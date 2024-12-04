@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnbyu236pfcat"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Bee/bullet.gd" id="1_httgp"]
+[ext_resource type="Texture2D" uid="uid://bpc38k5u808m0" path="res://Hallasan-Sunset/Enemies/Common Enemies/Bee/01.png" id="1_u53le"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Bee/Bee_hurtbox.gd" id="3_qrsd1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjh4j"]
+
+[node name="Bullet" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 17
+collision_mask = 17
+script = ExtResource("1_httgp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5708
+texture = ExtResource("1_u53le")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Bee_HurtBox" type="Area2D" parent="."]
+collision_layer = 17
+collision_mask = 17
+monitorable = false
+script = ExtResource("3_qrsd1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bee_HurtBox"]
+shape = SubResource("CircleShape2D_rjh4j")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
+[connection signal="body_entered" from="Bee_HurtBox" to="." method="_on_bee_hurt_box_body_entered"]

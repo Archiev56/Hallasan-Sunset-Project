@@ -1,0 +1,104 @@
+[gd_scene load_steps=29 format=3 uid="uid://cvoni5gbutug8"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/arc_projectile.gd" id="1_e0p8d"]
+[ext_resource type="Texture2D" uid="uid://ba0fv0orkokpx" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/projectile_shadow.png" id="2_yr1kk"]
+[ext_resource type="Texture2D" uid="uid://dm74wugs3temn" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/9.png" id="3_6ia21"]
+[ext_resource type="Texture2D" uid="uid://cscvxstrtmwt" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/1.png" id="4_f4km2"]
+[ext_resource type="Texture2D" uid="uid://cw220upys2s0o" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/2.png" id="5_njspv"]
+[ext_resource type="Texture2D" uid="uid://dit2usywjvaeo" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/3.png" id="6_a6h0j"]
+[ext_resource type="Texture2D" uid="uid://bcxdl8lb0j5wf" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/4.png" id="7_to6nk"]
+[ext_resource type="Texture2D" uid="uid://cwbncd00hc4mg" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/5.png" id="8_wljp5"]
+[ext_resource type="Texture2D" uid="uid://bj6ejl1bh8sri" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/6.png" id="9_sab5e"]
+[ext_resource type="Texture2D" uid="uid://8vq5lvar8yh0" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/7.png" id="10_31old"]
+[ext_resource type="Texture2D" uid="uid://dnglbomyi1qed" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/8.png" id="11_3iprk"]
+[ext_resource type="Texture2D" uid="uid://875l1aq7pea3" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/9.png" id="12_3jkdv"]
+[ext_resource type="Texture2D" uid="uid://dp04qx04qadkp" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/10.png" id="13_2rgyv"]
+[ext_resource type="Texture2D" uid="uid://bw76npiw2k41w" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/1.png" id="14_47bjf"]
+[ext_resource type="Texture2D" uid="uid://b5g5jpx2vevft" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/2.png" id="15_jcr8w"]
+[ext_resource type="Texture2D" uid="uid://dbf1v0bdd02ov" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/3.png" id="16_qgc51"]
+[ext_resource type="Texture2D" uid="uid://dvvqegw5jimv0" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/4.png" id="17_8vqic"]
+[ext_resource type="Texture2D" uid="uid://clkxm3kk52cua" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/5.png" id="18_ej0df"]
+[ext_resource type="Texture2D" uid="uid://yvo0b3stcolu" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/6.png" id="19_awr3i"]
+[ext_resource type="Texture2D" uid="uid://dedkint85l3k4" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/7.png" id="20_0rm3x"]
+[ext_resource type="Texture2D" uid="uid://cstvxtwj8ge47" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/8.png" id="21_xr5m7"]
+[ext_resource type="AudioStream" uid="uid://dgvkoqpqviy25" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/explosion.mp3" id="23_3ma4p"]
+[ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="23_d5rd0"]
+[ext_resource type="AudioStream" uid="uid://dai8cosm53p46" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/Sizzle.mp3" id="24_h0gts"]
+
+[sub_resource type="Animation" id="Animation_btdsq"]
+resource_name = "BombLive"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_f4km2"), ExtResource("5_njspv"), ExtResource("6_a6h0j"), ExtResource("7_to6nk"), ExtResource("8_wljp5"), ExtResource("9_sab5e"), ExtResource("10_31old"), ExtResource("11_3iprk"), ExtResource("12_3jkdv"), ExtResource("13_2rgyv")]
+}
+
+[sub_resource type="Animation" id="Animation_ha3a5"]
+resource_name = "Explode"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_47bjf"), ExtResource("15_jcr8w"), ExtResource("16_qgc51"), ExtResource("17_8vqic"), ExtResource("18_ej0df"), ExtResource("19_awr3i"), ExtResource("20_0rm3x"), ExtResource("21_xr5m7"), ExtResource("3_6ia21")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0xlk"]
+_data = {
+"BombLive": SubResource("Animation_btdsq"),
+"Explode": SubResource("Animation_ha3a5")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vh6cn"]
+radius = 28.0179
+
+[node name="arc_projectile" type="Node2D"]
+script = ExtResource("1_e0p8d")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yr1kk")
+
+[node name="Projectile" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -18)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_f4km2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Projectile"]
+libraries = {
+"": SubResource("AnimationLibrary_q0xlk")
+}
+
+[node name="hurt_box" parent="." instance=ExtResource("23_d5rd0")]
+unique_name_in_owner = true
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
+position = Vector2(0, -9)
+shape = SubResource("CircleShape2D_vh6cn")
+
+[node name="Explosion" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_3ma4p")
+
+[node name="Sizzle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_h0gts")
+volume_db = -20.0
+
+[connection signal="area_entered" from="hurt_box" to="." method="_on_hurt_box_area_entered"]
+[connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://k75pf2uxsq7d"]
+
+[ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_ld2yw"]
+[ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="1_myg6f"]
+[ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="3_yoq2g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
+shader = ExtResource("1_ld2yw")
+shader_parameter/WindStrength = 10.0
+
+[node name="Pine Tree" type="StaticBody2D"]
+z_index = 10
+collision_layer = 16
+collision_mask = 16
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.313726)
+texture_filter = 1
+position = Vector2(-1, 59)
+scale = Vector2(3, 3)
+texture = ExtResource("1_myg6f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+texture = ExtResource("3_yoq2g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-45, 69, -53, 32, -2, 17, 50, 41, 40, 72, 0, 94)

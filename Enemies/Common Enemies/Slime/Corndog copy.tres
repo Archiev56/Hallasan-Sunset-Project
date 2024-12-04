@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=3 uid="uid://dipdyp113iwoa"]
+
+[ext_resource type="Script" path="res://Items copy/Scripts/item_data.gd" id="1_2u8cl"]
+[ext_resource type="AudioStream" uid="uid://dnlh2uuebp8oy" path="res://Hallasan-Sunset/Items/Item Effects/hp-up.wav" id="1_jji4a"]
+[ext_resource type="Texture2D" uid="uid://vk5m0x43biym" path="res://Hallasan-Sunset/Items/Corndog/Corndog.png" id="2_wktvm"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Items/Item Effects/item_effect_heal.gd" id="2_wqu8o"]
+
+[sub_resource type="Resource" id="Resource_fts73"]
+script = ExtResource("2_wqu8o")
+heal_amount = 5
+audio = ExtResource("1_jji4a")
+use_description = ""
+
+[resource]
+script = ExtResource("1_2u8cl")
+name = "Corndog"
+description = "A golden, deep-fried masterpiece on a stick"
+texture = ExtResource("2_wktvm")
+effects = Array[Resource("res://Items/Item Effects/item_effect.gd")]([SubResource("Resource_fts73")])

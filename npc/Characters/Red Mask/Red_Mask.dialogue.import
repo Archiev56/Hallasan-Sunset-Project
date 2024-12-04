@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dusvtvxflbc0s"
+path="res://.godot/imported/Red_Mask.dialogue-60bbb224d6e9540f9efb16238beb8187.tres"
+
+[deps]
+
+source_file="res://npc/Characters/Red Mask/Red_Mask.dialogue"
+dest_files=["res://.godot/imported/Red_Mask.dialogue-60bbb224d6e9540f9efb16238beb8187.tres"]
+
+[params]
+
+defaults=true

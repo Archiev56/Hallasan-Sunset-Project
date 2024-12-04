@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://cqomboelbh7cq"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Pots/Pot 2/Brownpot2.gd" id="1_avpss"]
+[ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_va7uf"]
+[ext_resource type="Texture2D" uid="uid://cdtvbjneai7jt" path="res://Hallasan-Sunset/Environment/Pots/Pot 1/Untitled_Artwork 33.png" id="3_1r1qa"]
+[ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="4_2y380"]
+[ext_resource type="AudioStream" uid="uid://0xjgcbog3cl8" path="res://Hallasan-Sunset/Environment/Plant/Plant.mp3" id="5_sxjh7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts60k"]
+atlas = ExtResource("3_1r1qa")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10j8t"]
+atlas = ExtResource("3_1r1qa")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_131gv"]
+atlas = ExtResource("3_1r1qa")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_887b1"]
+atlas = ExtResource("3_1r1qa")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eruku"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts60k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10j8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_131gv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_887b1")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qamg5"]
+size = Vector2(24, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oo1lu"]
+radius = 16.0
+
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
+position = Vector2(0, -8)
+script = ExtResource("1_avpss")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 0.333333)
+texture_filter = 1
+position = Vector2(0, 4)
+scale = Vector2(1, 2.4)
+texture = ExtResource("2_va7uf")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -21)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_eruku")
+
+[node name="HitBox" parent="." instance=ExtResource("4_2y380")]
+position = Vector2(0, 7)
+monitoring = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_qamg5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 0
+collision_mask = 257
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0, 7)
+polygon = PackedVector2Array(-14, -17, -14, -26, -12, -26, -12, -28, 12, -28, 12, -26, 13, -26, 14, -14, 9, -10, 4, 0, -4, 0, -8, -6, -10, -12, -14, -16, -14, -18, -14, -26, -12, -26, -12, -28, -13, -17, -14, -16, -14, -18)
+
+[node name="Plant" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_sxjh7")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_oo1lu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

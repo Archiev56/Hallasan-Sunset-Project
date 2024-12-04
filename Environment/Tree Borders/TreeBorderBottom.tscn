@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://3c8o5hxduleo"]
+
+[ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_wf80h"]
+[ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="2_67xqn"]
+[ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_gejlw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
+shader = ExtResource("1_wf80h")
+shader_parameter/WindStrength = 10.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6ecid"]
+a = Vector2(-88, -182)
+b = Vector2(299, -182)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+z_index = 5
+position = Vector2(-57, 182)
+collision_layer = 16
+collision_mask = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-27, -116)
+texture = ExtResource("2_67xqn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(123, -63)
+texture = ExtResource("2_67xqn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(209, -143)
+texture = ExtResource("2_67xqn")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_gejlw")]
+z_index = 2
+position = Vector2(64, -258)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_6ecid")

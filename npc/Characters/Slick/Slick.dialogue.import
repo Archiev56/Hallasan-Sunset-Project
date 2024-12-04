@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cf5ythyw4ttko"
+path="res://.godot/imported/Slick.dialogue-4e198580d03c1895820b5b4b1cff3ce1.tres"
+
+[deps]
+
+source_file="res://npc/Characters/Slick/Slick.dialogue"
+dest_files=["res://.godot/imported/Slick.dialogue-4e198580d03c1895820b5b4b1cff3ce1.tres"]
+
+[params]
+
+defaults=true

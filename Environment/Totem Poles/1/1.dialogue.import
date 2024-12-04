@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://d10lsfehmop5o"
+path="res://.godot/imported/1.dialogue-a67c7b52c07be6210c6be159390c4d6a.tres"
+
+[deps]
+
+source_file="res://Environment copy/Totem Poles/1/1.dialogue"
+dest_files=["res://.godot/imported/1.dialogue-a67c7b52c07be6210c6be159390c4d6a.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2ltcopvrko7h"]
+
+[ext_resource type="Texture2D" uid="uid://22n66hcx832m" path="res://Hallasan-Sunset/Environment/Bridge/Bridge.png" id="1_0jfwe"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 16
+
+[node name="Bridge" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-19, 217)
+texture = ExtResource("1_0jfwe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-19, 217)
+polygon = PackedVector2Array(-93, 60, -93, 54, -79.5, 55, -79.5, 50, -73.5, 49, -73.5, 43, -68, 43, -68, 36, 68.5, 37, 68.5, 43, 74, 43, 74, 49, 80.5, 49, 81, 55, 92.5, 55, 92.5, 60, 49, 60, 43, 51, 24.5, 41, -24, 39, -37.5, 46, -47, 55, -49, 61)
+
+[node name="StairsUp" type="Area2D" parent="." groups=["stairs"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StairsUp"]
+polygon = PackedVector2Array(-111, 273, -111.5, 181, -106.5, 181, -106.5, 175, -100.5, 175, -100, 169, -93.5, 169, -93.5, 163, -88, 163, -88, 157, -87, 252, -87, 258.5, -91.5, 258.5, -91.5, 266, -99.5, 266, -99.5, 271.5, -106.5, 272.5)
+
+[node name="StairsDown" type="Area2D" parent="." groups=["stairs"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StairsDown"]
+polygon = PackedVector2Array(50.5, 255.5, 49, 157.5, 50.5, 164.5, 55.5, 163.5, 55.5, 168.5, 62, 168.5, 62, 175, 66.5, 175, 66.5, 180, 74, 188, 74, 271.5, 62.5, 271, 62.5, 266.5, 56, 265.5, 56, 259, 50.5, 258.5)

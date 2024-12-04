@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cmi46pvw4y360"
+path="res://.godot/imported/Sansin.dialogue-0a2237754d2d220dc743b7ec9e488691.tres"
+
+[deps]
+
+source_file="res://npc/Characters/Sansin/Sansin.dialogue"
+dest_files=["res://.godot/imported/Sansin.dialogue-0a2237754d2d220dc743b7ec9e488691.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://l1alh8mn32kq"
+path="res://.godot/imported/Pause.wav-b8285d0846d390de494e39b51e53f190.sample"
+
+[deps]
+
+source_file="res://Hallasan-Sunset/UI/Pause Menu/Pause/Pause.wav"
+dest_files=["res://.godot/imported/Pause.wav-b8285d0846d390de494e39b51e53f190.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

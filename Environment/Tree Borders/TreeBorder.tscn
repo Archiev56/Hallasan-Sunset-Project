@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba2vdtt3qp7p3"]
+
+[ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_1k2ju"]
+[ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="2_wuyhu"]
+[ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_k2cos"]
+[ext_resource type="Texture2D" uid="uid://cu5suodsm6h7b" path="res://Hallasan-Sunset/Environment/Plant/Plant 1.png" id="5_5kwh3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
+shader = ExtResource("1_1k2ju")
+shader_parameter/WindStrength = 10.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_inlc4"]
+a = Vector2(-2.00001, -143)
+b = Vector2(-0.999993, 154)
+
+[node name="Tree Border Down" type="StaticBody2D"]
+position = Vector2(-77, -104)
+collision_layer = 16
+collision_mask = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-15, 17)
+texture = ExtResource("2_wuyhu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(152, -3)
+texture = ExtResource("2_wuyhu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-45, 69, -53, 32, -2, 17, 50, 41, 40, 72, 0, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(68, 105)
+rotation = 1.5708
+shape = SubResource("SegmentShape2D_inlc4")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_k2cos")]
+z_index = 0
+position = Vector2(62, -117)
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.286275)
+texture_filter = 1
+position = Vector2(-3, 72)
+scale = Vector2(4, 4)
+
+[node name="Shadow2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.286275)
+texture_filter = 1
+position = Vector2(156, 48)
+scale = Vector2(4, 4)
+
+[node name="Plant3" type="Sprite2D" parent="."]
+position = Vector2(135, 78)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant2" type="Sprite2D" parent="."]
+position = Vector2(190, 77)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant4" type="Sprite2D" parent="."]
+position = Vector2(-80, 62)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant5" type="Sprite2D" parent="."]
+position = Vector2(45, 83)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant9" type="Sprite2D" parent="."]
+position = Vector2(-54, 82)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant6" type="Sprite2D" parent="."]
+position = Vector2(74, 50)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant7" type="Sprite2D" parent="."]
+position = Vector2(101, 79)
+texture = ExtResource("5_5kwh3")
+
+[node name="Plant8" type="Sprite2D" parent="."]
+position = Vector2(221, 50)
+texture = ExtResource("5_5kwh3")

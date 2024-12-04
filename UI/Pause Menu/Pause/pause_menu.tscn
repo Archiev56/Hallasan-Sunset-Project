@@ -1,0 +1,159 @@
+[gd_scene load_steps=13 format=3 uid="uid://bv18n10sdmxlc"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/Pause.gd" id="1_n04mh"]
+[ext_resource type="Texture2D" uid="uid://boinh7toy2duf" path="res://Hallasan-Sunset/UI/Inventory/book_middle.png" id="2_uxl7v"]
+[ext_resource type="Theme" uid="uid://ep8fk2oqixb5" path="res://Hallasan-Sunset/UI/Menu_Theme.tres" id="3_2l1ry"]
+[ext_resource type="Texture2D" uid="uid://dbhpg6jr5px7x" path="res://Hallasan-Sunset/UI/Inventory/LargeBackground.png" id="3_55hyt"]
+[ext_resource type="FontFile" uid="uid://cjvl2b0w81025" path="res://Hallasan-Sunset/UI/Fonts/joystix monospace.otf" id="4_0rxdr"]
+[ext_resource type="Texture2D" uid="uid://bc7cmbl8u1m6q" path="res://Hallasan-Sunset/UI/Inventory/Banner.png" id="4_xky3d"]
+[ext_resource type="Texture2D" uid="uid://d1srbbm1sgxd" path="res://Hallasan-Sunset/UI/Pause Menu/ui.png" id="5_e7plb"]
+[ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="5_r8eb1"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/inventory_ui.gd" id="6_cms6o"]
+[ext_resource type="PackedScene" uid="uid://nbdb7nut6dh2" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/inventory_slot.tscn" id="6_ye6ht"]
+[ext_resource type="Resource" uid="uid://dcqu1flenu416" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/player_inventory.tres" id="7_gdv8y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0vv8"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = ExtResource("5_e7plb")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 100
+script = ExtResource("1_n04mh")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+
+[node name="BookMiddle" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(323, 177)
+texture = ExtResource("2_uxl7v")
+
+[node name="LargeBackground" type="Sprite2D" parent="Control"]
+position = Vector2(254, 229)
+scale = Vector2(0.0776143, 0.0569845)
+texture = ExtResource("3_55hyt")
+
+[node name="Banner" type="Sprite2D" parent="Control"]
+position = Vector2(253, 87.375)
+scale = Vector2(0.283654, 0.517606)
+texture = ExtResource("4_xky3d")
+
+[node name="Description" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 179.0
+offset_top = 199.0
+offset_right = 341.0
+offset_bottom = 231.0
+theme_override_fonts/font = ExtResource("5_r8eb1")
+theme_override_font_sizes/font_size = 16
+text = "Description: "
+horizontal_alignment = 1
+
+[node name="Inventory" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 173.0
+offset_top = 74.375
+offset_right = 335.0
+offset_bottom = 106.375
+theme_override_fonts/font = ExtResource("5_r8eb1")
+theme_override_font_sizes/font_size = 16
+text = "INVENTORY"
+horizontal_alignment = 1
+
+[node name="ItemDescription" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 208.0
+offset_top = 217.0
+offset_right = 304.0
+offset_bottom = 240.0
+theme_override_fonts/font = ExtResource("5_r8eb1")
+theme_override_font_sizes/font_size = 8
+text = "heklmrfesdc"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 14.0
+offset_top = -50.0
+offset_right = 131.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2l1ry")
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("3_2l1ry")
+theme_override_fonts/font = ExtResource("4_0rxdr")
+theme_override_font_sizes/font_size = 20
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Button_save" type="Button" parent="Control/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Save"
+
+[node name="Button_load" type="Button" parent="Control/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Load
+"
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 192.0
+offset_top = 105.0
+offset_right = 316.0
+offset_bottom = 193.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o0vv8")
+
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+columns = 3
+script = ExtResource("6_cms6o")
+data = ExtResource("7_gdv8y")
+
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2

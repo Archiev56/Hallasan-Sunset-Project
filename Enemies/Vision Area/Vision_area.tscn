@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c55aho78pvpy8"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Vision Area/Vision_area.gd" id="1_7q7gy"]
+
+[node name="VisionArea" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_7q7gy")

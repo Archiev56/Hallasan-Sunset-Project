@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://j7xr0tnkfbq3"]
+
+[ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="1_y1aj7"]
+[ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="2_yn7x0"]
+[ext_resource type="Texture2D" uid="uid://3w037bsmwp26" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/tree.png" id="3_ql4mc"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/TallTreeRandomiser.gd" id="4_lpjnk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7dhqn"]
+shader = ExtResource("2_yn7x0")
+shader_parameter/WindStrength = 4.3
+
+[node name="StaticBody2D" type="StaticBody2D"]
+z_index = 5
+collision_layer = 16
+collision_mask = 16
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.360784)
+texture_filter = 1
+position = Vector2(0, 137)
+scale = Vector2(2.84, 2.44)
+texture = ExtResource("1_y1aj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_7dhqn")
+position = Vector2(0, 68)
+texture = ExtResource("3_ql4mc")
+script = ExtResource("4_lpjnk")
+min_wind_strength = 7.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-17, 138, -13, 109, -14, 61, 15, 62, 18, 139)

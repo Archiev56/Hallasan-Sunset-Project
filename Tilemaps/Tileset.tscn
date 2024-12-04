@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr8c8wtlgk4rc"]
+
+[ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="1_r57bv"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="11_2ksic"]
+
+[node name="Tileset" type="TileMapLayer"]
+z_index = -1
+texture_filter = 1
+use_parent_material = true
+tile_set = ExtResource("1_r57bv")
+rendering_quadrant_size = 24
+script = ExtResource("11_2ksic")
+
+[node name="LevelTileMapLayer" type="TileMapLayer" parent="."]
+script = ExtResource("11_2ksic")

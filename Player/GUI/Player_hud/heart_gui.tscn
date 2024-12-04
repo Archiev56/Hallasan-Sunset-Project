@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3ou4mscqfens"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/heart_gui.gd" id="1_b3fqt"]
+[ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_fmdtk"]
+
+[node name="Heart" type="Control"]
+custom_minimum_size = Vector2(9, 9)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b3fqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_fmdtk")
+centered = false
+hframes = 7
+vframes = 2
