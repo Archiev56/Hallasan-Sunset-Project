@@ -1,4 +1,4 @@
-@icon( "res://Technical/Icons/icon_map_2.png" )
+@icon( "res://Hallasan-Sunset/Technical/Icons/icon_map_2.png" )
 
 class_name LevelTileMapLayer extends TileMapLayer
 

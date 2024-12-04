@@ -1,4 +1,4 @@
-@icon( "res://Technical/Icons/icon_weapon.png" )
+@icon( "res://Hallasan-Sunset/Technical/Icons/icon_weapon.png" )
 
 class_name Enemy extends CharacterBody2D
 

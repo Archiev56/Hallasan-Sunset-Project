@@ -1,5 +1,5 @@
 @tool
-@icon( "res://Technical/Icons/icon_particle.png" )
+@icon( "res://Hallasan-Sunset/Technical/Icons/icon_particle.png" )
 
 class_name ItemPickup extends CharacterBody2D
 
