@@ -1690,6 +1690,7 @@ position = Vector2(3, -28)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
 position = Vector2(4.8, 46)
 max_polyphony = 6
+bus = &"SFX"
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("159_h133t")
@@ -1697,6 +1698,7 @@ bus = &"SFX"
 
 [node name="Dash" type="AudioStreamPlayer2D" parent="Audio"]
 stream = ExtResource("161_shorf")
+bus = &"SFX"
 
 [node name="Interactions" type="Node2D" parent="."]
 script = ExtResource("161_8urtu")
@@ -1774,7 +1776,6 @@ libraries = {
 }
 
 [node name="Dash" parent="." instance=ExtResource("75_ee50j")]
-position = Vector2(-362, -259)
 
 [node name="arc_projectile" parent="." instance=ExtResource("79_mcnx3")]
 visible = false

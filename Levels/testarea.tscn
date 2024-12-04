@@ -102,23 +102,23 @@ position = Vector2(-183, 164)
 position = Vector2(-183, 405)
 
 [node name="StaticBody2D7" parent="Environment/Borders" instance=ExtResource("17_yf6kt")]
-position = Vector2(969, 405)
+position = Vector2(977, 406)
 
 [node name="StaticBody2D8" parent="Environment/Borders" instance=ExtResource("17_yf6kt")]
 position = Vector2(971, 156)
 
 [node name="StaticBody2D" parent="Environment/Borders" instance=ExtResource("13_me302")]
-position = Vector2(534, 689)
+position = Vector2(569, 717)
 
 [node name="StaticBody2D3" parent="Environment/Borders" instance=ExtResource("13_me302")]
-position = Vector2(808, 689)
+position = Vector2(869, 712)
 
 [node name="StaticBody2D4" parent="Environment/Borders" instance=ExtResource("13_me302")]
 z_index = 10
 position = Vector2(-77, 689)
 
 [node name="StaticBody2D2" parent="Environment/Borders" instance=ExtResource("13_me302")]
-position = Vector2(260, 689)
+position = Vector2(232, 707)
 
 [node name="Interactables" type="Node" parent="Environment"]
 
@@ -161,6 +161,9 @@ position = Vector2(657, 403)
 
 [node name="TreeStump3" parent="Enemies" instance=ExtResource("26_k2jfo")]
 position = Vector2(165, 319)
+
+[node name="TreeStump4" parent="Enemies" instance=ExtResource("26_k2jfo")]
+position = Vector2(375, 231)
 
 [node name="Goblin" parent="Enemies" instance=ExtResource("22_s01vy")]
 position = Vector2(389, 387)

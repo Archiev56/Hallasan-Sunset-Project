@@ -1,4 +1,4 @@
-@icon( "res://Technical/Icons/icon_character.png" )
+@icon( "res://Hallasan-Sunset/Technical/Icons/icon_character.png" )
 
 extends Node2D
 

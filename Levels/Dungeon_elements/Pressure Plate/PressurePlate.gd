@@ -10,9 +10,10 @@ var off_rect : Rect2
 
 @onready var area_2d : Area2D = $Area2D
 @onready var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var audio_activate : AudioStream = preload("res://Levels/Dungeon_elements/Audio/lever-01.wav")
-@onready var audio_deactivate : AudioStream = preload("res://Levels/Dungeon_elements/Audio/lever-02.wav")
+@onready var audio_activate : AudioStream = preload("res://Hallasan-Sunset/Levels/Dungeon_elements/Audio/lever-01.wav")
+@onready var audio_deactivate : AudioStream = preload("res://Hallasan-Sunset/Levels/Dungeon_elements/Audio/lever-02.wav")
 @onready var sprite : Sprite2D = $Sprite2D
+
 
 
 func _ready() -> void:
@@ -32,8 +33,9 @@ func _on_body_exited( b : Node2D ) -> void:
 	bodies -= 1
 	check_is_activated()
 	pass
-	
-	
+
+
+
 func check_is_activated() -> void:
 	if bodies > 0 and is_active == false:
 		is_active = true

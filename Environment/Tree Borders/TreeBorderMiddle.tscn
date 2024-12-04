@@ -65,6 +65,7 @@ position = Vector2(150, 88)
 texture = ExtResource("4_hxu6y")
 
 [node name="Plant2" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(110, 57)
 texture = ExtResource("4_hxu6y")
 

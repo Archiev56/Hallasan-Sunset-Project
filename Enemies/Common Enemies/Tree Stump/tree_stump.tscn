@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://5ympmnaidvus"]
+[gd_scene load_steps=52 format=3 uid="uid://5ympmnaidvus"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_7vw80"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="2_q1u30"]
@@ -8,8 +8,11 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="6_8x1ad"]
 [ext_resource type="Texture2D" uid="uid://clik15gmdq3pn" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_down/Untitled_Artwork-2 10.png" id="7_6a8c6"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="7_i2j2d"]
+[ext_resource type="Texture2D" uid="uid://cjnfrfya5dr7r" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_side/Untitled_Artwork-1 18.png" id="7_ocssw"]
 [ext_resource type="Texture2D" uid="uid://ck1h7xm4ny3tl" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_down/Untitled_Artwork-3 10.png" id="8_bcph4"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="8_i7cum"]
+[ext_resource type="Texture2D" uid="uid://ctgvji3ki2imv" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_side/Untitled_Artwork-2 12.png" id="8_m8dq5"]
+[ext_resource type="Texture2D" uid="uid://dmsvhn4n2kaxy" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_side/Untitled_Artwork-3 12.png" id="9_ha4y2"]
 [ext_resource type="Texture2D" uid="uid://hnt61u4hlu6v" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-1 17.png" id="9_tb6gj"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_tfda5"]
 [ext_resource type="Texture2D" uid="uid://bioe7krs3wk0e" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-2 11.png" id="10_k4s3j"]
@@ -17,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://cjn2xlrxf22gp" path="res://Hallasan-Sunset/Items/Corndog/Corndog.tres" id="11_36ejc"]
 [ext_resource type="Texture2D" uid="uid://du07fdisrwq21" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-3 11.png" id="11_f3d7y"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Drop Data/drop_data.gd" id="12_q6cmd"]
+[ext_resource type="Texture2D" uid="uid://d4dhcek1d0hk2" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 56.png" id="12_yuel8"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="13_xjk0p"]
 [ext_resource type="Texture2D" uid="uid://dbl07ag0yb620" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/DestroySmoke.png" id="14_4jemv"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="14_urhcl"]
@@ -80,6 +84,65 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [ExtResource("3_ida3r"), ExtResource("7_6a8c6"), ExtResource("8_bcph4")]
+}
+
+[sub_resource type="Animation" id="Animation_gsgsg"]
+resource_name = "chase_side"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -28), Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_ocssw"), ExtResource("8_m8dq5"), ExtResource("9_ha4y2")]
+}
+
+[sub_resource type="Animation" id="Animation_08tk6"]
+resource_name = "chase_up"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -30), Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_tb6gj"), ExtResource("10_k4s3j"), ExtResource("11_f3d7y")]
 }
 
 [sub_resource type="Animation" id="Animation_sakl5"]
@@ -499,26 +562,26 @@ loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -24)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
+tracks/1/path = NodePath("Sprite:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -24)]
+"update": 1,
+"values": [ExtResource("12_yuel8")]
 }
 
 [sub_resource type="Animation" id="Animation_3xmtn"]
@@ -574,26 +637,26 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [15, 16, 17, 15]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.5, 0.7),
 "transitions": PackedFloat32Array(1, -2, -2, -2),
 "update": 0,
 "values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -30), Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_ocssw"), ExtResource("8_m8dq5"), ExtResource("9_ha4y2")]
 }
 
 [sub_resource type="Animation" id="Animation_dvb3c"]
@@ -626,40 +689,11 @@ tracks/1/keys = {
 "values": [ExtResource("9_tb6gj"), ExtResource("10_k4s3j"), ExtResource("11_f3d7y")]
 }
 
-[sub_resource type="Animation" id="Animation_08tk6"]
-resource_name = "chase_up"
-length = 0.6
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, -2, -2, -2),
-"update": 0,
-"values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -30), Vector2(0, -24)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("9_tb6gj"), ExtResource("10_k4s3j"), ExtResource("11_f3d7y")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {
 "RESET": SubResource("Animation_wnokj"),
 "chase_down": SubResource("Animation_qp3lq"),
+"chase_side": SubResource("Animation_gsgsg"),
 "chase_up": SubResource("Animation_08tk6"),
 "destroy_down": SubResource("Animation_sakl5"),
 "destroy_side": SubResource("Animation_slqic"),
