@@ -23,8 +23,8 @@
 script = ExtResource("1_0blxm")
 
 [node name="LevelTransition" parent="." instance=ExtResource("2_d6doj")]
-position = Vector2(384, 688)
-level = "res://Levels/testarea.tscn"
+position = Vector2(384, 714)
+level = "res://Hallasan-Sunset/Levels/testarea.tscn"
 side = 3
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("7_7l64l")]

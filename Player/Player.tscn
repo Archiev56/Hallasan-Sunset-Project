@@ -611,7 +611,8 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_8mfv3"]
 resource_name = "attack_down"
-length = 0.5
+length = 0.2
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -627,7 +628,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_gn0nw"]
 resource_name = "attack_side"
-length = 0.5
+length = 0.2
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -643,7 +645,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_dkj7r"]
 resource_name = "attack_up"
-length = 0.5
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1582,7 +1584,7 @@ script = ExtResource("1_l265g")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(2.08165e-12, 2.08165e-12)
-texture = ExtResource("132_ytr1a")
+texture = ExtResource("64_s6v76")
 
 [node name="ShadowSprite" type="Sprite2D" parent="Sprite2D"]
 modulate = Color(0, 0, 0, 0.235294)
@@ -1785,9 +1787,6 @@ visible = false
 [node name="Boomerang" type="Node2D" parent="Abilities"]
 script = ExtResource("74_8h3ji")
 
-[node name="Camera2D" parent="." instance=ExtResource("76_apee7")]
-shake_max_offset = 10.0
-
 [node name="DustParticles" type="GPUParticles2D" parent="."]
 modulate = Color(1, 1, 1, 0.596078)
 show_behind_parent = true
@@ -1799,5 +1798,7 @@ amount = 1
 process_material = SubResource("ParticleProcessMaterial_nbsyf")
 texture = ExtResource("78_3ug7b")
 lifetime = 0.3
+
+[node name="Camera2D" parent="." instance=ExtResource("76_apee7")]
 
 [editable path="Dash"]

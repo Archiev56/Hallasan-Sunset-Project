@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://ch55l646cr805"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://ch55l646cr805"]
 
 [ext_resource type="Texture2D" uid="uid://b3xajpubes6qw" path="res://Hallasan-Sunset/Tilemaps/Sprites/24x24 Cliff grass.png" id="1_vsd23"]
 [ext_resource type="Texture2D" uid="uid://cff22owg10dyv" path="res://Hallasan-Sunset/Tilemaps/Sprites/Grassland Tileset.png" id="2_83geu"]
@@ -1384,6 +1384,13 @@ texture_region_size = Vector2i(32, 32)
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.5625, 3.75, -14.8125, -13.75, 16, -16, 16, 16, -5.6875, 14.125)
 2:2/0 = 0
 2:2/0/terrain_set = 1
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1toym"]
+load_path = "res://.godot/imported/Sprite-0001.png-c5601f6b89f62b5dcbf551db4f6ea9fd.ctex"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8v1v2"]
+texture = SubResource("CompressedTexture2D_1toym")
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0cvx5"]
 texture = ExtResource("4_ufjyh")
@@ -5224,3 +5231,4 @@ sources/7 = SubResource("TileSetAtlasSource_jt8ux")
 sources/8 = SubResource("TileSetAtlasSource_pv8kn")
 sources/9 = SubResource("TileSetAtlasSource_ttu4o")
 sources/1 = SubResource("TileSetAtlasSource_a3a32")
+sources/2 = SubResource("TileSetAtlasSource_8v1v2")

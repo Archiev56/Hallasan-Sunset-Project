@@ -12,4 +12,5 @@ rendering_quadrant_size = 24
 script = ExtResource("11_2ksic")
 
 [node name="LevelTileMapLayer" type="TileMapLayer" parent="."]
+rendering_quadrant_size = 24
 script = ExtResource("11_2ksic")

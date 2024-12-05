@@ -1,7 +1,7 @@
 @tool
 class_name ItemDropper extends Node2D
 
-const PICKUP = preload("res://Items/item_pickup/item_pickup.tscn")
+const PICKUP = preload("res://Hallasan-Sunset/Items/item_pickup/item_pickup.tscn")
 
 @export var item_data : ItemData : set = _set_item_data
 
@@ -55,5 +55,3 @@ func _update_texture() -> void:
 	if Engine.is_editor_hint() == true:
 		if item_data and sprite:
 			sprite.texture = item_data.texture
-
-

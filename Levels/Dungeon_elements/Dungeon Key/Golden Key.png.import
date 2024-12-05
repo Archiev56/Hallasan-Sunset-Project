@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdtvbjneai7jt"
-path="res://.godot/imported/Untitled_Artwork 33.png-177e9188c49640f17d8464250656d7cb.ctex"
+uid="uid://di624as6s7i60"
+path="res://.godot/imported/Golden Key.png-1b43aeb7e663ef457f7fef4a3783cca2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Hallasan-Sunset/Environment/Pots/Pot 1/Untitled_Artwork 33.png"
-dest_files=["res://.godot/imported/Untitled_Artwork 33.png-177e9188c49640f17d8464250656d7cb.ctex"]
+source_file="res://Hallasan-Sunset/Levels/Dungeon_elements/Dungeon Key/Golden Key.png"
+dest_files=["res://.godot/imported/Golden Key.png-1b43aeb7e663ef457f7fef4a3783cca2.ctex"]
 
 [params]
 
