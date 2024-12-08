@@ -1577,7 +1577,7 @@ direction = Vector3(1, 2.08165e-12, 2.08165e-12)
 gravity = Vector3(100, 2.08165e-12, 2.08165e-12)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 5
+collision_layer = 21
 collision_mask = 20
 script = ExtResource("1_l265g")
 
@@ -1657,6 +1657,8 @@ script = ExtResource("65_t8td5")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("66_hex77")
+move_speed = 100.0
+max_speed = 70.0
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("67_i7pm4")

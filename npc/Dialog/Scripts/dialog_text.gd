@@ -1,5 +1,5 @@
 @tool
-@icon( "res://UI copy/Dialogue_system/icons/text_bubble.svg" )
+@icon( "res://Hallasan-Sunset/UI/Dialogue_system/icons/text_bubble.svg" )
 class_name DialogText extends DialogItem
 
 @export_multiline var text : String = "Placeholder text" : set = _set_text

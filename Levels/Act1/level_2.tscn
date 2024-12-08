@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://c712lfsg073ux"]
+[gd_scene load_steps=22 format=4 uid="uid://c712lfsg073ux"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_0blxm"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="2_d6doj"]
@@ -16,8 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://ulerv0qebh18" path="res://Hallasan-Sunset/Environment/Totem Poles/1/Totem1.tscn" id="14_o4e6e"]
 [ext_resource type="PackedScene" uid="uid://obenohw15alg" path="res://Hallasan-Sunset/Environment/Crate/Crate.tscn" id="15_mcp0t"]
 [ext_resource type="PackedScene" uid="uid://cal6ga32aayko" path="res://Hallasan-Sunset/Environment/Well/Well.tscn" id="16_jpxab"]
-[ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot 3.tscn" id="17_77gp8"]
+[ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot.tscn" id="17_77gp8"]
 [ext_resource type="PackedScene" uid="uid://wwugboi7jgu" path="res://Hallasan-Sunset/Environment/Log Pile/Log Pile.tscn" id="18_nwg2a"]
+[ext_resource type="PackedScene" uid="uid://dc6lo3whucr6e" path="res://Hallasan-Sunset/npc/npc.tscn" id="19_88j6c"]
+[ext_resource type="Resource" uid="uid://xqyqgwhh0qqu" path="res://Hallasan-Sunset/npc/Characters/Sansin/Sansin.tres" id="20_h2h3r"]
+[ext_resource type="PackedScene" uid="uid://cou4euvvaw0ml" path="res://Hallasan-Sunset/UI/Dialogue_system/dialogue_interaction.tscn" id="21_lx40f"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0blxm")
@@ -124,3 +127,10 @@ position = Vector2(32, 96)
 position = Vector2(264, 608)
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="NPC" parent="." instance=ExtResource("19_88j6c")]
+texture_filter = 1
+position = Vector2(254, 163)
+npc_resource = ExtResource("20_h2h3r")
+
+[node name="DialogueInteraction" parent="NPC" instance=ExtResource("21_lx40f")]

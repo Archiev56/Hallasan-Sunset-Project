@@ -1,5 +1,5 @@
 @tool
-@icon( "res://UI/Dialogue_system/icons/chat_bubbles.svg" )
+@icon( "res://Hallasan-Sunset/UI/Dialogue_system/icons/chat_bubbles.svg" )
 class_name DialogInteraction extends Area2D
 
 signal player_interacted

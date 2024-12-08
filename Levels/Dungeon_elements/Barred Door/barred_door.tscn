@@ -206,6 +206,7 @@ shape = SubResource("RectangleShape2D_k4ils")
 libraries = {
 "": SubResource("AnimationLibrary_k5eap")
 }
+autoplay = "closed"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 

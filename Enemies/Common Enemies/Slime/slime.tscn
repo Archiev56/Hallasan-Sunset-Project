@@ -1,19 +1,28 @@
-[gd_scene load_steps=37 format=3 uid="uid://0uw5235d8xhl"]
+[gd_scene load_steps=46 format=3 uid="uid://0uw5235d8xhl"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_44gfu"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="1_etj4l"]
-[ext_resource type="Texture2D" uid="uid://clqfwdjbwlcpb" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Slime.png" id="2_okxkx"]
 [ext_resource type="Texture2D" uid="uid://dbl07ag0yb620" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/DestroySmoke.png" id="5_knrdb"]
 [ext_resource type="AudioStream" uid="uid://bwrnh62hw2ocp" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/hit_00 (1).wav" id="5_pslyh"]
 [ext_resource type="AudioStream" uid="uid://bujw7xwffover" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Slime-[AudioTrimmer.com].wav" id="6_pdfxu"]
+[ext_resource type="Texture2D" uid="uid://h8b84gyye5uo" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-1 19.png" id="6_v3phd"]
+[ext_resource type="Texture2D" uid="uid://cmljk7ttsnbw4" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-2 13.png" id="7_tpksn"]
+[ext_resource type="Texture2D" uid="uid://d1bbxb6aq0rpc" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-3 13.png" id="8_x386k"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_7uhoo"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="9_m6qf0"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="9_wc0n0"]
+[ext_resource type="Texture2D" uid="uid://b3xyyko78s6iv" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-4 9.png" id="9_wv305"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_6rw3k"]
+[ext_resource type="Texture2D" uid="uid://b7sdvl0wwfsa" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-5 5.png" id="10_h17cf"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="10_trauc"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="11_bamqg"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Drop Data/drop_data.gd" id="11_s01br"]
 [ext_resource type="Resource" uid="uid://cjn2xlrxf22gp" path="res://Hallasan-Sunset/Items/Corndog/Corndog.tres" id="11_uem30"]
+[ext_resource type="Texture2D" uid="uid://bao6u4j0tssr0" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-1 19.png" id="11_yt2gu"]
+[ext_resource type="Texture2D" uid="uid://b88cyaf6mb8bq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-2 13.png" id="12_7dy00"]
+[ext_resource type="Texture2D" uid="uid://b1g8vvkvadq5m" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-3 13.png" id="13_i3olk"]
+[ext_resource type="Texture2D" uid="uid://d4ivxyhthe3kw" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-4 9.png" id="14_6sekb"]
+[ext_resource type="Texture2D" uid="uid://fes8ca8mjll6" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-5 5.png" id="15_fse6d"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="17_wsf84"]
 
 [sub_resource type="Animation" id="Animation_wnokj"]
@@ -426,89 +435,92 @@ tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_kxr6h"]
 resource_name = "idle_down"
-length = 0.4
-loop_mode = 2
+length = 0.8
+loop_mode = 1
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_v3phd"), ExtResource("7_tpksn"), ExtResource("8_x386k"), ExtResource("9_wv305"), ExtResource("10_h17cf")]
 }
 
 [sub_resource type="Animation" id="Animation_6tpqk"]
 resource_name = "idle_side"
-length = 0.4
-loop_mode = 2
+length = 0.8
+loop_mode = 1
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_yt2gu"), ExtResource("12_7dy00"), ExtResource("13_i3olk"), ExtResource("14_6sekb"), ExtResource("15_fse6d")]
 }
 
 [sub_resource type="Animation" id="Animation_3xmtn"]
 resource_name = "idle_up"
-length = 0.4
-loop_mode = 2
+length = 0.8
+loop_mode = 1
+step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 4, 5]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_yt2gu"), ExtResource("12_7dy00"), ExtResource("13_i3olk"), ExtResource("14_6sekb"), ExtResource("15_fse6d")]
 }
 
 [sub_resource type="Animation" id="Animation_iq8d0"]
@@ -518,26 +530,26 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [9, 10, 11, 9]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.5, 0.7),
 "transitions": PackedFloat32Array(1, -2, -2, -2),
 "update": 0,
 "values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -30), Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_v3phd"), ExtResource("7_tpksn"), ExtResource("8_x386k"), ExtResource("9_wv305"), ExtResource("10_h17cf")]
 }
 
 [sub_resource type="Animation" id="Animation_jb7fe"]
@@ -547,26 +559,26 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [15, 16, 17, 15]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.5, 0.7),
 "transitions": PackedFloat32Array(1, -2, -2, -2),
 "update": 0,
 "values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -30), Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_yt2gu"), ExtResource("12_7dy00"), ExtResource("13_i3olk"), ExtResource("14_6sekb"), ExtResource("15_fse6d")]
 }
 
 [sub_resource type="Animation" id="Animation_dvb3c"]
@@ -576,26 +588,26 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [12, 13, 14, 12]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.5, 0.7),
 "transitions": PackedFloat32Array(1, -2, -2, -2),
 "update": 0,
 "values": [Vector2(0, -24), Vector2(0, -24), Vector2(2.08165e-12, -30), Vector2(0, -24)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("11_yt2gu"), ExtResource("12_7dy00"), ExtResource("13_i3olk"), ExtResource("14_6sekb"), ExtResource("15_fse6d")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
@@ -626,8 +638,8 @@ probability = 100.0
 min_amount = 1
 max_amount = 1
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_herpx"]
-radius = 4.63897
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ksux"]
+size = Vector2(7.66667, 12.3333)
 
 [sub_resource type="Animation" id="Animation_uni4i"]
 length = 0.001
@@ -689,8 +701,8 @@ _data = {
 "destroy": SubResource("Animation_wnxxk")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gfs4t"]
-radius = 13.6528
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjmbv"]
+size = Vector2(24, 20)
 
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 256
@@ -704,12 +716,10 @@ position = Vector2(0, -2)
 texture = ExtResource("1_etj4l")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.709804)
 texture_filter = 1
 position = Vector2(0, -24)
-texture = ExtResource("2_okxkx")
-hframes = 16
-vframes = 2
-frame = 2
+texture = ExtResource("6_v3phd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -741,15 +751,16 @@ next_state = NodePath("../Idle")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_6rw3k")
+knockback_speed = 100.0
 drops = Array[ExtResource("11_s01br")]([SubResource("Resource_bb5ic")])
 
 [node name="HitBox" parent="." instance=ExtResource("9_m6qf0")]
 collision_mask = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, -11)
+position = Vector2(-0.5, -22)
 scale = Vector2(3, 3)
-shape = SubResource("CircleShape2D_herpx")
+shape = SubResource("RectangleShape2D_7ksux")
 debug_color = Color(0.92549, 0.215686, 0.423529, 0.419608)
 
 [node name="DestroyEffectSprite" type="Sprite2D" parent="."]
@@ -771,5 +782,5 @@ max_polyphony = 4
 [node name="hurt_box" parent="." instance=ExtResource("17_wsf84")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
-position = Vector2(0, -11)
-shape = SubResource("CircleShape2D_gfs4t")
+position = Vector2(0, -21)
+shape = SubResource("RectangleShape2D_gjmbv")

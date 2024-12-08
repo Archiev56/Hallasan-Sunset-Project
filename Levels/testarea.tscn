@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Leaves/Magicleaves.tscn" id="20_36bc0"]
 [ext_resource type="PackedScene" uid="uid://dyufjm1518vwi" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Goblin.tscn" id="22_s01vy"]
 [ext_resource type="PackedScene" uid="uid://dlqhudwfc155o" path="res://Hallasan-Sunset/Environment/Log/log.tscn" id="23_wbjvc"]
-[ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot 3.tscn" id="24_a6a1w"]
+[ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot.tscn" id="24_a6a1w"]
 [ext_resource type="PackedScene" uid="uid://5ympmnaidvus" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/tree_stump.tscn" id="26_k2jfo"]
 
 [node name="Node2D" type="Node2D"]
@@ -74,7 +74,8 @@ npc_info = ExtResource("9_kfn1s")
 
 [node name="LevelTransition2" parent="Transitions" instance=ExtResource("11_rnpyd")]
 position = Vector2(263, 68)
-level = "res://Hallasan-Sunset/Levels/Act1/dungeon_1.tscn"
+level = "res://Hallasan-Sunset/Levels/Act1/Dungeon_Lobby.tscn"
+target_transition_area = "LevelTransition2"
 size = 1
 side = 2
 
