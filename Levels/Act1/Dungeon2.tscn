@@ -22,10 +22,10 @@ position = Vector2(314, 178)
 position = Vector2(282, 83)
 
 [node name="Torch" parent="." instance=ExtResource("4_rl28o")]
-position = Vector2(243, 49)
+position = Vector2(238, 76)
 
 [node name="Torch2" parent="." instance=ExtResource("4_rl28o")]
-position = Vector2(387, 49)
+position = Vector2(382, 76)
 
 [node name="LevelTransition" parent="." instance=ExtResource("6_byfq6")]
 position = Vector2(312, 352)
@@ -36,6 +36,6 @@ side = 3
 
 [node name="LevelTransition4" parent="." instance=ExtResource("6_byfq6")]
 position = Vector2(314, 88)
-level = "res://Levels/Act1/Dungeon5.tscn"
+level = "res://Hallasan-Sunset/Levels/Act1/Dungeon5.tscn"
 size = 1
 side = 2

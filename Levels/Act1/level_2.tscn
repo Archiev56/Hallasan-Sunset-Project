@@ -1,12 +1,14 @@
-[gd_scene load_steps=22 format=4 uid="uid://c712lfsg073ux"]
+[gd_scene load_steps=21 format=4 uid="uid://c712lfsg073ux"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_0blxm"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="2_d6doj"]
+[ext_resource type="AudioStream" uid="uid://c1oflqs0hyg72" path="res://Hallasan-Sunset/Audio/Song/Stream Loops 2024-06-05_01.ogg" id="2_f1am6"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_62wcu"]
 [ext_resource type="PackedScene" uid="uid://ba2vdtt3qp7p3" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorder.tscn" id="6_jhllq"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="7_7l64l"]
 [ext_resource type="PackedScene" uid="uid://0mf0ikb45n58" path="res://Hallasan-Sunset/Environment/Gate/gate_2.tscn" id="7_o38j6"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorderSide.tscn" id="9_mqwks"]
+[ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Wind/Wind.tscn" id="10_532y8"]
 [ext_resource type="PackedScene" uid="uid://ds6bxm232amrv" path="res://Hallasan-Sunset/Environment/Fog/Fog.tscn" id="10_l3yyp"]
 [ext_resource type="PackedScene" uid="uid://3c8o5hxduleo" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorderBottom.tscn" id="10_sdt8r"]
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Leaves/Magicleaves.tscn" id="11_f30tt"]
@@ -18,17 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://cal6ga32aayko" path="res://Hallasan-Sunset/Environment/Well/Well.tscn" id="16_jpxab"]
 [ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot.tscn" id="17_77gp8"]
 [ext_resource type="PackedScene" uid="uid://wwugboi7jgu" path="res://Hallasan-Sunset/Environment/Log Pile/Log Pile.tscn" id="18_nwg2a"]
-[ext_resource type="PackedScene" uid="uid://dc6lo3whucr6e" path="res://Hallasan-Sunset/npc/npc.tscn" id="19_88j6c"]
-[ext_resource type="Resource" uid="uid://xqyqgwhh0qqu" path="res://Hallasan-Sunset/npc/Characters/Sansin/Sansin.tres" id="20_h2h3r"]
-[ext_resource type="PackedScene" uid="uid://cou4euvvaw0ml" path="res://Hallasan-Sunset/UI/Dialogue_system/dialogue_interaction.tscn" id="21_lx40f"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_0blxm")
-
-[node name="LevelTransition" parent="." instance=ExtResource("2_d6doj")]
-position = Vector2(384, 714)
-level = "res://Hallasan-Sunset/Levels/testarea.tscn"
-side = 3
+music = ExtResource("2_f1am6")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("7_7l64l")]
 position = Vector2(384, 80)
@@ -87,6 +82,8 @@ position = Vector2(795, 789)
 [node name="MagicLeaves" parent="Environment/Weather" instance=ExtResource("11_f30tt")]
 position = Vector2(558, 629)
 
+[node name="Wind" parent="Environment/Weather" instance=ExtResource("10_532y8")]
+
 [node name="Objects" type="Node" parent="Environment"]
 
 [node name="Outhouse" parent="Environment/Objects" instance=ExtResource("12_vx2sc")]
@@ -126,11 +123,17 @@ position = Vector2(32, 96)
 [node name="Totem1" parent="NPC\'s" instance=ExtResource("14_o4e6e")]
 position = Vector2(264, 608)
 
+[node name="Transitions" type="Node" parent="."]
+
+[node name="LevelTransition2" parent="Transitions" instance=ExtResource("2_d6doj")]
+z_index = 100
+position = Vector2(384, 11)
+level = "res://Hallasan-Sunset/Levels/Act1/level_01.tscn"
+side = 2
+
+[node name="LevelTransition" parent="Transitions" instance=ExtResource("2_d6doj")]
+position = Vector2(384, 714)
+level = "res://Hallasan-Sunset/Levels/Act1/level_3.tscn"
+side = 3
+
 [node name="Enemies" type="Node" parent="."]
-
-[node name="NPC" parent="." instance=ExtResource("19_88j6c")]
-texture_filter = 1
-position = Vector2(254, 163)
-npc_resource = ExtResource("20_h2h3r")
-
-[node name="DialogueInteraction" parent="NPC" instance=ExtResource("21_lx40f")]

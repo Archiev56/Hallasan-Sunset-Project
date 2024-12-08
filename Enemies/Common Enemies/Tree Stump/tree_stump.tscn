@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://5ympmnaidvus"]
+[gd_scene load_steps=56 format=3 uid="uid://5ympmnaidvus"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_7vw80"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="2_q1u30"]
@@ -17,7 +17,6 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_tfda5"]
 [ext_resource type="Texture2D" uid="uid://bioe7krs3wk0e" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-2 11.png" id="10_k4s3j"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_vdwbv"]
-[ext_resource type="Resource" uid="uid://cjn2xlrxf22gp" path="res://Hallasan-Sunset/Items/Corndog/Corndog.tres" id="11_36ejc"]
 [ext_resource type="Texture2D" uid="uid://du07fdisrwq21" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-3 11.png" id="11_f3d7y"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Drop Data/drop_data.gd" id="12_q6cmd"]
 [ext_resource type="Texture2D" uid="uid://d4dhcek1d0hk2" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 56.png" id="12_yuel8"]
@@ -26,6 +25,9 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="14_urhcl"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="15_x42rq"]
 [ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Vision Area/Vision_area.tscn" id="17_ks3fr"]
+[ext_resource type="Resource" uid="uid://kp6gn8ous75v" path="res://Hallasan-Sunset/Items/Coins/Silver Coin/Silver Coin.tres" id="22_qp84q"]
+[ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Coins/Gold Coin/Gold Coin.tres" id="23_o5eux"]
+[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Coins/Coin Stack/Coin Stack.tres" id="24_ri7as"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4t8og"]
 radius = 13.3333
@@ -715,8 +717,22 @@ height = 20.0
 
 [sub_resource type="Resource" id="Resource_bb5ic"]
 script = ExtResource("12_q6cmd")
-item = ExtResource("11_36ejc")
-probability = 100.0
+item = ExtResource("22_qp84q")
+probability = 70.0
+min_amount = 1
+max_amount = 3
+
+[sub_resource type="Resource" id="Resource_0xi25"]
+script = ExtResource("12_q6cmd")
+item = ExtResource("23_o5eux")
+probability = 50.0
+min_amount = 1
+max_amount = 2
+
+[sub_resource type="Resource" id="Resource_keree"]
+script = ExtResource("12_q6cmd")
+item = ExtResource("24_ri7as")
+probability = 20.0
 min_amount = 1
 max_amount = 1
 
@@ -843,7 +859,7 @@ next_state = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_vdwbv")
-drops = Array[ExtResource("12_q6cmd")]([SubResource("Resource_bb5ic")])
+drops = Array[ExtResource("12_q6cmd")]([SubResource("Resource_bb5ic"), SubResource("Resource_0xi25"), SubResource("Resource_keree")])
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
 script = ExtResource("14_urhcl")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://0uw5235d8xhl"]
+[gd_scene load_steps=50 format=3 uid="uid://0uw5235d8xhl"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_44gfu"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="1_etj4l"]
@@ -17,13 +17,15 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="10_trauc"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="11_bamqg"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Drop Data/drop_data.gd" id="11_s01br"]
-[ext_resource type="Resource" uid="uid://cjn2xlrxf22gp" path="res://Hallasan-Sunset/Items/Corndog/Corndog.tres" id="11_uem30"]
 [ext_resource type="Texture2D" uid="uid://bao6u4j0tssr0" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-1 19.png" id="11_yt2gu"]
 [ext_resource type="Texture2D" uid="uid://b88cyaf6mb8bq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-2 13.png" id="12_7dy00"]
 [ext_resource type="Texture2D" uid="uid://b1g8vvkvadq5m" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-3 13.png" id="13_i3olk"]
 [ext_resource type="Texture2D" uid="uid://d4ivxyhthe3kw" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-4 9.png" id="14_6sekb"]
 [ext_resource type="Texture2D" uid="uid://fes8ca8mjll6" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-5 5.png" id="15_fse6d"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="17_wsf84"]
+[ext_resource type="Resource" uid="uid://kp6gn8ous75v" path="res://Hallasan-Sunset/Items/Coins/Silver Coin/Silver Coin.tres" id="21_najnc"]
+[ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Coins/Gold Coin/Gold Coin.tres" id="22_gywgk"]
+[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Coins/Coin Stack/Coin Stack.tres" id="23_phpvk"]
 
 [sub_resource type="Animation" id="Animation_wnokj"]
 length = 0.001
@@ -633,8 +635,22 @@ height = 20.0
 
 [sub_resource type="Resource" id="Resource_bb5ic"]
 script = ExtResource("11_s01br")
-item = ExtResource("11_uem30")
-probability = 100.0
+item = ExtResource("21_najnc")
+probability = 80.0
+min_amount = 1
+max_amount = 3
+
+[sub_resource type="Resource" id="Resource_mv5j7"]
+script = ExtResource("11_s01br")
+item = ExtResource("22_gywgk")
+probability = 40.0
+min_amount = 1
+max_amount = 2
+
+[sub_resource type="Resource" id="Resource_gu5vd"]
+script = ExtResource("11_s01br")
+item = ExtResource("23_phpvk")
+probability = 20.0
 min_amount = 1
 max_amount = 1
 
@@ -752,7 +768,7 @@ next_state = NodePath("../Idle")
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_6rw3k")
 knockback_speed = 100.0
-drops = Array[ExtResource("11_s01br")]([SubResource("Resource_bb5ic")])
+drops = Array[ExtResource("11_s01br")]([SubResource("Resource_bb5ic"), SubResource("Resource_mv5j7"), SubResource("Resource_gu5vd")])
 
 [node name="HitBox" parent="." instance=ExtResource("9_m6qf0")]
 collision_mask = 1

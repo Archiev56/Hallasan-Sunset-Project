@@ -1,15 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2exepqmaxt58"]
+[gd_scene load_steps=7 format=3 uid="uid://c2exepqmaxt58"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.gd" id="1_1jiej"]
-[ext_resource type="PackedScene" path="res://Technical/Actionable/actionable.tscn" id="2_hkovj"]
-[ext_resource type="Resource" path="res://npc/Characters/Slick/Slick.dialogue" id="3_q0xqe"]
+[ext_resource type="Texture2D" uid="uid://capuwy3tmarls" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.png" id="2_lifig"]
 [ext_resource type="Texture2D" uid="uid://b4t545bdrwqij" path="res://Hallasan-Sunset/UI/Keys/Space-Key.png" id="4_pb26p"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ocye3"]
-load_path = "res://.godot/imported/Slick.png-daa744eaed12931588f7fd506d4abeef.ctex"
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_d6s4c"]
-radius = 41.1947
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7osou"]
 atlas = ExtResource("4_pb26p")
@@ -38,27 +31,15 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hn8g6"]
-radius = 57.0088
-
-[node name="StaticBody2D" type="StaticBody2D"]
-scale = Vector2(1.5, 1.5)
+[node name="Slick" type="StaticBody2D"]
 script = ExtResource("1_1jiej")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = SubResource("CompressedTexture2D_ocye3")
+texture = ExtResource("2_lifig")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-30, 31, -38, 23, -41, 16, -40, 4, -1, 2, 5, -1, 26, 0, 27, 6, 40, 12, 38, 29, 24, 31)
-
-[node name="Actionable" parent="." instance=ExtResource("2_hkovj")]
-dialogue_resource = ExtResource("3_q0xqe")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(0, 28)
-shape = SubResource("CircleShape2D_d6s4c")
-debug_color = Color(0, 0.65098, 0.133333, 0.419608)
 
 [node name="X" type="AnimatedSprite2D" parent="."]
 z_index = 100
@@ -68,13 +49,3 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_4meb1")
 autoplay = "default"
 speed_scale = 0.3
-
-[node name="Area2D" type="Area2D" parent="."]
-unique_name_in_owner = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 48)
-shape = SubResource("CircleShape2D_hn8g6")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

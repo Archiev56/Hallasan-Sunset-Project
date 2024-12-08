@@ -42,12 +42,12 @@ _data = {
 "RESET": SubResource("Animation_lnkrl")
 }
 
-[sub_resource type="Gradient" id="Gradient_eol0w"]
+[sub_resource type="Gradient" id="Gradient_v8w6g"]
 offsets = PackedFloat32Array(0, 0.179266, 0.568035, 0.924406, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 0.983333, 0, 1, 1, 0.505882, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_pol7p"]
-gradient = SubResource("Gradient_eol0w")
+gradient = SubResource("Gradient_v8w6g")
 width = 256
 height = 256
 fill = 1

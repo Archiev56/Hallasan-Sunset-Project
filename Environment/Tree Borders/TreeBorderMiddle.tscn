@@ -13,7 +13,7 @@ shader_parameter/WindStrength = 10.0
 a = Vector2(-282, 170)
 b = Vector2(12.0006, 170)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Tree Border Middle" type="StaticBody2D"]
 z_index = 5
 position = Vector2(-73, 33)
 collision_layer = 16
