@@ -107,3 +107,15 @@ position = Vector2(999, 542)
 position = Vector2(1162, 467)
 
 [node name="Items" type="Node" parent="."]
+
+[node name="Tree Border Down" parent="." instance=ExtResource("7_ji4af")]
+position = Vector2(739, 719)
+
+[node name="Tree Border Down2" parent="." instance=ExtResource("7_ji4af")]
+position = Vector2(1036, 719)
+
+[node name="Tree Border Down3" parent="." instance=ExtResource("7_ji4af")]
+position = Vector2(367, 719)
+
+[node name="Tree Border Down4" parent="." instance=ExtResource("7_ji4af")]
+position = Vector2(77, 719)
