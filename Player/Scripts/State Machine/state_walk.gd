@@ -1,17 +1,21 @@
 class_name State_Walk extends State
 
+
 @export var move_speed: float = 200.0
 @export var dash_speed: float = 200.0
 @export var dash_duration: float = 0.2  # Duration of the dash in seconds
-@export var max_speed: float = 80.0
+@export var max_speed: float = 75.0
 @export var accel: float = 1200.0
 @export var friction: float = 600.0
+
 @onready var idle: State = $"../Idle"
 @onready var attack: State = $"../Attack"
 @onready var walk_left_audio: AudioStreamPlayer2D = $"../../Audio/Walk"
 @onready var dust_particles: GPUParticles2D = $"../../DustParticles"
 @onready var dash_particles: GPUParticles2D = $"../../DashParticles"  # Optional: for dash effect
 @onready var dash = $"../../Audio/Dash"
+@onready var hit_box = $"../../Interactions/HitBox"
+@onready var animation_player = $"../../AnimationPlayer"
 
 var sound_cooldown: float = 0.0
 var is_dashing: bool = false
@@ -37,7 +41,9 @@ func Process(_delta: float) -> State:
 		dash_timer -= _delta
 		if dash_timer <= 0.0:
 			is_dashing = false
+			hit_box.is_invulnerable = false
 			player.velocity = player.direction * move_speed
+			player.UpdateAnimation("walk")  # Ensure animation reverts to walk
 			if dash_particles:
 				dash_particles.emitting = false
 	else:
@@ -86,8 +92,18 @@ func get_input() -> Vector2:
 
 func start_dashing():
 	is_dashing = true
+	player.UpdateAnimation("dodge")
+	animation_player.play("dodge_" + player.AnimDirection())
+	hit_box.is_invulnerable = true
 	dash.play()
 	dash_timer = dash_duration
 	player.velocity = player.direction * dash_speed
 	if dash_particles:
 		dash_particles.emitting = true
+
+func _on_AnimationPlayer_animation_finished(animation_name: String):
+	if animation_name.begins_with("dodge_"):  # If a dodge animation ends
+		if player.direction != Vector2.ZERO:
+			player.UpdateAnimation("walk")
+		else:
+			player.UpdateAnimation("idle")

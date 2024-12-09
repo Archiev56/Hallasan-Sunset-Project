@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ba2vdtt3qp7p3"]
+[gd_scene load_steps=6 format=3 uid="uid://ba2vdtt3qp7p3"]
 
 [ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_1k2ju"]
 [ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="2_wuyhu"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_k2cos"]
-[ext_resource type="Texture2D" uid="uid://cu5suodsm6h7b" path="res://Hallasan-Sunset/Environment/Plant/Plant 1.png" id="5_5kwh3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
 shader = ExtResource("1_1k2ju")
@@ -54,35 +53,3 @@ modulate = Color(0, 0, 0, 0.286275)
 texture_filter = 1
 position = Vector2(156, 48)
 scale = Vector2(4, 4)
-
-[node name="Plant3" type="Sprite2D" parent="."]
-position = Vector2(135, 78)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant2" type="Sprite2D" parent="."]
-position = Vector2(190, 77)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant4" type="Sprite2D" parent="."]
-position = Vector2(-80, 62)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant5" type="Sprite2D" parent="."]
-position = Vector2(45, 83)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant9" type="Sprite2D" parent="."]
-position = Vector2(-54, 82)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant6" type="Sprite2D" parent="."]
-position = Vector2(74, 50)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant7" type="Sprite2D" parent="."]
-position = Vector2(101, 79)
-texture = ExtResource("5_5kwh3")
-
-[node name="Plant8" type="Sprite2D" parent="."]
-position = Vector2(221, 50)
-texture = ExtResource("5_5kwh3")

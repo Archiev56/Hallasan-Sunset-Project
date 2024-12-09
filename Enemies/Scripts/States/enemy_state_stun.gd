@@ -4,6 +4,7 @@ class_name EnemyStateStun extends EnemyState
 @export var anim_name : String = "hurt"
 @export var knockback_speed : float = 400.0
 @export var decelerate_speed : float = 10.0
+@onready var gpu_particles_2d = $GPUParticles2D
 
 @export_category("AI")
 @export var next_state : EnemyState
@@ -30,6 +31,7 @@ func enter() -> void:
 	
 	enemy.update_animation( anim_name )
 	enemy.animation_player.animation_finished.connect( _on_animation_finished )
+	
 	pass
 
 

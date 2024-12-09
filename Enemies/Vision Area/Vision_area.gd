@@ -2,6 +2,7 @@ class_name VisionArea extends Area2D
 
 signal player_entered()
 signal player_exited()
+@onready var animation_player_2 = get_node_or_null("../Notice/AnimationPlayer2")
 
 
 func _ready() -> void:
@@ -17,6 +18,8 @@ func _ready() -> void:
 func _on_body_enter( _b : Node2D ) -> void:
 	if _b is Player:
 		player_entered.emit()
+		animation_player_2.play('show')
+		
 	pass
 
 

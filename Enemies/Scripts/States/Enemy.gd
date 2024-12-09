@@ -14,6 +14,7 @@ var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 var player : Player
 var invulnerable : bool = false
+@onready var gpu_particles_2d = $GPUParticles2D
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite
@@ -78,6 +79,8 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 	if invulnerable == true:
 		return
 	hp -= hurt_box.damage
+	gpu_particles_2d.restart()
+	gpu_particles_2d.emitting = true
 	if hp > 0:
 		enemy_damaged.emit( hurt_box )
 	else:

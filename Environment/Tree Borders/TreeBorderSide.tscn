@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://mquiukhsvnvp"]
+[gd_scene load_steps=6 format=3 uid="uid://mquiukhsvnvp"]
 
 [ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_ntfeh"]
 [ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="2_w3cf6"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_8bgtj"]
-[ext_resource type="Texture2D" uid="uid://cu5suodsm6h7b" path="res://Hallasan-Sunset/Environment/Plant/Plant 1.png" id="4_86sbl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
 shader = ExtResource("1_ntfeh")
@@ -84,79 +83,3 @@ position = Vector2(-7, -182)
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_8bgtj")]
 z_index = 2
 position = Vector2(63, -272)
-
-[node name="Plant5" type="Sprite2D" parent="."]
-position = Vector2(159, 153)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant4" type="Sprite2D" parent="."]
-position = Vector2(49, 96)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant7" type="Sprite2D" parent="."]
-position = Vector2(167, 102)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant8" type="Sprite2D" parent="."]
-position = Vector2(6, 99)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant9" type="Sprite2D" parent="."]
-position = Vector2(-70, 95)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant10" type="Sprite2D" parent="."]
-position = Vector2(-24, 83)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant11" type="Sprite2D" parent="."]
-position = Vector2(43, 8)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant12" type="Sprite2D" parent="."]
-position = Vector2(29, -69)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant13" type="Sprite2D" parent="."]
-position = Vector2(50, -114)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant14" type="Sprite2D" parent="."]
-position = Vector2(104, -105)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant15" type="Sprite2D" parent="."]
-position = Vector2(-71, -47)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant16" type="Sprite2D" parent="."]
-position = Vector2(-77, -93)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant17" type="Sprite2D" parent="."]
-position = Vector2(32, -156)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant18" type="Sprite2D" parent="."]
-position = Vector2(13, -177)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant19" type="Sprite2D" parent="."]
-position = Vector2(136, -86)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant20" type="Sprite2D" parent="."]
-position = Vector2(154, -33)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant6" type="Sprite2D" parent="."]
-position = Vector2(57, 45)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant3" type="Sprite2D" parent="."]
-position = Vector2(163, -68)
-texture = ExtResource("4_86sbl")
-
-[node name="Plant2" type="Sprite2D" parent="."]
-position = Vector2(174, -9)
-texture = ExtResource("4_86sbl")

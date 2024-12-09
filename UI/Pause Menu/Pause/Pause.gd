@@ -64,8 +64,8 @@ func update_item_description( new_text : String ) -> void:
 func _on_main_menu_pressed():
 	# Ensure the game is unpaused and the pause menu is hidden before switching scenes
 	get_tree().paused = false
-	$".".hide()
-	get_tree().change_scene_to_file("res://UI/Main Menu/main_menu.tscn")
+	hide_pause_menu()
+	get_tree().change_scene_to_file("res://Hallasan-Sunset/UI/Main Menu/Main Menu.tscn")
 
 
 

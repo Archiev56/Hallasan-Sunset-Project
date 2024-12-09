@@ -1,13 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://cerpqrtpj4udh"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/WoodenSpike.gd" id="1_48smd"]
-[ext_resource type="Texture2D" uid="uid://dlttrild6yo1e" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Spikes/Untitled_Artwork-2 3.png" id="2_8oxc4"]
-[ext_resource type="Texture2D" uid="uid://dt0lrikx31x7m" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Spikes/Untitled_Artwork-1 9.png" id="3_qy4ya"]
-[ext_resource type="Texture2D" uid="uid://by68n1qsun6n1" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Spikes/Untitled_Artwork-3 3.png" id="4_0w66j"]
-[ext_resource type="Texture2D" uid="uid://cgrtmkkh6x6fp" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Spikes/Untitled_Artwork-4 2.png" id="5_5bng7"]
-[ext_resource type="Texture2D" uid="uid://ctoju3u0omc3r" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Spikes/Untitled_Artwork-5 2.png" id="6_2eyeo"]
+[ext_resource type="Texture2D" uid="uid://cljxd8nhur0fq" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Untitled_Artwork 61.png" id="3_6t0u0"]
+[ext_resource type="Texture2D" uid="uid://d30x31hlclxuc" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-2 14.png" id="4_1px77"]
+[ext_resource type="Texture2D" uid="uid://dibk1gij7kmuf" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-3 14.png" id="5_oigly"]
+[ext_resource type="Texture2D" uid="uid://bhq6pi0i0hiwc" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-4 10.png" id="6_3mchp"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="6_y57rj"]
-[ext_resource type="Texture2D" uid="uid://dmfclxs5oj4de" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Spikes/Untitled_Artwork-6.png" id="7_5v5xj"]
+[ext_resource type="Texture2D" uid="uid://yec72s8eru22" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-5 6.png" id="7_64360"]
+[ext_resource type="Texture2D" uid="uid://bh1kj65bxtwkk" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-6 4.png" id="8_wrngg"]
 
 [sub_resource type="Animation" id="Animation_nadug"]
 resource_name = "Nospike"
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_qy4ya")]
+"values": [ExtResource("3_6t0u0")]
 }
 
 [sub_resource type="Animation" id="Animation_72dd4"]
@@ -40,7 +40,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.025, 0.05, 0.075, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("2_8oxc4"), ExtResource("4_0w66j"), ExtResource("5_5bng7"), ExtResource("6_2eyeo"), ExtResource("7_5v5xj")]
+"values": [ExtResource("4_1px77"), ExtResource("5_oigly"), ExtResource("6_3mchp"), ExtResource("7_64360"), ExtResource("8_wrngg")]
 }
 
 [sub_resource type="Animation" id="Animation_geijt"]
@@ -56,7 +56,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("7_5v5xj"), ExtResource("6_2eyeo"), ExtResource("5_5bng7"), ExtResource("4_0w66j"), ExtResource("2_8oxc4"), ExtResource("3_qy4ya")]
+"values": [ExtResource("8_wrngg"), ExtResource("7_64360"), ExtResource("6_3mchp"), ExtResource("5_oigly"), ExtResource("4_1px77"), ExtResource("3_6t0u0")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1eqan"]
@@ -67,20 +67,19 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed5tt"]
-size = Vector2(31, 75)
+size = Vector2(25, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pn8do"]
-size = Vector2(13, 62)
+size = Vector2(13, 17)
 
 [node name="WoodenSpike" type="Area2D"]
-z_index = 5
 texture_filter = 1
 position = Vector2(0, -53)
 script = ExtResource("1_48smd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("3_qy4ya")
+texture = ExtResource("4_1px77")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -89,19 +88,16 @@ libraries = {
 autoplay = "Nospike"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 13.5)
+position = Vector2(0.5, 41.5)
 shape = SubResource("RectangleShape2D_ed5tt")
 
 [node name="hurt_box" parent="." instance=ExtResource("6_y57rj")]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
-position = Vector2(0, 22)
+position = Vector2(0, 44.5)
 shape = SubResource("RectangleShape2D_pn8do")
 debug_color = Color(0.92549, 0.239216, 0.345098, 0.419608)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="hurt_box"]
-root_node = NodePath("../../AnimationPlayer")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

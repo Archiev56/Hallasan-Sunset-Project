@@ -3,7 +3,6 @@
 [ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_6oeag"]
 [ext_resource type="Texture2D" uid="uid://hyganj4423ks" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Tree 4.png" id="2_tqb2p"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_a30po"]
-[ext_resource type="Texture2D" uid="uid://cu5suodsm6h7b" path="res://Hallasan-Sunset/Environment/Plant/Plant 1.png" id="4_hxu6y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
 shader = ExtResource("1_6oeag")
@@ -12,6 +11,10 @@ shader_parameter/WindStrength = 10.0
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_inlc4"]
 a = Vector2(-282, 170)
 b = Vector2(12.0006, 170)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_kn46w"]
+a = Vector2(-101, -178)
+b = Vector2(268, -178)
 
 [node name="Tree Border Middle" type="StaticBody2D"]
 z_index = 5
@@ -42,6 +45,12 @@ position = Vector2(68, 105)
 rotation = 1.5708
 shape = SubResource("SegmentShape2D_inlc4")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(68, 105)
+rotation = 1.5708
+shape = SubResource("SegmentShape2D_inlc4")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(438, 105)
@@ -60,103 +69,5 @@ position = Vector2(184, -227)
 z_index = 2
 position = Vector2(191, -30)
 
-[node name="Plant1" type="Sprite2D" parent="."]
-position = Vector2(150, 88)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(110, 57)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant22" type="Sprite2D" parent="."]
-position = Vector2(71, 67)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant23" type="Sprite2D" parent="."]
-position = Vector2(127, 27)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant24" type="Sprite2D" parent="."]
-position = Vector2(84, 29)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant25" type="Sprite2D" parent="."]
-position = Vector2(249, -74)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant3" type="Sprite2D" parent="."]
-position = Vector2(239, 75)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant4" type="Sprite2D" parent="."]
-position = Vector2(248, -39)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant5" type="Sprite2D" parent="."]
-position = Vector2(245, 23)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant6" type="Sprite2D" parent="."]
-position = Vector2(226, -98)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant7" type="Sprite2D" parent="."]
-position = Vector2(247, -143)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant8" type="Sprite2D" parent="."]
-position = Vector2(16, -135)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant9" type="Sprite2D" parent="."]
-position = Vector2(46, -184)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant10" type="Sprite2D" parent="."]
-position = Vector2(107, -186)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant11" type="Sprite2D" parent="."]
-position = Vector2(-66, -141)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant12" type="Sprite2D" parent="."]
-position = Vector2(-74, -81)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant13" type="Sprite2D" parent="."]
-position = Vector2(-76, 34)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant14" type="Sprite2D" parent="."]
-position = Vector2(-36, 84)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant15" type="Sprite2D" parent="."]
-position = Vector2(32, 94)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant16" type="Sprite2D" parent="."]
-position = Vector2(-73, 87)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant17" type="Sprite2D" parent="."]
-position = Vector2(-79, -35)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant18" type="Sprite2D" parent="."]
-position = Vector2(-82, -118)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant19" type="Sprite2D" parent="."]
-position = Vector2(150, 43)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant20" type="Sprite2D" parent="."]
-position = Vector2(108, 94)
-texture = ExtResource("4_hxu6y")
-
-[node name="Plant21" type="Sprite2D" parent="."]
-position = Vector2(74, -182)
-texture = ExtResource("4_hxu6y")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_kn46w")

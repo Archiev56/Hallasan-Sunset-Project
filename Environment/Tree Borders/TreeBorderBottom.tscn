@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://3c8o5hxduleo"]
+[gd_scene load_steps=6 format=3 uid="uid://3c8o5hxduleo"]
 
 [ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_wf80h"]
 [ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="2_67xqn"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_gejlw"]
-[ext_resource type="Texture2D" uid="uid://cu5suodsm6h7b" path="res://Hallasan-Sunset/Environment/Plant/Plant 1.png" id="4_wji6s"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
 shader = ExtResource("1_wf80h")
@@ -72,42 +71,6 @@ texture = ExtResource("2_67xqn")
 [node name="StaticBody2D" parent="." instance=ExtResource("3_gejlw")]
 z_index = 2
 position = Vector2(64, -258)
-
-[node name="Plant2" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-37, 95)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant3" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(144, 209)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant4" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(231, 94)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant5" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(199, 189)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant6" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-78, 233)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant7" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-134, 225)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant8" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-153, 179)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant9" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-181, 146)
-texture = ExtResource("4_wji6s")
-
-[node name="Plant10" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(177, 224)
-texture = ExtResource("4_wji6s")
 
 [node name="StaticBody2D2" parent="." instance=ExtResource("3_gejlw")]
 z_index = 2
