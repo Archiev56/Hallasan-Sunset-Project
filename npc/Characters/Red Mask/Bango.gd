@@ -31,4 +31,3 @@ func _process(delta):
 		interact_label.visible = false
 
 # Function to start the conversation
-

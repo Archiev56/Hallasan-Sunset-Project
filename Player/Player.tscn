@@ -1,4 +1,4 @@
-[gd_scene load_steps=241 format=3 uid="uid://cbctfc3oob7kd"]
+[gd_scene load_steps=242 format=3 uid="uid://cbctfc3oob7kd"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Player.gd" id="1_l265g"]
 [ext_resource type="Texture2D" uid="uid://c2mkqyimkv68w" path="res://Hallasan-Sunset/Player/Animations/Spin Attack/Untitled_Artwork-5 3.png" id="2_1g1fs"]
@@ -103,6 +103,7 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_charge_attack.gd" id="86_ykiv8"]
 [ext_resource type="Texture2D" uid="uid://sno485bp17m0" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_side/Untitled_Artwork 43.png" id="87_il5wr"]
 [ext_resource type="Texture2D" uid="uid://dw4wsr38eyrk7" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_side/Untitled_Artwork-4 7.png" id="88_fdk8q"]
+[ext_resource type="Texture2D" uid="uid://s8qirkkfomjs" path="res://Hallasan-Sunset/Player/Animations/Dodge/Dodge_side/Untitled_Artwork 67.png" id="88_ptyc0"]
 [ext_resource type="Texture2D" uid="uid://isn2l4qba2d0" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_side/Untitled_Artwork-5 3.png" id="89_1uinj"]
 [ext_resource type="Texture2D" uid="uid://cgnrmain2bo8r" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_side/Untitled_Artwork-6 2.png" id="90_ogftw"]
 [ext_resource type="Texture2D" uid="uid://c5k5hkdccu20y" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_side/Untitled_Artwork-7.png" id="91_702u5"]
@@ -1192,8 +1193,8 @@ tracks/0/keys = {
 "values": [ExtResource("75_20pjw"), ExtResource("76_hmbot"), ExtResource("2_1huh3")]
 }
 
-[sub_resource type="Animation" id="Animation_0sl3b"]
-resource_name = "dodge_side"
+[sub_resource type="Animation" id="Animation_kuby1"]
+resource_name = "dodge_down"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1204,7 +1205,62 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("143_6iffp"), ExtResource("143_6iffp")]
+"values": [ExtResource("145_by7y5"), ExtResource("145_by7y5")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_0sl3b"]
+resource_name = "dodge_side"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("88_ptyc0"), ExtResource("143_6iffp"), ExtResource("143_6iffp"), ExtResource("88_ptyc0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_wnbtq"]
+resource_name = "dodge_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("144_mry8x"), ExtResource("144_mry8x")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -1526,60 +1582,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_wnbtq"]
-resource_name = "dodge_up"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("144_mry8x"), ExtResource("144_mry8x")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 10)]
-}
-
-[sub_resource type="Animation" id="Animation_kuby1"]
-resource_name = "dodge_down"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("145_by7y5"), ExtResource("145_by7y5")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 10)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qdnul"]

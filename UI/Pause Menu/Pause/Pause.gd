@@ -3,9 +3,10 @@ extends CanvasLayer
 signal shown
 signal hidden
 
-@onready var button_save: Button = $Control/VBoxContainer/Button_save
-@onready var button_load: Button = $Control/VBoxContainer/Button_load
-@onready var item_description: Label = $Control/ItemDescription
+@onready var tab_container = $TabContainer
+@onready var button_save: Button = $TabContainer/System/VBoxContainer/Button_save
+@onready var button_load: Button = $TabContainer/System/VBoxContainer/Button_load
+@onready var item_description: Label = $TabContainer/Inventory/ItemDescription
 @onready var audio_stream_player: AudioStreamPlayer2D = $Control/AudioStreamPlayer2D
 
 var is_paused : bool = false
@@ -27,11 +28,18 @@ func _unhandled_input(event: InputEvent) -> void:
 			hide_pause_menu()
 		get_viewport().set_input_as_handled()
 		
-		
+	if is_paused:
+		if event.is_action_pressed("right_bumper"):
+			change_tab( 1 )
+		elif event.is_action_pressed("left_bumper"):
+			change_tab( -1 )
+
+
 func show_pause_menu() -> void:
 	get_tree().paused = true
 	visible = true
 	is_paused = true
+	tab_container.current_tab = 0
 	shown.emit()
 
 func hide_pause_menu() -> void:
@@ -77,3 +85,11 @@ func _on_quit_pressed():
 func play_audio( audio : AudioStream ) -> void:
 	audio_stream_player.stream = audio
 	audio_stream_player.play()
+	
+func change_tab( _i : int = 1 ) -> void:
+	tab_container.current_tab = wrapi(
+			tab_container.current_tab + _i,
+			0,
+			tab_container.get_tab_count()
+		)
+	tab_container.get_tab_bar().grab_focus()

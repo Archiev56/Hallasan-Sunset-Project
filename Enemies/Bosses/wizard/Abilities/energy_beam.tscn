@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://coo8ikr7qo8wg" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/energy-beam.png" id="1_dnphu"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/energy_beam_sprite.gd" id="3_0v650"]
 [ext_resource type="Texture2D" uid="uid://c2w6458qbuqdr" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/energy-beam-large.png" id="4_18ha1"]
-[ext_resource type="AudioStream" uid="uid://bivx6h0ffc6yb" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Audio/boss_beam.wav" id="5_7glpx"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="5_364j5"]
+[ext_resource type="AudioStream" uid="uid://cm8r1bq10h7wp" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Audio/beam.mp3" id="6_bfhcr"]
 
 [sub_resource type="Animation" id="Animation_bwluu"]
 length = 0.001
@@ -144,7 +144,7 @@ tracks/5/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_7glpx")
+"stream": ExtResource("6_bfhcr")
 }],
 "times": PackedFloat32Array(2)
 }

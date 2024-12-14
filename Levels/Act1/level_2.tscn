@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://c712lfsg073ux"]
+[gd_scene load_steps=22 format=4 uid="uid://c712lfsg073ux"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_0blxm"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="2_d6doj"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://obenohw15alg" path="res://Hallasan-Sunset/Environment/Crate/Crate.tscn" id="15_mcp0t"]
 [ext_resource type="PackedScene" uid="uid://cal6ga32aayko" path="res://Hallasan-Sunset/Environment/Well/Well.tscn" id="16_jpxab"]
 [ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot.tscn" id="17_77gp8"]
+[ext_resource type="PackedScene" uid="uid://d2vp57kytlw30" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/fire_trap.tscn" id="18_ipfqk"]
 [ext_resource type="PackedScene" uid="uid://wwugboi7jgu" path="res://Hallasan-Sunset/Environment/Log Pile/Log Pile.tscn" id="18_nwg2a"]
 
 [node name="Level2" type="Node2D"]
@@ -93,6 +94,7 @@ position = Vector2(88, 56)
 position = Vector2(384, 424)
 
 [node name="Magic Tree" parent="Environment/Objects" instance=ExtResource("13_lo27o")]
+z_index = 10
 position = Vector2(568, 248)
 
 [node name="LogPile" parent="Environment/Objects" instance=ExtResource("18_nwg2a")]
@@ -106,6 +108,9 @@ position = Vector2(40, 416)
 
 [node name="Wooden Crate" parent="Environment/Objects" instance=ExtResource("15_mcp0t")]
 position = Vector2(280, 80)
+
+[node name="Fire Trap" parent="Environment/Objects" instance=ExtResource("18_ipfqk")]
+position = Vector2(381, 180)
 
 [node name="Interactables" type="Node" parent="Environment"]
 

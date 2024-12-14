@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bv18n10sdmxlc"]
+[gd_scene load_steps=18 format=3 uid="uid://bv18n10sdmxlc"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/Pause.gd" id="1_n04mh"]
 [ext_resource type="Texture2D" uid="uid://boinh7toy2duf" path="res://Hallasan-Sunset/UI/Inventory/book_middle.png" id="2_uxl7v"]
@@ -6,10 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://dbhpg6jr5px7x" path="res://Hallasan-Sunset/UI/Inventory/LargeBackground.png" id="3_55hyt"]
 [ext_resource type="Texture2D" uid="uid://bc7cmbl8u1m6q" path="res://Hallasan-Sunset/UI/Inventory/Banner.png" id="4_xky3d"]
 [ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="5_jplde"]
-[ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="5_r8eb1"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/inventory_ui.gd" id="6_cms6o"]
 [ext_resource type="PackedScene" uid="uid://nbdb7nut6dh2" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/inventory_slot.tscn" id="6_ye6ht"]
-[ext_resource type="Resource" uid="uid://dcqu1flenu416" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/player_inventory.tres" id="7_gdv8y"]
+[ext_resource type="Resource" uid="uid://dcqu1flenu416" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/player_inventory.tres" id="7_gdv8y"]
+[ext_resource type="PackedScene" uid="uid://v0k1yqv8sn7u" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_item.tscn" id="10_0fcl2"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quests_ui.gd" id="10_wsuh3"]
+[ext_resource type="PackedScene" uid="uid://1uaklgsuboha" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_step_item.tscn" id="12_re7xn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0vv8"]
+texture = ExtResource("3_55hyt")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3aiy"]
 bg_color = Color(0.129412, 0.588235, 0.32549, 1)
@@ -39,154 +48,81 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0vv8"]
-texture = ExtResource("3_55hyt")
-texture_margin_left = 24.0
-texture_margin_top = 24.0
-texture_margin_right = 24.0
-texture_margin_bottom = 24.0
-
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
 layer = 100
 script = ExtResource("1_n04mh")
 
 [node name="Control" type="Control" parent="."]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
-
-[node name="BookMiddle" type="Sprite2D" parent="Control"]
-texture_filter = 1
-position = Vector2(323, 177)
-texture = ExtResource("2_uxl7v")
-
-[node name="LargeBackground" type="Sprite2D" parent="Control"]
-position = Vector2(252.578, 234.789)
-scale = Vector2(0.0776143, 0.0569845)
-texture = ExtResource("3_55hyt")
-
-[node name="Banner" type="Sprite2D" parent="Control"]
-position = Vector2(253, 88.875)
-scale = Vector2(0.283654, 0.475352)
-texture = ExtResource("4_xky3d")
-
-[node name="Description" type="Label" parent="Control"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 176.0
-offset_top = 205.0
-offset_right = 338.0
-offset_bottom = 224.0
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 16
-text = "Description: "
-horizontal_alignment = 1
-
-[node name="Inventory" type="Label" parent="Control"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 172.0
-offset_top = 80.0
-offset_right = 334.0
-offset_bottom = 112.0
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 16
-text = "INVENTORY"
-horizontal_alignment = 1
-
-[node name="ItemDescription" type="Label" parent="Control"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 205.0
-offset_top = 218.0
-offset_right = 301.0
-offset_bottom = 259.0
-theme_override_colors/font_color = Color(0.129412, 0.588235, 0.32549, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 16
-text = "heklmrfesdc"
-autowrap_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 30.0
-offset_top = -86.0
-offset_right = 130.0
-offset_bottom = 66.0
-grow_horizontal = 2
-grow_vertical = 2
 theme = ExtResource("3_2l1ry")
 
-[node name="Label" type="Label" parent="Control/VBoxContainer"]
+[node name="Label" type="Label" parent="Control"]
 texture_filter = 1
 layout_mode = 2
+offset_left = 510.0
+offset_top = 7.0
+offset_right = 610.0
+offset_bottom = 27.0
 theme = ExtResource("3_2l1ry")
 theme_override_fonts/font = ExtResource("5_jplde")
 theme_override_font_sizes/font_size = 32
 text = "Paused"
 horizontal_alignment = 1
 
-[node name="Button_save" type="Button" parent="Control/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_fonts/font = ExtResource("5_r8eb1")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_h3aiy")
-text = "Save"
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
 
-[node name="Button_load" type="Button" parent="Control/VBoxContainer"]
+[node name="BookMiddle" type="Sprite2D" parent="Control"]
+visible = false
 texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_dsbfc")
-text = "Load
-"
+position = Vector2(323, 177)
+texture = ExtResource("2_uxl7v")
 
-[node name="Button_load2" type="Button" parent="Control/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_fnsqn")
-text = "Settings"
-
-[node name="Button_load3" type="Button" parent="Control/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fuv5")
-text = "Main Menu"
-
-[node name="Button_load4" type="Button" parent="Control/VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_7fuv5")
-text = "Quit"
-
-[node name="PanelContainer" type="PanelContainer" parent="Control"]
-texture_filter = 1
+[node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_left = 168.0
-offset_top = 80.0
-offset_right = 336.0
-offset_bottom = 224.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
+
+[node name="Inventory" type="Control" parent="TabContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("3_2l1ry")
+metadata/_tab_index = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="TabContainer/Inventory"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -72.0
+offset_right = 84.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_o0vv8")
 
-[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Inventory/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -194,23 +130,229 @@ columns = 3
 script = ExtResource("6_cms6o")
 data = ExtResource("7_gdv8y")
 
-[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+[node name="InventorySlot" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
-[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+[node name="InventorySlot2" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
-[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+[node name="InventorySlot3" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
-[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+[node name="InventorySlot4" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
-[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+[node name="InventorySlot5" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
-[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+[node name="InventorySlot6" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
-[connection signal="pressed" from="Control/VBoxContainer/Button_load3" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Button_load4" to="." method="_on_quit_pressed"]
+[node name="Banner" type="Sprite2D" parent="TabContainer/Inventory"]
+position = Vector2(310, 102)
+scale = Vector2(0.283654, 0.475352)
+texture = ExtResource("4_xky3d")
+
+[node name="LargeBackground" type="Sprite2D" parent="TabContainer/Inventory"]
+position = Vector2(312, 251)
+scale = Vector2(0.0776143, 0.0569845)
+texture = ExtResource("3_55hyt")
+
+[node name="Description" type="Label" parent="TabContainer/Inventory"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 234.0
+offset_top = 221.0
+offset_right = 396.0
+offset_bottom = 240.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 16
+text = "Description: "
+horizontal_alignment = 1
+
+[node name="Inventory" type="Label" parent="TabContainer/Inventory"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 230.0
+offset_top = 91.0
+offset_right = 392.0
+offset_bottom = 123.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 16
+text = "INVENTORY"
+horizontal_alignment = 1
+
+[node name="ItemDescription" type="Label" parent="TabContainer/Inventory"]
+texture_filter = 1
+layout_mode = 2
+offset_left = 264.0
+offset_top = 233.0
+offset_right = 360.0
+offset_bottom = 274.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.129412, 0.588235, 0.32549, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 16
+text = "heklmrfesdc"
+autowrap_mode = 2
+
+[node name="Quests" type="Control" parent="TabContainer"]
+visible = false
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("3_2l1ry")
+script = ExtResource("10_wsuh3")
+metadata/_tab_index = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Quests"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 35.0
+offset_right = 327.0
+offset_bottom = 314.0
+follow_focus = true
+scroll_vertical_custom_step = 100.0
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Quests/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Quests/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="QuestItem" parent="TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("10_0fcl2")]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+
+[node name="QuestItem2" parent="TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("10_0fcl2")]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+
+[node name="QuestItem3" parent="TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("10_0fcl2")]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+
+[node name="QuestItem4" parent="TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("10_0fcl2")]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+
+[node name="QuestItem5" parent="TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("10_0fcl2")]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+
+[node name="QuestItem6" parent="TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("10_0fcl2")]
+custom_minimum_size = Vector2(245, 50)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Quests"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 37.0
+offset_right = 582.0
+offset_bottom = 95.0
+
+[node name="TitleLabel" type="Label" parent="TabContainer/Quests/VBoxContainer"]
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quest Title: "
+autowrap_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="TabContainer/Quests/VBoxContainer"]
+modulate = Color(0.75, 0.75, 0.75, 1)
+custom_minimum_size = Vector2(245, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Quest Description
+"
+autowrap_mode = 2
+
+[node name="SpacerControl" type="Control" parent="TabContainer/Quests/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="QuestStepItem" parent="TabContainer/Quests/VBoxContainer" instance=ExtResource("12_re7xn")]
+layout_mode = 2
+
+[node name="QuestStepItem2" parent="TabContainer/Quests/VBoxContainer" instance=ExtResource("12_re7xn")]
+layout_mode = 2
+
+[node name="QuestStepItem3" parent="TabContainer/Quests/VBoxContainer" instance=ExtResource("12_re7xn")]
+layout_mode = 2
+
+[node name="System" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/System"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -48.0
+offset_right = 94.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_2l1ry")
+
+[node name="Button_save" type="Button" parent="TabContainer/System/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3aiy")
+text = "Save"
+
+[node name="Button_load" type="Button" parent="TabContainer/System/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_dsbfc")
+text = "Load
+"
+
+[node name="Button_load2" type="Button" parent="TabContainer/System/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fnsqn")
+text = "Settings"
+
+[node name="Button_load3" type="Button" parent="TabContainer/System/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_7fuv5")
+text = "Main Menu"
+
+[node name="Button_load4" type="Button" parent="TabContainer/System/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_7fuv5")
+text = "Quit"
+
+[connection signal="pressed" from="TabContainer/System/VBoxContainer/Button_load3" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="TabContainer/System/VBoxContainer/Button_load4" to="." method="_on_quit_pressed"]

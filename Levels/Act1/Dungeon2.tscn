@@ -36,6 +36,6 @@ side = 3
 
 [node name="LevelTransition4" parent="." instance=ExtResource("6_byfq6")]
 position = Vector2(314, 88)
-level = "res://Hallasan-Sunset/Levels/Act1/Dungeon5.tscn"
+level = "res://Hallasan-Sunset/Levels/Act1/Dungeon7.tscn"
 size = 1
 side = 2

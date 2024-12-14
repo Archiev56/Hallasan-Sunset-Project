@@ -1,8 +1,7 @@
 extends Node
 
 const PLAYER = preload("res://Hallasan-Sunset/Player/Player.tscn")
-const INVENTORY_DATA : InventoryData = preload("res://Hallasan-Sunset/UI/Pause Menu/Pause/player_inventory.tres")
-
+const INVENTORY_DATA : InventoryData = preload("res://Hallasan-Sunset/UI/Pause Menu/Inventory/player_inventory.tres")
 
 signal camera_shook( trauma : float )
 signal interact_pressed
@@ -10,6 +9,8 @@ signal interact_pressed
 var interact_handled : bool = true
 var player : Player
 var player_spawned : bool = false
+
+var xp : int = 0
 
 
 func _ready() -> void:
@@ -31,6 +32,11 @@ func set_health( hp: int, max_hp: int ) -> void:
 	player.hp = hp
 	player.update_hp( 0 )
 
+
+
+func reward_xp( _xp : int ) -> void:
+	xp += _xp
+	print( "XP = ", str( xp ) )
 
 
 func set_player_position( _new_pos : Vector2 ) -> void:

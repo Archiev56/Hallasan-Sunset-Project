@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsdsymcscej23"]
+[gd_scene load_steps=17 format=3 uid="uid://dsdsymcscej23"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.gd" id="1_enff3"]
 [ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_oupnd"]
 [ext_resource type="PackedScene" uid="uid://3ou4mscqfens" path="res://Hallasan-Sunset/Player/GUI/Player_hud/heart_gui.tscn" id="2_xlvne"]
 [ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="4_suqvs"]
 [ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="5_srpej"]
+[ext_resource type="Texture2D" uid="uid://bpphdxqd10vsv" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/boss-hp.png" id="6_bavgn"]
 
 [sub_resource type="Animation" id="Animation_23vnf"]
 length = 0.001
@@ -239,6 +240,30 @@ _data = {
 "show_game_over": SubResource("Animation_j42si")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4aiw3"]
+atlas = ExtResource("6_bavgn")
+region = Rect2(9, 40, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u48a0"]
+atlas = ExtResource("6_bavgn")
+region = Rect2(40, 40, 15, 15)
+
+[sub_resource type="Gradient" id="Gradient_2hx46"]
+colors = PackedColorArray(0.34, 0.34, 0.34, 1, 0.341176, 0.341176, 0.341176, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oldeq"]
+gradient = SubResource("Gradient_2hx46")
+width = 100
+height = 15
+
+[sub_resource type="Gradient" id="Gradient_7xdwe"]
+colors = PackedColorArray(0.215686, 0.329412, 0.854902, 1, 0.215686, 0.329412, 0.854902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t6aej"]
+gradient = SubResource("Gradient_7xdwe")
+width = 100
+height = 15
+
 [node name="PlayerHUD" type="CanvasLayer"]
 offset = Vector2(2.08165e-12, 2.08165e-12)
 transform = Transform2D(1, 2.08165e-12, 2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
@@ -251,6 +276,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+mouse_default_cursor_shape = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
 texture_filter = 1
@@ -369,5 +396,86 @@ text = "Back to Menu"
 libraries = {
 "": SubResource("AnimationLibrary_yi2p7")
 }
+
+[node name="BossUI" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -91.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/BossUI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -7.5
+offset_right = 89.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+nine_patch_stretch = true
+texture_under = SubResource("AtlasTexture_4aiw3")
+texture_progress = SubResource("AtlasTexture_u48a0")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/BossUI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.5
+offset_top = -15.0
+offset_right = 95.5
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_bavgn")
+region_rect = Rect2(0, 0, 64, 30)
+patch_margin_left = 22
+patch_margin_right = 24
+axis_stretch_horizontal = 1
+
+[node name="Label" type="Label" parent="Control/BossUI"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -34.0
+offset_right = 73.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_srpej")
+text = "fuck monkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 60.0
+offset_right = 117.0
+offset_bottom = 75.0
+value = 50.0
+rounded = true
+texture_under = SubResource("GradientTexture2D_oldeq")
+texture_progress = SubResource("GradientTexture2D_t6aej")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

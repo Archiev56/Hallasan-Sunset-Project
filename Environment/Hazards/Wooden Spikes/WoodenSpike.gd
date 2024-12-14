@@ -15,5 +15,3 @@ func _on_body_exited(body):
 	animation_player.play("SpikeDown")
 	await animation_player.animation_finished
 	
-
-# Function triggered when the player's hurt box enters the spike's area

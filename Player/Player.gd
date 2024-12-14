@@ -100,7 +100,8 @@ func _unhandled_input(_event: InputEvent) -> void:
 			PlayerManager.interact_pressed.emit()
 			return
 
-
+func change_sprite() -> void:
+	sprite.texture = load("res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-1.png")
 
 
 func _take_damage( hurt_box : HurtBox ) -> void:

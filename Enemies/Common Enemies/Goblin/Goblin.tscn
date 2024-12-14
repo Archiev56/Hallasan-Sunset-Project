@@ -720,7 +720,7 @@ _data = {
 [sub_resource type="Gradient" id="Gradient_l4vde"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_2r4x2"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dbqif"]
 gradient = SubResource("Gradient_l4vde")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h5dtl"]
@@ -738,7 +738,7 @@ damping_min = 100.0
 damping_max = 800.0
 scale_min = 0.5
 scale_max = 0.7
-color_ramp = SubResource("GradientTexture1D_2r4x2")
+color_ramp = SubResource("GradientTexture1D_dbqif")
 
 [sub_resource type="Animation" id="Animation_85rny"]
 length = 0.001

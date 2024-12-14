@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bvbl8onxw7ep1"]
+[gd_scene load_steps=18 format=4 uid="uid://bvbl8onxw7ep1"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_16huu"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="2_5tgeo"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://k75pf2uxsq7d" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tscn" id="12_xlq2a"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="13_xqtgh"]
 [ext_resource type="PackedScene" uid="uid://dyufjm1518vwi" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Goblin.tscn" id="14_2p617"]
+[ext_resource type="PackedScene" uid="uid://bc0ofrtosagbj" path="res://Hallasan-Sunset/Environment/Campfire/Campfire.tscn" id="17_eiqnj"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_16huu")
@@ -119,3 +120,6 @@ position = Vector2(367, 719)
 
 [node name="Tree Border Down4" parent="." instance=ExtResource("7_ji4af")]
 position = Vector2(77, 719)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("17_eiqnj")]
+position = Vector2(367, 130)

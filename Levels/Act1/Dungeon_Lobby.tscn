@@ -74,7 +74,7 @@ side = 1
 
 [node name="LevelTransition5" parent="." instance=ExtResource("7_qllu8")]
 unique_name_in_owner = true
-position = Vector2(181, 9)
+position = Vector2(181, 11)
 level = "res://Hallasan-Sunset/Levels/Act1/Dungeon6.tscn"
 size = 1
 side = 2

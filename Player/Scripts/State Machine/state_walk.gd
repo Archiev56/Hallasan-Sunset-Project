@@ -16,6 +16,8 @@ class_name State_Walk extends State
 @onready var dash = $"../../Audio/Dash"
 @onready var hit_box = $"../../Interactions/HitBox"
 @onready var animation_player = $"../../AnimationPlayer"
+@onready var sprite = $"../../Sprite2D"
+
 
 var sound_cooldown: float = 0.0
 var is_dashing: bool = false
@@ -34,8 +36,10 @@ func exit() -> void:
 		dash_particles.emitting = false
 
 func Process(_delta: float) -> State:
+	
 	if player.direction == Vector2.ZERO and not is_dashing:
 		return idle
+		
 
 	if is_dashing:
 		dash_timer -= _delta

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://v0k1yqv8sn7u"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_item.gd" id="1_y202x"]
+
+[node name="QuestItem" type="Button"]
+custom_minimum_size = Vector2(200, 50)
+script = ExtResource("1_y202x")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 203.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 32
+text = "Quest Title"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="StepLabel" type="Label" parent="."]
+modulate = Color(0.75, 0.75, 0.75, 1)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 23.0
+offset_right = 203.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 16
+text = "Quest step 1/5"
+clip_text = true
+text_overrun_behavior = 3

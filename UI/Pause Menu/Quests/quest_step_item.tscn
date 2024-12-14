@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://1uaklgsuboha"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_step_item.gd" id="1_5gnmw"]
+[ext_resource type="Texture2D" uid="uid://bied1dgs0dcc6" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/checkbox.png" id="2_5ae08"]
+
+[node name="QuestStepItem" type="Control"]
+custom_minimum_size = Vector2(145, 20)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 245.0
+offset_bottom = 20.0
+script = ExtResource("1_5gnmw")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0.607843, 0.678431, 0.717647, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 19.0
+offset_top = 4.0
+offset_right = 59.0
+offset_bottom = 14.0
+text = "Step"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, 8)
+texture = ExtResource("2_5ae08")
+hframes = 2

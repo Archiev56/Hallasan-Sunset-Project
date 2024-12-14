@@ -1,10 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://dk11vr1agmrsd"]
+[gd_scene load_steps=17 format=3 uid="uid://dk11vr1agmrsd"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Chest/chest.gd" id="1_wcqph"]
 [ext_resource type="Texture2D" uid="uid://bhc1nhufg22v0" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-1 8.png" id="2_kv4pw"]
 [ext_resource type="Texture2D" uid="uid://dh6awve7ygyfy" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-5.png" id="2_lir6l"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_vv3xs"]
-[ext_resource type="Texture2D" path="res://Items copy/Strawberry/Untitled_Artwork 25.png" id="3_ey24i"]
 [ext_resource type="Texture2D" uid="uid://cn1m8m8y4keqj" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-2 2.png" id="4_etewe"]
 [ext_resource type="Texture2D" uid="uid://c1sc75ywsspt1" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-3 2.png" id="5_p11no"]
 [ext_resource type="Texture2D" uid="uid://camu11e0ijab0" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-4.png" id="6_itohp"]
@@ -192,7 +191,6 @@ texture = ExtResource("2_kv4pw")
 visible = false
 texture_filter = 1
 position = Vector2(0, 2.08165e-12)
-texture = ExtResource("3_ey24i")
 
 [node name="Label" type="Label" parent="ItemSprite"]
 texture_filter = 1
