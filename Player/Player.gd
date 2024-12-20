@@ -16,7 +16,6 @@ var direction : Vector2 = Vector2.ZERO
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer2D = $Audio/AudioStreamPlayer2D
 @onready var effect_animation_player : AnimationPlayer = $EffectAnimationPlayer
-@onready var dash : Dash = $Dash
 @onready var behind_sprite = $Sprite2D/BehindObjectSprite
 @onready var hit_box : HitBox  = $Interactions/HitBox
 @onready var hurt_box : HurtBox  = $Interactions/HurtBox

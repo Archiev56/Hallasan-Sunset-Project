@@ -1,5 +1,5 @@
 @tool
-@icon( "res://UI copy/Dialogue_system/icons/question_bubble.svg" )
+@icon( "res://Hallasan-Sunset/UI/Dialogue_system/icons/question_bubble.svg" )
 class_name DialogChoice extends DialogItem
 
 var dialog_branches : Array[ DialogBranch ]

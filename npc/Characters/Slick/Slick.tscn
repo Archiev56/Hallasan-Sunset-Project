@@ -1,51 +1,84 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2exepqmaxt58"]
+[gd_scene load_steps=12 format=3 uid="uid://chwksqbnu0jli"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.gd" id="1_1jiej"]
-[ext_resource type="Texture2D" uid="uid://capuwy3tmarls" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.png" id="2_lifig"]
-[ext_resource type="Texture2D" uid="uid://b4t545bdrwqij" path="res://Hallasan-Sunset/UI/Keys/Space-Key.png" id="4_pb26p"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc.gd" id="1_d7jkw"]
+[ext_resource type="Resource" uid="uid://dxnb65gey8g0i" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tres" id="2_2l1eq"]
+[ext_resource type="Texture2D" uid="uid://capuwy3tmarls" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.png" id="3_dlmwj"]
+[ext_resource type="Texture2D" uid="uid://cuvgsyd825y83" path="res://Hallasan-Sunset/Player/Sprites/Shadow (1).png" id="4_vma3q"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7osou"]
-atlas = ExtResource("4_pb26p")
-region = Rect2(0, 0, 64, 32)
+[sub_resource type="Animation" id="Animation_7du3u"]
+resource_name = "idle_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_dlmwj")]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mp5jl"]
-atlas = ExtResource("4_pb26p")
-region = Rect2(64, 0, 64, 32)
+[sub_resource type="Animation" id="Animation_8m2xn"]
+resource_name = "idle_up"
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4meb1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7osou")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mp5jl")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
+[sub_resource type="Animation" id="Animation_62wq6"]
+resource_name = "walk_down"
+length = 0.6
+loop_mode = 2
+step = 0.2
 
-[node name="Slick" type="StaticBody2D"]
-script = ExtResource("1_1jiej")
+[sub_resource type="Animation" id="Animation_l0wml"]
+resource_name = "walk_side"
+length = 0.6
+loop_mode = 2
+step = 0.2
+
+[sub_resource type="Animation" id="Animation_5qrp0"]
+resource_name = "walk_up"
+length = 0.6
+loop_mode = 2
+step = 0.2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivkd1"]
+_data = {
+"idle_down": SubResource("Animation_7du3u"),
+"idle_up": SubResource("Animation_8m2xn"),
+"walk_down": SubResource("Animation_62wq6"),
+"walk_side": SubResource("Animation_l0wml"),
+"walk_up": SubResource("Animation_5qrp0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkj7h"]
+size = Vector2(27.0011, 70.4776)
+
+[node name="Slick" type="CharacterBody2D"]
+position = Vector2(0, -22)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_d7jkw")
+npc_resource = ExtResource("2_2l1eq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_lifig")
+texture = ExtResource("3_dlmwj")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-30, 31, -38, 23, -41, 16, -40, 4, -1, 2, 5, -1, 26, 0, 27, 6, 40, 12, 38, 29, 24, 31)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_ivkd1")
+}
+autoplay = "idle_down"
 
-[node name="X" type="AnimatedSprite2D" parent="."]
-z_index = 100
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.2947, 21.4991)
+rotation = -1.56962
+shape = SubResource("RectangleShape2D_kkj7h")
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.235294)
+show_behind_parent = true
 texture_filter = 1
-position = Vector2(0, -46.6667)
-scale = Vector2(0.8, 0.8)
-sprite_frames = SubResource("SpriteFrames_4meb1")
-autoplay = "default"
-speed_scale = 0.3
+position = Vector2(0, 22)
+texture = ExtResource("4_vma3q")

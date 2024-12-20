@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://dxnb65gey8g0i"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="2_ugwk8"]
+[ext_resource type="Texture2D" uid="uid://capuwy3tmarls" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.png" id="3_i1gho"]
+
+[resource]
+script = ExtResource("2_ugwk8")
+npc_name = "Slick"
+sprite = ExtResource("3_i1gho")
+dialog_audio_pitch = 1.6

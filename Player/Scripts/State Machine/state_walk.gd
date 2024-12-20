@@ -8,15 +8,18 @@ class_name State_Walk extends State
 @export var accel: float = 1200.0
 @export var friction: float = 600.0
 
+var dash_scene = preload("res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dash.tscn")
+
 @onready var idle: State = $"../Idle"
 @onready var attack: State = $"../Attack"
 @onready var walk_left_audio: AudioStreamPlayer2D = $"../../Audio/Walk"
 @onready var dust_particles: GPUParticles2D = $"../../DustParticles"
 @onready var dash_particles: GPUParticles2D = $"../../DashParticles"  # Optional: for dash effect
-@onready var dash = $"../../Audio/Dash"
+@onready var dash_audio = $"../../Audio/Dash"
 @onready var hit_box = $"../../Interactions/HitBox"
 @onready var animation_player = $"../../AnimationPlayer"
 @onready var sprite = $"../../Sprite2D"
+@onready var dash_node = $"../../Dash"
 
 
 var sound_cooldown: float = 0.0
@@ -24,11 +27,16 @@ var is_dashing: bool = false
 var dash_timer: float = 0.0
 var input: Vector2 = Vector2.ZERO
 
+func _ready() -> void:
+	var dash_scene = dash_scene.instantiate()
+	add_child(dash_scene)
+
 func enter() -> void:
 	player.UpdateAnimation("walk")
 	sound_cooldown = 0.0
 	dust_particles.emitting = true
 	is_dashing = false
+
 
 func exit() -> void:
 	dust_particles.emitting = false
@@ -94,16 +102,25 @@ func get_input() -> Vector2:
 	)
 	return direction.normalized()
 
+	
 func start_dashing():
 	is_dashing = true
 	player.UpdateAnimation("dodge")
 	animation_player.play("dodge_" + player.AnimDirection())
+	
+	
 	hit_box.is_invulnerable = true
-	dash.play()
+	dash_audio.play()
+	
 	dash_timer = dash_duration
 	player.velocity = player.direction * dash_speed
 	if dash_particles:
 		dash_particles.emitting = true
+	if dash_node:
+		dash_node.instance_ghost()
+	else:
+		print("Error: Dash node not found!")
+
 
 func _on_AnimationPlayer_animation_finished(animation_name: String):
 	if animation_name.begins_with("dodge_"):  # If a dodge animation ends

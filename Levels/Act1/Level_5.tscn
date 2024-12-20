@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bvbl8onxw7ep1"]
+[gd_scene load_steps=23 format=4 uid="uid://bvbl8onxw7ep1"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_16huu"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="2_5tgeo"]
@@ -10,15 +10,21 @@
 [ext_resource type="PackedScene" uid="uid://ba2vdtt3qp7p3" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorder.tscn" id="7_ji4af"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Wind/Wind.tscn" id="7_q0u11"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorderSide.tscn" id="8_3jdvc"]
-[ext_resource type="PackedScene" uid="uid://c2exepqmaxt58" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tscn" id="9_yd6ik"]
+[ext_resource type="PackedScene" uid="uid://chwksqbnu0jli" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tscn" id="9_yd6ik"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="10_il8wr"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="11_keqrh"]
 [ext_resource type="PackedScene" uid="uid://k75pf2uxsq7d" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tscn" id="12_xlq2a"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="13_xqtgh"]
 [ext_resource type="PackedScene" uid="uid://dyufjm1518vwi" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Goblin.tscn" id="14_2p617"]
+[ext_resource type="Resource" uid="uid://dxnb65gey8g0i" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tres" id="15_nhcci"]
+[ext_resource type="PackedScene" uid="uid://cou4euvvaw0ml" path="res://Hallasan-Sunset/UI/Dialogue_system/dialogue_interaction.tscn" id="16_fx6ux"]
 [ext_resource type="PackedScene" uid="uid://bc0ofrtosagbj" path="res://Hallasan-Sunset/Environment/Campfire/Campfire.tscn" id="17_eiqnj"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_text.gd" id="17_nh6xo"]
+[ext_resource type="PackedScene" uid="uid://3c8o5hxduleo" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorderBottom.tscn" id="21_c6h7u"]
+[ext_resource type="PackedScene" uid="uid://biqm0bsvhjkqr" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Gwenggidari.tscn" id="22_j5hlm"]
 
 [node name="Map" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_16huu")
 music = ExtResource("2_155xh")
 
@@ -41,7 +47,7 @@ script = ExtResource("3_cayoc")
 position = Vector2(951, 75)
 
 [node name="Pine Tree2" parent="Environment/Objects" instance=ExtResource("12_xlq2a")]
-position = Vector2(1186, 620)
+position = Vector2(1192, 564)
 
 [node name="Tall Tree" parent="Environment/Objects" instance=ExtResource("13_xqtgh")]
 position = Vector2(876, 368)
@@ -84,6 +90,19 @@ position = Vector2(-68, 595)
 z_index = 1
 position = Vector2(279, 147)
 
+[node name="DialogueInteraction" parent="NPC\'s/Slick" instance=ExtResource("16_fx6ux")]
+position = Vector2(9.1521, 20.8883)
+
+[node name="DialogText" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("17_nh6xo")
+text = "Hey Playboy"
+npc_info = ExtResource("15_nhcci")
+
+[node name="DialogText2" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("17_nh6xo")
+text = "how you doin?"
+npc_info = ExtResource("15_nhcci")
+
 [node name="Transitions" type="Node" parent="."]
 
 [node name="LevelTransition" parent="Transitions" instance=ExtResource("10_il8wr")]
@@ -109,17 +128,24 @@ position = Vector2(1162, 467)
 
 [node name="Items" type="Node" parent="."]
 
-[node name="Tree Border Down" parent="." instance=ExtResource("7_ji4af")]
-position = Vector2(739, 719)
-
-[node name="Tree Border Down2" parent="." instance=ExtResource("7_ji4af")]
-position = Vector2(1036, 719)
-
-[node name="Tree Border Down3" parent="." instance=ExtResource("7_ji4af")]
-position = Vector2(367, 719)
-
-[node name="Tree Border Down4" parent="." instance=ExtResource("7_ji4af")]
-position = Vector2(77, 719)
-
 [node name="StaticBody2D" parent="." instance=ExtResource("17_eiqnj")]
 position = Vector2(367, 130)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("21_c6h7u")]
+position = Vector2(294, 904)
+
+[node name="Gwenggidari" parent="." instance=ExtResource("22_j5hlm")]
+position = Vector2(176, 160)
+
+[node name="DialogueInteraction" parent="Gwenggidari" instance=ExtResource("16_fx6ux")]
+position = Vector2(0, -8.00001)
+
+[node name="DialogText" type="Node" parent="Gwenggidari/DialogueInteraction"]
+script = ExtResource("17_nh6xo")
+text = "Hey superstar! "
+npc_info = ExtResource("15_nhcci")
+
+[node name="DialogText2" type="Node" parent="Gwenggidari/DialogueInteraction"]
+script = ExtResource("17_nh6xo")
+text = "how you doin?"
+npc_info = ExtResource("15_nhcci")

@@ -19,15 +19,13 @@
 [ext_resource type="PackedScene" uid="uid://obenohw15alg" path="res://Hallasan-Sunset/Environment/Crate/Crate.tscn" id="15_mcp0t"]
 [ext_resource type="PackedScene" uid="uid://cal6ga32aayko" path="res://Hallasan-Sunset/Environment/Well/Well.tscn" id="16_jpxab"]
 [ext_resource type="PackedScene" uid="uid://ck2dpa4dd808r" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Pot.tscn" id="17_77gp8"]
-[ext_resource type="PackedScene" uid="uid://d2vp57kytlw30" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/fire_trap.tscn" id="18_ipfqk"]
 [ext_resource type="PackedScene" uid="uid://wwugboi7jgu" path="res://Hallasan-Sunset/Environment/Log Pile/Log Pile.tscn" id="18_nwg2a"]
+[ext_resource type="Texture2D" uid="uid://bjhhln6w1hll0" path="res://Hallasan-Sunset/Untitled_Artwork 75.png" id="21_tjmtg"]
 
 [node name="Level2" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_0blxm")
 music = ExtResource("2_f1am6")
-
-[node name="PlayerSpawn" parent="." instance=ExtResource("7_7l64l")]
-position = Vector2(384, 80)
 
 [node name="Tileset" parent="." instance=ExtResource("3_62wcu")]
 position = Vector2(0, -4)
@@ -44,19 +42,22 @@ position = Vector2(45, -189)
 position = Vector2(294, -189)
 
 [node name="StaticBody2D3" parent="Environment/Borders" instance=ExtResource("6_jhllq")]
-position = Vector2(483, -189)
+position = Vector2(576, -189)
 
 [node name="SideBorder" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
 position = Vector2(-241, -33)
 
 [node name="SideBorder2" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
-position = Vector2(-241, 209)
+position = Vector2(-243, 209)
 
 [node name="SideBorder3" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
 position = Vector2(-242, 461)
 
 [node name="SideBorder4" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
 position = Vector2(-242, 720)
+
+[node name="SideBorder9" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
+position = Vector2(-242, 910)
 
 [node name="StaticBody2D4" parent="Environment/Borders" instance=ExtResource("10_sdt8r")]
 position = Vector2(48, 904)
@@ -65,16 +66,16 @@ position = Vector2(48, 904)
 position = Vector2(512, 904)
 
 [node name="SideBorder5" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
-position = Vector2(795, -4)
+position = Vector2(837, -4)
 
 [node name="SideBorder6" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
-position = Vector2(795, 270)
+position = Vector2(837, 270)
 
 [node name="SideBorder7" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
-position = Vector2(795, 541)
+position = Vector2(837, 541)
 
 [node name="SideBorder8" parent="Environment/Borders" instance=ExtResource("9_mqwks")]
-position = Vector2(795, 789)
+position = Vector2(837, 789)
 
 [node name="Weather" type="Node" parent="Environment"]
 
@@ -95,6 +96,7 @@ position = Vector2(384, 424)
 
 [node name="Magic Tree" parent="Environment/Objects" instance=ExtResource("13_lo27o")]
 z_index = 10
+y_sort_enabled = true
 position = Vector2(568, 248)
 
 [node name="LogPile" parent="Environment/Objects" instance=ExtResource("18_nwg2a")]
@@ -108,9 +110,6 @@ position = Vector2(40, 416)
 
 [node name="Wooden Crate" parent="Environment/Objects" instance=ExtResource("15_mcp0t")]
 position = Vector2(280, 80)
-
-[node name="Fire Trap" parent="Environment/Objects" instance=ExtResource("18_ipfqk")]
-position = Vector2(381, 180)
 
 [node name="Interactables" type="Node" parent="Environment"]
 
@@ -142,3 +141,13 @@ level = "res://Hallasan-Sunset/Levels/Act1/level_3.tscn"
 side = 3
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("7_7l64l")]
+y_sort_enabled = true
+position = Vector2(384, 80)
+
+[node name="UntitledArtwork75" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(208, 286)
+scale = Vector2(3, 3)
+texture = ExtResource("21_tjmtg")

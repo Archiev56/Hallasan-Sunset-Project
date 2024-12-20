@@ -1,6 +1,7 @@
-[gd_scene load_steps=50 format=4 uid="uid://cwgdku87rfmeb"]
+[gd_scene load_steps=51 format=4 uid="uid://cwgdku87rfmeb"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_vigd7"]
+[ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_8twt2"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_ln1it"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="4_qdu28"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_s8d3q"]
@@ -715,6 +716,7 @@ fill_to = Vector2(1, 0.5)
 
 [node name="Dungeon1" type="Node2D"]
 script = ExtResource("1_vigd7")
+music = ExtResource("2_8twt2")
 
 [node name="DoorBlock" parent="." instance=ExtResource("3_ln1it")]
 tile_map_data = PackedByteArray("AAAOAA4ACQANAAYAAAANAA4ACQANAAYAAAAMAA4ACQANAAYAAAALAA4ACQANAAYAAAA=")

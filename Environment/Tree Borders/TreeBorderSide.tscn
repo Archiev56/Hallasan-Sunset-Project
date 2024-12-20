@@ -1,16 +1,35 @@
-[gd_scene load_steps=6 format=3 uid="uid://mquiukhsvnvp"]
+[gd_scene load_steps=11 format=3 uid="uid://mquiukhsvnvp"]
 
 [ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_ntfeh"]
 [ext_resource type="Texture2D" uid="uid://bmwt1fexoqph" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/pine tree-export.png" id="2_w3cf6"]
-[ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/Tall Tree.tscn" id="3_8bgtj"]
+[ext_resource type="Texture2D" uid="uid://3w037bsmwp26" path="res://Hallasan-Sunset/Environment/Tree/Tall Tree/tree.png" id="3_2sfjc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c6lsk"]
 shader = ExtResource("1_ntfeh")
 shader_parameter/WindStrength = 10.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c44wc"]
+shader = ExtResource("1_ntfeh")
+shader_parameter/WindStrength = 6.923
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7e08k"]
+shader = ExtResource("1_ntfeh")
+shader_parameter/WindStrength = 6.787
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_inlc4"]
 a = Vector2(-282, 170)
 b = Vector2(12.0006, 170)
+
+[sub_resource type="Gradient" id="Gradient_l8wsi"]
+offsets = PackedFloat32Array(0, 0.186047, 0.4926, 0.775899, 0.993658)
+colors = PackedColorArray(0.3, 0.3, 0.3, 0, 0.3, 0.3, 0.3, 0.784314, 0.3, 0.3, 0.3, 1, 0.3, 0.3, 0.3, 0.784314, 0.3, 0.3, 0.3, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bu88a"]
+gradient = SubResource("Gradient_l8wsi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iu8qu"]
+shader = ExtResource("1_ntfeh")
+shader_parameter/WindStrength = 6.5
 
 [node name="SideBorder" type="StaticBody2D"]
 z_index = 5
@@ -19,50 +38,153 @@ position = Vector2(102, 29)
 collision_layer = 16
 collision_mask = 16
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = 5
-texture_filter = 1
-material = SubResource("ShaderMaterial_c6lsk")
-position = Vector2(-34, -3)
-texture = ExtResource("2_w3cf6")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D18" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
 material = SubResource("ShaderMaterial_c6lsk")
-position = Vector2(82, -57)
+position = Vector2(138, -181)
 texture = ExtResource("2_w3cf6")
 
-[node name="Sprite2D8" type="Sprite2D" parent="."]
+[node name="Sprite2D26" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
 material = SubResource("ShaderMaterial_c6lsk")
-position = Vector2(150, -170)
+position = Vector2(-44, -184)
 texture = ExtResource("2_w3cf6")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D32" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
 material = SubResource("ShaderMaterial_c6lsk")
-position = Vector2(121, 43)
+position = Vector2(50, -183)
 texture = ExtResource("2_w3cf6")
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
+[node name="Sprite2D20" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
 material = SubResource("ShaderMaterial_c6lsk")
-position = Vector2(-38, -154)
+position = Vector2(138, -181)
 texture = ExtResource("2_w3cf6")
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
+[node name="Sprite2D19" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
 material = SubResource("ShaderMaterial_c6lsk")
-position = Vector2(-38, -154)
+position = Vector2(112, -134)
 texture = ExtResource("2_w3cf6")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-45, 69, -53, 32, -2, 17, 50, 41, 40, 72, 0, 94)
+[node name="Sprite2D36" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-56, -134)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D27" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(17, -133)
+texture = ExtResource("2_w3cf6")
+
+[node name="Tree" type="Sprite2D" parent="Sprite2D27"]
+material = SubResource("ShaderMaterial_c44wc")
+position = Vector2(-15, 18)
+texture = ExtResource("3_2sfjc")
+
+[node name="Sprite2D21" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(140, -80)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D28" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-41, -80)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D33" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(41, -80)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D22" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(89, -27)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D35" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-77, -27)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D29" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(13, -27)
+texture = ExtResource("2_w3cf6")
+
+[node name="Tree2" type="Sprite2D" parent="Sprite2D29"]
+material = SubResource("ShaderMaterial_7e08k")
+position = Vector2(89, 25)
+texture = ExtResource("3_2sfjc")
+
+[node name="Sprite2D23" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(144, 14)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D30" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-51, 14)
+texture = ExtResource("2_w3cf6")
+
+[node name="Tree3" type="Sprite2D" parent="Sprite2D30"]
+material = SubResource("ShaderMaterial_7e08k")
+position = Vector2(43, 12)
+texture = ExtResource("3_2sfjc")
+
+[node name="Sprite2D34" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(39, 14)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D24" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(56, 63)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D31" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(-47, 64)
+texture = ExtResource("2_w3cf6")
+
+[node name="Sprite2D25" type="Sprite2D" parent="."]
+z_index = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_c6lsk")
+position = Vector2(147, 63)
+texture = ExtResource("2_w3cf6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
@@ -76,10 +198,15 @@ position = Vector2(366, 105)
 rotation = 1.5708
 shape = SubResource("SegmentShape2D_inlc4")
 
-[node name="StaticBody2D" parent="." instance=ExtResource("3_8bgtj")]
-z_index = 2
-position = Vector2(-7, -182)
+[node name="Shadow(1)" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.317647)
+position = Vector2(47.0931, -34)
+rotation = 1.5708
+scale = Vector2(4.64062, 4.68797)
+texture = SubResource("GradientTexture2D_bu88a")
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("3_8bgtj")]
-z_index = 2
-position = Vector2(63, -272)
+[node name="Tree3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_iu8qu")
+position = Vector2(20, -206)
+texture = ExtResource("3_2sfjc")

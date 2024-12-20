@@ -1,0 +1,96 @@
+[gd_scene load_steps=19 format=3 uid="uid://biqm0bsvhjkqr"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc.gd" id="1_54psq"]
+[ext_resource type="Resource" uid="uid://cengu4o4xxb4h" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Gwenggidari.tres" id="2_3ov67"]
+[ext_resource type="Texture2D" uid="uid://ddr6e1tadtjmv" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-1 30.png" id="3_6gvun"]
+[ext_resource type="Texture2D" uid="uid://cuvgsyd825y83" path="res://Hallasan-Sunset/Player/Sprites/Shadow (1).png" id="4_xgvru"]
+[ext_resource type="Texture2D" uid="uid://dx2eadeey0sex" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-2 20.png" id="5_w2fx0"]
+[ext_resource type="Texture2D" uid="uid://bhe7s64bvnrdo" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-3 18.png" id="6_s3ba1"]
+[ext_resource type="Texture2D" uid="uid://bsc67irxv72iv" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-4 14.png" id="7_dp3yr"]
+[ext_resource type="Texture2D" uid="uid://c7cyt4vy71fm" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-5 9.png" id="8_gws5d"]
+[ext_resource type="Texture2D" uid="uid://8vtyob6yneyi" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-6 7.png" id="9_cqvyp"]
+[ext_resource type="Texture2D" uid="uid://cfq0pbct8r1cu" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-7 6.png" id="10_cf8l8"]
+[ext_resource type="Texture2D" uid="uid://itgl1c2lsa1r" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-8 5.png" id="11_hfnb2"]
+
+[sub_resource type="Animation" id="Animation_7du3u"]
+resource_name = "idle_down"
+length = 1.6
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_6gvun"), ExtResource("5_w2fx0"), ExtResource("6_s3ba1"), ExtResource("7_dp3yr"), ExtResource("8_gws5d"), ExtResource("9_cqvyp"), ExtResource("10_cf8l8"), ExtResource("11_hfnb2")]
+}
+
+[sub_resource type="Animation" id="Animation_8m2xn"]
+resource_name = "idle_up"
+
+[sub_resource type="Animation" id="Animation_62wq6"]
+resource_name = "walk_down"
+length = 0.6
+loop_mode = 2
+step = 0.2
+
+[sub_resource type="Animation" id="Animation_l0wml"]
+resource_name = "walk_side"
+length = 0.6
+loop_mode = 2
+step = 0.2
+
+[sub_resource type="Animation" id="Animation_5qrp0"]
+resource_name = "walk_up"
+length = 0.6
+loop_mode = 2
+step = 0.2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ivkd1"]
+_data = {
+"idle_down": SubResource("Animation_7du3u"),
+"idle_up": SubResource("Animation_8m2xn"),
+"walk_down": SubResource("Animation_62wq6"),
+"walk_side": SubResource("Animation_l0wml"),
+"walk_up": SubResource("Animation_5qrp0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkj7h"]
+size = Vector2(22, 28)
+
+[node name="Gwenggidari" type="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(0, -22)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_54psq")
+npc_resource = ExtResource("2_3ov67")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_6gvun")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_ivkd1")
+}
+autoplay = "idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.78814e-07, 36)
+rotation = -1.56962
+shape = SubResource("RectangleShape2D_kkj7h")
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.235294)
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(0, 46)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_xgvru")

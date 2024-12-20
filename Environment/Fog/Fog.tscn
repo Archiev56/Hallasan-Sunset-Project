@@ -20,9 +20,13 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_2wdew")
 
 [node name="Fog" type="ParallaxBackground"]
 layer = 99
+rotation = 1.5708
+transform = Transform2D(-4.37114e-08, 1, -1, -4.37114e-08, 0, 0)
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(741, -1287)
+rotation = 1.5708
 motion_mirroring = Vector2(960, 540)
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxLayer"]

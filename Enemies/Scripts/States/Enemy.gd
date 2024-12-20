@@ -21,6 +21,7 @@ var invulnerable : bool = false
 @onready var hit_box : HitBox = $HitBox
 @onready var state_machine : EnemyStateMachine = $EnemyStateMachine
 
+@onready var notice = $Notice
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

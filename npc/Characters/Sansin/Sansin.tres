@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://b8ikusgqral4y" path="res://Hallasan-Sunset/npc/Portraits/Sansin Portrait.png" id="1_gqyr2"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="2_0b6ma"]
-[ext_resource type="Texture2D" uid="uid://ctcrfy803geml" path="res://Hallasan-Sunset/npc/Sprites/npc_sprite.png" id="3_01q62"]
+[ext_resource type="Texture2D" uid="uid://du0xndceaiym8" path="res://Hallasan-Sunset/npc/Characters/Sansin/Sansin.png" id="3_qn3vj"]
 
 [resource]
 script = ExtResource("2_0b6ma")
 npc_name = "Sansin"
-sprite = ExtResource("3_01q62")
+sprite = ExtResource("3_qn3vj")
 portrait = ExtResource("1_gqyr2")
 dialog_audio_pitch = 1.6

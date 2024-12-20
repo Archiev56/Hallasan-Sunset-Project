@@ -67,6 +67,7 @@ _data = {
 radius = 28.0179
 
 [node name="arc_projectile" type="Node2D"]
+position = Vector2(0, -18)
 script = ExtResource("1_e0p8d")
 
 [node name="Shadow" type="Sprite2D" parent="."]

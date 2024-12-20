@@ -93,10 +93,16 @@ offset_bottom = 40.0
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
 current_tab = 0
+
+[node name="LargeBackground" type="Sprite2D" parent="TabContainer"]
+position = Vector2(314, 174.438)
+scale = Vector2(0.356182, 0.234951)
+texture = ExtResource("3_55hyt")
 
 [node name="Inventory" type="Control" parent="TabContainer"]
 texture_filter = 1
@@ -107,17 +113,15 @@ metadata/_tab_index = 0
 [node name="PanelContainer" type="PanelContainer" parent="TabContainer/Inventory"]
 texture_filter = 1
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -84.0
-offset_top = -72.0
-offset_right = 84.0
-offset_bottom = 72.0
-grow_horizontal = 2
+offset_left = 20.0
+offset_top = -171.5
+offset_right = 220.0
+offset_bottom = -0.5
 grow_vertical = 2
+scale = Vector2(2, 2)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_o0vv8")
@@ -126,7 +130,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_o0vv8")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-columns = 3
+columns = 4
 script = ExtResource("6_cms6o")
 data = ExtResource("7_gdv8y")
 
@@ -148,27 +152,45 @@ layout_mode = 2
 [node name="InventorySlot6" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
 layout_mode = 2
 
+[node name="InventorySlot7" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="TabContainer/Inventory/PanelContainer/GridContainer" instance=ExtResource("6_ye6ht")]
+layout_mode = 2
+
 [node name="Banner" type="Sprite2D" parent="TabContainer/Inventory"]
-position = Vector2(310, 102)
-scale = Vector2(0.283654, 0.475352)
+position = Vector2(310, 47)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_xky3d")
 
 [node name="LargeBackground" type="Sprite2D" parent="TabContainer/Inventory"]
-position = Vector2(312, 251)
-scale = Vector2(0.0776143, 0.0569845)
+position = Vector2(459.711, 177)
+scale = Vector2(0.109275, 0.1638)
 texture = ExtResource("3_55hyt")
 
 [node name="Description" type="Label" parent="TabContainer/Inventory"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 234.0
-offset_top = 221.0
-offset_right = 396.0
-offset_bottom = 240.0
+offset_left = 385.0
+offset_top = 90.0
+offset_right = 547.0
+offset_bottom = 110.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
 theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "Description: "
 horizontal_alignment = 1
 
@@ -176,24 +198,24 @@ horizontal_alignment = 1
 texture_filter = 1
 layout_mode = 0
 offset_left = 230.0
-offset_top = 91.0
+offset_top = 35.0
 offset_right = 392.0
-offset_bottom = 123.0
+offset_bottom = 67.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
 theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "INVENTORY"
 horizontal_alignment = 1
 
 [node name="ItemDescription" type="Label" parent="TabContainer/Inventory"]
 texture_filter = 1
 layout_mode = 2
-offset_left = 264.0
-offset_top = 233.0
-offset_right = 360.0
-offset_bottom = 274.0
-grow_horizontal = 2
+offset_left = 387.0
+offset_top = 123.0
+offset_right = 528.0
+offset_bottom = 164.0
+grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.129412, 0.588235, 0.32549, 1)
@@ -212,10 +234,10 @@ metadata/_tab_index = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Quests"]
 layout_mode = 0
-offset_left = 33.0
-offset_top = 35.0
-offset_right = 327.0
-offset_bottom = 314.0
+offset_left = 80.0
+offset_top = 66.0
+offset_right = 333.0
+offset_bottom = 345.0
 follow_focus = true
 scroll_vertical_custom_step = 100.0
 horizontal_scroll_mode = 0
@@ -255,10 +277,16 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Quests"]
 layout_mode = 0
-offset_left = 337.0
-offset_top = 37.0
-offset_right = 582.0
-offset_bottom = 95.0
+offset_left = 350.0
+offset_top = 76.0
+offset_right = 595.0
+offset_bottom = 196.0
+
+[node name="LargeBackground" type="Sprite2D" parent="TabContainer/Quests/VBoxContainer"]
+modulate = Color(0.0509804, 0.564706, 0.407843, 1)
+position = Vector2(91, 95)
+scale = Vector2(0.147465, 0.181928)
+texture = ExtResource("3_55hyt")
 
 [node name="TitleLabel" type="Label" parent="TabContainer/Quests/VBoxContainer"]
 custom_minimum_size = Vector2(245, 0)
@@ -289,6 +317,25 @@ layout_mode = 2
 [node name="QuestStepItem3" parent="TabContainer/Quests/VBoxContainer" instance=ExtResource("12_re7xn")]
 layout_mode = 2
 
+[node name="Banner" type="Sprite2D" parent="TabContainer/Quests"]
+position = Vector2(310, 46.875)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_xky3d")
+
+[node name="Inventory" type="Label" parent="TabContainer/Quests"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 230.0
+offset_top = 35.0
+offset_right = 392.0
+offset_bottom = 67.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 32
+text = "QUESTS"
+horizontal_alignment = 1
+
 [node name="System" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
@@ -308,6 +355,12 @@ offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_2l1ry")
+
+[node name="LargeBackground" type="Sprite2D" parent="TabContainer/System/VBoxContainer"]
+modulate = Color(0.0509804, 0.564706, 0.407843, 1)
+position = Vector2(92.5, 52.5)
+scale = Vector2(0.147465, 0.181928)
+texture = ExtResource("3_55hyt")
 
 [node name="Button_save" type="Button" parent="TabContainer/System/VBoxContainer"]
 texture_filter = 1
@@ -353,6 +406,25 @@ theme_override_fonts/font = ExtResource("5_jplde")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_7fuv5")
 text = "Quit"
+
+[node name="Banner" type="Sprite2D" parent="TabContainer/System"]
+position = Vector2(310, 46.875)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_xky3d")
+
+[node name="Inventory" type="Label" parent="TabContainer/System"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 230.0
+offset_top = 35.0
+offset_right = 392.0
+offset_bottom = 67.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
+theme_override_fonts/font = ExtResource("5_jplde")
+theme_override_font_sizes/font_size = 32
+text = "SYSTEM"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="TabContainer/System/VBoxContainer/Button_load3" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="TabContainer/System/VBoxContainer/Button_load4" to="." method="_on_quit_pressed"]

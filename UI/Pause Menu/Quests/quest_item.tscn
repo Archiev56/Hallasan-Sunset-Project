@@ -3,6 +3,8 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_item.gd" id="1_y202x"]
 
 [node name="QuestItem" type="Button"]
+self_modulate = Color(0, 1, 0.149541, 1)
+texture_filter = 1
 custom_minimum_size = Vector2(200, 50)
 script = ExtResource("1_y202x")
 

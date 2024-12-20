@@ -30,4 +30,6 @@ script = ExtResource("4_lpjnk")
 min_wind_strength = 7.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.321429, 109.444)
+scale = Vector2(0.642857, 0.227564)
 polygon = PackedVector2Array(-17, 138, -13, 109, -14, 61, 15, 62, 18, 139)

@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2ltcopvrko7h"]
 
-[ext_resource type="Texture2D" uid="uid://22n66hcx832m" path="res://Hallasan-Sunset/Environment/Bridge/Bridge.png" id="1_0jfwe"]
+[ext_resource type="Texture2D" uid="uid://sykdwaxgm0k0" path="res://Hallasan-Sunset/Environment/Bridge/Untitled_Artwork 69.png" id="1_2mgfu"]
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Bridge" type="StaticBody2D"]
 collision_layer = 16
 
 [node name="Bridge" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_0jfwe")
+texture = ExtResource("1_2mgfu")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-93, 60, -93, 54, -79.5, 55, -79.5, 50, -73.5, 49, -73.5, 43, -68, 43, -68, 36, 68.5, 37, 68.5, 43, 74, 43, 74, 49, 80.5, 49, 81, 55, 92.5, 55, 92.5, 60, 49, 60, 43, 51, 24.5, 41, -24, 39, -37.5, 46, -47, 55, -49, 61)

@@ -1,6 +1,8 @@
 @tool
-@icon( "res://UI copy/Dialogue_system/icons/answer_bubble.svg" )
+@icon( "res://Hallasan-Sunset/UI/Dialogue_system/icons/answer_bubble.svg" )
 class_name DialogBranch extends DialogItem
+
+signal selected
 
 @export var text : String = "ok..." : set = _set_text
 

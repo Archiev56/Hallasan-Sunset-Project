@@ -1,4 +1,4 @@
-[gd_scene load_steps=242 format=3 uid="uid://cbctfc3oob7kd"]
+[gd_scene load_steps=273 format=3 uid="uid://cbctfc3oob7kd"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Player.gd" id="1_l265g"]
 [ext_resource type="Texture2D" uid="uid://c2mkqyimkv68w" path="res://Hallasan-Sunset/Player/Animations/Spin Attack/Untitled_Artwork-5 3.png" id="2_1g1fs"]
@@ -84,7 +84,6 @@
 [ext_resource type="PackedScene" uid="uid://xwk3g6ka7muy" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dash.tscn" id="75_ee50j"]
 [ext_resource type="PackedScene" uid="uid://x3kqulp18mfq" path="res://Hallasan-Sunset/Player/Technical/Camera copy/camera_2d.tscn" id="76_apee7"]
 [ext_resource type="Texture2D" uid="uid://doxge4lhhd5xd" path="res://Hallasan-Sunset/Player/Animations/Death/Dead_Down-3.png" id="76_hmbot"]
-[ext_resource type="Texture2D" uid="uid://c388r2yycglft" path="res://Hallasan-Sunset/Player/Sprites/2.png" id="78_3ug7b"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="78_hsdvo"]
 [ext_resource type="Texture2D" uid="uid://dhayo38v8q23b" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_up/Untitled_Artwork-1 14.png" id="78_q1ima"]
 [ext_resource type="Texture2D" uid="uid://dqmjpglv6x4f4" path="res://Hallasan-Sunset/Player/Animations/Charge Walk/charge_walk_up/Untitled_Artwork-2 8.png" id="79_255sd"]
@@ -166,15 +165,41 @@
 [ext_resource type="Texture2D" uid="uid://cew1p3ah16nhi" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkUp/Untitled_Artwork-8.png" id="143_ajlyb"]
 [ext_resource type="Texture2D" uid="uid://cv47a7j2c06qs" path="res://Hallasan-Sunset/Player/Animations/Dodge/Dodge_up/Untitled_Artwork 62.png" id="144_mry8x"]
 [ext_resource type="Texture2D" uid="uid://bg3bsjkx00m4j" path="res://Hallasan-Sunset/Player/Animations/Dodge/Dodge_down/Untitled_Artwork 63.png" id="145_by7y5"]
+[ext_resource type="Texture2D" uid="uid://d2txn5t122pye" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 14.png" id="147_ts5nh"]
+[ext_resource type="Texture2D" uid="uid://l55btgdyrea3" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 15.png" id="148_jubh0"]
+[ext_resource type="Texture2D" uid="uid://c3qy6riyoh5wv" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 16.png" id="149_n1wvg"]
+[ext_resource type="Texture2D" uid="uid://8b3qgrucpulr" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 17.png" id="150_ueuy1"]
+[ext_resource type="Texture2D" uid="uid://6qxm251e384q" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 18.png" id="151_3al2p"]
 [ext_resource type="AudioStream" uid="uid://3evhpn0gekns" path="res://Hallasan-Sunset/Player/Audio/exhausted.wav" id="151_a6mux"]
+[ext_resource type="Texture2D" uid="uid://bkrv18lcna5gv" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 19.png" id="152_jdqik"]
+[ext_resource type="Texture2D" uid="uid://cao7k234ofbhb" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 20.png" id="153_apot5"]
+[ext_resource type="Texture2D" uid="uid://dqlx83kvdaklq" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 21.png" id="154_we47n"]
+[ext_resource type="Texture2D" uid="uid://br5bw66x2vi3g" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown1.png" id="155_kvo8t"]
+[ext_resource type="Texture2D" uid="uid://d2sub62o0xw78" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown2.png" id="156_ns7l6"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_lift.gd" id="156_y2kpu"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_carry.gd" id="157_4s7g4"]
+[ext_resource type="Texture2D" uid="uid://cbsowdix6frut" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown3.png" id="157_fuqjd"]
 [ext_resource type="AudioStream" uid="uid://chik5hscs52r4" path="res://Hallasan-Sunset/Player/Audio/huwh.wav" id="157_rl4b5"]
 [ext_resource type="AudioStream" uid="uid://d2aoucale2cpp" path="res://Hallasan-Sunset/Player/Audio/throw.wav" id="158_3ari3"]
+[ext_resource type="Texture2D" uid="uid://b663qiv01oyks" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown4.png" id="158_o6g1w"]
 [ext_resource type="AudioStream" uid="uid://d4bdf062vyl4i" path="res://Hallasan-Sunset/Player/Audio/grass1.wav" id="159_h133t"]
+[ext_resource type="Texture2D" uid="uid://ckrbbfvyk088i" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown5.png" id="159_janta"]
+[ext_resource type="Texture2D" uid="uid://cc1bfe6hns1ll" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown6.png" id="160_nn2sm"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/PlayerInteractionsHost.gd" id="161_8urtu"]
+[ext_resource type="Texture2D" uid="uid://ch76d5yl1xqpc" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown7.png" id="161_p77nw"]
 [ext_resource type="AudioStream" uid="uid://jkklvsljea4c" path="res://Hallasan-Sunset/Player/Audio/dashswoosh.wav" id="161_shorf"]
+[ext_resource type="Texture2D" uid="uid://cjnuoy480t3jy" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown8.png" id="162_u6h4e"]
+[ext_resource type="Texture2D" uid="uid://dx6x45xsfq6j8" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-1.png" id="163_3opgd"]
+[ext_resource type="Texture2D" uid="uid://bjghs08d3imd6" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-2.png" id="164_vn40x"]
+[ext_resource type="Texture2D" uid="uid://ctheh125f7y3e" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-3.png" id="165_r5q0f"]
+[ext_resource type="Texture2D" uid="uid://byjd1bis6cvip" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-4.png" id="166_f600o"]
+[ext_resource type="Texture2D" uid="uid://d244xbvumc0pe" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-5.png" id="167_km3ac"]
+[ext_resource type="Texture2D" uid="uid://c71tccnvrcbe0" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-6.png" id="168_s3vqv"]
+[ext_resource type="Texture2D" uid="uid://xkivm2fgkqih" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-7.png" id="169_l4phe"]
+[ext_resource type="Texture2D" uid="uid://du82myb5es2x2" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-8.png" id="170_6lb38"]
+[ext_resource type="Texture2D" uid="uid://b441mee730njf" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_down/New/Untitled_Artwork-1 10.png" id="171_64jp2"]
 [ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Magnet/item_magnet.tscn" id="171_iktbv"]
+[ext_resource type="Texture2D" uid="uid://bgyh5lqoojjbl" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dusty.png" id="197_np30c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u7cob"]
 shader = ExtResource("4_7fkcj")
@@ -509,7 +534,9 @@ _data = {
 "spin": SubResource("Animation_xyylv")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l824u"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_slyos"]
+radius = 4.0
+height = 18.0
 
 [sub_resource type="Animation" id="Animation_6eirk"]
 resource_name = " carry_up"
@@ -549,6 +576,96 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g4d8c"]
+resource_name = "BombCarryDown"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("155_kvo8t"), ExtResource("156_ns7l6"), ExtResource("157_fuqjd"), ExtResource("158_o6g1w"), ExtResource("159_janta"), ExtResource("160_nn2sm"), ExtResource("161_p77nw"), ExtResource("162_u6h4e")]
+}
+
+[sub_resource type="Animation" id="Animation_so2cc"]
+resource_name = "BombCarrySide"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("163_3opgd"), ExtResource("164_vn40x"), ExtResource("165_r5q0f"), ExtResource("166_f600o"), ExtResource("167_km3ac"), ExtResource("168_s3vqv"), ExtResource("169_l4phe"), ExtResource("170_6lb38")]
+}
+
+[sub_resource type="Animation" id="Animation_7n7jl"]
+resource_name = "BombCarryUp"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("147_ts5nh"), ExtResource("148_jubh0"), ExtResource("149_n1wvg"), ExtResource("150_ueuy1"), ExtResource("151_3al2p"), ExtResource("152_jdqik"), ExtResource("153_apot5"), ExtResource("154_we47n")]
+}
+
+[sub_resource type="Animation" id="Animation_xybuq"]
+resource_name = "Dash_attack_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("171_64jp2"), ExtResource("54_qr4y4")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 10)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_gxkdx"]
@@ -636,6 +753,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ShadowSprite:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.7, 0.7)]
 }
 
 [sub_resource type="Animation" id="Animation_8mfv3"]
@@ -1501,6 +1630,7 @@ tracks/0/keys = {
 resource_name = "walk_down"
 length = 0.8
 loop_mode = 1
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1524,6 +1654,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShadowSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.6, 0.6)]
 }
 
 [sub_resource type="Animation" id="Animation_7ppi6"]
@@ -1554,6 +1696,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShadowSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.6, 0.6)]
+}
 
 [sub_resource type="Animation" id="Animation_hbdfb"]
 resource_name = "walk_up"
@@ -1583,10 +1737,26 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShadowSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.6, 0.6)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qdnul"]
 _data = {
 " carry_up": SubResource("Animation_6eirk"),
+"BombCarryDown": SubResource("Animation_g4d8c"),
+"BombCarrySide": SubResource("Animation_so2cc"),
+"BombCarryUp": SubResource("Animation_7n7jl"),
+"Dash_attack_down": SubResource("Animation_xybuq"),
 "RESET": SubResource("Animation_gxkdx"),
 "attack_down": SubResource("Animation_8mfv3"),
 "attack_side": SubResource("Animation_gn0nw"),
@@ -1655,7 +1825,7 @@ color_ramp = SubResource("GradientTexture1D_jppa2")
 radius = 48.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lsh8t"]
-radius = 7.01142
+radius = 6.01332
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46mm3"]
 
@@ -1731,15 +1901,24 @@ _data = {
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_se81v"]
 
+[sub_resource type="Gradient" id="Gradient_dqkwe"]
+offsets = PackedFloat32Array(0.0733496, 0.545232)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t65vu"]
+gradient = SubResource("Gradient_dqkwe")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nbsyf"]
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 direction = Vector3(1, 2.08165e-12, 2.08165e-12)
-gravity = Vector3(100, 2.08165e-12, 2.08165e-12)
+gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_t65vu")
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
+y_sort_enabled = true
 collision_layer = 5
 collision_mask = 20
 script = ExtResource("1_l265g")
@@ -1748,7 +1927,8 @@ script = ExtResource("1_l265g")
 modulate = Color(0, 0, 0, 0.235294)
 show_behind_parent = true
 texture_filter = 1
-position = Vector2(-0.6, 25.2)
+position = Vector2(0.4, 22.2)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_kt8jp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -1777,6 +1957,7 @@ libraries = {
 autoplay = "no_attack"
 
 [node name="SpinEffectSprite2D" type="Sprite2D" parent="Sprite2D"]
+visible = false
 show_behind_parent = true
 texture_filter = 1
 texture = ExtResource("7_lsaca")
@@ -1793,6 +1974,7 @@ position = Vector2(-2.08165e-12, 24)
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D/HeldItem"]
 visible = false
+show_behind_parent = true
 position = Vector2(-1, -21)
 scale = Vector2(2, 2)
 texture = ExtResource("8_hefqs")
@@ -1801,8 +1983,9 @@ region_enabled = true
 region_rect = Rect2(0, 68, 128, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 18)
-shape = SubResource("CircleShape2D_l824u")
+position = Vector2(-1, 19)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_slyos")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1914,7 +2097,7 @@ collision_layer = 1
 monitoring = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HitBox"]
-position = Vector2(0, 6.4)
+position = Vector2(0, 9.4)
 shape = SubResource("CircleShape2D_lsh8t")
 debug_color = Color(0.576471, 0.552941, 0.0901961, 0)
 
@@ -1947,6 +2130,7 @@ libraries = {
 
 [node name="arc_projectile" parent="." instance=ExtResource("79_mcnx3")]
 visible = false
+position = Vector2(-1, -13)
 
 [node name="Abilities" type="Node" parent="."]
 
@@ -1954,19 +2138,21 @@ visible = false
 script = ExtResource("74_8h3ji")
 
 [node name="DustParticles" type="GPUParticles2D" parent="."]
-modulate = Color(1, 1, 1, 0.596078)
+modulate = Color(1, 1, 1, 0.494118)
+self_modulate = Color(1, 1, 1, 0.658824)
 show_behind_parent = true
+y_sort_enabled = true
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_se81v")
-position = Vector2(0, 22)
+position = Vector2(0, 18)
 emitting = false
-amount = 1
+amount = 3
 process_material = SubResource("ParticleProcessMaterial_nbsyf")
-texture = ExtResource("78_3ug7b")
-lifetime = 0.3
+texture = ExtResource("197_np30c")
 
 [node name="Camera2D" parent="." instance=ExtResource("76_apee7")]
 
 [node name="Area2D" parent="." instance=ExtResource("171_iktbv")]
+visible = false
 
 [editable path="Dash"]
