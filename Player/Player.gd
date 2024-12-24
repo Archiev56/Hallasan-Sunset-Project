@@ -8,6 +8,7 @@ const dash_speed = 300
 const dash_duration = 0.5
 
 
+@export var max_speed: float = 75.0
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO

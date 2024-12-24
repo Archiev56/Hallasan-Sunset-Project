@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bied1dgs0dcc6" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/checkbox.png" id="2_5ae08"]
 
 [node name="QuestStepItem" type="Control"]
+texture_filter = 1
 custom_minimum_size = Vector2(145, 20)
 layout_mode = 3
 anchors_preset = 0
@@ -16,9 +17,10 @@ modulate = Color(0.607843, 0.678431, 0.717647, 1)
 texture_filter = 1
 layout_mode = 0
 offset_left = 19.0
-offset_top = 4.0
+offset_top = 2.0
 offset_right = 59.0
 offset_bottom = 14.0
+theme_override_font_sizes/font_size = 12
 text = "Step"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

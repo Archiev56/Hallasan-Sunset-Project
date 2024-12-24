@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://4anfveanagec"]
+[gd_scene load_steps=19 format=4 uid="uid://4anfveanagec"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_rlhv3"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="1_rx43c"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://ds6bxm232amrv" path="res://Hallasan-Sunset/Environment/Fog/Fog.tscn" id="13_fmrg2"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="13_ofqdv"]
 [ext_resource type="PackedScene" uid="uid://5ympmnaidvus" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/tree_stump.tscn" id="15_p5868"]
+[ext_resource type="PackedScene" uid="uid://ba2vdtt3qp7p3" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorder.tscn" id="18_wdt3d"]
 [ext_resource type="PackedScene" uid="uid://s87tt1bkx3ku" path="res://Hallasan-Sunset/Environment/Leaves/Floating lights.tscn" id="18_xy80v"]
 
 [node name="Node2D" type="Node2D"]
@@ -40,18 +41,6 @@ position = Vector2(405, 64)
 [node name="Lamp post" parent="Environment/Objects" instance=ExtResource("4_5vpuk")]
 position = Vector2(410, 228)
 
-[node name="Pine Tree" parent="Environment/Objects" instance=ExtResource("5_mn1bu")]
-position = Vector2(1189, 19)
-
-[node name="Pine Tree2" parent="Environment/Objects" instance=ExtResource("5_mn1bu")]
-position = Vector2(1195, 574)
-
-[node name="Pine Tree3" parent="Environment/Objects" instance=ExtResource("5_mn1bu")]
-position = Vector2(741, 10)
-
-[node name="Pine Tree4" parent="Environment/Objects" instance=ExtResource("5_mn1bu")]
-position = Vector2(1196, 377)
-
 [node name="Pine Tree5" parent="Environment/Objects" instance=ExtResource("5_mn1bu")]
 position = Vector2(912, 635)
 
@@ -60,9 +49,6 @@ position = Vector2(809, 112)
 
 [node name="StaticBody2D2" parent="Environment/Objects" instance=ExtResource("6_r346u")]
 position = Vector2(913, 346)
-
-[node name="StaticBody2D3" parent="Environment/Objects" instance=ExtResource("6_r346u")]
-position = Vector2(890, -94)
 
 [node name="StaticBody2D4" parent="Environment/Objects" instance=ExtResource("6_r346u")]
 position = Vector2(1056, -29)
@@ -127,5 +113,20 @@ position = Vector2(980, 220)
 
 [node name="FloatingLights" parent="." instance=ExtResource("18_xy80v")]
 position = Vector2(561, 226)
+
+[node name="Tree Border Down" parent="." instance=ExtResource("18_wdt3d")]
+position = Vector2(760, -44)
+
+[node name="Tree Border Down2" parent="." instance=ExtResource("18_wdt3d")]
+position = Vector2(1024, -44)
+
+[node name="SideBorder" parent="." instance=ExtResource("2_lg2nl")]
+position = Vector2(1302, 80)
+
+[node name="SideBorder2" parent="." instance=ExtResource("2_lg2nl")]
+position = Vector2(1302, 509)
+
+[node name="SideBorder3" parent="." instance=ExtResource("2_lg2nl")]
+position = Vector2(1302, 783)
 
 [editable path="Transitions/TreeStump"]

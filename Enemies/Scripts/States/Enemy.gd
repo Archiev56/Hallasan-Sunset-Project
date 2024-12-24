@@ -15,6 +15,7 @@ var direction : Vector2 = Vector2.ZERO
 var player : Player
 var invulnerable : bool = false
 @onready var gpu_particles_2d = $GPUParticles2D
+@onready var gpu_particles_2d_2 = $GPUParticles2D2
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var sprite : Sprite2D = $Sprite
@@ -28,6 +29,7 @@ func _ready():
 	state_machine.initialize( self )
 
 	hit_box.damaged.connect( _take_damage )
+	gpu_particles_2d_2.emitting = false
 	pass # Replace with function body.
 
 

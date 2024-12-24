@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://btw8r3qjabski" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Untitled_Artwork 46.png" id="8_hefqs"]
 [ext_resource type="Texture2D" uid="uid://dnaheucsn2rsy" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)7.png" id="9_t4q58"]
 [ext_resource type="Texture2D" uid="uid://fchmwiqxqir4" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)8.png" id="10_j2yuu"]
-[ext_resource type="Texture2D" uid="uid://cjica1d5crp5c" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/PLAYER (1)3.png" id="13_h6n1u"]
 [ext_resource type="Texture2D" uid="uid://ddt2vy6hmducl" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-2.png" id="20_s3ikh"]
 [ext_resource type="Texture2D" uid="uid://cpuk42pn1heag" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-3.png" id="21_g4a1u"]
 [ext_resource type="Texture2D" uid="uid://bwgxh50u2k4qm" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-4.png" id="22_sp8r2"]
@@ -140,19 +139,12 @@
 [ext_resource type="Texture2D" uid="uid://br8q1y6d27ou0" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkDown/Carrywalkdown-6.png" id="126_bmkas"]
 [ext_resource type="Texture2D" uid="uid://dq0e0x0sfrf6b" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkDown/Carrywalkdown-7.png" id="127_ohaf7"]
 [ext_resource type="Texture2D" uid="uid://b71pki357a22i" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkDown/Carrywalkdown-8.png" id="128_oup6w"]
-[ext_resource type="Texture2D" uid="uid://d06m01nt5hdp7" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-1 14.png" id="128_rbiax"]
-[ext_resource type="Texture2D" uid="uid://mnao442ondvw" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-2 8.png" id="129_bo0mw"]
 [ext_resource type="Texture2D" uid="uid://duo6k5jbb82ct" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-1.png" id="129_ta1mq"]
 [ext_resource type="Texture2D" uid="uid://dne6l1mixk6pj" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-2.png" id="130_bagn1"]
-[ext_resource type="Texture2D" uid="uid://bc0fqitwjj7w7" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-4 7.png" id="131_f60dx"]
 [ext_resource type="Texture2D" uid="uid://bdj35ud8mv74b" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-3.png" id="131_wdrhf"]
 [ext_resource type="Texture2D" uid="uid://djb44qvq7uucu" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-4.png" id="132_pk2lw"]
-[ext_resource type="Texture2D" uid="uid://7p1017daodrg" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-5 3.png" id="132_ytr1a"]
 [ext_resource type="Texture2D" uid="uid://cad35ydkhhecv" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-5.png" id="133_e86w5"]
-[ext_resource type="Texture2D" uid="uid://bqnadjvq2lgpw" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-6 2.png" id="133_ojd13"]
 [ext_resource type="Texture2D" uid="uid://cdrspahid46mk" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-6.png" id="134_cjys6"]
-[ext_resource type="Texture2D" uid="uid://vx5b3ux0dfs7" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-7.png" id="134_np8km"]
-[ext_resource type="Texture2D" uid="uid://bb1qrt8i1jgad" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-8.png" id="135_rx5y2"]
 [ext_resource type="Texture2D" uid="uid://bcohxmsat06sk" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-7.png" id="135_tiiit"]
 [ext_resource type="Texture2D" uid="uid://bj8tpttu8trpd" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkSide/Carrywalkside-8.png" id="136_qe5na"]
 [ext_resource type="Texture2D" uid="uid://qrbv0dyt24ut" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkUp/Untitled_Artwork-1 14.png" id="137_f61rl"]
@@ -176,20 +168,28 @@
 [ext_resource type="Texture2D" uid="uid://dqlx83kvdaklq" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 21.png" id="154_we47n"]
 [ext_resource type="Texture2D" uid="uid://br5bw66x2vi3g" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown1.png" id="155_kvo8t"]
 [ext_resource type="Texture2D" uid="uid://d2sub62o0xw78" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown2.png" id="156_ns7l6"]
+[ext_resource type="Texture2D" uid="uid://2awuem7wo7r8" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-1 31.png" id="156_rd556"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_lift.gd" id="156_y2kpu"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_carry.gd" id="157_4s7g4"]
 [ext_resource type="Texture2D" uid="uid://cbsowdix6frut" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown3.png" id="157_fuqjd"]
+[ext_resource type="Texture2D" uid="uid://bn1a8aqaab4ld" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-2 21.png" id="157_k87v0"]
 [ext_resource type="AudioStream" uid="uid://chik5hscs52r4" path="res://Hallasan-Sunset/Player/Audio/huwh.wav" id="157_rl4b5"]
 [ext_resource type="AudioStream" uid="uid://d2aoucale2cpp" path="res://Hallasan-Sunset/Player/Audio/throw.wav" id="158_3ari3"]
+[ext_resource type="Texture2D" uid="uid://bnwod5s3lk6ou" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-3 19.png" id="158_m08ji"]
 [ext_resource type="Texture2D" uid="uid://b663qiv01oyks" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown4.png" id="158_o6g1w"]
 [ext_resource type="AudioStream" uid="uid://d4bdf062vyl4i" path="res://Hallasan-Sunset/Player/Audio/grass1.wav" id="159_h133t"]
 [ext_resource type="Texture2D" uid="uid://ckrbbfvyk088i" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown5.png" id="159_janta"]
+[ext_resource type="Texture2D" uid="uid://cuaff3bb7cwhm" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-4 15.png" id="159_ty5hf"]
+[ext_resource type="Texture2D" uid="uid://bkdv7fxutbckr" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-5 10.png" id="160_h8w1o"]
 [ext_resource type="Texture2D" uid="uid://cc1bfe6hns1ll" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown6.png" id="160_nn2sm"]
+[ext_resource type="Texture2D" uid="uid://bf64d3badux72" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-6 8.png" id="161_3n8jm"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/PlayerInteractionsHost.gd" id="161_8urtu"]
 [ext_resource type="Texture2D" uid="uid://ch76d5yl1xqpc" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown7.png" id="161_p77nw"]
 [ext_resource type="AudioStream" uid="uid://jkklvsljea4c" path="res://Hallasan-Sunset/Player/Audio/dashswoosh.wav" id="161_shorf"]
 [ext_resource type="Texture2D" uid="uid://cjnuoy480t3jy" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown8.png" id="162_u6h4e"]
+[ext_resource type="Texture2D" uid="uid://cd3uajn1ki4qy" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-7 7.png" id="162_xl6i4"]
 [ext_resource type="Texture2D" uid="uid://dx6x45xsfq6j8" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-1.png" id="163_3opgd"]
+[ext_resource type="Texture2D" uid="uid://dshjwhapky3j4" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/New_walk_side/Untitled_Artwork-8 6.png" id="163_yuu8n"]
 [ext_resource type="Texture2D" uid="uid://bjghs08d3imd6" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-2.png" id="164_vn40x"]
 [ext_resource type="Texture2D" uid="uid://ctheh125f7y3e" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-3.png" id="165_r5q0f"]
 [ext_resource type="Texture2D" uid="uid://byjd1bis6cvip" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-4.png" id="166_f600o"]
@@ -1682,7 +1682,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("128_rbiax"), ExtResource("129_bo0mw"), ExtResource("13_h6n1u"), ExtResource("131_f60dx"), ExtResource("132_ytr1a"), ExtResource("133_ojd13"), ExtResource("134_np8km"), ExtResource("135_rx5y2")]
+"values": [ExtResource("156_rd556"), ExtResource("157_k87v0"), ExtResource("158_m08ji"), ExtResource("159_ty5hf"), ExtResource("160_h8w1o"), ExtResource("161_3n8jm"), ExtResource("162_xl6i4"), ExtResource("163_yuu8n")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -2002,7 +2002,6 @@ script = ExtResource("65_t8td5")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("66_hex77")
-move_speed = 100.0
 dash_speed = 185.0
 dash_duration = 0.3
 

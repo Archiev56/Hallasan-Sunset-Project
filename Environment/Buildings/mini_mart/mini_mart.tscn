@@ -9,7 +9,6 @@ size = Vector2(344, 290.667)
 z_index = 5
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(876, 1295)
 scale = Vector2(0.75, 0.75)
 collision_layer = 16
 collision_mask = 16

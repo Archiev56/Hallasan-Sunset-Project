@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dsdsymcscej23"]
+[gd_scene load_steps=18 format=3 uid="uid://dsdsymcscej23"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.gd" id="1_enff3"]
 [ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_oupnd"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="4_suqvs"]
 [ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="5_srpej"]
 [ext_resource type="Texture2D" uid="uid://bpphdxqd10vsv" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/boss-hp.png" id="6_bavgn"]
+[ext_resource type="Texture2D" uid="uid://u2ade1f6gvs8" path="res://Hallasan-Sunset/UI/Keys/Keyboard Letters and Symbols.png" id="7_fmvlj"]
 
 [sub_resource type="Animation" id="Animation_23vnf"]
 length = 0.001
@@ -264,10 +265,11 @@ gradient = SubResource("Gradient_7xdwe")
 width = 100
 height = 15
 
-[node name="PlayerHUD" type="CanvasLayer"]
+[node name="PlayerHUD" type="CanvasLayer" node_paths=PackedStringArray("energy_bar")]
 offset = Vector2(2.08165e-12, 2.08165e-12)
 transform = Transform2D(1, 2.08165e-12, 2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
 script = ExtResource("1_enff3")
+energy_bar = NodePath("Control/Energy Bar")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -288,6 +290,7 @@ region_enabled = true
 region_rect = Rect2(29, 0, 34, 8)
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Control"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 21.0
 offset_top = 40.0
@@ -397,7 +400,10 @@ libraries = {
 "": SubResource("AnimationLibrary_yi2p7")
 }
 
+[node name="1" type="Sprite2D" parent="Control/GameOver"]
+
 [node name="BossUI" type="Control" parent="Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -466,16 +472,46 @@ text = "fuck monkey"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
+[node name="Energy Bar" type="TextureProgressBar" parent="Control"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 0
 offset_left = 17.0
 offset_top = 60.0
 offset_right = 117.0
 offset_bottom = 75.0
-value = 50.0
+step = 2.0
+value = 100.0
 rounded = true
 texture_under = SubResource("GradientTexture2D_oldeq")
 texture_progress = SubResource("GradientTexture2D_t6aej")
 
+[node name="KeyboardLettersAndSymbols" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(528, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("7_fmvlj")
+region_enabled = true
+region_rect = Rect2(17, 82, 13, 12)
+
+[node name="KeyboardLettersAndSymbols2" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(592, 112)
+scale = Vector2(2, 2)
+texture = ExtResource("7_fmvlj")
+region_enabled = true
+region_rect = Rect2(33, 34, 13, 12)
+
+[node name="KeyboardLettersAndSymbols3" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(592, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("7_fmvlj")
+region_enabled = true
+region_rect = Rect2(113, 66, 13, 12)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="refill_energy"]

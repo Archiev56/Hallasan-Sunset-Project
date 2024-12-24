@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bv18n10sdmxlc"]
+[gd_scene load_steps=20 format=3 uid="uid://bv18n10sdmxlc"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/Pause.gd" id="1_n04mh"]
 [ext_resource type="Texture2D" uid="uid://boinh7toy2duf" path="res://Hallasan-Sunset/UI/Inventory/book_middle.png" id="2_uxl7v"]
@@ -10,8 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://nbdb7nut6dh2" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/inventory_slot.tscn" id="6_ye6ht"]
 [ext_resource type="Resource" uid="uid://dcqu1flenu416" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/player_inventory.tres" id="7_gdv8y"]
 [ext_resource type="PackedScene" uid="uid://v0k1yqv8sn7u" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_item.tscn" id="10_0fcl2"]
+[ext_resource type="FontFile" uid="uid://dc4xnxlmy3tbi" path="res://Hallasan-Sunset/UI/Fonts/yoster.ttf" id="10_camsl"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quests_ui.gd" id="10_wsuh3"]
 [ext_resource type="PackedScene" uid="uid://1uaklgsuboha" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_step_item.tscn" id="12_re7xn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdd4a"]
+bg_color = Color(0.952941, 0.866667, 0.780392, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0vv8"]
 texture = ExtResource("3_55hyt")
@@ -90,21 +98,20 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TabContainer" type="TabContainer" parent="."]
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 31.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/panel = SubResource("StyleBoxFlat_cdd4a")
 tab_alignment = 1
-current_tab = 0
-
-[node name="LargeBackground" type="Sprite2D" parent="TabContainer"]
-position = Vector2(314, 174.438)
-scale = Vector2(0.356182, 0.234951)
-texture = ExtResource("3_55hyt")
+current_tab = 1
 
 [node name="Inventory" type="Control" parent="TabContainer"]
+visible = false
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("3_2l1ry")
@@ -171,61 +178,60 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Banner" type="Sprite2D" parent="TabContainer/Inventory"]
-position = Vector2(310, 47)
+position = Vector2(222, 41.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_xky3d")
 
 [node name="LargeBackground" type="Sprite2D" parent="TabContainer/Inventory"]
-position = Vector2(459.711, 177)
-scale = Vector2(0.109275, 0.1638)
+position = Vector2(505.211, 177)
+scale = Vector2(0.167571, 0.1638)
 texture = ExtResource("3_55hyt")
 
 [node name="Description" type="Label" parent="TabContainer/Inventory"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 385.0
+offset_left = 421.0
 offset_top = 90.0
-offset_right = 547.0
-offset_bottom = 110.0
+offset_right = 591.0
+offset_bottom = 114.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("10_camsl")
+theme_override_font_sizes/font_size = 24
 text = "Description: "
 horizontal_alignment = 1
 
 [node name="Inventory" type="Label" parent="TabContainer/Inventory"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 230.0
-offset_top = 35.0
-offset_right = 392.0
-offset_bottom = 67.0
+offset_left = 142.0
+offset_top = 24.75
+offset_right = 304.0
+offset_bottom = 56.75
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("10_camsl")
+theme_override_font_sizes/font_size = 24
 text = "INVENTORY"
 horizontal_alignment = 1
 
 [node name="ItemDescription" type="Label" parent="TabContainer/Inventory"]
 texture_filter = 1
 layout_mode = 2
-offset_left = 387.0
+offset_left = 393.0
 offset_top = 123.0
-offset_right = 528.0
+offset_right = 534.0
 offset_bottom = 164.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.129412, 0.588235, 0.32549, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("10_camsl")
+theme_override_font_sizes/font_size = 12
 text = "heklmrfesdc"
 autowrap_mode = 2
 
 [node name="Quests" type="Control" parent="TabContainer"]
-visible = false
 texture_filter = 1
 layout_mode = 2
 theme = ExtResource("3_2l1ry")
@@ -234,10 +240,10 @@ metadata/_tab_index = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Quests"]
 layout_mode = 0
-offset_left = 80.0
+offset_left = 10.0
 offset_top = 66.0
 offset_right = 333.0
-offset_bottom = 345.0
+offset_bottom = 268.0
 follow_focus = true
 scroll_vertical_custom_step = 100.0
 horizontal_scroll_mode = 0
@@ -284,8 +290,8 @@ offset_bottom = 196.0
 
 [node name="LargeBackground" type="Sprite2D" parent="TabContainer/Quests/VBoxContainer"]
 modulate = Color(0.0509804, 0.564706, 0.407843, 1)
-position = Vector2(91, 95)
-scale = Vector2(0.147465, 0.181928)
+position = Vector2(128.952, 95)
+scale = Vector2(0.19609, 0.181928)
 texture = ExtResource("3_55hyt")
 
 [node name="TitleLabel" type="Label" parent="TabContainer/Quests/VBoxContainer"]
@@ -318,21 +324,21 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Banner" type="Sprite2D" parent="TabContainer/Quests"]
-position = Vector2(310, 46.875)
+position = Vector2(339, 32.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_xky3d")
 
-[node name="Inventory" type="Label" parent="TabContainer/Quests"]
+[node name="Quests" type="Label" parent="TabContainer/Quests"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 230.0
-offset_top = 35.0
-offset_right = 392.0
-offset_bottom = 67.0
+offset_left = 259.0
+offset_top = 17.0
+offset_right = 421.0
+offset_bottom = 49.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.505882, 0, 0.67451, 1)
-theme_override_fonts/font = ExtResource("5_jplde")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("10_camsl")
+theme_override_font_sizes/font_size = 24
 text = "QUESTS"
 horizontal_alignment = 1
 
