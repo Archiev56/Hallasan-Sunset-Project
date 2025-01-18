@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://drsrxcey1mr8h"]
+[gd_scene load_steps=8 format=3 uid="uid://drsrxcey1mr8h"]
 
 [ext_resource type="Texture2D" uid="uid://bfsljqyv1qdbl" path="res://Hallasan-Sunset/npc/Characters/Ungyeo Bear/Sprites/Untitled_Artwork-1 9.png" id="1_pvsxk"]
 [ext_resource type="Texture2D" uid="uid://l3nly7wv1xtp" path="res://Hallasan-Sunset/npc/Characters/Ungyeo Bear/Sprites/Untitled_Artwork-2 3.png" id="2_ga7pm"]
 [ext_resource type="Texture2D" uid="uid://dsybr11b03tl3" path="res://Hallasan-Sunset/npc/Characters/Ungyeo Bear/Sprites/Untitled_Artwork-3 3.png" id="3_ofadx"]
 [ext_resource type="Texture2D" uid="uid://d378gy87y0uot" path="res://Hallasan-Sunset/npc/Characters/Ungyeo Bear/Sprites/Untitled_Artwork-4 2.png" id="4_643cp"]
 [ext_resource type="Texture2D" uid="uid://dj46ykj8q4283" path="res://Hallasan-Sunset/npc/Characters/Ungyeo Bear/Sprites/Untitled_Artwork-5 2.png" id="5_o1w1a"]
-[ext_resource type="PackedScene" uid="uid://c3gxjr065vnmf" path="res://Hallasan-Sunset/Technical/Actionable copy/actionable.tscn" id="6_tad88"]
-[ext_resource type="Resource" path="res://npc/Characters/Ungyeo Bear/Ungyeo Bear.dialogue" id="7_j218l"]
 
 [sub_resource type="Animation" id="Animation_rigee"]
 resource_name = "Idle"
@@ -31,16 +29,13 @@ _data = {
 "Idle": SubResource("Animation_rigee")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8ns37"]
-radius = 40.05
-
 [node name="Ungyeo Bear" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 collision_layer = 17
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("4_643cp")
+texture = ExtResource("1_pvsxk")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")
@@ -51,10 +46,3 @@ autoplay = "Idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-19, 39, -28, 24, -28, 14, -34, -13, -31, -28, -27, -32, 26, -33, 31, -28, 34, -13, 28, 13, 28, 25, 19, 39)
-
-[node name="Actionable" parent="." instance=ExtResource("6_tad88")]
-dialogue_resource = ExtResource("7_j218l")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(0, 32)
-shape = SubResource("CircleShape2D_8ns37")

@@ -1,21 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://4np1xt5e2gi8"]
+[gd_scene load_steps=5 format=3 uid="uid://4np1xt5e2gi8"]
 
+[ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="1_3gvvw"]
 [ext_resource type="Shader" uid="uid://2ucyy8fxogos" path="res://Hallasan-Sunset/Environment/Tree/Pine Tree/Pine Tree.tres" id="1_yxvih"]
 [ext_resource type="Texture2D" uid="uid://br1of0rafoocg" path="res://Hallasan-Sunset/Environment/Totem Poles/1/4.png" id="2_kaj2n"]
-[ext_resource type="PackedScene" uid="uid://c3gxjr065vnmf" path="res://Hallasan-Sunset/Technical/Actionable copy/actionable.tscn" id="3_8hbck"]
-[ext_resource type="Resource" path="res://Environment/Totem Poles/1/1.dialogue" id="4_54m0o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_noodt"]
 shader = ExtResource("1_yxvih")
 shader_parameter/WindStrength = 2.5
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_erp16"]
-radius = 40.0125
-
 [node name="Area2D" type="Area2D"]
 z_index = 5
 collision_layer = 16
 collision_mask = 0
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.192157)
+position = Vector2(1, -1)
+texture = ExtResource("1_3gvvw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -25,10 +26,3 @@ texture = ExtResource("2_kaj2n")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-5, 7, -8, -9, -3, -21, 5, -33, 20, -33, 19, -26, 15, -16, 9, -9, 8, 8)
-
-[node name="Actionable" parent="." instance=ExtResource("3_8hbck")]
-dialogue_resource = ExtResource("4_54m0o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
-position = Vector2(1, 14)
-shape = SubResource("CircleShape2D_erp16")

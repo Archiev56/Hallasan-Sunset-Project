@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dsdsymcscej23"]
+[gd_scene load_steps=27 format=3 uid="uid://dsdsymcscej23"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.gd" id="1_enff3"]
 [ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_oupnd"]
@@ -7,6 +7,35 @@
 [ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="5_srpej"]
 [ext_resource type="Texture2D" uid="uid://bpphdxqd10vsv" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/boss-hp.png" id="6_bavgn"]
 [ext_resource type="Texture2D" uid="uid://u2ade1f6gvs8" path="res://Hallasan-Sunset/UI/Keys/Keyboard Letters and Symbols.png" id="7_fmvlj"]
+[ext_resource type="Texture2D" uid="uid://nn1omdjbl3r1" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/panel_notification.png" id="8_6ya57"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Notifications/notifications.gd" id="8_mchtw"]
+[ext_resource type="AudioStream" uid="uid://8ocqaef855jl" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/notification.wav" id="10_dr8b1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqb76"]
+content_margin_left = 12.0
+content_margin_top = 12.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("8_6ya57")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6qff"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("8_6ya57")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [sub_resource type="Animation" id="Animation_23vnf"]
 length = 0.001
@@ -265,6 +294,120 @@ gradient = SubResource("Gradient_7xdwe")
 width = 100
 height = 15
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uap67"]
+content_margin_left = 12.0
+content_margin_top = 6.0
+content_margin_right = 12.0
+content_margin_bottom = 12.0
+texture = ExtResource("8_6ya57")
+texture_margin_left = 18.0
+texture_margin_top = 18.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="Animation" id="Animation_gmq34"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_yhi33"]
+resource_name = "show_notification"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PanelContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(5, 0), Vector2(5, 5), Vector2(5, 5), Vector2(5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PanelContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_dr8b1")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eodqd"]
+_data = {
+"RESET": SubResource("Animation_gmq34"),
+"show_notification": SubResource("Animation_yhi33")
+}
+
 [node name="PlayerHUD" type="CanvasLayer" node_paths=PackedStringArray("energy_bar")]
 offset = Vector2(2.08165e-12, 2.08165e-12)
 transform = Transform2D(1, 2.08165e-12, 2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
@@ -283,7 +426,7 @@ mouse_default_cursor_shape = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
 texture_filter = 1
-position = Vector2(66, 29)
+position = Vector2(548, 15)
 scale = Vector2(2, 2)
 texture = ExtResource("1_oupnd")
 region_enabled = true
@@ -291,11 +434,15 @@ region_rect = Rect2(29, 0, 34, 8)
 
 [node name="HFlowContainer" type="HFlowContainer" parent="Control"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 21.0
-offset_top = 40.0
-offset_right = 67.0
-offset_bottom = 60.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -122.0
+offset_top = 25.0
+offset_right = -76.0
+offset_bottom = 45.0
+grow_horizontal = 0
 scale = Vector2(2, 2)
 theme_override_constants/h_separation = 4
 theme_override_constants/v_separation = 2
@@ -354,10 +501,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 146.5
-offset_top = 73.0
-offset_right = 786.5
-offset_bottom = 433.0
+offset_left = -165.5
+offset_top = -107.0
+offset_right = 474.5
+offset_bottom = 253.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_suqvs")
@@ -373,10 +520,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 148.5
-offset_top = 133.0
-offset_right = 332.5
-offset_bottom = 217.0
+offset_left = -171.5
+offset_top = -60.0
+offset_right = 28.5
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -384,15 +531,17 @@ alignment = 1
 [node name="ContinueButton" type="Button" parent="Control/GameOver/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("5_srpej")
+theme_override_fonts/font = ExtResource("4_suqvs")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_fqb76")
 text = "Continue"
 
 [node name="TitleButton" type="Button" parent="Control/GameOver/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("5_srpej")
+theme_override_fonts/font = ExtResource("4_suqvs")
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxTexture_o6qff")
 text = "Back to Menu"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/GameOver"]
@@ -473,6 +622,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Energy Bar" type="TextureProgressBar" parent="Control"]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 0
 offset_left = 17.0
@@ -486,28 +636,74 @@ texture_under = SubResource("GradientTexture2D_oldeq")
 texture_progress = SubResource("GradientTexture2D_t6aej")
 
 [node name="KeyboardLettersAndSymbols" type="Sprite2D" parent="Control"]
+visible = false
 texture_filter = 1
-position = Vector2(528, 48)
+position = Vector2(501, 316)
 scale = Vector2(2, 2)
 texture = ExtResource("7_fmvlj")
 region_enabled = true
 region_rect = Rect2(17, 82, 13, 12)
 
 [node name="KeyboardLettersAndSymbols2" type="Sprite2D" parent="Control"]
+visible = false
 texture_filter = 1
-position = Vector2(592, 112)
+position = Vector2(565, 252)
 scale = Vector2(2, 2)
 texture = ExtResource("7_fmvlj")
 region_enabled = true
 region_rect = Rect2(33, 34, 13, 12)
 
 [node name="KeyboardLettersAndSymbols3" type="Sprite2D" parent="Control"]
+visible = false
 texture_filter = 1
-position = Vector2(592, 48)
+position = Vector2(565, 316)
 scale = Vector2(2, 2)
 texture = ExtResource("7_fmvlj")
 region_enabled = true
 region_rect = Rect2(113, 66, 13, 12)
+
+[node name="Notification" type="Control" parent="Control"]
+process_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("8_mchtw")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/Notification"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 249.0
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_uap67")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Notification/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Notification/PanelContainer/VBoxContainer"]
+modulate = Color(1, 0.858824, 0.552941, 1)
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_suqvs")
+text = "Notification Type"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Notification/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_suqvs")
+text = "Notification Message
+"
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Notification"]
+libraries = {
+"": SubResource("AnimationLibrary_eodqd")
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

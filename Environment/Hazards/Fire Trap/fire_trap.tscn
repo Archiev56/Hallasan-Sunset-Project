@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2vp57kytlw30"]
 
-[ext_resource type="Script" path="res://Fire Trap.gd" id="1_2dxhl"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/Fire Trap.gd" id="1_2dxhl"]
 [ext_resource type="Texture2D" uid="uid://doiemsxlugase" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/Fire_Trap.png" id="2_tytys"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_0ve1f"]
 

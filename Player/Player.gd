@@ -4,7 +4,7 @@ signal direction_changed( new_direction: Vector2 )
 signal player_damaged( hurt_box: HurtBox )
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
-const dash_speed = 300
+const dash_speed = 200
 const dash_duration = 0.5
 
 

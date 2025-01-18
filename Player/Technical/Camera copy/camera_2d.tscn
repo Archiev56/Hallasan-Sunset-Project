@@ -3,5 +3,6 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Camera copy/Camera2D.gd" id="1_n2r10"]
 
 [node name="Camera2D" type="Camera2D"]
+editor_draw_screen = false
 editor_draw_limits = true
 script = ExtResource("1_n2r10")

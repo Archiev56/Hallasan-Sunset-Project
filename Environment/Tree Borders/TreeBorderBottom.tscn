@@ -12,7 +12,7 @@ shader_parameter/WindStrength = 10.0
 a = Vector2(-88, -182)
 b = Vector2(299, -182)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="DownBorder" type="StaticBody2D"]
 z_index = 5
 texture_filter = 1
 position = Vector2(-57, 182)

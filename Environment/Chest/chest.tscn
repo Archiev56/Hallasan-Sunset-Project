@@ -1,20 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://dk11vr1agmrsd"]
+[gd_scene load_steps=14 format=3 uid="uid://dk11vr1agmrsd"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Chest/chest.gd" id="1_wcqph"]
-[ext_resource type="Texture2D" uid="uid://bhc1nhufg22v0" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-1 8.png" id="2_kv4pw"]
 [ext_resource type="Texture2D" uid="uid://dh6awve7ygyfy" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-5.png" id="2_lir6l"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_vv3xs"]
-[ext_resource type="Texture2D" uid="uid://cn1m8m8y4keqj" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-2 2.png" id="4_etewe"]
-[ext_resource type="Texture2D" uid="uid://c1sc75ywsspt1" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-3 2.png" id="5_p11no"]
-[ext_resource type="Texture2D" uid="uid://camu11e0ijab0" path="res://Hallasan-Sunset/Environment/Chest/Untitled_Artwork-4.png" id="6_itohp"]
-[ext_resource type="AudioStream" uid="uid://d32ocyquvxyea" path="res://Hallasan-Sunset/Environment/Chest/SE4_BS_HANA_FACE_OPEN1.wav" id="8_yc0ao"]
+[ext_resource type="Texture2D" uid="uid://p8o8r5rp8giq" path="res://Fantasy RPG (Toony) 32x32.png" id="3_yymi6"]
+[ext_resource type="AudioStream" uid="uid://6s6h6cnieicq" path="res://Hallasan-Sunset/Environment/Chest/Chest_open.mp3" id="4_6v73u"]
 [ext_resource type="PackedScene" uid="uid://qeg0erpj3xkj" path="res://Hallasan-Sunset/Technical/PersistentDataHelper copy/persistent-data-handler.tscn" id="10_01jfc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_htg77"]
-size = Vector2(104, 50.5)
+size = Vector2(56, 67.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ufgo5"]
-size = Vector2(90, 25)
+size = Vector2(51, 28.5)
 
 [sub_resource type="Animation" id="Animation_j0ghv"]
 length = 0.001
@@ -56,14 +53,14 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:texture")
+tracks/3/path = NodePath("Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_kv4pw")]
+"values": [5]
 }
 
 [sub_resource type="Animation" id="Animation_ujsht"]
@@ -78,58 +75,59 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_kv4pw")]
+"values": [ExtResource("3_yymi6")]
 }
 
 [sub_resource type="Animation" id="Animation_nrweh"]
 resource_name = "opened"
 length = 1.5
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("ItemSprite:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("2_kv4pw"), ExtResource("4_etewe"), ExtResource("5_p11no"), ExtResource("6_itohp"), ExtResource("2_lir6l")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ItemSprite:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
 }
-tracks/2/type = "bezier"
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprite:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(12, -0.25, 0, 0.25, 0, -50, -0.25, 0, 0.25, 0, -25, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.1, 0.5, 0.8)
+}
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("ItemSprite:position:y")
+tracks/2/path = NodePath("ItemSprite:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(12, -0.25, 0, 0.25, 0, -84, -0.25, 0, 0.25, 0, -58, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.1, 0.5, 0.8)
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("ItemSprite:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0.1, 0.5, 0.8, 1.2, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(2, 2, 2, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [5, 29, 39]
 }
 tracks/4/type = "audio"
 tracks/4/imported = false
@@ -141,7 +139,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("8_yc0ao")
+"stream": ExtResource("4_6v73u")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -173,19 +171,22 @@ _data = {
 [node name="Chest" type="Node2D"]
 process_mode = 3
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_wcqph")
 
 [node name="Shadow" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0.45098)
+modulate = Color(0, 0, 0, 0.188)
 texture_filter = 1
-position = Vector2(0, 38)
-scale = Vector2(3.5, 3.5)
+position = Vector2(-1, 24.5)
+scale = Vector2(2.125, 1.71875)
 texture = ExtResource("2_vv3xs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_kv4pw")
+scale = Vector2(2, 2)
+texture = ExtResource("3_yymi6")
+hframes = 12
+vframes = 8
+frame = 5
 
 [node name="ItemSprite" type="Sprite2D" parent="."]
 visible = false
@@ -211,14 +212,15 @@ collision_mask = 5
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 15.25)
+position = Vector2(0, 6.75)
 shape = SubResource("RectangleShape2D_htg77")
 debug_color = Color(0, 0.65098, 0.105882, 0.419608)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 25.5)
+position = Vector2(0, 14.25)
 shape = SubResource("RectangleShape2D_ufgo5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

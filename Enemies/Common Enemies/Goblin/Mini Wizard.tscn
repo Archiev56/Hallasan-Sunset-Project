@@ -26,6 +26,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_qwr4k"]
 radius = 13.3333
 
+[sub_resource type="Animation" id="Animation_n2hut"]
+resource_name = "Idle"
+
 [sub_resource type="Animation" id="Animation_wnokj"]
 length = 0.001
 tracks/0/type = "value"
@@ -552,9 +555,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [3, 4, 5]
 }
-
-[sub_resource type="Animation" id="Animation_n2hut"]
-resource_name = "Idle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {

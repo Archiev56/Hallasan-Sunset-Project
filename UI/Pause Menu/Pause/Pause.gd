@@ -6,7 +6,7 @@ signal hidden
 @onready var tab_container = $TabContainer
 @onready var button_save: Button = $TabContainer/System/VBoxContainer/Button_save
 @onready var button_load: Button = $TabContainer/System/VBoxContainer/Button_load
-@onready var item_description: Label = $TabContainer/Inventory/ItemDescription
+@onready var item_description: Label = $TabContainer/Inventory/VBoxContainer/Panel/ItemDescription
 @onready var audio_stream_player: AudioStreamPlayer2D = $Control/AudioStreamPlayer2D
 
 var is_paused : bool = false

@@ -1,14 +1,13 @@
 class_name State_Walk extends State
 
-@export var move_speed: float = 800.0
-@export var dash_speed: float = 200.0
-@export var dash_duration: float = 0.2  # Duration of the dash in seconds
+@export var move_speed: float = 175.0
+@export var dash_speed: float = 150.0
+@export var dash_duration: float = 0.1  # Duration of the dash in seconds
 @export var max_speed: float = 85.0
 @export var accel: float = 1200.0
 @export var friction: float = 600.0
 
 @export var player_hud_path: String = "res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.tscn"
-var player_hud: Node = null  # Reference to the instantiated PlayerHUD
 
 var dash_scene = preload("res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dash.tscn")
 
@@ -29,19 +28,7 @@ var dash_timer: float = 0.0
 var input: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	# Load the PlayerHUD scene
-	var player_hud_scene = load(player_hud_path)
-  # Use preload or load
-	if player_hud_scene:
-		player_hud = player_hud_scene.instantiate()
-		get_tree().root.add_child(player_hud)  # Add PlayerHUD to the root or desired parent node
-		print("PlayerHUD loaded and instantiated successfully:", player_hud)
-	else:
-		print("Failed to load PlayerHUD scene from path:", player_hud_path)
-	
-	# Existing _ready logic
-	var dash_scene = dash_scene.instantiate()
-	add_child(dash_scene)
+	pass
 
 func enter() -> void:
 	player.UpdateAnimation("walk")
@@ -57,31 +44,35 @@ func exit() -> void:
 func Process(_delta: float) -> State:
 	if player.direction == Vector2.ZERO and not is_dashing:
 		return idle
+	return null
 
+func Physics(_delta: float) -> State:
 	if is_dashing:
 		dash_timer -= _delta
 		if dash_timer <= 0.0:
 			is_dashing = false
 			hit_box.is_invulnerable = false
-			player.velocity = player.direction * move_speed
-			player.UpdateAnimation("walk")  # Ensure animation reverts to walk
+			player.velocity = player.direction * move_speed  # Revert to walking speed after dash
+			player.UpdateAnimation("walk")
 			if dash_particles:
 				dash_particles.emitting = false
+		else:
+			player.velocity = player.direction * dash_speed
 	else:
 		handle_walking(_delta)
 
-	return null
+	# Smoothly transition velocity to avoid staggering after a dash
+	if not is_dashing and input != Vector2.ZERO:
+		player.velocity = player.velocity.lerp(input * move_speed, 0.2)
 
-func Physics(_delta: float) -> State:
 	player.move_and_slide()  # Ensure this uses calculated velocity
 	return null
 
 func handle_input(_event: InputEvent) -> State:
 	if _event.is_action_pressed("attack"):
 		return attack
-	elif _event.is_action_pressed("dash"):
-		if not start_dashing():
-			print("Not enough energy to dash!")  # Debugging message
+	if _event.is_action_pressed("dash"):
+		start_dashing()
 	return null
 
 func handle_walking(delta: float):
@@ -96,10 +87,6 @@ func handle_walking(delta: float):
 	else:
 		player.velocity += input * accel * delta
 		player.velocity = player.velocity.limit_length(max_speed)
-
-	# Smoothly transition velocity after dashing
-	if not is_dashing and player.velocity.length() > move_speed:
-		player.velocity = player.velocity.normalized().lerp(player.velocity.normalized() * move_speed, delta * friction)
 
 	# Play walking sound at intervals
 	sound_cooldown -= delta
@@ -120,29 +107,18 @@ func get_input() -> Vector2:
 	return direction.normalized()
 
 func start_dashing() -> bool:
-	print("Checking energy for dash...")  # Debugging message
-	if player_hud and player_hud.deduct_energy_for_dodge():
-		print("Dash successful!")  # Debugging message
-		is_dashing = true
-		player.UpdateAnimation("dodge")
-		animation_player.play("dodge_" + player.AnimDirection())
-		hit_box.is_invulnerable = true
-		dash_audio.play()
-		dash_timer = dash_duration
-		player.velocity = player.direction * dash_speed
-		if dash_particles:
-			dash_particles.emitting = true
-		if dash_node:
-			dash_node.instance_ghost()
-		else:
-			print("Error: Dash node not found!")
-		return true
-	else:
-		print("Not enough energy or PlayerHUD not found!")  # Debugging message
-		return false
+	is_dashing = true
+	player.UpdateAnimation("dodge")
+	animation_player.play("dodge_" + player.AnimDirection())
+	hit_box.is_invulnerable = true
+	dash_audio.play()
+	dash_timer = dash_duration
+	if dash_particles:
+		dash_particles.emitting = true
+	return true
 
 func _on_AnimationPlayer_animation_finished(animation_name: String):
-	if animation_name.begins_with("dodge_"):  # If a dodge animation ends
+	if animation_name.begins_with("dodge_"):
 		if player.direction != Vector2.ZERO:
 			player.UpdateAnimation("walk")
 		else:

@@ -17,17 +17,10 @@ var energy_deduction_per_dodge: int = 1
 @onready var boss_hp_bar: TextureProgressBar = $Control/BossUI/TextureProgressBar
 @onready var boss_label: Label = $Control/BossUI/Label
 @export var energy_bar: TextureProgressBar  # Assign via Inspector
+@onready var notification : NotificationUI = $Control/Notification
 
 func _ready():
-	# Check energy bar assignment
-	if not energy_bar:
-		print("Error: Energy bar is not assigned in the Inspector!")
-	else:
-		print("Energy bar successfully assigned:", energy_bar)
-
-	# Initialize energy bar to full
-	current_energy = max_energy
-	update_energy_bar()
+	
 
 	# Setup hearts
 	for child in $Control/HFlowContainer.get_children():
@@ -40,45 +33,6 @@ func _ready():
 	LevelManager.level_load_started.connect(hide_game_over_screen)
 	hide_boss_health()
 
-	# Configure energy refill timer
-	if energy_refill_timer:
-		energy_refill_timer.wait_time = 1.0 / energy_refill_rate
-		energy_refill_timer.autostart = true
-		energy_refill_timer.one_shot = false
-		energy_refill_timer.timeout.connect(refill_energy)
-		energy_refill_timer.start()  # Ensure the timer starts
-		print("Energy refill timer configured and started: ", energy_refill_timer.wait_time)
-	else:
-		print("Error: Energy refill timer is not found!")
-
-func update_energy_bar() -> void:
-	if energy_bar:
-		energy_bar.value = float(current_energy) / float(max_energy) * 100
-		print("Energy bar updated. Value: ", energy_bar.value)
-	else:
-		print("Error: Energy bar node is not assigned or does not exist!")
-
-func deduct_energy_for_dodge() -> bool:
-	print("Attempting to deduct energy. Current energy: ", current_energy)
-	if current_energy >= energy_deduction_per_dodge:
-		current_energy -= energy_deduction_per_dodge
-		current_energy = max(current_energy, 0)  # Clamp to zero
-		update_energy_bar()
-		print("Energy deducted. Remaining energy: ", current_energy)
-		return true
-	else:
-		print("Not enough energy to dash! Current energy: ", current_energy)
-		return false
-
-func refill_energy() -> void:
-	print("Refilling energy. Current energy: ", current_energy)
-	if current_energy < max_energy:
-		current_energy += 1
-		current_energy = min(current_energy, max_energy)  # Clamp to max
-		update_energy_bar()
-		print("Energy increased to: ", current_energy)
-	else:
-		print("Energy is already full. Current energy: ", current_energy)
 
 func update_hp(_hp: int, _max_hp: int) -> void:
 	update_max_hp(_max_hp)
@@ -141,3 +95,7 @@ func hide_boss_health() -> void:
 
 func update_boss_health(hp: int, max_hp: int) -> void:
 	boss_hp_bar.value = clampf(float(hp) / float(max_hp) * 100, 0, 100)
+
+func queue_notification( _title : String, _message : String ) -> void:
+	notification.add_notification_to_queue( _title, _message )
+	pass

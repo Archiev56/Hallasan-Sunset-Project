@@ -56,18 +56,12 @@ func start_dash(duration):
 
 func is_dashing():
 	return !duration_timer.is_stopped()
-func end_dash():
-	sprite.material.set_shader_param("whiten", false)
-	ghost_timer.stop()
 	
-	can_dash = false
-	await get_tree().create_timer(dash_delay).timeout
-	can_dash = true
+
 
 
 func _on_duration_timer_timeout():
 	print("Dash ended")
-	end_dash()  # Stop ghost creation when the dash ends
 
 func _on_ghost_timer_timeout():
 	instance_ghost()  # Create more ghosts at intervals while dashing

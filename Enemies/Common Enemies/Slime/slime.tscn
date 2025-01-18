@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://0uw5235d8xhl"]
+[gd_scene load_steps=65 format=3 uid="uid://0uw5235d8xhl"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_44gfu"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="1_etj4l"]
@@ -27,6 +27,7 @@
 [ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Coins/Gold Coin/Gold Coin.tres" id="22_gywgk"]
 [ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Coins/Coin Stack/Coin Stack.tres" id="23_phpvk"]
 [ext_resource type="Texture2D" uid="uid://dk75qs4d6k6p0" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/Star.png" id="27_yfrkm"]
+[ext_resource type="Texture2D" uid="uid://c17eubopfjeqt" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Lost_Heart.png" id="28_agpad"]
 
 [sub_resource type="Animation" id="Animation_wnokj"]
 length = 0.001
@@ -864,6 +865,65 @@ scale_min = 0.5
 scale_max = 0.7
 color_ramp = SubResource("GradientTexture1D_2r4x2")
 
+[sub_resource type="Gradient" id="Gradient_0qod7"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dbqif"]
+gradient = SubResource("Gradient_0qod7")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xo8hy"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 2)
+emission_shape = 1
+emission_sphere_radius = 5.78
+direction = Vector3(1, -1, 2)
+spread = 90.0
+initial_velocity_min = 200.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 700, 0)
+damping_min = 100.0
+damping_max = 800.0
+scale_min = 0.5
+scale_max = 0.7
+color_ramp = SubResource("GradientTexture1D_dbqif")
+
+[sub_resource type="Gradient" id="Gradient_r77ro"]
+offsets = PackedFloat32Array(0.297989, 0.954296)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yg76r"]
+gradient = SubResource("Gradient_r77ro")
+
+[sub_resource type="Curve" id="Curve_h3cic"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ef7xg"]
+curve = SubResource("Curve_h3cic")
+
+[sub_resource type="Curve" id="Curve_3nfhk"]
+max_value = 3.0
+_data = [Vector2(0.0214876, 0.347087), 0.0, 0.0, 0, 0, Vector2(0.985124, 0.69501), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7rleb"]
+curve = SubResource("Curve_3nfhk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u1aab"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 43.01
+radial_velocity_min = -2.23517e-05
+radial_velocity_max = 50.0
+gravity = Vector3(0, -80, 0)
+linear_accel_curve = SubResource("CurveTexture_ef7xg")
+scale_max = 1.5
+scale_over_velocity_curve = SubResource("CurveTexture_7rleb")
+color_ramp = SubResource("GradientTexture1D_yg76r")
+
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 256
 collision_mask = 17
@@ -954,3 +1014,23 @@ texture = ExtResource("27_yfrkm")
 lifetime = 0.6
 one_shot = true
 explosiveness = 1.0
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(0, -48)
+emitting = false
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_xo8hy")
+texture = ExtResource("27_yfrkm")
+lifetime = 0.6
+one_shot = true
+explosiveness = 1.0
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -50)
+emitting = false
+amount = 100
+process_material = SubResource("ParticleProcessMaterial_u1aab")
+texture = ExtResource("28_agpad")
+one_shot = true
+explosiveness = 0.8
