@@ -4,9 +4,9 @@
 [ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_ddr3t"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_1rdhy"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="4_6keq3"]
-[ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Torch/torch.tscn" id="5_o2ofn"]
-[ext_resource type="PackedScene" uid="uid://iuhg4fkjm7w" path="res://Hallasan-Sunset/Levels/Dungeon_elements/LockedDoor/locked_door.tscn" id="6_3ibh0"]
-[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="7_mbilw"]
+[ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Dungeon/Torch/torch.tscn" id="5_o2ofn"]
+[ext_resource type="PackedScene" uid="uid://iuhg4fkjm7w" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/LockedDoor/locked_door.tscn" id="6_3ibh0"]
+[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="7_mbilw"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_e54db")

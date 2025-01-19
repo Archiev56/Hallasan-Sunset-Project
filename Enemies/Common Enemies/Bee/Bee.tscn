@@ -10,10 +10,10 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="10_bj8aa"]
 [ext_resource type="Material" uid="uid://xi2k6m0b3vyg" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Blood/slime.tres" id="11_3ntbp"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="11_o35sp"]
-[ext_resource type="Resource" uid="uid://cjn2xlrxf22gp" path="res://Hallasan-Sunset/Items/Corndog/Corndog.tres" id="12_fpjsw"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Drop Data/drop_data.gd" id="13_mueew"]
+[ext_resource type="Resource" uid="uid://cjn2xlrxf22gp" path="res://Hallasan-Sunset/Items/Consumables/Corndog/Corndog.tres" id="12_fpjsw"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="13_mueew"]
 [ext_resource type="Resource" uid="uid://dixsynm0elypt" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/IceCream.tres" id="14_cs687"]
-[ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Vision Area/Vision_area.tscn" id="16_xs0vd"]
+[ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Technical/Vision Area/Vision_area.tscn" id="16_xs0vd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3rrn6"]
 radius = 15.5081

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://nbdb7nut6dh2"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/inventory_slot_ui.gd" id="1_3781g"]
-[ext_resource type="Texture2D" uid="uid://vk5m0x43biym" path="res://Hallasan-Sunset/Items/Corndog/Corndog.png" id="2_sjfhg"]
-[ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="3_dl5eb"]
+[ext_resource type="Texture2D" uid="uid://vk5m0x43biym" path="res://Hallasan-Sunset/Items/Consumables/Corndog/Corndog.png" id="2_sjfhg"]
+[ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="3_fotf2"]
 
 [node name="InventorySlot" type="Button"]
 texture_filter = 1
@@ -36,6 +36,6 @@ offset_left = 2.0
 offset_right = 16.0
 offset_bottom = 16.0
 theme_override_colors/font_color = Color(0.85098, 0, 0.243137, 1)
-theme_override_fonts/font = ExtResource("3_dl5eb")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("3_fotf2")
+theme_override_font_sizes/font_size = 32
 text = "99"

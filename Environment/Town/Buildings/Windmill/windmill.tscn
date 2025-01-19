@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjejjlxeeqfd3"]
+
+[ext_resource type="Texture2D" uid="uid://dhwveafrr8wi3" path="res://Hallasan-Sunset/Environment/Town/Buildings/Windmill/windmill.png" id="1_6umje"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(0.6, 0.6)
+collision_layer = 16
+collision_mask = 0
+
+[node name="Windmill" type="Sprite2D" parent="."]
+z_index = 5
+texture_filter = 1
+texture = ExtResource("1_6umje")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-145, 174, -103, 219, -35, 239, -22, 238, -16, 182, -4, 174, 16, 179, 29, 235, 92, 227, 143, 184, 146, 143, 127, 84, 112, 49, 105, -13, 105, -35, -103, -35, -105, -4, -111, 41, -132, 91)

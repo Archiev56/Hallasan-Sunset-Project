@@ -1,6 +1,6 @@
 class_name EnemyStateDestroy extends EnemyState
 
-const PICKUP = preload("res://Hallasan-Sunset/Items/item_pickup/item_pickup.tscn")
+const PICKUP = preload("res://Hallasan-Sunset/Items/Technical/item_pickup/item_pickup.tscn")
 
 @export var anim_name : String = "destroy"
 @export var knockback_speed : float = 200.0
@@ -32,6 +32,7 @@ func enter() -> void:
 	enemy.animation_player.animation_finished.connect( _on_animation_finished )
 	disable_hurt_box()
 	drop_items()
+	PlayerManager.reward_xp(enemy.xp_reward)
 
 	pass
 

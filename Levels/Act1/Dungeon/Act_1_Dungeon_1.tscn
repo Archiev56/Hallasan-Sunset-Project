@@ -4,10 +4,10 @@
 [ext_resource type="AudioStream" uid="uid://741el40t3eu1" path="res://Hallasan-Sunset/Audio/Song/example_music_02.ogg" id="2_y77ky"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_5neg7"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="4_ov0t4"]
-[ext_resource type="PackedScene" uid="uid://btgu4aupytyoh" path="res://Hallasan-Sunset/Levels/Dungeon_elements/Barred Door/barred_door.tscn" id="5_c1kvs"]
-[ext_resource type="PackedScene" uid="uid://dla2m7ra56uvu" path="res://Hallasan-Sunset/Levels/Dungeon_elements/Pressure Plate/pressure_plate.tscn" id="6_ncew4"]
-[ext_resource type="PackedScene" uid="uid://cr1vro2w6labf" path="res://Hallasan-Sunset/Levels/Dungeon_elements/Pushable Statue/pushable_statue.tscn" id="7_1qeoe"]
-[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="8_wjtv7"]
+[ext_resource type="PackedScene" uid="uid://btgu4aupytyoh" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Barred Door/barred_door.tscn" id="5_c1kvs"]
+[ext_resource type="PackedScene" uid="uid://dla2m7ra56uvu" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pressure Plate/pressure_plate.tscn" id="6_ncew4"]
+[ext_resource type="PackedScene" uid="uid://cr1vro2w6labf" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pushable Statue/pushable_statue.tscn" id="7_1qeoe"]
+[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="8_wjtv7"]
 
 [node name="Dungeon1" type="Node2D"]
 script = ExtResource("1_e1118")

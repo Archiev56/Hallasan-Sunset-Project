@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://luo1t5v1rpwd"]
+
+[ext_resource type="Texture2D" uid="uid://20kfgdtfh1xg" path="res://Hallasan-Sunset/Environment/Town/Buildings/Red House/Red House.png" id="1_xypys"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 0
+
+[node name="RedHouse" type="Sprite2D" parent="."]
+texture = ExtResource("1_xypys")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+z_index = 5
+polygon = PackedVector2Array(-74, 119, -74, 26, -84, 27, -84, -28, 6, -69, 97, -26, 98, 27, 87, 33, 86, 120)

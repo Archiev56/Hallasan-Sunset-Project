@@ -6,6 +6,7 @@ class_name EnemyStateStun extends EnemyState
 @export var decelerate_speed : float = 5.0
 @onready var gpu_particles_2d = $GPUParticles2D
 
+
 @export_category("AI")
 @export var next_state : EnemyState
 
@@ -59,6 +60,7 @@ func _on_enemy_damaged( hurt_box : HurtBox ) -> void:
 	_damage_position = hurt_box.global_position
 	state_machine.change_state( self )
 	PlayerManager.shake_camera()
+
 
 
 func _on_animation_finished( _a : String ) -> void:

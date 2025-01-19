@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="2_od6r5"]
 [ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_p67o6"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_r7gj2"]
-[ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Torch/torch.tscn" id="3_1l5iq"]
+[ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Dungeon/Torch/torch.tscn" id="3_1l5iq"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_udmkh"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="4_sd0ur"]
-[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="5_qalfy"]
+[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="5_qalfy"]
 [ext_resource type="PackedScene" uid="uid://0uw5235d8xhl" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/slime.tscn" id="6_ola0e"]
 
 [node name="Node2D" type="Node2D"]

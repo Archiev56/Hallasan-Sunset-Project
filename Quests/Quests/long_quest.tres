@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Quests/Scripts/quest_reward_item.gd" id="1_s6x1w"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Quests/Scripts/quest_resource.gd" id="2_4h4ga"]
-[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Coins/Coin Stack/Coin Stack.tres" id="2_iyhf4"]
+[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Currency/Coins/Coin Stack/Coin Stack.tres" id="2_iyhf4"]
 
 [sub_resource type="Resource" id="Resource_snn6a"]
 script = ExtResource("1_s6x1w")

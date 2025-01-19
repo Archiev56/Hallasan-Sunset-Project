@@ -9,6 +9,7 @@ signal enemy_destroyed( hurt_box : HurtBox )
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 @export var hp : int = 3
+@export var xp_reward : int = 1
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
@@ -22,7 +23,6 @@ var invulnerable : bool = false
 @onready var hit_box : HitBox = $HitBox
 @onready var state_machine : EnemyStateMachine = $EnemyStateMachine
 
-@onready var notice = $Notice
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

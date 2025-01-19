@@ -19,18 +19,18 @@
 [ext_resource type="Texture2D" uid="uid://bioe7krs3wk0e" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-2 11.png" id="10_k4s3j"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_vdwbv"]
 [ext_resource type="Texture2D" uid="uid://du07fdisrwq21" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-3 11.png" id="11_f3d7y"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Drop Data/drop_data.gd" id="12_q6cmd"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="12_q6cmd"]
 [ext_resource type="Texture2D" uid="uid://d4dhcek1d0hk2" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 56.png" id="12_yuel8"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="13_xjk0p"]
 [ext_resource type="Texture2D" uid="uid://dbl07ag0yb620" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/DestroySmoke.png" id="14_4jemv"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="14_urhcl"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="15_x42rq"]
-[ext_resource type="Texture2D" uid="uid://di7k7tbp7g2vq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Untitled_Artwork 72.png" id="16_vh2s2"]
-[ext_resource type="Texture2D" uid="uid://p2ndgbfct5ik" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Untitled_Artwork 73.png" id="17_h7p0r"]
-[ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Vision Area/Vision_area.tscn" id="17_ks3fr"]
-[ext_resource type="Resource" uid="uid://kp6gn8ous75v" path="res://Hallasan-Sunset/Items/Coins/Silver Coin/Silver Coin.tres" id="22_qp84q"]
-[ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Coins/Gold Coin/Gold Coin.tres" id="23_o5eux"]
-[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Coins/Coin Stack/Coin Stack.tres" id="24_ri7as"]
+[ext_resource type="Texture2D" uid="uid://di7k7tbp7g2vq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 72.png" id="16_vh2s2"]
+[ext_resource type="Texture2D" uid="uid://p2ndgbfct5ik" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 73.png" id="17_h7p0r"]
+[ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Technical/Vision Area/Vision_area.tscn" id="17_ks3fr"]
+[ext_resource type="Resource" uid="uid://kp6gn8ous75v" path="res://Hallasan-Sunset/Items/Currency/Coins/Silver Coin/Silver Coin.tres" id="22_qp84q"]
+[ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Currency/Coins/Gold Coin/Gold Coin.tres" id="23_o5eux"]
+[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Currency/Coins/Coin Stack/Coin Stack.tres" id="24_ri7as"]
 [ext_resource type="Texture2D" uid="uid://c17eubopfjeqt" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Lost_Heart.png" id="32_id3qt"]
 
 [sub_resource type="Gradient" id="Gradient_tgach"]
@@ -719,7 +719,7 @@ height = 20.0
 [sub_resource type="Resource" id="Resource_bb5ic"]
 script = ExtResource("12_q6cmd")
 item = ExtResource("22_qp84q")
-probability = 70.0
+probability = 100.0
 min_amount = 1
 max_amount = 3
 
@@ -845,6 +845,8 @@ z_index = 1
 collision_layer = 256
 collision_mask = 17
 script = ExtResource("1_7vw80")
+hp = 2
+xp_reward = 25
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.329412)
@@ -944,6 +946,7 @@ libraries = {
 max_polyphony = 4
 
 [node name="hurt_box" parent="." instance=ExtResource("15_x42rq")]
+damage = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
 position = Vector2(0, -11)
@@ -958,7 +961,7 @@ polygon = PackedVector2Array(-16, -5, 17, -6, 128, 128, -128, 128)
 texture_filter = 1
 position = Vector2(0, -26)
 emitting = false
-amount = 100
+amount = 10
 process_material = SubResource("ParticleProcessMaterial_nievx")
 texture = ExtResource("32_id3qt")
 one_shot = true

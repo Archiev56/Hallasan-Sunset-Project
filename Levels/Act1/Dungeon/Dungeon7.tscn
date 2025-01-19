@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_jfktq"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_4rxod"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="4_8tcyr"]
-[ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Torch/torch.tscn" id="5_j44vt"]
+[ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Dungeon/Torch/torch.tscn" id="5_j44vt"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="5_tex8t"]
-[ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Wind/Wind.tscn" id="6_ifg6s"]
-[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="7_yfdy5"]
+[ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="6_ifg6s"]
+[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="7_yfdy5"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_wfqd2")

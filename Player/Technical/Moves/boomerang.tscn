@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/boomerang.gd" id="1_205nx"]
 [ext_resource type="Texture2D" uid="uid://dh3pja0jvdoxa" path="res://Hallasan-Sunset/Player/Sprites/boomerang (2).png" id="2_jehtq"]
 [ext_resource type="AudioStream" uid="uid://b82d078o3njph" path="res://Hallasan-Sunset/Player/Audio/boomerang (1).wav" id="3_33gb2"]
-[ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Magnet/item_magnet.tscn" id="4_6h03d"]
+[ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Technical/Magnet/item_magnet.tscn" id="4_6h03d"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="5_3a3wy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pbrmp"]

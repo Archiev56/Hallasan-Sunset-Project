@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dejnllo725ito"]
+
+[ext_resource type="Texture2D" uid="uid://cvlwicitqr46e" path="res://Hallasan-Sunset/Environment/Forest/Statue/Untitled_Artwork 28.png" id="1_3n8i6"]
+
+[node name="Area2D" type="StaticBody2D"]
+z_index = 2
+collision_layer = 17
+collision_mask = 17
+
+[node name="Statue" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_3n8i6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+z_index = 5
+polygon = PackedVector2Array(-26, -2, 25, -2, 25, 68, -26, 68)

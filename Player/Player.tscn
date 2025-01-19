@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dsltnlq8bu1fn" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)5.png" id="7_h2chw"]
 [ext_resource type="Texture2D" uid="uid://chljibnu5qqi5" path="res://Hallasan-Sunset/Player/Sprites/spin_effect.png" id="7_lsaca"]
 [ext_resource type="Texture2D" uid="uid://clsnwvp3blrky" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)6.png" id="8_3r1ld"]
-[ext_resource type="Texture2D" uid="uid://btw8r3qjabski" path="res://Hallasan-Sunset/Environment/Pots/Pot 3/Untitled_Artwork 46.png" id="8_hefqs"]
+[ext_resource type="Texture2D" uid="uid://btw8r3qjabski" path="res://Hallasan-Sunset/Environment/Forest/Pot/Untitled_Artwork 46.png" id="8_hefqs"]
 [ext_resource type="Texture2D" uid="uid://dnaheucsn2rsy" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)7.png" id="9_t4q58"]
 [ext_resource type="Texture2D" uid="uid://fchmwiqxqir4" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)8.png" id="10_j2yuu"]
 [ext_resource type="Texture2D" uid="uid://ddt2vy6hmducl" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-2.png" id="20_s3ikh"]
@@ -198,7 +198,7 @@
 [ext_resource type="Texture2D" uid="uid://xkivm2fgkqih" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-7.png" id="169_l4phe"]
 [ext_resource type="Texture2D" uid="uid://du82myb5es2x2" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombSide/Carrywalkside-8.png" id="170_6lb38"]
 [ext_resource type="Texture2D" uid="uid://b441mee730njf" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_down/New/Untitled_Artwork-1 10.png" id="171_64jp2"]
-[ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Magnet/item_magnet.tscn" id="171_iktbv"]
+[ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Technical/Magnet/item_magnet.tscn" id="171_iktbv"]
 [ext_resource type="Texture2D" uid="uid://bgyh5lqoojjbl" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dusty.png" id="197_np30c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u7cob"]
@@ -2083,7 +2083,7 @@ rotation = 6.28319
 collision_layer = 256
 collision_mask = 256
 monitoring = false
-damage = 3
+damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/ChargeSpinHurtBox"]
 position = Vector2(-3.67176e-06, -21)
@@ -2149,6 +2149,9 @@ process_material = SubResource("ParticleProcessMaterial_nbsyf")
 texture = ExtResource("197_np30c")
 
 [node name="Camera2D" parent="." instance=ExtResource("76_apee7")]
+shake_power = 1.0
+shake_max_offset = 10.0
+shake_decay = 2.0
 
 [node name="Area2D" parent="." instance=ExtResource("171_iktbv")]
 visible = false

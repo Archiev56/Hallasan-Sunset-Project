@@ -29,13 +29,24 @@ var direction : Vector2 = Vector2.ZERO
 var invulnerable : bool = false
 var hp : int = 6
 var max_hp : int = 6
-# Called when the node enters the scene tree for the first time.
+
+var level : int = 1
+var xp : int = 0
+
+var attack : int = 1:
+	set( v ):
+		attack = v
+		update_damage_values()
+var defense : int = 1
+
+
 func _ready():
 	PlayerManager.player = self
 	state_machine.Initialize(self)
 	hit_box.damaged.connect( _take_damage )
 	update_hp(99)
-	 
+	update_damage_values()
+	#PlayerManager.player_leveled_up.connect( update_damage_values )
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -109,7 +120,13 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 		return
 	
 	if hp > 0:
-		update_hp( -hurt_box.damage )
+		var dmg : int = hurt_box.damage
+		
+		if dmg > 0:
+			dmg = clampi(dmg - defense, 1, dmg)
+			
+			
+		update_hp( -dmg )
 		player_damaged.emit( hurt_box )
 	
 	pass
@@ -139,3 +156,7 @@ func pickup_item( _t : Throwable ) -> void:
 func revive_player() -> void:
 	update_hp( 99 )
 	state_machine.change_state( $StateMachine/Idle )
+	
+func update_damage_values() -> void: 
+	$Interactions/HurtBox.damage = attack
+	$Interactions/ChargeSpinHurtBox.damage = attack * 2

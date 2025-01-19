@@ -56,6 +56,9 @@ func _player_damaged( _hurt_box : HurtBox ) -> void:
 	if state_machine.current_state != death:
 		state_machine.change_state( self )
 	pass
+	
+	
+	
 
 func _animation_finished( _a: String ) -> void:
 	next_state = idle

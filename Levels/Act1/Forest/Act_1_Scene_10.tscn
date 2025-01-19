@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_mbfwj"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_xe56l"]
-[ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Tree Borders/TreeBorderSide.tscn" id="3_gkf75"]
+[ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="3_gkf75"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_gp3f4"]
-[ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Interactive_grass/Interactive_grass.tscn" id="4_jbrrc"]
-[ext_resource type="PackedScene" uid="uid://bbejca547y4ce" path="res://Hallasan-Sunset/Environment/Tree/Magic Tree/MagicTree.tscn" id="4_pnrcx"]
+[ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="4_jbrrc"]
+[ext_resource type="PackedScene" uid="uid://bbejca547y4ce" path="res://Hallasan-Sunset/Environment/Forest/Trees/Magic Tree/MagicTree.tscn" id="4_pnrcx"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="5_1rg8d"]
-[ext_resource type="PackedScene" uid="uid://bjdlcofd2dxsk" path="res://Hallasan-Sunset/Environment/Totem Poles/1/Totem3.tscn" id="5_67me2"]
+[ext_resource type="PackedScene" uid="uid://bjdlcofd2dxsk" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem3.tscn" id="5_67me2"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="5_672jq"]
-[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition copy/Level_transition.tscn" id="6_ieocw"]
+[ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="6_ieocw"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_mbfwj")
