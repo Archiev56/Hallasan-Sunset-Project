@@ -21,6 +21,8 @@ var frozen_position: Vector2 # Keeps the position where the projectile freezes
 @onready var animation_player = $Projectile/AnimationPlayer
 @onready var animation_player2 = $"../AnimationPlayer"
 
+@onready var animation_player3 = $Sprite2D/AnimationPlayer
+
 
 # Reference to the hurt box (Area2D)
 @onready var hurt_box = $Projectile/HurtBox
@@ -40,7 +42,7 @@ func _ready():
 	set_physics_process(false)
 	hurt_box_collision_shape.disabled = true
 
-	animation_player.connect("animation_finished", Callable(self, "_on_AnimationPlayer_animation_finished"))
+	animation_player3.connect("animation_finished", Callable(self, "_on_AnimationPlayer_animation_finished"))
 
 func _process(delta):
 	if not has_exploded:
@@ -141,5 +143,5 @@ func exploded():
 	scale *= 2
 
 	hurt_box_collision_shape.disabled = false
-	animation_player.play("Explode")
+	animation_player3.play("Explode")
 	explosion_sound.play()

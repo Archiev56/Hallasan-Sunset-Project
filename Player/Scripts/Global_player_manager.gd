@@ -37,12 +37,19 @@ func set_health( hp: int, max_hp: int ) -> void:
 
 func reward_xp( _xp : int ) -> void:
 	player.xp += _xp
-	if player.xp >= level_requirements[ player.level ]:
+	check_for_level_advance()
+
+
+func check_for_level_advance() -> void:
+	if player.level >= level_requirements.size():
+		return
+	if player.xp >= level_requirements[player.level]:
 		player.level += 1
 		player.attack += 1
 		player.defense += 1
 		player_leveled_up.emit()
-
+		check_for_level_advance()
+	pass  # Recursive call
 
 func set_player_position( _new_pos : Vector2 ) -> void:
 	player.global_position = _new_pos

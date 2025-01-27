@@ -8,7 +8,7 @@ const dash_speed = 200
 const dash_duration = 0.5
 
 
-@export var max_speed: float = 75.0
+@export var max_speed: float = 50.0
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
@@ -46,10 +46,10 @@ func _ready():
 	hit_box.damaged.connect( _take_damage )
 	update_hp(99)
 	update_damage_values()
-	#PlayerManager.player_leveled_up.connect( update_damage_values )
+	PlayerManager.player_leveled_up.connect( _on_player_leveled_up )
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta):
 	
 	direction = Vector2(
@@ -83,9 +83,6 @@ func set_direction() -> bool:
 	direction_changed.emit( new_dir )
 	sprite.scale.x = 1 if cardinal_direction == Vector2.LEFT else -1
 	return true
-
-
-	
 
 
 
@@ -160,3 +157,9 @@ func revive_player() -> void:
 func update_damage_values() -> void: 
 	$Interactions/HurtBox.damage = attack
 	$Interactions/ChargeSpinHurtBox.damage = attack * 2
+
+func _on_player_leveled_up() -> void:
+	effect_animation_player.play("level_up")
+	update_hp(max_hp)
+	pass
+	

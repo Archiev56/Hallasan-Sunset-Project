@@ -8,6 +8,8 @@ signal hidden
 @onready var button_load: Button = $TabContainer/System/VBoxContainer/Button_load
 @onready var item_description: Label = $TabContainer/Inventory/VBoxContainer/Panel/ItemDescription
 @onready var audio_stream_player: AudioStreamPlayer2D = $Control/AudioStreamPlayer2D
+@onready var audio_stream_player2: AudioStreamPlayer2D = $Control/AudioStreamPlayer2D2
+@onready var audio_stream_player3: AudioStreamPlayer2D = $Control/AudioStreamPlayer2D3
 
 var is_paused : bool = false
 
@@ -24,8 +26,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			if DialogSystem.is_active:
 				return
 			show_pause_menu()
+			audio_stream_player.play()
 		else:
 			hide_pause_menu()
+			audio_stream_player2.play()
 		get_viewport().set_input_as_handled()
 		
 	if is_paused:
@@ -91,5 +95,7 @@ func change_tab( _i : int = 1 ) -> void:
 			tab_container.current_tab + _i,
 			0,
 			tab_container.get_tab_count()
+			
 		)
 	tab_container.get_tab_bar().grab_focus()
+	audio_stream_player3.play()

@@ -1,18 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://cvoni5gbutug8"]
+[gd_scene load_steps=23 format=3 uid="uid://cvoni5gbutug8"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/arc_projectile.gd" id="1_e0p8d"]
 [ext_resource type="Texture2D" uid="uid://ba0fv0orkokpx" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/projectile_shadow.png" id="2_yr1kk"]
 [ext_resource type="Texture2D" uid="uid://dm74wugs3temn" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/9.png" id="3_6ia21"]
-[ext_resource type="Texture2D" uid="uid://cscvxstrtmwt" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/1.png" id="4_f4km2"]
-[ext_resource type="Texture2D" uid="uid://cw220upys2s0o" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/2.png" id="5_njspv"]
-[ext_resource type="Texture2D" uid="uid://dit2usywjvaeo" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/3.png" id="6_a6h0j"]
-[ext_resource type="Texture2D" uid="uid://bcxdl8lb0j5wf" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/4.png" id="7_to6nk"]
-[ext_resource type="Texture2D" uid="uid://cwbncd00hc4mg" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/5.png" id="8_wljp5"]
-[ext_resource type="Texture2D" uid="uid://bj6ejl1bh8sri" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/6.png" id="9_sab5e"]
-[ext_resource type="Texture2D" uid="uid://8vq5lvar8yh0" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/7.png" id="10_31old"]
-[ext_resource type="Texture2D" uid="uid://dnglbomyi1qed" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/8.png" id="11_3iprk"]
-[ext_resource type="Texture2D" uid="uid://875l1aq7pea3" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/9.png" id="12_3jkdv"]
-[ext_resource type="Texture2D" uid="uid://dp04qx04qadkp" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/2-Bomb On/10.png" id="13_2rgyv"]
+[ext_resource type="Texture2D" uid="uid://bsuuia3fqy6wg" path="res://Hallasan-Sunset/Player/Sprites/Hands.png" id="3_xrutk"]
 [ext_resource type="Texture2D" uid="uid://bw76npiw2k41w" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/1.png" id="14_47bjf"]
 [ext_resource type="Texture2D" uid="uid://b5g5jpx2vevft" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/2.png" id="15_jcr8w"]
 [ext_resource type="Texture2D" uid="uid://dbf1v0bdd02ov" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/1-BOMB/3-Explotion/3.png" id="16_qgc51"]
@@ -25,9 +16,109 @@
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="23_d5rd0"]
 [ext_resource type="AudioStream" uid="uid://dai8cosm53p46" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/Sizzle.mp3" id="24_h0gts"]
 
+[sub_resource type="Animation" id="Animation_8rhgq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.785398]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_btdsq"]
 resource_name = "BombLive"
-length = 0.9
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.785398, 1.5708, 2.35619, 3.14159, 3.92699, 4.71239, 5.49779, 6.28319]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [16, 16]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0xlk"]
+_data = {
+"BombLive": SubResource("Animation_btdsq"),
+"RESET": SubResource("Animation_8rhgq")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vh6cn"]
+radius = 28.0179
+
+[sub_resource type="Animation" id="Animation_cagxx"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -35,15 +126,26 @@ tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_f4km2"), ExtResource("5_njspv"), ExtResource("6_a6h0j"), ExtResource("7_to6nk"), ExtResource("8_wljp5"), ExtResource("9_sab5e"), ExtResource("10_31old"), ExtResource("11_3iprk"), ExtResource("12_3jkdv"), ExtResource("13_2rgyv")]
+"values": [null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_ha3a5"]
+[sub_resource type="Animation" id="Animation_7h5ig"]
 resource_name = "Explode"
-length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -56,15 +158,24 @@ tracks/0/keys = {
 "update": 1,
 "values": [ExtResource("14_47bjf"), ExtResource("15_jcr8w"), ExtResource("16_qgc51"), ExtResource("17_8vqic"), ExtResource("18_ej0df"), ExtResource("19_awr3i"), ExtResource("20_0rm3x"), ExtResource("21_xr5m7"), ExtResource("3_6ia21")]
 }
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_q0xlk"]
-_data = {
-"BombLive": SubResource("Animation_btdsq"),
-"Explode": SubResource("Animation_ha3a5")
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vh6cn"]
-radius = 28.0179
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_se3ph"]
+_data = {
+"Explode": SubResource("Animation_7h5ig"),
+"RESET": SubResource("Animation_cagxx")
+}
 
 [node name="arc_projectile" type="Node2D"]
 position = Vector2(0, -18)
@@ -76,10 +187,13 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_yr1kk")
 
 [node name="Projectile" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
-position = Vector2(0, -18)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_f4km2")
+position = Vector2(0, -9)
+rotation = 0.785398
+texture = ExtResource("3_xrutk")
+hframes = 16
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Projectile"]
 libraries = {
@@ -100,6 +214,15 @@ stream = ExtResource("23_3ma4p")
 [node name="Sizzle" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_h0gts")
 volume_db = -20.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_se3ph")
+}
 
 [connection signal="area_entered" from="hurt_box" to="." method="_on_hurt_box_area_entered"]
 [connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]

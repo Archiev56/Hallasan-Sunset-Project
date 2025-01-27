@@ -1,8 +1,16 @@
 extends Sprite2D
-
+ 
 func _ready():
-	# Create a new tween (SceneTreeTween)
-	var tween = create_tween()
-
-	# Tween the 'modulate:a' (alpha) property from 1.0 to 0.0 over 0.5 seconds with linear transition and ease in-out
-	tween.tween_property(self, "modulate:a", 0.0, 0.5)
+	ghosting()
+ 
+func set_property(tx_pos, tx_scale ):
+	position = tx_pos
+	scale = tx_scale
+ 
+func ghosting():
+	var tween_fade = get_tree().create_tween()
+ 
+	tween_fade.tween_property(self, "self_modulate",Color(1, 1, 1, 0), 0.75 )
+	await tween_fade.finished
+ 
+	queue_free()

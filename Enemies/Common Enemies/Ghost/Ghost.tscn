@@ -917,11 +917,10 @@ z_index = 1
 collision_layer = 256
 collision_mask = 17
 script = ExtResource("1_smniq")
-hp = 2
 xp_reward = 25
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0.237)
+modulate = Color(0, 0, 0, 0)
 texture_filter = 1
 position = Vector2(-0.5, -2.17568)
 scale = Vector2(1, 1.162)
@@ -938,6 +937,7 @@ one_shot = true
 explosiveness = 1.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
 texture_filter = 1
 position = Vector2(0, -24)
 texture = ExtResource("4_85701")

@@ -13,6 +13,6 @@ quantity = 1
 script = ExtResource("2_yh8ti")
 title = "short quest"
 description = "Hello this is an example short quest with 1 step to complete"
-steps = Array[String](["Complete the quest "])
+steps = Array[String]([""])
 reward_xp = 10
 reward_items = Array[ExtResource("1_w5b40")]([SubResource("Resource_5vgag")])

@@ -13,8 +13,7 @@ const PICKUP = preload("res://Hallasan-Sunset/Items/Technical/item_pickup/item_p
 
 var _damage_position : Vector2
 var _direction : Vector2
-
-
+var time_scale = 1
 
 ## What happens when we initialize this state?
 func init() -> void:
@@ -31,6 +30,7 @@ func enter() -> void:
 	enemy.update_animation( anim_name )
 	enemy.animation_player.animation_finished.connect( _on_animation_finished )
 	disable_hurt_box()
+	frameFreeze(0.1, 0.02)
 	drop_items()
 	PlayerManager.reward_xp(enemy.xp_reward)
 
@@ -84,3 +84,8 @@ func drop_items() -> void:
 			drop.global_position = enemy.global_position
 			drop.velocity = enemy.velocity.rotated( randf_range( -1, 2.5 ) ) * randf_range( 0.9 , 1.5 )
 	pass
+
+func frameFreeze(timeScale, duration):
+	Engine.time_scale = timeScale  # Set the game's time scale (e.g., freeze with 0.0 or slow down with < 1.0)
+	await(get_tree().create_timer(duration * time_scale).timeout)  # Wait for the duration scaled by timeScale
+	Engine.time_scale = 1.0  # Reset the time scale back to normal

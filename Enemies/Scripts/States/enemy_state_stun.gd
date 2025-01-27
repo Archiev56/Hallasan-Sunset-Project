@@ -14,6 +14,8 @@ var _damage_position : Vector2
 var _direction : Vector2
 var _animation_finished : bool = false
 
+
+
 ## What happens when we initialize this state?
 func init() -> void:
 	enemy.enemy_damaged.connect( _on_enemy_damaged )
@@ -24,6 +26,7 @@ func init() -> void:
 func enter() -> void:
 	enemy.invulnerable = true
 	_animation_finished = false
+	
 	
 	_direction = enemy.global_position.direction_to( _damage_position )
 	

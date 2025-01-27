@@ -1,16 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cglpefhcv1hjh"]
+[gd_scene load_steps=4 format=3 uid="uid://cglpefhcv1hjh"]
 
 [ext_resource type="Texture2D" uid="uid://bs4qrs1dh3a5a" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)1.png" id="1_6peli"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/DashGhost.gdshader" id="1_rktpo"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/DashGhost.gd" id="2_484rx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mdfwy"]
-shader = ExtResource("1_rktpo")
-shader_parameter/whiten = true
-shader_parameter/mix_weight = 0.7
 
 [node name="DashGhost" type="Sprite2D"]
-modulate = Color(1, 1, 1, 0.392157)
+modulate = Color(0, 0.0742793, 1, 0.458)
 texture_filter = 1
 material = SubResource("ShaderMaterial_mdfwy")
 texture = ExtResource("1_6peli")

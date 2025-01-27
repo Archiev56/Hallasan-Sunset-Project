@@ -1,15 +1,15 @@
-[gd_scene load_steps=17 format=3 uid="uid://cerpqrtpj4udh"]
+[gd_scene load_steps=18 format=3 uid="uid://cerpqrtpj4udh"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/WoodenSpike.gd" id="1_48smd"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_0f4r6"]
-[ext_resource type="Texture2D" uid="uid://cljxd8nhur0fq" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Untitled_Artwork 61.png" id="3_6t0u0"]
-[ext_resource type="Texture2D" uid="uid://d30x31hlclxuc" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-2 14.png" id="4_1px77"]
-[ext_resource type="Texture2D" uid="uid://dibk1gij7kmuf" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-3 14.png" id="5_oigly"]
-[ext_resource type="Texture2D" uid="uid://bhq6pi0i0hiwc" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-4 10.png" id="6_3mchp"]
+[ext_resource type="Texture2D" uid="uid://cvt3frekhnp3b" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Sprites/Untitled_Artwork-1 34.png" id="5_vjmnu"]
+[ext_resource type="Texture2D" uid="uid://725bltpepnpn" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Sprites/Untitled_Artwork-2 23.png" id="6_0yu00"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="6_y57rj"]
-[ext_resource type="Texture2D" uid="uid://yec72s8eru22" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-5 6.png" id="7_64360"]
-[ext_resource type="Texture2D" uid="uid://bh1kj65bxtwkk" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-6 4.png" id="8_wrngg"]
-[ext_resource type="AudioStream" uid="uid://002xadebqiv0" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/443806__deathscyp__spiketrap.wav" id="9_0sgbr"]
+[ext_resource type="Texture2D" uid="uid://otfkl0ds6mw0" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Sprites/Untitled_Artwork-3 21.png" id="7_st1x5"]
+[ext_resource type="Texture2D" uid="uid://cbf60dc05gspa" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Sprites/Untitled_Artwork-4 17.png" id="8_mnusu"]
+[ext_resource type="Texture2D" uid="uid://tewyaw35iua7" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Sprites/Untitled_Artwork-5 12.png" id="9_iuyqa"]
+[ext_resource type="AudioStream" uid="uid://yojigcvbfbbi" path="res://Hallasan-Sunset/Audio/Sound effects/Grass_spike.wav" id="9_xetbo"]
+[ext_resource type="Texture2D" uid="uid://8ykxwsm5bblj" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Sprites/Untitled_Artwork-6 10.png" id="10_gg2kj"]
 
 [sub_resource type="Animation" id="Animation_nadug"]
 resource_name = "Nospike"
@@ -25,13 +25,11 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_6t0u0")]
+"values": [ExtResource("5_vjmnu")]
 }
 
-[sub_resource type="Animation" id="Animation_72dd4"]
-resource_name = "Spike"
-length = 0.1
-step = 0.025
+[sub_resource type="Animation" id="Animation_q86hp"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,10 +37,27 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.025, 0.05, 0.075, 0.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_1px77"), ExtResource("5_oigly"), ExtResource("6_3mchp"), ExtResource("7_64360"), ExtResource("8_wrngg")]
+"values": [ExtResource("5_vjmnu")]
+}
+
+[sub_resource type="Animation" id="Animation_72dd4"]
+resource_name = "Spike"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.04, 0.06, 0.08, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_vjmnu"), ExtResource("6_0yu00"), ExtResource("7_st1x5"), ExtResource("8_mnusu"), ExtResource("9_iuyqa"), ExtResource("10_gg2kj")]
 }
 tracks/1/type = "audio"
 tracks/1/imported = false
@@ -54,9 +69,9 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("9_0sgbr")
+"stream": ExtResource("9_xetbo")
 }],
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0.01)
 }
 tracks/1/use_blend = true
 
@@ -73,12 +88,13 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_wrngg"), ExtResource("7_64360"), ExtResource("6_3mchp"), ExtResource("5_oigly"), ExtResource("4_1px77"), ExtResource("3_6t0u0")]
+"values": [ExtResource("10_gg2kj"), ExtResource("9_iuyqa"), ExtResource("8_mnusu"), ExtResource("7_st1x5"), ExtResource("6_0yu00"), ExtResource("5_vjmnu")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1eqan"]
 _data = {
 "Nospike": SubResource("Animation_nadug"),
+"RESET": SubResource("Animation_q86hp"),
 "Spike": SubResource("Animation_72dd4"),
 "SpikeDown": SubResource("Animation_geijt")
 }
@@ -92,6 +108,7 @@ size = Vector2(13, 17)
 [node name="WoodenSpike" type="Area2D"]
 texture_filter = 1
 position = Vector2(0, -53)
+collision_mask = 5
 script = ExtResource("1_48smd")
 
 [node name="Shadow" type="Sprite2D" parent="."]
@@ -102,7 +119,7 @@ texture = ExtResource("2_0f4r6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
-texture = ExtResource("8_wrngg")
+texture = ExtResource("5_vjmnu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -116,6 +133,7 @@ shape = SubResource("RectangleShape2D_ed5tt")
 
 [node name="hurt_box" parent="." instance=ExtResource("6_y57rj")]
 unique_name_in_owner = true
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
 position = Vector2(0, 44.5)

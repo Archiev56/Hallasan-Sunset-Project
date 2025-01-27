@@ -1,15 +1,19 @@
 class_name State_Walk extends State
 
-@export var move_speed: float = 175.0
-@export var dash_speed: float = 150.0
-@export var dash_duration: float = 0.1  # Duration of the dash in seconds
+@export var move_speed: float = 150.0
+@export var dash_speed: float = 200.0
+@export var dash_duration: float = 0.4  # Duration of the dash in seconds
 @export var max_speed: float = 85.0
 @export var accel: float = 1200.0
 @export var friction: float = 600.0
 
+@onready var ghost_timer = $ghost_timer
+
 @export var player_hud_path: String = "res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.tscn"
+@export var ghost_node : PackedScene = preload("res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/DashGhost.tscn")
 
 var dash_scene = preload("res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dash.tscn")
+var dash_ghost = preload("res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/DashGhost.tscn")
 
 @onready var idle: State = $"../Idle"
 @onready var attack: State = $"../Attack"
@@ -51,6 +55,7 @@ func Physics(_delta: float) -> State:
 		dash_timer -= _delta
 		if dash_timer <= 0.0:
 			is_dashing = false
+			ghost_timer.stop()  # Stop spawning ghosts when dash ends
 			hit_box.is_invulnerable = false
 			player.velocity = player.direction * move_speed  # Revert to walking speed after dash
 			player.UpdateAnimation("walk")
@@ -108,13 +113,17 @@ func get_input() -> Vector2:
 
 func start_dashing() -> bool:
 	is_dashing = true
+	ghost_timer.start()  # Start spawning ghosts during the dash
 	player.UpdateAnimation("dodge")
 	animation_player.play("dodge_" + player.AnimDirection())
 	hit_box.is_invulnerable = true
 	dash_audio.play()
 	dash_timer = dash_duration
+	add_ghost()
+	
 	if dash_particles:
 		dash_particles.emitting = true
+	
 	return true
 
 func _on_AnimationPlayer_animation_finished(animation_name: String):
@@ -123,3 +132,30 @@ func _on_AnimationPlayer_animation_finished(animation_name: String):
 			player.UpdateAnimation("walk")
 		else:
 			player.UpdateAnimation("idle")
+			
+func add_ghost():
+	var ghost = ghost_node.instantiate()
+	ghost.position = sprite.global_position  # Match the player's position
+	ghost.scale = sprite.scale  # Match the player's scale
+
+	# Match the player's texture
+	if ghost.has_node("Sprite2D") and sprite:
+		var ghost_sprite = ghost.get_node("Sprite2D")
+		ghost_sprite.texture = sprite.texture  # Match the player's texture
+		ghost_sprite.flip_h = sprite.flip_h  # Match the horizontal flip
+		ghost_sprite.flip_v = sprite.flip_v  # Match the vertical flip
+		ghost_sprite.rotation = sprite.rotation  # Match rotation if applicable
+
+	# Optional: Adjust transparency for ghost effect
+	if ghost.has_method("set_modulate"):
+		ghost.set_modulate(Color(1, 1, 1, 0.5))  # Semi-transparent ghost
+
+	# Ensure it appears below the player
+	ghost.z_index = sprite.z_index - 1
+
+	# Add the ghost to the scene
+	get_tree().current_scene.add_child(ghost)
+
+func _on_ghost_timer_timeout():
+	if is_dashing:  # Only spawn ghosts while dashing
+		add_ghost()

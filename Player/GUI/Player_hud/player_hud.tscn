@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dsdsymcscej23"]
+[gd_scene load_steps=23 format=3 uid="uid://dsdsymcscej23"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.gd" id="1_enff3"]
 [ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_oupnd"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://u2ade1f6gvs8" path="res://Hallasan-Sunset/UI/Keys/Keyboard Letters and Symbols.png" id="7_fmvlj"]
 [ext_resource type="Texture2D" uid="uid://nn1omdjbl3r1" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/panel_notification.png" id="8_6ya57"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Notifications/notifications.gd" id="8_mchtw"]
-[ext_resource type="AudioStream" uid="uid://8ocqaef855jl" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/notification.wav" id="10_dr8b1"]
+[ext_resource type="AudioStream" uid="uid://b4p67spcqc2u8" path="res://Hallasan-Sunset/Audio/Sound effects/Menu_notification.mp3" id="10_l5yyi"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqb76"]
 content_margin_left = 12.0
@@ -278,22 +278,6 @@ region = Rect2(9, 40, 14, 15)
 atlas = ExtResource("6_bavgn")
 region = Rect2(40, 40, 15, 15)
 
-[sub_resource type="Gradient" id="Gradient_2hx46"]
-colors = PackedColorArray(0.34, 0.34, 0.34, 1, 0.341176, 0.341176, 0.341176, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_oldeq"]
-gradient = SubResource("Gradient_2hx46")
-width = 100
-height = 15
-
-[sub_resource type="Gradient" id="Gradient_7xdwe"]
-colors = PackedColorArray(0.215686, 0.329412, 0.854902, 1, 0.215686, 0.329412, 0.854902, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_t6aej"]
-gradient = SubResource("Gradient_7xdwe")
-width = 100
-height = 15
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uap67"]
 content_margin_left = 12.0
 content_margin_top = 6.0
@@ -396,7 +380,7 @@ tracks/3/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("10_dr8b1")
+"stream": ExtResource("10_l5yyi")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -408,11 +392,10 @@ _data = {
 "show_notification": SubResource("Animation_yhi33")
 }
 
-[node name="PlayerHUD" type="CanvasLayer" node_paths=PackedStringArray("energy_bar")]
+[node name="PlayerHUD" type="CanvasLayer"]
 offset = Vector2(2.08165e-12, 2.08165e-12)
 transform = Transform2D(1, 2.08165e-12, 2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
 script = ExtResource("1_enff3")
-energy_bar = NodePath("Control/Energy Bar")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -426,7 +409,7 @@ mouse_default_cursor_shape = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
 texture_filter = 1
-position = Vector2(548, 15)
+position = Vector2(563, 14)
 scale = Vector2(2, 2)
 texture = ExtResource("1_oupnd")
 region_enabled = true
@@ -501,9 +484,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -165.5
+offset_left = -173.5
 offset_top = -107.0
-offset_right = 474.5
+offset_right = 466.5
 offset_bottom = 253.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -521,9 +504,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -171.5
-offset_top = -60.0
+offset_top = -47.0
 offset_right = 28.5
-offset_bottom = 50.0
+offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -620,20 +603,6 @@ theme_override_fonts/font = ExtResource("5_srpej")
 text = "fuck monkey"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Energy Bar" type="TextureProgressBar" parent="Control"]
-visible = false
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 0
-offset_left = 17.0
-offset_top = 60.0
-offset_right = 117.0
-offset_bottom = 75.0
-step = 2.0
-value = 100.0
-rounded = true
-texture_under = SubResource("GradientTexture2D_oldeq")
-texture_progress = SubResource("GradientTexture2D_t6aej")
 
 [node name="KeyboardLettersAndSymbols" type="Sprite2D" parent="Control"]
 visible = false

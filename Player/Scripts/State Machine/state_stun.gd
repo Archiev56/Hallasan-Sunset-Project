@@ -6,7 +6,7 @@ class_name State_Stun extends State
 
 var hurt_box : HurtBox
 var direction : Vector2
-
+var time_scale = 1
 var next_state : State = null
 
 @onready var idle : State = $"../Idle"
@@ -19,7 +19,7 @@ func enter() -> void:
 	player.UpdateAnimation("stun")
 	player.animation_player.animation_finished.connect( _animation_finished )
 	direction = player.global_position.direction_to( hurt_box.global_position )
-	
+	frameFreeze(0.1, 0.05)
 	player.velocity = direction * -knockback_speed
 	player.set_direction()
 	player.make_invulnerable( invulnerable_duration )
@@ -64,3 +64,8 @@ func _animation_finished( _a: String ) -> void:
 	next_state = idle
 	if player.hp <= 0:
 		next_state = death
+
+func frameFreeze(timeScale, duration):
+	Engine.time_scale = timeScale  # Set the game's time scale (e.g., freeze with 0.0 or slow down with < 1.0)
+	await(get_tree().create_timer(duration * time_scale).timeout)  # Wait for the duration scaled by timeScale
+	Engine.time_scale = 1.0  # Reset the time scale back to normal

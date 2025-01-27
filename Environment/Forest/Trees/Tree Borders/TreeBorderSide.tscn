@@ -19,7 +19,7 @@ shader_parameter/WindStrength = 6.787
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_inlc4"]
 a = Vector2(-282, 170)
-b = Vector2(12.0006, 170)
+b = Vector2(40.0006, 171)
 
 [sub_resource type="Gradient" id="Gradient_l8wsi"]
 offsets = PackedFloat32Array(0.00358423, 0.4926, 0.989247)
@@ -200,6 +200,11 @@ texture = ExtResource("2_w3cf6")
 unique_name_in_owner = true
 position = Vector2(68, 105)
 rotation = 1.5708
+shape = SubResource("SegmentShape2D_inlc4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(183, -25)
 shape = SubResource("SegmentShape2D_inlc4")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

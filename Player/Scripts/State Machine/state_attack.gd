@@ -25,9 +25,7 @@ func enter() -> void:
 	animation_player.animation_finished.connect( _end_attack )
 	
 	
-	audio.stream = attack_sound
-	audio.pitch_scale = randf_range( 0.9, 1.1 )
-	audio.play()
+	
 	
 	attacking = true
 	await get_tree().create_timer( 0.075 ).timeout
