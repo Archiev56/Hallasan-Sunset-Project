@@ -7,7 +7,7 @@
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_bcoq0"]
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="4_is4ja"]
 [ext_resource type="PackedScene" uid="uid://wjejx1t5mkad" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderUngyeo.tscn" id="4_nga1f"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="5_gcolb"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="5_gcolb"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="5_lr8el"]
 
 [node name="Map" type="Node2D"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_7wxwb"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_k5blm"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="5_bevd5"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="6_nqd7u"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="6_nqd7u"]
 [ext_resource type="PackedScene" uid="uid://ddaoidnntl8k1" path="res://Hallasan-Sunset/npc/Characters/Sansin/Sansin_NPC.tscn" id="7_o1nxr"]
 [ext_resource type="PackedScene" uid="uid://cou4euvvaw0ml" path="res://Hallasan-Sunset/UI/Dialogue_system/dialogue_interaction.tscn" id="8_s6tjq"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_text.gd" id="9_oy0af"]

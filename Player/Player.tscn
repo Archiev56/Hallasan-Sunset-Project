@@ -1,12 +1,11 @@
-[gd_scene load_steps=281 format=3 uid="uid://cbctfc3oob7kd"]
+[gd_scene load_steps=282 format=3 uid="uid://cbctfc3oob7kd"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Player.gd" id="1_l265g"]
 [ext_resource type="Texture2D" uid="uid://nknfj7nkp53n" path="res://Hallasan-Sunset/Player/Animations/Death/Dead_Down-4.png" id="2_1huh3"]
 [ext_resource type="Texture2D" uid="uid://s5r6idarqmw3" path="res://Hallasan-Sunset/Player/Animations/carry/CarryWalkUp/Untitled_Artwork-3 8.png" id="2_3uibj"]
-[ext_resource type="Texture2D" uid="uid://bhel5of4nn7vt" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_down/New/Untitled_Artwork-4 3.png" id="2_cps1o"]
 [ext_resource type="Texture2D" uid="uid://dqjrws7k8eq3h" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleUp/Untitled_Artwork-1.png" id="2_inyow"]
-[ext_resource type="Texture2D" uid="uid://bc5lx7kop54i4" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_side/Untitled_Artwork-3 8.png" id="2_kei3r"]
-[ext_resource type="Texture2D" uid="uid://vva28u0jpc2e" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_left/New/Untitled_Artwork-4 6.png" id="2_weqbi"]
+[ext_resource type="Texture2D" uid="uid://bc5lx7kop54i4" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_side/Untitled_Artwork-3 8.png" id="2_kei3r"]
+[ext_resource type="Resource" uid="uid://c68gij7c58rdu" path="res://Hallasan-Sunset/Technical/Resources/Skills/FistChain.tres" id="2_pp6gu"]
 [ext_resource type="Texture2D" uid="uid://bs4qrs1dh3a5a" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)1.png" id="3_0wbd3"]
 [ext_resource type="Texture2D" uid="uid://cuvgsyd825y83" path="res://Hallasan-Sunset/Player/Sprites/Shadow (1).png" id="3_kt8jp"]
 [ext_resource type="Texture2D" uid="uid://cfl7xqmnlxqmo" path="res://Hallasan-Sunset/Player/Animations/Attack/Attack_shadow/AttackSprite01 (2).png" id="3_m2bwt"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dnaheucsn2rsy" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)7.png" id="9_t4q58"]
 [ext_resource type="Texture2D" uid="uid://bsuuia3fqy6wg" path="res://Hallasan-Sunset/Player/Sprites/Hands.png" id="9_u82ln"]
 [ext_resource type="Texture2D" uid="uid://fchmwiqxqir4" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkDown/PLAYER (1)8.png" id="10_j2yuu"]
+[ext_resource type="Texture2D" uid="uid://cq7jdy4ajln77" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Smash/Smoke Effect.png" id="10_vscvm"]
 [ext_resource type="Texture2D" uid="uid://ddt2vy6hmducl" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-2.png" id="20_s3ikh"]
 [ext_resource type="Texture2D" uid="uid://cpuk42pn1heag" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-3.png" id="21_g4a1u"]
 [ext_resource type="Texture2D" uid="uid://bwgxh50u2k4qm" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-4.png" id="22_sp8r2"]
@@ -52,49 +52,44 @@
 [ext_resource type="AudioStream" uid="uid://b1c8yqhav1d5x" path="res://Hallasan-Sunset/Player/Audio/ES_Swing Fast, Whoosh, Metal - Epidemic Sound - 1915-2174.wav" id="37_ntwfo"]
 [ext_resource type="Texture2D" uid="uid://eepbutn50j2x" path="res://Hallasan-Sunset/Player/Animations/Stun/Untitled_Artwork 42.png" id="38_2e3sj"]
 [ext_resource type="Texture2D" uid="uid://554h5fe6oclt" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleUp/Untitled_Artwork-5.png" id="38_wsxnm"]
+[ext_resource type="AudioStream" uid="uid://dpv0lmar317h0" path="res://Hallasan-Sunset/Player/Audio/ES_Punch, Block, Swoosh - Epidemic Sound - 1509-1983.wav" id="39_2xcfq"]
 [ext_resource type="Texture2D" uid="uid://bvg1tqxwb0ay4" path="res://Hallasan-Sunset/Player/Animations/Stun/Untitled_Artwork 39.png" id="39_rsi5w"]
 [ext_resource type="Texture2D" uid="uid://semtsxame55r" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleUp/Untitled_Artwork-6.png" id="39_y1n4n"]
 [ext_resource type="Texture2D" uid="uid://dl81hve4tqxi7" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleUp/Untitled_Artwork-7.png" id="40_pja5u"]
 [ext_resource type="Texture2D" uid="uid://dyvcgp4qvg3f0" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleUp/Untitled_Artwork-8.png" id="41_oev8g"]
-[ext_resource type="Texture2D" uid="uid://cv3l12vbokf5c" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_down/New/Untitled_Artwork-2 4.png" id="53_8vd6s"]
 [ext_resource type="Texture2D" uid="uid://iurccmipepnm" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_down/New/Untitled_Artwork-3 4.png" id="54_qr4y4"]
-[ext_resource type="Texture2D" uid="uid://vwculr1u85qp" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_left/New/Untitled_Artwork-2 7.png" id="56_j0euv"]
-[ext_resource type="Texture2D" uid="uid://lk1wm8d75yxl" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_left/New/Untitled_Artwork-3 7.png" id="57_aiwkq"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/player_state_machine.gd" id="64_rvr43"]
-[ext_resource type="Texture2D" uid="uid://c2g6c7uce4s2c" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_up/New/Untitled_Artwork-2 5.png" id="64_s6v76"]
-[ext_resource type="Texture2D" uid="uid://bl74hywht025o" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Down/Untitled_Artwork-2 8.png" id="65_sc6va"]
+[ext_resource type="Texture2D" uid="uid://bl74hywht025o" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Down/Untitled_Artwork-2 8.png" id="65_sc6va"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_idle.gd" id="65_t8td5"]
-[ext_resource type="Texture2D" uid="uid://bjy71afwl0wl1" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_up/New/Untitled_Artwork-3 5.png" id="65_uy06o"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_walk.gd" id="66_hex77"]
-[ext_resource type="Texture2D" uid="uid://k77ac87uqwcw" path="res://Hallasan-Sunset/Player/Animations/Attack/attack_up/New/Untitled_Artwork-4 4.png" id="66_l3wag"]
-[ext_resource type="Texture2D" uid="uid://mobmcspjto53" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Down/Untitled_Artwork-3 8.png" id="66_p7xyd"]
+[ext_resource type="Texture2D" uid="uid://mobmcspjto53" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Down/Untitled_Artwork-3 8.png" id="66_p7xyd"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_attack.gd" id="67_i7pm4"]
-[ext_resource type="Texture2D" uid="uid://bvsvltbvsukpm" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Down/Untitled_Artwork-4 7.png" id="67_mxfn7"]
-[ext_resource type="Texture2D" uid="uid://dhvt7kn588iri" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_up/Untitled_Artwork-2 8.png" id="68_gol32"]
+[ext_resource type="Texture2D" uid="uid://bvsvltbvsukpm" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Down/Untitled_Artwork-4 7.png" id="67_mxfn7"]
+[ext_resource type="Texture2D" uid="uid://dhvt7kn588iri" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_up/Untitled_Artwork-2 8.png" id="68_gol32"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_stun.gd" id="69_58qxy"]
-[ext_resource type="Texture2D" uid="uid://dyaem6qfqjwcb" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_up/Untitled_Artwork-3 8.png" id="69_akfv1"]
-[ext_resource type="Texture2D" uid="uid://b1b3mkce0fjwr" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_up/Untitled_Artwork-4 7.png" id="70_tynqy"]
+[ext_resource type="Texture2D" uid="uid://dyaem6qfqjwcb" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_up/Untitled_Artwork-3 8.png" id="69_akfv1"]
+[ext_resource type="Texture2D" uid="uid://b1b3mkce0fjwr" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_up/Untitled_Artwork-4 7.png" id="70_tynqy"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_boomerang.gd" id="70_ul2vr"]
-[ext_resource type="Texture2D" uid="uid://d12x7wdmlt3cs" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_side/Untitled_Artwork-2 8.png" id="71_dtphi"]
+[ext_resource type="Texture2D" uid="uid://d12x7wdmlt3cs" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_side/Untitled_Artwork-2 8.png" id="71_dtphi"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/abilities.gd" id="74_8h3ji"]
 [ext_resource type="Texture2D" uid="uid://ppsaevjvbvms" path="res://Hallasan-Sunset/Player/Animations/Death/Dead_Down-2.png" id="75_20pjw"]
-[ext_resource type="PackedScene" uid="uid://xwk3g6ka7muy" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dash.tscn" id="75_ee50j"]
-[ext_resource type="PackedScene" uid="uid://x3kqulp18mfq" path="res://Hallasan-Sunset/Player/Technical/Camera copy/camera_2d.tscn" id="76_apee7"]
+[ext_resource type="PackedScene" uid="uid://xwk3g6ka7muy" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash/dash.tscn" id="75_ee50j"]
+[ext_resource type="PackedScene" uid="uid://x3kqulp18mfq" path="res://Hallasan-Sunset/Player/Technical/Camera/camera_2d.tscn" id="76_apee7"]
 [ext_resource type="Texture2D" uid="uid://doxge4lhhd5xd" path="res://Hallasan-Sunset/Player/Animations/Death/Dead_Down-3.png" id="76_hmbot"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="78_hsdvo"]
-[ext_resource type="Texture2D" uid="uid://cyrgbbyy8jael" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-1 36.png" id="79_m8pf5"]
-[ext_resource type="PackedScene" uid="uid://cvoni5gbutug8" path="res://Hallasan-Sunset/Player/Technical/Moves/Projectile copy/arc_projectile.tscn" id="79_mcnx3"]
+[ext_resource type="Texture2D" uid="uid://cyrgbbyy8jael" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-1 36.png" id="79_m8pf5"]
+[ext_resource type="PackedScene" uid="uid://cvoni5gbutug8" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Bomb/arc_projectile.tscn" id="79_mcnx3"]
 [ext_resource type="AudioStream" uid="uid://w6ebrnlnsumc" path="res://Hallasan-Sunset/Player/Audio/SwordSwoosh (1).wav" id="79_mskk0"]
-[ext_resource type="Texture2D" uid="uid://316wrb5b4cjl" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-2 25.png" id="80_i2wkm"]
-[ext_resource type="Texture2D" uid="uid://b4ve2ihhhgx7b" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-3 23.png" id="81_jkdu6"]
+[ext_resource type="Texture2D" uid="uid://316wrb5b4cjl" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-2 25.png" id="80_i2wkm"]
+[ext_resource type="Texture2D" uid="uid://b4ve2ihhhgx7b" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-3 23.png" id="81_jkdu6"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="81_wnbgp"]
-[ext_resource type="Texture2D" uid="uid://bapqh73dpvsr6" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-4 19.png" id="82_3aw8l"]
-[ext_resource type="Texture2D" uid="uid://bvw8mbawt588w" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-5 14.png" id="83_1swds"]
-[ext_resource type="Texture2D" uid="uid://bhcgu5wkca4su" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-6 12.png" id="84_5vffj"]
+[ext_resource type="Texture2D" uid="uid://bapqh73dpvsr6" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-4 19.png" id="82_3aw8l"]
+[ext_resource type="Texture2D" uid="uid://bvw8mbawt588w" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-5 14.png" id="83_1swds"]
+[ext_resource type="Texture2D" uid="uid://bhcgu5wkca4su" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-6 12.png" id="84_5vffj"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_death.gd" id="84_tr3qq"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Push copy/push.gd" id="85_7mujm"]
-[ext_resource type="Texture2D" uid="uid://d3q367mpunka2" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-7 8.png" id="85_kjr3w"]
-[ext_resource type="Texture2D" uid="uid://cccvpkiyuq1li" path="res://Hallasan-Sunset/Player/Animations/Boomerang/Boomerang_Charge_attack/Untitled_Artwork-8 7.png" id="86_uvryy"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Push/push.gd" id="85_7mujm"]
+[ext_resource type="Texture2D" uid="uid://d3q367mpunka2" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-7 8.png" id="85_kjr3w"]
+[ext_resource type="Texture2D" uid="uid://cccvpkiyuq1li" path="res://Hallasan-Sunset/Player/Animations/Fist Throw/Boomerang_Charge_attack/Untitled_Artwork-8 7.png" id="86_uvryy"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/State Machine/state_charge_attack.gd" id="86_ykiv8"]
 [ext_resource type="Texture2D" uid="uid://s8qirkkfomjs" path="res://Hallasan-Sunset/Player/Animations/Dodge/Dodge_side/Untitled_Artwork 67.png" id="88_ptyc0"]
 [ext_resource type="Texture2D" uid="uid://d06m01nt5hdp7" path="res://Hallasan-Sunset/Player/Animations/Walk/WalkSide/walk_side/walk_side-1 14.png" id="95_1t1lm"]
@@ -147,6 +142,7 @@
 [ext_resource type="Texture2D" uid="uid://8b3qgrucpulr" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 17.png" id="150_ueuy1"]
 [ext_resource type="Texture2D" uid="uid://6qxm251e384q" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 18.png" id="151_3al2p"]
 [ext_resource type="Texture2D" uid="uid://bkrv18lcna5gv" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 19.png" id="152_jdqik"]
+[ext_resource type="AudioStream" uid="uid://cyky3cc31wbpy" path="res://Hallasan-Sunset/Audio/Sound effects/ES_Cinematic, Riser, Fast, Big Hit, Bomb - Epidemic Sound - 0570-4369.wav" id="152_vea7i"]
 [ext_resource type="Texture2D" uid="uid://cao7k234ofbhb" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 20.png" id="153_apot5"]
 [ext_resource type="Texture2D" uid="uid://dqlx83kvdaklq" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombUp/Untitled_Artwork-1 21.png" id="154_we47n"]
 [ext_resource type="Texture2D" uid="uid://br5bw66x2vi3g" path="res://Hallasan-Sunset/Player/Animations/carry/CarryBombDown/CarryBombDown1.png" id="155_kvo8t"]
@@ -183,10 +179,11 @@
 [ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Technical/Magnet/item_magnet.tscn" id="171_iktbv"]
 [ext_resource type="AudioStream" uid="uid://b4p67spcqc2u8" path="res://Hallasan-Sunset/Audio/Sound effects/Menu_notification.mp3" id="181_mr3vi"]
 [ext_resource type="AudioStream" uid="uid://ly4pqvhvoyx2" path="res://Hallasan-Sunset/Audio/Sound effects/Spin Attack.mp3" id="184_0ucy7"]
+[ext_resource type="PackedScene" uid="uid://bdqsrs7ycwg0r" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist.tscn" id="184_bov41"]
 [ext_resource type="AudioStream" uid="uid://scxnjkxxqkb1" path="res://Hallasan-Sunset/Audio/Sound effects/Step.wav" id="189_55wgi"]
 [ext_resource type="AudioStream" uid="uid://cg5mcbj3ke22l" path="res://Hallasan-Sunset/Audio/Sound effects/Hurt.mp3" id="195_yhs1l"]
 [ext_resource type="AudioStream" uid="uid://blbto7u2lrkn2" path="res://Hallasan-Sunset/Audio/Sound effects/Level up.mp3" id="196_dkjh1"]
-[ext_resource type="Texture2D" uid="uid://bgyh5lqoojjbl" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash copy/dusty.png" id="197_np30c"]
+[ext_resource type="Texture2D" uid="uid://bgyh5lqoojjbl" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash/dusty.png" id="197_np30c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_u7cob"]
 shader = ExtResource("4_7fkcj")
@@ -488,7 +485,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Sprite2D:position")
+tracks/2/path = NodePath("../Hand 2 R:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -500,7 +497,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Sprite2D3:position")
+tracks/3/path = NodePath("../Hand 2 L:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -512,7 +509,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Sprite2D:frame")
+tracks/4/path = NodePath("../Hand 2 R:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -524,7 +521,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../Sprite2D3:frame")
+tracks/5/path = NodePath("../Hand 2 L:frame")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -565,11 +562,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Sprite2D:frame")
+tracks/2/path = NodePath("../Hand 2 R:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [8, 4]
@@ -577,23 +574,23 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Sprite2D:position")
+tracks/3/path = NodePath("../Hand 2 R:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(50, 0), Vector2(30, 40), Vector2(0, 50), Vector2(-40, 30), Vector2(-50, 0)]
+"values": [Vector2(50, 0), Vector2(30, 40), Vector2(0, 50), Vector2(-40, 30), Vector2(-50, 0), Vector2(50, 0), Vector2(30, 40), Vector2(0, 50), Vector2(-40, 30), Vector2(-50, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("../Sprite2D3:frame")
+tracks/4/path = NodePath("../Hand 2 L:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.2),
+"times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [8, 4]
@@ -601,46 +598,34 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../Sprite2D3:position")
+tracks/5/path = NodePath("../Hand 2 L:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-50, 0), Vector2(-30, -40), Vector2(0, -50), Vector2(40, -30), Vector2(50, 0)]
+"values": [Vector2(-50, 0), Vector2(-30, -40), Vector2(0, -50), Vector2(40, -30), Vector2(50, -30), Vector2(-50, -30), Vector2(-30, -40), Vector2(0, -50), Vector2(40, -30), Vector2(50, 0)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../Sprite2D:flip_v")
+tracks/6/path = NodePath("../Hand 2 R:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.25),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("../Sprite2D:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../Sprite2D3:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Hand 2 L:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -772,6 +757,80 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_xft73"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Smash Outer Ring:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Smash Outer Ring:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_vm1s0"]
+resource_name = "Smash_effect"
+length = 1.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Smash Outer Ring:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7, 8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Smash Outer Ring:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4s7w"]
+_data = {
+"RESET": SubResource("Animation_xft73"),
+"Smash_effect": SubResource("Animation_vm1s0")
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_slyos"]
 radius = 4.0
@@ -907,6 +966,206 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_rnhs1"]
+resource_name = "Hands_Smash"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 1,
+"values": [ExtResource("75_20pjw"), ExtResource("76_hmbot"), ExtResource("2_1huh3")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Hand 2 L:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.15, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 0, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Hand 2 L:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2, 0.4, 0.5),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(-16, 6), Vector2(-16, 4), Vector2(-16, -20), Vector2(-16, 21), Vector2(-16, 10)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Hand 2 R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.15, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 0, 0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/Hand 2 R:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.2, 0.4, 0.5),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(16, 6), Vector2(16, 4), Vector2(16, -20), Vector2(16, 21), Vector2(16, 10)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D/Hand 2 L:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.785398]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Sprite2D/Hand 2 R:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.785398]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Sprite2D/Hand 2 R:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sprite2D/Hand 2 L:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Sprite2D/Smash Effect:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.35, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sprite2D:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -5), Vector2(0, -10), Vector2(0, -15), Vector2(0, -20), Vector2(0, 0)]
+}
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Audio/AudioStreamPlayer2D")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 1.80122,
+"start_offset": 0.0,
+"stream": ExtResource("152_vea7i")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/11/use_blend = true
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Interactions/ChargeSpinHurtBox:monitoring")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sprite2D/Smash Effect:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.35, 0.45, 0.55, 0.65, 0.75, 0.85, 0.95, 1.05, 1.15, 1.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Sprite2D/Smash Effect/Smash Outer Ring:frame")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.75, 0.85, 0.95, 1.05, 1.15, 1.25, 1.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7, 8]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Sprite2D/Smash Effect/Smash Outer Ring:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
 [sub_resource type="Animation" id="Animation_gxkdx"]
 length = 0.001
 tracks/0/type = "value"
@@ -1008,7 +1267,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Sprite2D/Sprite2D:visible")
+tracks/8/path = NodePath("Sprite2D/Hand 2 R:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -1020,7 +1279,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Sprite2D/Sprite2D3:visible")
+tracks/9/path = NodePath("Sprite2D/Hand 2 L:visible")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -1029,62 +1288,182 @@ tracks/9/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sprite2D/Hand 2 R:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Sprite2D/Hand 2 R:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16, 4)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Sprite2D/Hand 2 L:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sprite2D/Hand 2 L:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, 6)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Sprite2D/Hand 2 R:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Sprite2D/Hand 2 L:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Interactions/ChargeSpinHurtBox:monitoring")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Sprite2D/Smash Effect/Smash Outer Ring:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_8mfv3"]
 resource_name = "attack_down"
-length = 0.2
+length = 0.4
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Sprite2D/Hand 2 L:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("53_8vd6s"), ExtResource("54_qr4y4"), ExtResource("2_cps1o")]
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 6), Vector2(0, 40)]
 }
-tracks/1/type = "audio"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/path = NodePath("Sprite2D/Hand 2 L:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("67_mxfn7"), ExtResource("66_p7xyd"), ExtResource("65_sc6va"), ExtResource("66_p7xyd"), ExtResource("67_mxfn7")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Hand 2 L:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Audio/AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("37_ntwfo")
+"stream": ExtResource("39_2xcfq")
 }],
 "times": PackedFloat32Array(0)
 }
-tracks/1/use_blend = true
+tracks/4/use_blend = true
 
 [sub_resource type="Animation" id="Animation_gn0nw"]
 resource_name = "attack_side"
-length = 0.2
+length = 0.3
 step = 0.1
-tracks/0/type = "value"
+tracks/0/type = "audio"
 tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/enabled = false
+tracks/0/path = NodePath("AudioStreamPlayer2D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("56_j0euv"), ExtResource("57_aiwkq"), ExtResource("2_weqbi")]
-}
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -1092,11 +1471,74 @@ tracks/1/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
-tracks/1/use_blend = true
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("71_dtphi"), ExtResource("2_kei3r")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Hand 2 L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [9, 8]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Hand 2 L:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-10, 8), Vector2(-40, 8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D/Hand 2 L:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Audio/AudioStreamPlayer2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("39_2xcfq")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/5/use_blend = true
 
 [sub_resource type="Animation" id="Animation_dkj7r"]
 resource_name = "attack_up"
-length = 0.2
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1107,23 +1549,71 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("64_s6v76"), ExtResource("65_uy06o"), ExtResource("66_l3wag")]
+"values": [ExtResource("68_gol32"), ExtResource("69_akfv1"), ExtResource("70_tynqy")]
 }
-tracks/1/type = "audio"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/path = NodePath("Sprite2D/Hand 2 L:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -6), Vector2(0, -40)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D/Hand 2 L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D/Hand 2 L:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Audio/AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("37_ntwfo")
+"stream": ExtResource("39_2xcfq")
 }],
 "times": PackedFloat32Array(0)
 }
-tracks/1/use_blend = true
+tracks/4/use_blend = true
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite2D/Hand 2 L:show_behind_parent")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_tpkhf"]
 resource_name = "boomerang_down"
@@ -1204,7 +1694,6 @@ tracks/5/keys = {
 [sub_resource type="Animation" id="Animation_lpl5n"]
 resource_name = "boomerang_side"
 length = 0.2
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -1964,7 +2453,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/Sprite2D:frame")
+tracks/1/path = NodePath("Sprite2D/Hand 2 R:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1976,7 +2465,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/Sprite2D:position")
+tracks/2/path = NodePath("Sprite2D/Hand 2 R:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -2149,6 +2638,7 @@ _data = {
 "BombCarrySide": SubResource("Animation_so2cc"),
 "BombCarryUp": SubResource("Animation_7n7jl"),
 "Dash_attack_down": SubResource("Animation_xybuq"),
+"Hands_Smash": SubResource("Animation_rnhs1"),
 "RESET": SubResource("Animation_gxkdx"),
 "attack_down": SubResource("Animation_8mfv3"),
 "attack_side": SubResource("Animation_gn0nw"),
@@ -2481,6 +2971,7 @@ y_sort_enabled = true
 collision_layer = 5
 collision_mask = 20
 script = ExtResource("1_l265g")
+fist_chain = ExtResource("2_pp6gu")
 
 [node name="ShadowSprite" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.235294)
@@ -2551,23 +3042,46 @@ position = Vector2(-11, 13)
 sprite_frames = SubResource("SpriteFrames_m0ckh")
 flip_h = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+[node name="Hand 2 R" type="Sprite2D" parent="Sprite2D"]
 visible = false
 texture_filter = 1
-position = Vector2(30, 0)
+position = Vector2(16, 4)
 texture = ExtResource("9_u82ln")
-flip_v = true
 hframes = 16
-frame = 4
+frame = 1
 
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D"]
+[node name="Hand 2 L" type="Sprite2D" parent="Sprite2D"]
 visible = false
 texture_filter = 1
-position = Vector2(-30, 0)
+position = Vector2(-16, 6)
 texture = ExtResource("9_u82ln")
 flip_h = true
 hframes = 16
-frame = 4
+frame = 1
+
+[node name="Smash Effect" type="Sprite2D" parent="Sprite2D"]
+visible = false
+show_behind_parent = true
+texture_filter = 1
+position = Vector2(0, 24)
+scale = Vector2(2, 2)
+texture = ExtResource("10_vscvm")
+hframes = 11
+region_enabled = true
+region_rect = Rect2(0, 714, 704, 46)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D/Smash Effect"]
+libraries = {
+"": SubResource("AnimationLibrary_e4s7w")
+}
+
+[node name="Smash Outer Ring" type="Sprite2D" parent="Sprite2D/Smash Effect"]
+scale = Vector2(2, 2)
+texture = ExtResource("10_vscvm")
+hframes = 11
+frame = 3
+region_enabled = true
+region_rect = Rect2(0, 713, 704, 45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 19)
@@ -2678,7 +3192,6 @@ debug_color = Color(0.996078, 0, 0.219608, 0)
 
 [node name="HitBox" parent="Interactions" instance=ExtResource("78_hsdvo")]
 collision_layer = 1
-monitoring = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HitBox"]
 position = Vector2(0, 9.4)
@@ -2735,6 +3248,7 @@ texture = ExtResource("197_np30c")
 
 [node name="Camera2D" parent="." instance=ExtResource("76_apee7")]
 process_callback = 0
+shake_power = 0.5
 
 [node name="Magnet" parent="." instance=ExtResource("171_iktbv")]
 visible = false
@@ -2761,6 +3275,13 @@ lifetime = 0.75
 one_shot = true
 explosiveness = 0.25
 
+[node name="Fist" parent="." instance=ExtResource("184_bov41")]
+visible = false
+
+[node name="HurtBox" parent="Fist" index="5"]
+monitoring = false
+
 [connection signal="timeout" from="StateMachine/Walk/ghost_timer" to="StateMachine/Walk" method="_on_ghost_timer_timeout"]
 
 [editable path="Dash"]
+[editable path="Fist"]

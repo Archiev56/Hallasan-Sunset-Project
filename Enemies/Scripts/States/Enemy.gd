@@ -11,6 +11,7 @@ const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 @export var hp : int = 3
 @export var xp_reward : int = 1
 
+
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 var player : Player
@@ -82,6 +83,8 @@ func _take_damage( hurt_box : HurtBox ) -> void:
 	if invulnerable == true:
 		return
 	hp -= hurt_box.damage
+	PlayerManager.shake_camera()
+	EffectManager.damage_text(hurt_box.damage, global_position + Vector2(0,-36))
 	gpu_particles_2d.restart()
 	gpu_particles_2d.emitting = true
 	if hp > 0:

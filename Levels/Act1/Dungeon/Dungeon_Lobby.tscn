@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_5f0nu"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="1_jst8d"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="2_a7fa8"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="2_a7fa8"]
 [ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_ay54f"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="2_tpcvp"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="3_qniyf"]

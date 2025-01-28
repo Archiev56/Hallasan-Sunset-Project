@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="1_iix7v"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_qwq1o"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="2_41vh6"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="2_41vh6"]
 [ext_resource type="AudioStream" uid="uid://bganfa48k5f0w" path="res://Hallasan-Sunset/Audio/Song/Pipa with drums.ogg" id="2_ges6e"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_bgbxq"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/dark_wizard_boss.gd" id="4_b8ab4"]

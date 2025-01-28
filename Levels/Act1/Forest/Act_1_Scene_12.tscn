@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://wurqaqupmrgy"]
+[gd_scene load_steps=21 format=4 uid="uid://wurqaqupmrgy"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_qxh1m"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_1yc6e"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="4_mo2xx"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="5_hw5g3"]
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="6_n7uab"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="6_row2c"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="6_row2c"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="7_hyfm5"]
 [ext_resource type="Resource" uid="uid://cw3bf5p68wy7b" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Kimbap.tres" id="8_clo2x"]
 [ext_resource type="PackedScene" uid="uid://dk11vr1agmrsd" path="res://Hallasan-Sunset/Environment/Forest/Chest/chest.tscn" id="8_ef20y"]
@@ -14,10 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://3c8o5hxduleo" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderBottom.tscn" id="9_bh2i1"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_text.gd" id="9_hs1em"]
 [ext_resource type="PackedScene" uid="uid://j7xr0tnkfbq3" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tall Tree/Tall Tree.tscn" id="9_k3fkf"]
+[ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="10_8qgmy"]
 [ext_resource type="Resource" uid="uid://dxnb65gey8g0i" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tres" id="10_gi5qa"]
 [ext_resource type="PackedScene" uid="uid://chwksqbnu0jli" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tscn" id="10_otmro"]
-[ext_resource type="PackedScene" uid="uid://cp7e7rucofrk0" path="res://Hallasan-Sunset/Enemies/Common Enemies/Shroomboom/Shroomboom.tscn" id="17_0b01v"]
+[ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Weather/Leaves/Magicleaves.tscn" id="11_f5n5s"]
 [ext_resource type="PackedScene" uid="uid://ddioxudb4roti" path="res://Hallasan-Sunset/Items/Technical/item_pickup/item_pickup.tscn" id="18_0p8wk"]
+[ext_resource type="PackedScene" uid="uid://dyufjm1518vwi" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Goblin.tscn" id="19_yroyr"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_qxh1m")
@@ -156,6 +158,11 @@ position = Vector2(1634, -272)
 
 [node name="Weather" type="Node" parent="Environment"]
 
+[node name="Wind" parent="Environment/Weather" instance=ExtResource("10_8qgmy")]
+
+[node name="MagicLeaves" parent="Environment/Weather" instance=ExtResource("11_f5n5s")]
+position = Vector2(680, 984)
+
 [node name="Hazards" type="Node" parent="Environment"]
 
 [node name="Borders" type="Node" parent="Environment"]
@@ -220,10 +227,23 @@ side = 1
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Items" type="Node" parent="."]
+[node name="Goblin" parent="Enemies" groups=["Enemies"] instance=ExtResource("19_yroyr")]
+position = Vector2(1328, 128)
+xp_reward = 1
 
-[node name="TreeStump" parent="." instance=ExtResource("17_0b01v")]
-position = Vector2(1312, 160)
+[node name="Goblin2" parent="Enemies" groups=["Enemies"] instance=ExtResource("19_yroyr")]
+position = Vector2(1584, 216)
+xp_reward = 1
+
+[node name="Goblin3" parent="Enemies" groups=["Enemies"] instance=ExtResource("19_yroyr")]
+position = Vector2(1640, 112)
+xp_reward = 1
+
+[node name="Goblin4" parent="Enemies" groups=["Enemies"] instance=ExtResource("19_yroyr")]
+position = Vector2(1408, 232)
+xp_reward = 1
+
+[node name="Items" type="Node" parent="."]
 
 [node name="ItemPickup" parent="." instance=ExtResource("18_0p8wk")]
 position = Vector2(1456, 144)

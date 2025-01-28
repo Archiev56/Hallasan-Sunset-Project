@@ -27,11 +27,10 @@ func _process(delta):
 		C.play("IdleC") 
 
 	# Check if the "attack" action is just released
-	if Input.is_action_just_released("Bomb"):
+	if Input.is_action_just_released("Fist Bomb"):
 		X.play("IdleX") 
 	
-	if Input.is_action_just_pressed("Bomb"):
+	if Input.is_action_just_pressed(" Fist Bomb"):
 		X.play("PressX")  # Play the attack animation when the key is pressed
 
 	# Check if the "attack" action is just released
-

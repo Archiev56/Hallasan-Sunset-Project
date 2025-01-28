@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://ctbbh43inokqv"]
+[gd_scene load_steps=24 format=3 uid="uid://ctbbh43inokqv"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/ironoak_boss.gd" id="1_kndsa"]
 [ext_resource type="Texture2D" uid="uid://dyl568ovlnk58" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Sprites/big_worm.png" id="2_s0v1s"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="3_1khwm"]
+[ext_resource type="Texture2D" uid="uid://csa2l7d5bn2ay" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Sprites/Untitled_Artwork-1 32.png" id="3_gft6y"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_u5jal"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Branch/branch_spawner.gd" id="4_467m5"]
 
@@ -114,6 +115,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_gft6y")]
+}
 
 [sub_resource type="Animation" id="Animation_4ymo2"]
 resource_name = "attack"
@@ -188,14 +201,14 @@ step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [ExtResource("3_gft6y")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xxpn2"]
@@ -242,6 +255,10 @@ frame = 1
 visible = false
 position = Vector2(0.5, 8.5)
 shape = SubResource("RectangleShape2D_x2btc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_gft6y")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

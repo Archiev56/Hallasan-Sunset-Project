@@ -968,11 +968,11 @@ color_ramp = SubResource("GradientTexture1D_ph1l6")
 
 [node name="Shroomboom" type="CharacterBody2D"]
 z_index = 1
-collision_layer = 256
-collision_mask = 17
+collision_layer = 260
+collision_mask = 21
 script = ExtResource("1_5tg0a")
 hp = 2
-xp_reward = 25
+xp_reward = 50
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0)
@@ -1064,6 +1064,7 @@ state_aggro_duration = 3.0
 next_state = NodePath("../Wander")
 
 [node name="HitBox" parent="." instance=ExtResource("29_3lkxb")]
+collision_layer = 260
 collision_mask = 1
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
@@ -1090,7 +1091,6 @@ max_polyphony = 4
 
 [node name="hurt_box" parent="." instance=ExtResource("5_83oyw")]
 visible = false
-damage = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
 position = Vector2(0, -11)

@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="5_hajru"]
 [ext_resource type="PackedScene" uid="uid://k75pf2uxsq7d" path="res://Hallasan-Sunset/Environment/Forest/Trees/Pine Tree/Pine Tree.tscn" id="6_h3nta"]
 [ext_resource type="PackedScene" uid="uid://4np1xt5e2gi8" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem4.tscn" id="6_ioffm"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="8_byrce"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="8_byrce"]
 [ext_resource type="PackedScene" uid="uid://8l5uc6or308u" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem5.tscn" id="11_6hd6n"]
 [ext_resource type="PackedScene" uid="uid://s87tt1bkx3ku" path="res://Hallasan-Sunset/Environment/Weather/Floating Lights/Floating lights.tscn" id="12_doqpe"]
 [ext_resource type="PackedScene" uid="uid://dyufjm1518vwi" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Goblin.tscn" id="15_gqhti"]

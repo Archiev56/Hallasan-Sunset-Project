@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dlqhudwfc155o" path="res://Hallasan-Sunset/Environment/Forest/Log/log.tscn" id="13_fk3no"]
 [ext_resource type="Texture2D" uid="uid://fxu21hbe2o4r" path="res://Hallasan-Sunset/Environment/Town/Buildings/Church/Untitled_Artwork 76.png" id="14_yoyy5"]
 [ext_resource type="Texture2D" uid="uid://bsp35yg5i44mp" path="res://Hallasan-Sunset/Environment/Town/Buildings/blue_house/Untitled_Artwork 77.png" id="15_6p5au"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="16_l5rrp"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="16_l5rrp"]
 [ext_resource type="PackedScene" uid="uid://cr4mn2ndohjxo" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/Lamp Post.tscn" id="16_qdqxn"]
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Weather/Leaves/Magicleaves.tscn" id="17_paw1o"]
 [ext_resource type="PackedScene" uid="uid://wwugboi7jgu" path="res://Hallasan-Sunset/Environment/Forest/Log Pile/Log Pile.tscn" id="18_edfjw"]

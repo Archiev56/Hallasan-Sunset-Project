@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_14gk0"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_752fl"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="3_2r4kj"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="3_2r4kj"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="5_cjalj"]
 [ext_resource type="Texture2D" uid="uid://csa2l7d5bn2ay" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Sprites/Untitled_Artwork-1 32.png" id="5_yhux0"]
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="6_we3e0"]
@@ -226,8 +226,9 @@ scale = Vector2(2, 2)
 texture = ExtResource("5_yhux0")
 
 [node name="IronoakBoss" parent="." instance=ExtResource("9_nbicu")]
+z_index = 10
 position = Vector2(578, 351)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("3_2r4kj")]
 position = Vector2(594, 562)

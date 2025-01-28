@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_yelmx"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="3_p3oqa"]
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Weather/Leaves/Magicleaves.tscn" id="4_c3rjn"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="4_g6n4j"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="4_g6n4j"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="5_46ksk"]
 [ext_resource type="PackedScene" uid="uid://cerpqrtpj4udh" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/WoodenSpike.tscn" id="5_63v8m"]
 [ext_resource type="PackedScene" uid="uid://dnoohvgbs737l" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem2.tscn" id="6_5g5qv"]
@@ -229,8 +229,10 @@ position = Vector2(904, 312)
 [node name="Weather" type="Node" parent="Environment"]
 
 [node name="MagicLeaves" parent="Environment/Weather" instance=ExtResource("4_c3rjn")]
+position = Vector2(624, 768)
 
 [node name="Wind" parent="Environment/Weather" instance=ExtResource("5_46ksk")]
+position = Vector2(600, 840)
 
 [node name="Hazards" type="Node" parent="Environment"]
 

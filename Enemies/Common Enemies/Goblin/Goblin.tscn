@@ -868,10 +868,11 @@ color_ramp = SubResource("GradientTexture1D_0tj5q")
 
 [node name="Goblin" type="CharacterBody2D"]
 z_index = 1
-collision_layer = 256
-collision_mask = 16
+collision_layer = 260
+collision_mask = 21
 script = ExtResource("1_e0n12")
-hp = 5
+hp = 1
+xp_reward = null
 
 [node name="ShadowCopy" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.231373)
@@ -939,6 +940,8 @@ next_state = NodePath("../Wander")
 
 [node name="HitBox" parent="." instance=ExtResource("14_n4loe")]
 position = Vector2(0, -9)
+collision_layer = 260
+collision_mask = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -11)

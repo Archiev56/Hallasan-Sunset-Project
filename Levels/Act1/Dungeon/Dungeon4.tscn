@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://dwpjdbyqsg8ma"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_gpk5k"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="2_od6r5"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="2_od6r5"]
 [ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_p67o6"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_r7gj2"]
 [ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Dungeon/Torch/torch.tscn" id="3_1l5iq"]

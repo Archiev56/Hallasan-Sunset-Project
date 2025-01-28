@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://c712lfsg073ux"]
+[gd_scene load_steps=23 format=4 uid="uid://c712lfsg073ux"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_phgp6"]
 [ext_resource type="AudioStream" uid="uid://c1oflqs0hyg72" path="res://Hallasan-Sunset/Audio/Song/Stream Loops 2024-06-05_01.ogg" id="2_hqg1s"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ba2vdtt3qp7p3" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorder.tscn" id="4_chl80"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="5_bxmgt"]
 [ext_resource type="PackedScene" uid="uid://3c8o5hxduleo" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderBottom.tscn" id="6_2etwl"]
-[ext_resource type="PackedScene" uid="uid://ds6bxm232amrv" path="res://Hallasan-Sunset/Environment/Weather/Fog/Fog.tscn" id="7_ebg1n"]
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Weather/Leaves/Magicleaves.tscn" id="8_qqj6t"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="9_n5wkl"]
 [ext_resource type="PackedScene" uid="uid://dk2ene3poro4h" path="res://Hallasan-Sunset/Environment/Town/Outhouse/Outhouse.tscn" id="10_gm7vt"]
@@ -20,10 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="18_c0bkd"]
 [ext_resource type="PackedScene" uid="uid://ulerv0qebh18" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem1.tscn" id="18_rqqud"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="19_p3ys4"]
-[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Player Spawn/player_spawn.tscn" id="20_pgqld"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="20_pgqld"]
 [ext_resource type="PackedScene" uid="uid://ddioxudb4roti" path="res://Hallasan-Sunset/Items/Technical/item_pickup/item_pickup.tscn" id="22_0etsc"]
 [ext_resource type="Resource" uid="uid://cw3bf5p68wy7b" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Kimbap.tres" id="23_0i4j0"]
-[ext_resource type="Texture2D" uid="uid://bbjbjyg15c0c0" path="res://Hallasan-Sunset/Environment/Town/Buildings/Tea House/Untitled_Artwork 108.png" id="24_mwfrr"]
 
 [node name="Level2" type="Node2D"]
 y_sort_enabled = true
@@ -86,12 +84,11 @@ position = Vector2(837, 789)
 
 [node name="Weather" type="Node" parent="Environment"]
 
-[node name="Fog" parent="Environment/Weather" instance=ExtResource("7_ebg1n")]
-
 [node name="MagicLeaves" parent="Environment/Weather" instance=ExtResource("8_qqj6t")]
-position = Vector2(558, 629)
+position = Vector2(697, 641)
 
 [node name="Wind" parent="Environment/Weather" instance=ExtResource("9_n5wkl")]
+position = Vector2(426, 201)
 
 [node name="Objects" type="Node" parent="Environment"]
 
@@ -281,8 +278,3 @@ side = 3
 [node name="ItemPickup" parent="." instance=ExtResource("22_0etsc")]
 position = Vector2(152, 268)
 item_data = ExtResource("23_0i4j0")
-
-[node name="UntitledArtwork108" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(183, 221)
-texture = ExtResource("24_mwfrr")

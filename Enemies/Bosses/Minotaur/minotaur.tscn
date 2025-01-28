@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://byg8cnxq228vx"]
+[gd_scene load_steps=61 format=3 uid="uid://byg8cnxq228vx"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Minotaur/minotaur.gd" id="1_f0pen"]
 [ext_resource type="Texture2D" uid="uid://bj7m2iue47et8" path="res://Hallasan-Sunset/Enemies/Bosses/Minotaur/Minotaur - Sprite Sheet.png" id="1_yjl0f"]
@@ -407,6 +407,14 @@ radius = 21.7077
 [sub_resource type="CircleShape2D" id="CircleShape2D_4f12c"]
 radius = 22.0227
 
+[sub_resource type="Animation" id="Animation_8ooar"]
+resource_name = "Idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eklst"]
+_data = {
+"Idle": SubResource("Animation_8ooar")
+}
+
 [node name="Minotaur" type="CharacterBody2D"]
 scale = Vector2(3, 3)
 collision_layer = 257
@@ -414,12 +422,15 @@ collision_mask = 273
 script = ExtResource("1_f0pen")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_yy5kg")
 animation = &"Attack 2 "
+frame_progress = 0.99371
 
 [node name="hurt_box" parent="." instance=ExtResource("2_qlr51")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(13, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box"]
@@ -430,6 +441,7 @@ debug_color = Color(0.937255, 0.192157, 0.407843, 0.419608)
 [node name="NavAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="HitBox" parent="." instance=ExtResource("3_w6fd2")]
+visible = false
 collision_mask = 257
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
@@ -438,11 +450,22 @@ shape = SubResource("CircleShape2D_oy0iv")
 debug_color = Color(0.768627, 0.427451, 0.364706, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_4f12c")
 
 [node name="InvulnerabilityTimer" type="Timer" parent="."]
 
 [node name="KnockbackTimer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0.333333, 0)
+texture = ExtResource("1_yjl0f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_eklst")
+}
 
 [connection signal="body_entered" from="hurt_box" to="." method="_on_hurt_box_body_entered"]
