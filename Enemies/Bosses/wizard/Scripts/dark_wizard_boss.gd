@@ -43,7 +43,7 @@ func _ready() -> void:
 		return
 		
 	hp = max_hp
-	PlayerHud.show_boss_health( "Pervy Wizard" )
+	PlayerHud.show_boss_health( "Hahoe Mask" )
 	hit_box.damaged.connect( damage_taken )
 	
 	for c in $PositionTargets.get_children():
@@ -168,6 +168,7 @@ func damage_taken( _hurt_box : HurtBox ) -> void:
 		return
 	play_audio( audio_hurt )
 	hp = clampi( hp - _hurt_box.damage, 0, max_hp )
+	PlayerManager.shake_camera()
 	PlayerHud.update_boss_health( hp, max_hp )
 	animation_player_damaged.play( "damaged" )
 	animation_player_damaged.seek( 0 )
@@ -185,6 +186,7 @@ func play_audio( _a : AudioStream ) -> void:
 func defeat() -> void:
 	animation_player.play( "destroy" )
 	enable_hit_boxes( false )
+	PlayerHud.show_boss_slain()
 	PlayerHud.hide_boss_health()
 	persistent_data_handler.set_value()
 	await animation_player.animation_finished

@@ -13,7 +13,7 @@ gradient = SubResource("Gradient_0s0cm")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gajq4"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(500, 200, 1)
+emission_box_extents = Vector3(4000, 1600, 1)
 spread = 20.0
 initial_velocity_min = 20.0
 initial_velocity_max = 60.0
@@ -25,13 +25,13 @@ anim_offset_max = 1.0
 
 [node name="FloatingLights" type="GPUParticles2D"]
 process_mode = 3
-modulate = Color(0.995572, 0.618913, 0.958925, 1)
 z_index = 100
 texture_filter = 1
 material = ExtResource("1_jdd5r")
-amount = 25
+position = Vector2(115, -924)
+amount = 500
 process_material = SubResource("ParticleProcessMaterial_gajq4")
 texture = ExtResource("2_wba4f")
 speed_scale = 0.5
 randomness = 1.0
-visibility_rect = Rect2(-500, -200, 1000, 400)
+visibility_rect = Rect2(-1000, -400, 4000, 1600)

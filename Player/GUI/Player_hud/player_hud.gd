@@ -1,11 +1,12 @@
-extends CanvasLayer
+class_name PlayerHUD extends CanvasLayer
+
+@onready var energy_bar = $"Control/Energy Bar/Energy Bar"
 
 var hearts: Array[HeartGUI] = []
-var max_energy: int = 5
+
+var max_energy: int = 3
 var current_energy: int = max_energy  # Initialize energy to full
-var energy_refill_rate: float = 1.0  # Energy points per second
-var energy_deduction_per_dodge: int = 1
-@onready var energy_refill_timer: Timer = $Timer
+
 
 @onready var game_over: Control = $Control/GameOver
 @onready var continue_button: Button = $Control/GameOver/VBoxContainer/ContinueButton
@@ -16,8 +17,14 @@ var energy_deduction_per_dodge: int = 1
 @onready var boss_ui: Control = $Control/BossUI
 @onready var boss_hp_bar: TextureProgressBar = $Control/BossUI/TextureProgressBar
 @onready var boss_label: Label = $Control/BossUI/Label
-@export var energy_bar: TextureProgressBar  # Assign via Inspector
 @onready var notification : NotificationUI = $Control/Notification
+@onready var area_notification = $"Control/Area Notification"
+@onready var area_name: Label = $"Control/Area Notification/Sprite2D/Label"
+@onready var animation_player2 = $"Control/Area Notification/AnimationPlayer"
+@onready var enemy_slain = $"Control/Enemy Slain"
+@onready var animation_player3 = $"Control/Enemy Slain/AnimationPlayer"
+@onready var energy_timer = $Timer
+
 
 func _ready():
 	
@@ -32,6 +39,10 @@ func _ready():
 	continue_button.pressed.connect(load_game)
 	LevelManager.level_load_started.connect(hide_game_over_screen)
 	hide_boss_health()
+	hide_area_notification()
+	hide_boss_slain()
+	
+	energy_timer.start()
 
 
 func update_hp(_hp: int, _max_hp: int) -> void:
@@ -99,3 +110,44 @@ func update_boss_health(hp: int, max_hp: int) -> void:
 func queue_notification( _title : String, _message : String ) -> void:
 	notification.add_notification_to_queue( _title, _message )
 	pass
+
+func hide_area_notification() -> void:
+	area_notification.visible = false
+	
+	
+func show_area_notification(area_text: String) -> void:
+	area_notification.visible = true
+	area_name.text = area_text
+	animation_player2.play("Fade_in")
+
+func hide_boss_slain() -> void:
+	enemy_slain.visible = false
+	
+	
+func show_boss_slain() -> void:
+	enemy_slain.visible = true
+	animation_player3.play("Fade_in")
+	
+
+
+func reduce_energy_bar() -> void:
+	var value = energy_bar.get_value()
+	value -= 1
+	energy_bar.set_value(value)
+		
+	
+func _regenerate_energy():
+	var value = energy_bar.get_value()
+	value += 1
+	energy_bar.set_value(value)
+
+
+func _input(event):
+	if event.is_action_pressed("dash"):
+		reduce_energy_bar()
+		
+
+
+func _on_timer_timeout():
+	_regenerate_energy()
+	pass # Replace with function body.

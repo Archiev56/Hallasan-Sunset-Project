@@ -22,26 +22,29 @@ animations = [{
 size = Vector2(20, 19.25)
 
 [node name="Gate" type="StaticBody2D"]
+y_sort_enabled = true
 collision_layer = 16
 collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 11
+z_index = 1
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(4, -20)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_1l4ej")
 
 [node name="Gate2" type="Sprite2D" parent="."]
-z_index = 10
 y_sort_enabled = true
 texture_filter = 1
 texture = ExtResource("2_7pdbj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 position = Vector2(-80, 83)
 shape = SubResource("RectangleShape2D_khdal")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 position = Vector2(79, 83)
 shape = SubResource("RectangleShape2D_khdal")

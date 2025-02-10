@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c57s3sp41srat"
+path="res://.godot/imported/Forest Theme.ogg-236389800399bda8263400d8d3439258.oggvorbisstr"
+
+[deps]
+
+source_file="res://Hallasan-Sunset/Audio/Song/Forest Theme.ogg"
+dest_files=["res://.godot/imported/Forest Theme.ogg-236389800399bda8263400d8d3439258.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

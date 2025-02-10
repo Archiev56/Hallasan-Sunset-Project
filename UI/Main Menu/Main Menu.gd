@@ -37,7 +37,7 @@ func setup_title_screen() -> void:
 	AudioManager.play_music( music )
 	button_new.pressed.connect( start_game )
 	button_continue.pressed.connect( load_game )
-	
+	button_new.grab_focus()
 	
 	button_new.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	button_continue.focus_entered.connect( play_audio.bind( button_focus_audio ) )

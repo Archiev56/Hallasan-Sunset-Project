@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dejnllo725ito" path="res://Hallasan-Sunset/Environment/Forest/Statue/statue.tscn" id="2_xqjem"]
 [ext_resource type="AudioStream" uid="uid://bk452ky0gmeub" path="res://Hallasan-Sunset/UI/Main Menu/menu_focus.wav" id="3_25jm4"]
 [ext_resource type="PackedScene" uid="uid://k75pf2uxsq7d" path="res://Hallasan-Sunset/Environment/Forest/Trees/Pine Tree/Pine Tree.tscn" id="3_tyyl1"]
-[ext_resource type="AudioStream" uid="uid://d02gc5m12l0e0" path="res://Hallasan-Sunset/UI/Main Menu/menu_select.wav" id="4_1mnf3"]
 [ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="4_2lb6a"]
+[ext_resource type="AudioStream" uid="uid://q4tcvwp83ov5" path="res://Hallasan-Sunset/Audio/Sound effects/UI_Select.wav" id="4_si1of"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="5_3te3h"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="6_55sip"]
 [ext_resource type="FontFile" uid="uid://bimnqo2lc0co0" path="res://Hallasan-Sunset/UI/Fonts/papercut.ttf" id="6_prlyq"]
@@ -58,7 +58,7 @@ _data = {
 script = ExtResource("1_l82es")
 music = ExtResource("2_btpfe")
 button_focus_audio = ExtResource("3_25jm4")
-button_press_audio = ExtResource("4_1mnf3")
+button_press_audio = ExtResource("4_si1of")
 
 [node name="Tileset" parent="." instance=ExtResource("5_3te3h")]
 position = Vector2(0, 47)

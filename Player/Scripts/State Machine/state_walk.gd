@@ -1,8 +1,9 @@
 class_name State_Walk extends State
 
-@export var move_speed: float = 150.0
+
+@export var move_speed: float = 40.0
 @export var dash_speed: float = 200.0
-@export var dash_duration: float = 0.4  # Duration of the dash in seconds
+@export var dash_duration: float = 0.25  # Duration of the dash in seconds
 @export var max_speed: float = 85.0
 @export var accel: float = 1200.0
 @export var friction: float = 600.0
@@ -18,7 +19,7 @@ var dash_ghost = preload("res://Hallasan-Sunset/Player/Technical/Moves/Dash/Dash
 @onready var idle: State = $"../Idle"
 @onready var attack: State = $"../Attack"
 @onready var walk_left_audio: AudioStreamPlayer2D = $"../../Audio/Walk"
-@onready var dust_particles: GPUParticles2D = $"../../DustParticles"
+@onready var dust_particles: GPUParticles2D = $"../../Effects & Particles/DustParticles"
 @onready var dash_particles: GPUParticles2D = $"../../DashParticles"  # Optional: for dash effect
 @onready var dash_audio = $"../../Audio/Dash"
 @onready var hit_box = $"../../Interactions/HitBox"
@@ -135,27 +136,11 @@ func _on_AnimationPlayer_animation_finished(animation_name: String):
 			
 func add_ghost():
 	var ghost = ghost_node.instantiate()
-	ghost.position = sprite.global_position  # Match the player's position
-	ghost.scale = sprite.scale  # Match the player's scale
-
-	# Match the player's texture
-	if ghost.has_node("Sprite2D") and sprite:
-		var ghost_sprite = ghost.get_node("Sprite2D")
-		ghost_sprite.texture = sprite.texture  # Match the player's texture
-		ghost_sprite.flip_h = sprite.flip_h  # Match the horizontal flip
-		ghost_sprite.flip_v = sprite.flip_v  # Match the vertical flip
-		ghost_sprite.rotation = sprite.rotation  # Match rotation if applicable
-
-	# Optional: Adjust transparency for ghost effect
-	if ghost.has_method("set_modulate"):
-		ghost.set_modulate(Color(1, 1, 1, 0.5))  # Semi-transparent ghost
-
-	# Ensure it appears below the player
-	ghost.z_index = sprite.z_index - 1
-
-	# Add the ghost to the scene
+	ghost.position = sprite.global_position  # Use the Sprite2D's global position
+	ghost.scale = sprite.scale  # Set the scale to match the player's sprite
+	ghost.texture = sprite.texture  # Update ghost texture to match player's
 	get_tree().current_scene.add_child(ghost)
 
 func _on_ghost_timer_timeout():
 	if is_dashing:  # Only spawn ghosts while dashing
-		add_ghost()
+		add_ghost() 

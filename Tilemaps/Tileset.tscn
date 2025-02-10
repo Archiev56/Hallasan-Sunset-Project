@@ -5,12 +5,16 @@
 
 [node name="Tileset" type="TileMapLayer"]
 z_index = -1
+y_sort_enabled = true
 texture_filter = 1
 use_parent_material = true
 tile_set = ExtResource("1_r57bv")
 rendering_quadrant_size = 24
 script = ExtResource("11_2ksic")
+metadata/_edit_group_ = true
 
 [node name="LevelTileMapLayer" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+y_sort_origin = 1
 rendering_quadrant_size = 24
 script = ExtResource("11_2ksic")

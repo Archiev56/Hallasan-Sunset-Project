@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://cf0i2lm4e13my"]
+[gd_scene load_steps=51 format=4 uid="uid://coab6lx1oxbwv"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_vigd7"]
 [ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_8twt2"]

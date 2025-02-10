@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://dqco1rsv0j2e0"]
+[gd_scene load_steps=4 format=4 uid="uid://bxjlgevostnav"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_sab28"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_ecwtv"]

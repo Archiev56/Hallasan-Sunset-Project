@@ -4,7 +4,10 @@ var slot_data : SlotData : set = set_slot_data
 
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var label: Label = $Label
+@onready var inventory_slot = $"."
+@onready var audio_stream_player = $AudioStreamPlayer2D
 
+@export var button_focus_audio : AudioStream
 
 func _ready() -> void:
 	texture_rect.texture = null
@@ -12,6 +15,7 @@ func _ready() -> void:
 	focus_entered.connect( item_focused )
 	focus_exited.connect( item_unfocused )
 	pressed.connect( item_pressed )
+	inventory_slot.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	
 
 func set_slot_data( value : SlotData ) -> void:
@@ -41,3 +45,7 @@ func item_pressed() -> void:
 				return
 			slot_data.quantity -= 1
 			label.text = str( slot_data.quantity )
+
+func play_audio( audio : AudioStream ) -> void:
+	audio_stream_player.stream = audio
+	audio_stream_player.play()

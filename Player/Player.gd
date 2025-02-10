@@ -4,8 +4,8 @@ signal direction_changed(new_direction: Vector2)
 signal player_damaged(hurt_box: HurtBox)
 
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
-const dash_speed = 200
-const dash_duration = 0.5
+const dash_speed = 150
+const dash_duration = 0.3
 
 @export var fist_chain: Skill
 @export var max_speed: float = 50.0
@@ -137,7 +137,7 @@ func revive_player() -> void:
 func update_damage_values() -> void:
 	$Interactions/HurtBox.damage = attack
 	$Interactions/ChargeSpinHurtBox.damage = attack * 2
-	$Fist/HurtBox.damage = attack
+	$Abilities/Fist2/HurtBox.damage = attack
 
 func _on_player_leveled_up() -> void:
 	effect_animation_player.play("level_up")

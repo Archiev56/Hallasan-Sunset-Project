@@ -17,8 +17,8 @@ quantity = 1
 
 [resource]
 script = ExtResource("2_gcs3n")
-title = "Find the lost corndog"
-description = "Micky has lost his Corn Dog deep in the cave! Quick, find it for him before he wastes away from hunger! "
-steps = Array[String](["Found dat Corndog!", "Return to Micky"])
+title = "Recover Sansin's Medicine"
+description = "Your Grandfather's sickness grows worse, you're his only hope. "
+steps = Array[String](["Travel to Windmill town", "Recover the first ingredient"])
 reward_xp = 100
 reward_items = Array[ExtResource("1_ydsgb")]([SubResource("Resource_qvchm"), SubResource("Resource_dcs4t")])

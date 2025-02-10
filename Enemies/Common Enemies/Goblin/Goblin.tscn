@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://dyufjm1518vwi"]
+[gd_scene load_steps=79 format=3 uid="uid://dyufjm1518vwi"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_e0n12"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="2_ivd8m"]
@@ -28,7 +28,6 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="15_dk4vg"]
 [ext_resource type="PackedScene" uid="uid://c1irimlt3ed4m" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/damage_numbers_origin.tscn" id="15_y0dff"]
 [ext_resource type="Texture2D" uid="uid://u5xldcqvfttk" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Animations/walk_up/Untitled_Artwork-5 3.png" id="16_6b2ll"]
-[ext_resource type="Texture2D" uid="uid://dbl07ag0yb620" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/DestroySmoke.png" id="16_iqaek"]
 [ext_resource type="Texture2D" uid="uid://0nmyqnf5oqa6" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Animations/walk_side/Untitled_Artwork-5 4.png" id="16_qk1f5"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="17_8klim"]
 [ext_resource type="Texture2D" uid="uid://b0sbktdhefdfl" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Animations/walk_side/Untitled_Artwork-6 3.png" id="17_gp617"]
@@ -41,9 +40,8 @@
 [ext_resource type="Texture2D" uid="uid://dloe04rpfjgws" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Animations/hurt_down/Untitled_Artwork 74.png" id="29_ly5b7"]
 [ext_resource type="AudioStream" uid="uid://ur4xtvsfcry4" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_hit.mp3" id="31_l7txm"]
 [ext_resource type="Texture2D" uid="uid://cr2xglvr66xkw" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Animations/walk_side/Untitled_Artwork 55.png" id="32_gc7jw"]
-[ext_resource type="Resource" uid="uid://kp6gn8ous75v" path="res://Hallasan-Sunset/Items/Currency/Coins/Silver Coin/Silver Coin.tres" id="35_wxyxn"]
-[ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Currency/Coins/Gold Coin/Gold Coin.tres" id="36_tdo2v"]
-[ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Currency/Coins/Coin Stack/Coin Stack.tres" id="37_cjryb"]
+[ext_resource type="Resource" uid="uid://c3cx0nodai8jq" path="res://Hallasan-Sunset/Items/Currency/Gem/Gem.tres" id="37_td2g7"]
+[ext_resource type="Texture2D" uid="uid://b0deec4ud0pn1" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Smash/Free Smoke Fx  Pixel 06.png" id="43_0v04r"]
 [ext_resource type="Texture2D" uid="uid://dk75qs4d6k6p0" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/Star.png" id="43_2pr8r"]
 [ext_resource type="Texture2D" uid="uid://c17eubopfjeqt" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Lost_Heart.png" id="47_e8xac"]
 
@@ -86,7 +84,31 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.64, 1)]
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShadowCopy:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_jbt1i"]
@@ -255,6 +277,18 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0)
 }
 tracks/5/use_blend = true
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ShadowCopy:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_slqic"]
 resource_name = "destroy_side"
@@ -331,6 +365,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [ExtResource("32_gc7jw")]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ShadowCopy:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_mtgbe"]
 resource_name = "destroy_up"
@@ -358,74 +404,49 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-tracks/2/type = "animation"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("DestroyEffectSprite/AnimationPlayer")
+tracks/2/path = NodePath("GPUParticles2D2:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"clips": PackedStringArray("destroy"),
-"times": PackedFloat32Array(0.2)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("GPUParticles2D2:emitting")
+tracks/3/path = NodePath("Sprite:texture")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [ExtResource("19_2p037")]
 }
-tracks/4/type = "audio"
+tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/path = NodePath("Sprite:scale")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("28_jfw25")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/4/use_blend = true
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Sprite:texture")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("19_2p037")]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Sprite:scale")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(1.4, 1), Vector2(0.5, 1)]
 }
-tracks/7/type = "audio"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("AudioStreamPlayer2D")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -433,7 +454,55 @@ tracks/7/keys = {
 }],
 "times": PackedFloat32Array(0)
 }
-tracks/7/use_blend = true
+tracks/5/use_blend = true
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ShadowCopy:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("DestroyEffectSprite:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DestroyEffectSprite:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DestroyEffectSprite:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -20)]
+}
 
 [sub_resource type="Animation" id="Animation_ij6g7"]
 resource_name = "Hurt"
@@ -725,24 +794,10 @@ height = 20.0
 
 [sub_resource type="Resource" id="Resource_a412f"]
 script = ExtResource("12_sauxc")
-item = ExtResource("35_wxyxn")
+item = ExtResource("37_td2g7")
 probability = 70.0
 min_amount = 1
 max_amount = 3
-
-[sub_resource type="Resource" id="Resource_3sh5y"]
-script = ExtResource("12_sauxc")
-item = ExtResource("36_tdo2v")
-probability = 50.0
-min_amount = 1
-max_amount = 2
-
-[sub_resource type="Resource" id="Resource_3a1ri"]
-script = ExtResource("12_sauxc")
-item = ExtResource("37_cjryb")
-probability = 20.0
-min_amount = 1
-max_amount = 1
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_herpx"]
 radius = 23.0
@@ -752,26 +807,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_wnxxk"]
@@ -779,26 +834,38 @@ resource_name = "destroy"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5]
+"values": [true, false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.0333333, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [true, false]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -20)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7gr4"]
@@ -867,7 +934,7 @@ scale_over_velocity_curve = SubResource("CurveTexture_ihgs2")
 color_ramp = SubResource("GradientTexture1D_0tj5q")
 
 [node name="Goblin" type="CharacterBody2D"]
-z_index = 1
+y_sort_enabled = true
 collision_layer = 260
 collision_mask = 21
 script = ExtResource("1_e0n12")
@@ -883,7 +950,6 @@ texture = ExtResource("2_ivd8m")
 [node name="Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -23)
-scale = Vector2(0.64, 1)
 texture = ExtResource("3_d2gom")
 
 [node name="AttackHurtBox" parent="Sprite" instance=ExtResource("17_8klim")]
@@ -928,7 +994,7 @@ next_state = NodePath("../Chase")
 
 [node name="Destroy" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_fkave")
-drops = Array[ExtResource("12_sauxc")]([SubResource("Resource_a412f"), SubResource("Resource_3sh5y"), SubResource("Resource_3a1ri")])
+drops = Array[ExtResource("12_sauxc")]([SubResource("Resource_a412f")])
 
 [node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("vision_area", "attack_area", "next_state")]
 script = ExtResource("15_dk4vg")
@@ -953,10 +1019,12 @@ debug_color = Color(0.92549, 0.215686, 0.423529, 0.419608)
 [node name="DestroyEffectSprite" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-position = Vector2(0, -13)
-texture = ExtResource("16_iqaek")
-hframes = 6
+position = Vector2(0, -20)
+texture = ExtResource("43_0v04r")
+hframes = 12
 frame = 1
+region_enabled = true
+region_rect = Rect2(0, 124, 768, 74)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DestroyEffectSprite"]
 libraries = {

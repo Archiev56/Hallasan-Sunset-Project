@@ -689,7 +689,7 @@ script = ExtResource("11_qwoe6")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("after_idle_state")]
 script = ExtResource("12_v2qay")
-after_idle_state = NodePath("../Wander")
+after_idle_state = NodePath(".")
 
 [node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
 script = ExtResource("13_wq4vb")

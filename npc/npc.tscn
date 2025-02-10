@@ -131,6 +131,7 @@ script = ExtResource("1_jmq23")
 texture_filter = 1
 texture = ExtResource("2_5x0gd")
 hframes = 15
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")

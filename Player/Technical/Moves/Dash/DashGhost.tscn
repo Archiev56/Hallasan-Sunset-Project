@@ -6,7 +6,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mdfwy"]
 
 [node name="DashGhost" type="Sprite2D"]
-modulate = Color(0, 0.0742793, 1, 0.458)
+modulate = Color(1, 1, 1, 0.408)
 texture_filter = 1
 material = SubResource("ShaderMaterial_mdfwy")
 texture = ExtResource("1_6peli")

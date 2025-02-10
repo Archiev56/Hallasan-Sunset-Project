@@ -5,9 +5,11 @@
 
 [node name="PlayerSpawn" type="Node2D"]
 z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_gspw8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 1, 1)
+y_sort_enabled = true
 texture_filter = 1
 texture = ExtResource("1_fsjjb")

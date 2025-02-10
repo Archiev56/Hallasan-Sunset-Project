@@ -17,7 +17,7 @@ func _ready() -> void:
 
 
 func _unhandled_input( event: InputEvent ) -> void:
-	if event.is_action_pressed("test"):
+	#if event.is_action_pressed("test"):
 		#print( find_quest( load("res://quests/recover_lost_flute.tres") as Quest ) )
 		#print( find_quest_by_title( "short quest" ) )
 		#print( "get_quest_index_by_title: ", get_quest_index_by_title("Recover Lost Magical Flute"))
@@ -29,9 +29,9 @@ func _unhandled_input( event: InputEvent ) -> void:
 		#update_quest( "long quest", "Step 2")
 		#update_quest( "Recover Lost Magical Flute", "Find the Magical Flute" )
 		#update_quest( "Find the lost corndog", "", true)
-		print( "quests: ", current_quests )
+		#print( "quests: ", current_quests )
 		#print("============================================================")
-		pass
+	pass
 	pass
 
 

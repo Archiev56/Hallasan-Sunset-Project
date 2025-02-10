@@ -9,6 +9,8 @@ shader = ExtResource("1_fis6m")
 shader_parameter/WindStrength = 2.944
 
 [node name="Magic Tree" type="StaticBody2D"]
+z_as_relative = false
+y_sort_enabled = true
 collision_layer = 16
 collision_mask = 16
 

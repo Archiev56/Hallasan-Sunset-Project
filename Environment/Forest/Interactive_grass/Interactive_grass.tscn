@@ -170,7 +170,7 @@ radius = 7.0
 height = 14.0
 
 [node name="InteractiveGrass" type="Area2D"]
-z_index = 2
+y_sort_enabled = true
 script = ExtResource("1_kg2tj")
 
 [node name="Shadow2" type="Sprite2D" parent="."]
