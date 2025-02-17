@@ -53,7 +53,8 @@ func exit() -> void:
 
 ## What happens during the _process update in this State?
 func process( _delta : float ) -> EnemyState:
-	if PlayerManager.player.hp <= 0:
+	var distance_to_player = enemy.global_position.distance_to(PlayerManager.player.global_position)
+	if distance_to_player <= 40:
 		return next_state
 	
 	#var new_dir : Vector2 = enemy.global_position.direction_to( PlayerManager.player.global_position )

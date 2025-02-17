@@ -534,6 +534,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
+modulate = Color(0.443137, 0.458824, 0.47451, 1)
 texture_filter = 1
 position = Vector2(58, 13)
 scale = Vector2(2, 2)

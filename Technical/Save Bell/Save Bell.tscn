@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cal6ga32aayko"]
+[gd_scene load_steps=18 format=3 uid="uid://cal6ga32aayko"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Save Bell/Save_Bell.gd" id="1_xtbfx"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_mo4fa"]
@@ -6,8 +6,75 @@
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="4_ry46a"]
 [ext_resource type="AudioStream" uid="uid://cku1jg2g72pqm" path="res://Hallasan-Sunset/Technical/Save Bell/Bell Hit.wav" id="5_xdor4"]
 [ext_resource type="Texture2D" uid="uid://swxs3cikpsuj" path="res://Hallasan-Sunset/Technical/Save Bell/Sprites/Untitled_Artwork 113.png" id="6_866ki"]
+[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/Shockwave.gdshader" id="7_q3waw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uoy11"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3m1jw"]
+shader = ExtResource("7_q3waw")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/force = 0.0
+shader_parameter/size = 0.0
+
+[sub_resource type="Animation" id="Animation_yb2u6"]
+resource_name = "Pulse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/force")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5]
+}
+
+[sub_resource type="Animation" id="Animation_jehkj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/force")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vrbw4"]
+_data = {
+"Pulse": SubResource("Animation_yb2u6"),
+"RESET": SubResource("Animation_jehkj")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dvav6"]
 radius = 40.05
@@ -128,10 +195,28 @@ size = Vector2(11.5, 30)
 [node name="Save Bell" type="StaticBody2D"]
 y_sort_enabled = true
 texture_filter = 1
+position = Vector2(315, 197)
 disable_mode = 1
 collision_layer = 16
 physics_material_override = SubResource("PhysicsMaterial_uoy11")
 script = ExtResource("1_xtbfx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_3m1jw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_vrbw4")
+}
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.368627)

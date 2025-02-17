@@ -1,13 +1,13 @@
 extends Node2D
 
-const START_LEVEL : String = "res://Levels/testarea.tscn"
+const START_LEVEL : String = "res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_1.tscn"
 
 @export var music : AudioStream
 @export var button_focus_audio : AudioStream
 @export var button_press_audio : AudioStream
 
-@onready var button_new: Button = $CanvasLayer/Control/ButtonNew
-@onready var button_continue: Button = $CanvasLayer/Control/ButtonContinue
+@onready var button_new: Button = $CanvasLayer/Control/VBoxContainer/ButtonNew
+@onready var button_continue: Button = $CanvasLayer/Control/VBoxContainer/ButtonContinue
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 

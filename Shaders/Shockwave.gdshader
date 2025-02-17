@@ -1,23 +1,24 @@
 shader_type canvas_item;
 
-uniform float speed : hint_range(0.0, 10.0) = 3.0;
-uniform float amplitude : hint_range(0.0, 2.0) = 0.5;
-uniform float frequency : hint_range(0.0, 10.0) = 5.0;
-uniform float progress : hint_range(0.0, 1.0) = 0.0;
-uniform sampler2D noise_texture;
+uniform sampler2D SCREEN_TEXTURE : hint_screen_texture, filter_linear_mipmap;
+uniform vec2 center;
+uniform float force;
+uniform float size;
 
 void fragment() {
-    vec2 uv = UV;
-    vec2 center = vec2(0.5);
-    float dist = distance(uv, center);
+    float ratio = SCREEN_PIXEL_SIZE.x / SCREEN_PIXEL_SIZE.y;
 
-    // Shockwave effect calculation
-    float wave = sin(dist * frequency - progress * speed) * amplitude / (dist + 0.1);
-    float noise = texture(noise_texture, uv * 2.0).r;
-    vec2 offset = normalize(uv - center) * wave * noise;
+    // Correct the UV scaling so the center is properly aligned
+    vec2 scaledUV = (SCREEN_UV - vec2(0.5)) / vec2(ratio, 1.0) + vec2(0.5);
 
-    // Apply fade-out effect
-    float fade = smoothstep(1.0, 0.0, progress);
+    // Distance mask calculation (shockwave effect)
+    float dist = length(scaledUV - center);
+    float mask = (1.0 - smoothstep(size - 0.1, size, dist)) *
+                 smoothstep(size - 0.2, size - 0.1, dist);
 
-    COLOR = texture(TEXTURE, uv + offset) * fade;
+    // Apply displacement to create the shockwave effect
+    vec2 disp = normalize(scaledUV - center) * force * mask;
+
+    // Sample the screen texture with the displacement
+    COLOR = texture(SCREEN_TEXTURE, SCREEN_UV - disp);
 }

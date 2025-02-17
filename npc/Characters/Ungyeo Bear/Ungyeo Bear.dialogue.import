@@ -1,14 +1,14 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager_compiler_14"
 type="Resource"
 uid="uid://csn5nvcg7bwbv"
-path="res://.godot/imported/Ungyeo Bear.dialogue-082ed7a5369ffc9822e7a16e51d742c7.tres"
+path="res://.godot/imported/Ungyeo Bear.dialogue-173a32da3035280ff9ce6aab77374635.tres"
 
 [deps]
 
-source_file="res://npc/Characters/Ungyeo Bear/Ungyeo Bear.dialogue"
-dest_files=["res://.godot/imported/Ungyeo Bear.dialogue-082ed7a5369ffc9822e7a16e51d742c7.tres"]
+source_file="res://Hallasan-Sunset/npc/Characters/Ungyeo Bear/Ungyeo Bear.dialogue"
+dest_files=["res://.godot/imported/Ungyeo Bear.dialogue-173a32da3035280ff9ce6aab77374635.tres"]
 
 [params]
 

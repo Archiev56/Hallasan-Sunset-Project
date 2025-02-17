@@ -11,5 +11,4 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_w15fm")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PackedVector2Array(-71, 95, -100, 67, -100, 52, -89, 46, -88, 16, -82, 3, -60, -25, 75, -33, 95, -15, 115, 51, 88, 82, 60, 91, 39, 71, 24, 49, 13, 53, 40, 100, 5, 126, -38, 130, -44, 87, -58, 88)
+polygon = PackedVector2Array(-71, 95, -100, 67, -100, 52, -89, 46, -88, 16, -82, 3, -60, -12, 75, -33, 95, -15, 102, 19, 94, 49, 71, 64, 43, 64, 24, 49, 13, 53, 10, 92, -23, 105, -44, 87, -58, 88)

@@ -175,12 +175,14 @@ script = ExtResource("1_kg2tj")
 
 [node name="Shadow2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.376471)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0, -4)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_nf77j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
 material = SubResource("ShaderMaterial_kbqdr")
 position = Vector2(-1, -7)

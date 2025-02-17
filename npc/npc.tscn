@@ -122,16 +122,17 @@ radius = 5.0
 height = 18.0023
 
 [node name="NPC" type="CharacterBody2D"]
+y_sort_enabled = true
 position = Vector2(0, -22)
 collision_layer = 16
 collision_mask = 16
 script = ExtResource("1_jmq23")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture_filter = 1
 texture = ExtResource("2_5x0gd")
 hframes = 15
-frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite2D")

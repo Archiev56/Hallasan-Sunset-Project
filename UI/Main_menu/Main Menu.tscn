@@ -1,0 +1,178 @@
+[gd_scene load_steps=19 format=3 uid="uid://b17ihecntx07g"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Main Menu/Main Menu.gd" id="1_msx88"]
+[ext_resource type="AudioStream" uid="uid://c7k0efkjggvib" path="res://Hallasan-Sunset/UI/Main Menu/Main Menu .ogg" id="2_qgolk"]
+[ext_resource type="AudioStream" uid="uid://bk452ky0gmeub" path="res://Hallasan-Sunset/UI/Main Menu/menu_focus.wav" id="3_8st75"]
+[ext_resource type="AudioStream" uid="uid://q4tcvwp83ov5" path="res://Hallasan-Sunset/Audio/Sound effects/UI_Select.wav" id="4_2ejl7"]
+[ext_resource type="PackedScene" uid="uid://s87tt1bkx3ku" path="res://Hallasan-Sunset/Environment/Weather/Floating Lights/Floating lights.tscn" id="5_3oyqx"]
+[ext_resource type="FontFile" uid="uid://bimnqo2lc0co0" path="res://Hallasan-Sunset/UI/Fonts/papercut.ttf" id="6_8hs4p"]
+[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/Scrolling.gdshader" id="7_fpg8d"]
+[ext_resource type="Texture2D" uid="uid://bjhu2h1vr8mvh" path="res://Hallasan-Sunset/UI/Untitled_Artwork 115.png" id="8_fi43r"]
+[ext_resource type="Texture2D" uid="uid://c03n7i5l4o6gf" path="res://Hallasan-Sunset/UI/Logo/Untitled_Artwork 90.png" id="10_jnukg"]
+[ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="11_orcgf"]
+[ext_resource type="StyleBox" uid="uid://cp8t4vq10rdhr" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/Inv_hover.tres" id="12_ou1qm"]
+[ext_resource type="StyleBox" uid="uid://d1weg2wusgucp" path="res://Hallasan-Sunset/UI/Pause Menu/Pause/Inv_buttons.tres" id="13_kdgh2"]
+[ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="14_4beu7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ghkvn"]
+shader = ExtResource("7_fpg8d")
+shader_parameter/Top_Color = Color(0.0745098, 0.0509804, 0.0901961, 1)
+shader_parameter/Mid_Color = Color(0.247708, 0.1885, 0.29, 1)
+shader_parameter/Bot_Color = Color(0.0745098, 0.0509804, 0.0901961, 1)
+shader_parameter/pattern_color = Color(0.611765, 0.321569, 1, 1)
+shader_parameter/scale = 5.12
+shader_parameter/ratio = 0.65
+shader_parameter/pattern_sampler = ExtResource("8_fi43r")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c0gwj"]
+load_path = "res://.godot/imported/HALLASAN (1).png-5515af429c16a71a35339ff81da87230.ctex"
+
+[sub_resource type="Animation" id="Animation_n5mro"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(312, 120)]
+}
+
+[sub_resource type="Animation" id="Animation_n0lyp"]
+resource_name = "Title"
+length = 0.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(312, 190), Vector2(312, 200)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_njiow"]
+_data = {
+"RESET": SubResource("Animation_n5mro"),
+"Title": SubResource("Animation_n0lyp")
+}
+
+[node name="Main Menu" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_msx88")
+music = ExtResource("2_qgolk")
+button_focus_audio = ExtResource("3_8st75")
+button_press_audio = ExtResource("4_2ejl7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+y_sort_enabled = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FloatingLights" parent="CanvasLayer/Control" instance=ExtResource("5_3oyqx")]
+unique_name_in_owner = true
+position = Vector2(328, 208)
+amount = 4000
+visibility_rect = Rect2(-500, -800, 1000, 1000)
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 56.0
+offset_top = 32.0
+offset_right = -60.0
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 40
+theme_override_fonts/font = ExtResource("6_8hs4p")
+theme_override_font_sizes/font_size = 128
+text = "hallasan"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+material = SubResource("ShaderMaterial_ghkvn")
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Hallasan(1)" type="Sprite2D" parent="CanvasLayer/Control"]
+visible = false
+texture_filter = 1
+position = Vector2(320, 232)
+texture = SubResource("CompressedTexture2D_c0gwj")
+
+[node name="UntitledArtwork87" type="Sprite2D" parent="CanvasLayer/Control"]
+visible = false
+z_index = 100
+texture_filter = 1
+position = Vector2(312, 120)
+texture = ExtResource("10_jnukg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/UntitledArtwork87"]
+libraries = {
+"": SubResource("AnimationLibrary_njiow")
+}
+autoplay = "Title"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 52.0
+offset_right = 51.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonNew" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_orcgf")
+theme_override_styles/hover = ExtResource("12_ou1qm")
+theme_override_styles/normal = ExtResource("13_kdgh2")
+text = "New Game"
+
+[node name="ButtonContinue" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_orcgf")
+theme_override_styles/hover = ExtResource("12_ou1qm")
+theme_override_styles/normal = ExtResource("13_kdgh2")
+text = "Continue Game"
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("14_4beu7")]
+position = Vector2(312, 207)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/ButtonNew" to="." method="start_game"]
+[connection signal="pressed" from="CanvasLayer/Control/VBoxContainer/ButtonContinue" to="." method="load_game"]

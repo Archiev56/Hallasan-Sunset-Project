@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://cgm3f16hjwd1w" path="res://Hallasan-Sunset/Audio/Song/example_music_01.ogg" id="2_ykpso"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_7wxwb"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_k5blm"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="5_bevd5"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="5_bevd5"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="6_nqd7u"]
 [ext_resource type="PackedScene" uid="uid://ddaoidnntl8k1" path="res://Hallasan-Sunset/npc/Characters/Sansin/Sansin_NPC.tscn" id="7_o1nxr"]
 [ext_resource type="PackedScene" uid="uid://cou4euvvaw0ml" path="res://Hallasan-Sunset/UI/Dialogue_system/dialogue_interaction.tscn" id="8_s6tjq"]
@@ -14,10 +14,11 @@
 [ext_resource type="Script" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_choice.gd" id="12_dwodi"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_branch.gd" id="13_a5xvs"]
 [ext_resource type="PackedScene" uid="uid://clbvlp2jbi5a3" path="res://Hallasan-Sunset/Quests/Utility_nodes/quest_advance_trigger.tscn" id="14_n02uy"]
-[ext_resource type="Resource" uid="uid://sq3tvsxpoohb" path="res://Hallasan-Sunset/Quests/Quests/find_corn_dog.tres" id="15_h1rxm"]
+[ext_resource type="Resource" uid="uid://sq3tvsxpoohb" path="res://Hallasan-Sunset/Quests/Quests/Find Sansin's medicine.tres" id="15_h1rxm"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="16_1wn2x"]
 
 [node name="Map" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_144pq")
 music = ExtResource("2_ykpso")
 

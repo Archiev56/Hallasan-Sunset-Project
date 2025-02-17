@@ -1,14 +1,14 @@
 [gd_scene load_steps=15 format=3 uid="uid://iuhg4fkjm7w"]
 
-[ext_resource type="Texture2D" uid="uid://hv02yidexlkv" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Sprites/dungeon_props (1).png" id="1_13myb"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/LockedDoor/locked_door.gd" id="1_fwr1q"]
 [ext_resource type="PackedScene" uid="uid://qeg0erpj3xkj" path="res://Hallasan-Sunset/Technical/PersistentDataHelper copy/persistent-data-handler.tscn" id="2_2j8fr"]
 [ext_resource type="Resource" uid="uid://b4b3fc4qc1cnh" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Dungeon Key/Key_dungeon.tres" id="2_rywnv"]
 [ext_resource type="AudioStream" uid="uid://cn3onwirruj32" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Audio/locked_door.wav" id="3_d0ds5"]
 [ext_resource type="AudioStream" uid="uid://lg8ufqnauk75" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Audio/unlock_door.wav" id="4_yd03m"]
+[ext_resource type="Texture2D" uid="uid://xdfe0n83pifa" path="res://Hallasan-Sunset/Tilemaps/Sprites/Tree Door.png" id="5_naoiy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x05oo"]
-size = Vector2(64, 63)
+size = Vector2(48, 48.5)
 
 [sub_resource type="Animation" id="Animation_7d6db"]
 length = 0.001
@@ -159,6 +159,7 @@ size = Vector2(26, 28)
 
 [node name="LockedDoor" type="Node2D"]
 process_mode = 3
+position = Vector2(0, 2)
 script = ExtResource("1_fwr1q")
 key_item = ExtResource("2_rywnv")
 locked_audio = ExtResource("3_d0ds5")
@@ -166,16 +167,15 @@ open_audio = ExtResource("4_yd03m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(32, -38)
-texture = ExtResource("1_13myb")
-hframes = 7
+position = Vector2(29, -23)
+texture = ExtResource("5_naoiy")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(32, -27.5)
+position = Vector2(29, -23.75)
 shape = SubResource("RectangleShape2D_x05oo")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -192,6 +192,6 @@ collision_layer = 0
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea2D"]
-position = Vector2(32, -2)
+position = Vector2(24, -15)
 shape = SubResource("RectangleShape2D_xy10u")
 debug_color = Color(0.643137, 0.521569, 0.109804, 0.419608)

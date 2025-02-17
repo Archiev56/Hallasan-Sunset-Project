@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cr8c8wtlgk4rc"]
 
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="1_r57bv"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="11_2ksic"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="11_2ksic"]
 
 [node name="Tileset" type="TileMapLayer"]
 z_index = -1

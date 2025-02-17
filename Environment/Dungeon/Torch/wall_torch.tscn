@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://b44kyfk0deywt"]
+
+[ext_resource type="Texture2D" uid="uid://583xn4h3c75" path="res://Hallasan-Sunset/Tilemaps/Sprites/Tree Village.png" id="1_5nksv"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_vd0on"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6tn1"]
+atlas = ExtResource("1_5nksv")
+region = Rect2(216, 576, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxjbx"]
+atlas = ExtResource("1_5nksv")
+region = Rect2(240, 576, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdqjn"]
+atlas = ExtResource("1_5nksv")
+region = Rect2(216, 600, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcqxq"]
+atlas = ExtResource("1_5nksv")
+region = Rect2(240, 600, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_extwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6tn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxjbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdqjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcqxq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_v8w6g"]
+offsets = PackedFloat32Array(0, 0.179266, 0.568035, 0.924406, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.983333, 0, 1, 1, 0.505882, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cuxre"]
+gradient = SubResource("Gradient_v8w6g")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="WallTorch" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_extwy")
+autoplay = "default"
+frame_progress = 0.917765
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(-9.09495e-13, -4)
+scale = Vector2(5, 5)
+texture = SubResource("GradientTexture2D_cuxre")
+script = ExtResource("2_vd0on")

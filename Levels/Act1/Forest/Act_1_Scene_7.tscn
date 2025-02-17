@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_7l5fe"]
 [ext_resource type="AudioStream" uid="uid://c57s3sp41srat" path="res://Hallasan-Sunset/Audio/Song/Forest Theme.ogg" id="2_pqdwe"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_xppsb"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/LevelTileMapLayer.gd" id="4_s03dc"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_s03dc"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="5_7jgh4"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="6_7tfw8"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="6_8y7yx"]

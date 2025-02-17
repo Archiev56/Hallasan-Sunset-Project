@@ -1,14 +1,14 @@
 [remap]
 
-importer="dialogue_manager_compiler_13"
+importer="dialogue_manager_compiler_14"
 type="Resource"
 uid="uid://dtdrfcmimcp6y"
-path="res://.godot/imported/Farmer.dialogue-fd5b4ef5c69849a2317c2a83660aaeae.tres"
+path="res://.godot/imported/Farmer.dialogue-ea01a38795271f6b935436bbc66624f0.tres"
 
 [deps]
 
-source_file="res://npc/Characters/Farmer/Farmer.dialogue"
-dest_files=["res://.godot/imported/Farmer.dialogue-fd5b4ef5c69849a2317c2a83660aaeae.tres"]
+source_file="res://Hallasan-Sunset/npc/Characters/Farmer/Farmer.dialogue"
+dest_files=["res://.godot/imported/Farmer.dialogue-ea01a38795271f6b935436bbc66624f0.tres"]
 
 [params]
 

@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://cekm3xgcqle1i" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_10.tscn" id="11_tpymx"]
 [ext_resource type="PackedScene" uid="uid://62thlhk68xup" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_11.tscn" id="12_lax54"]
 [ext_resource type="PackedScene" uid="uid://wurqaqupmrgy" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_12.tscn" id="13_0bixr"]
-[ext_resource type="PackedScene" uid="uid://bpgfqpgwsp7w0" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_13.tscn" id="14_godyk"]
-[ext_resource type="PackedScene" uid="uid://d07g1iyxenhx8" path="res://Hallasan-Sunset/Levels/Act1/Clear Valley Town/Act_1_Scene_14_Town.tscn" id="15_n03mp"]
+[ext_resource type="PackedScene" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_13.tscn" id="14_godyk"]
+[ext_resource type="PackedScene" uid="uid://d07g1iyxenhx8" path="res://Hallasan-Sunset/Levels/Act1/Skyhollow Town/Act_1_Town_1.tscn" id="15_n03mp"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_qtuvp")

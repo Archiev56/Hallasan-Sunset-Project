@@ -51,28 +51,15 @@ side = 1
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="QuestAdvanceTrigger" type="Node2D" parent="Enemies"]
-position = Vector2(153, 178)
-script = ExtResource("10_e0a6a")
-signal_name = "activated"
-linked_quest = ExtResource("11_w3etk")
-quest_step = 1
-quest_complete = true
-settings_summary = "UPDATE QUEST:
- Quest: short quest
-Step: 1 - 
-Complete: true"
+[node name="EnemyCounter" parent="Enemies" instance=ExtResource("6_sybuv")]
 
-[node name="EnemyCounter" parent="Enemies/QuestAdvanceTrigger" instance=ExtResource("6_sybuv")]
-position = Vector2(-153, -178)
-
-[node name="Slime3" parent="Enemies/QuestAdvanceTrigger/EnemyCounter" instance=ExtResource("7_3dwcd")]
+[node name="Slime3" parent="Enemies/EnemyCounter" instance=ExtResource("7_3dwcd")]
 position = Vector2(493, 252)
 
-[node name="Slime4" parent="Enemies/QuestAdvanceTrigger/EnemyCounter" instance=ExtResource("7_3dwcd")]
+[node name="Slime4" parent="Enemies/EnemyCounter" instance=ExtResource("7_3dwcd")]
 position = Vector2(470, 175)
 
-[node name="Slime5" parent="Enemies/QuestAdvanceTrigger/EnemyCounter" instance=ExtResource("7_3dwcd")]
+[node name="Slime5" parent="Enemies/EnemyCounter" instance=ExtResource("7_3dwcd")]
 position = Vector2(370, 297)
 
 [node name="Items" type="Node" parent="."]
@@ -93,4 +80,4 @@ Complete: false"
 position = Vector2(153, 178)
 item_data = ExtResource("9_quis7")
 
-[connection signal="enemies_defeated" from="Enemies/QuestAdvanceTrigger/EnemyCounter" to="Items/ItemDropper" method="drop_item"]
+[connection signal="enemies_defeated" from="Enemies/EnemyCounter" to="Items/ItemDropper" method="drop_item"]
