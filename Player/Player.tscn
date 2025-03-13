@@ -1,4 +1,4 @@
-[gd_scene load_steps=288 format=3 uid="uid://cbctfc3oob7kd"]
+[gd_scene load_steps=291 format=3 uid="uid://cbctfc3oob7kd"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/Player/Player.gd" id="1_l265g"]
 [ext_resource type="Texture2D" uid="uid://nknfj7nkp53n" path="res://Hallasan-Sunset/Player/Animations/Death/Dead_Down-4.png" id="2_1huh3"]
@@ -180,6 +180,9 @@
 [ext_resource type="AudioStream" uid="uid://b4p67spcqc2u8" path="res://Hallasan-Sunset/Audio/Sound effects/Menu_notification.mp3" id="181_mr3vi"]
 [ext_resource type="AudioStream" uid="uid://ly4pqvhvoyx2" path="res://Hallasan-Sunset/Audio/Sound effects/Spin Attack.mp3" id="184_0ucy7"]
 [ext_resource type="PackedScene" uid="uid://bdqsrs7ycwg0r" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist.tscn" id="184_bov41"]
+[ext_resource type="PackedScene" uid="uid://bpuje4cn5x0ht" path="res://Hallasan-Sunset/Audio/Sound effects/Foot steps/footstep_audio.tscn" id="186_0moo6"]
+[ext_resource type="AudioStream" uid="uid://drvymm181ljws" path="res://Hallasan-Sunset/Audio/Sound effects/SE4_P_MARIO_MOVE1R.wav" id="186_52fp5"]
+[ext_resource type="AudioStream" uid="uid://t7ri84cjuw4u" path="res://Hallasan-Sunset/Audio/Sound effects/Foot steps/footstep_03.wav" id="189_50up6"]
 [ext_resource type="AudioStream" uid="uid://scxnjkxxqkb1" path="res://Hallasan-Sunset/Audio/Sound effects/Step.wav" id="189_55wgi"]
 [ext_resource type="AudioStream" uid="uid://cg5mcbj3ke22l" path="res://Hallasan-Sunset/Audio/Sound effects/Hurt.mp3" id="195_yhs1l"]
 [ext_resource type="AudioStream" uid="uid://blbto7u2lrkn2" path="res://Hallasan-Sunset/Audio/Sound effects/Level up.mp3" id="196_dkjh1"]
@@ -1515,6 +1518,18 @@ tracks/23/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Sprite2D:flip_h")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_8mfv3"]
@@ -3679,7 +3694,7 @@ tracks/0/keys = {
 resource_name = "walk_down"
 length = 0.8
 loop_mode = 1
-step = 0.1
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -3699,10 +3714,10 @@ tracks/1/path = NodePath("Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0), Vector2(0, -3)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -3728,6 +3743,23 @@ tracks/3/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FootstepAudio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_footstep"
+}, {
+"args": [],
+"method": &"play_footstep"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_7ppi6"]
 resource_name = "walk_side"
@@ -3748,26 +3780,43 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/path = NodePath("ShadowSprite:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ShadowSprite:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0.8, 0.8), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.6, 0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0), Vector2(0, -3)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FootstepAudio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_footstep"
+}, {
+"args": [],
+"method": &"play_footstep"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_hbdfb"]
@@ -3793,10 +3842,10 @@ tracks/1/path = NodePath("Sprite2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0), Vector2(0, -3)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -3809,6 +3858,23 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0.8, 0.8), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.6, 0.6)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FootstepAudio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_footstep"
+}, {
+"args": [],
+"method": &"play_footstep"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qdnul"]
@@ -4169,6 +4235,7 @@ texture = ExtResource("3_kt8jp")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("5_djwgx")
+flip_h = true
 
 [node name="BehindObjectSprite" type="Sprite2D" parent="Sprite2D"]
 visible = false
@@ -4478,6 +4545,9 @@ emitting = false
 amount = 3
 process_material = SubResource("ParticleProcessMaterial_nbsyf")
 texture = ExtResource("197_np30c")
+
+[node name="FootstepAudio" parent="." instance=ExtResource("186_0moo6")]
+footstep_varient = Array[AudioStream]([ExtResource("189_55wgi"), ExtResource("186_52fp5"), ExtResource("189_50up6")])
 
 [connection signal="timeout" from="StateMachine/Walk/ghost_timer" to="StateMachine/Walk" method="_on_ghost_timer_timeout"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://d2vp57kytlw30"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/Fire Trap.gd" id="1_2dxhl"]
+[ext_resource type="Script" uid="uid://8hly4yn6xd52" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/Fire Trap.gd" id="1_2dxhl"]
 [ext_resource type="Texture2D" uid="uid://doiemsxlugase" path="res://Hallasan-Sunset/Environment/Hazards/Fire Trap/Fire_Trap.png" id="2_tytys"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_0ve1f"]
 
@@ -90,9 +90,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_52ors"]
 _data = {
-"RESET": SubResource("Animation_b2n0o"),
-"flame_on": SubResource("Animation_bp1ob"),
-"no_flame": SubResource("Animation_xsmvl")
+&"RESET": SubResource("Animation_b2n0o"),
+&"flame_on": SubResource("Animation_bp1ob"),
+&"no_flame": SubResource("Animation_xsmvl")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed5tt"]

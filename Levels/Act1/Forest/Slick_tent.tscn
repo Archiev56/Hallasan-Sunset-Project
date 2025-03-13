@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=4 uid="uid://c7bbukf11h1ei"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_4110d"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_4110d"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_q68uw"]
-[ext_resource type="AudioStream" uid="uid://bucx1x3sxd1hs" path="res://Hallasan-Sunset/Audio/Song/Slick tent.ogg" id="2_sd6xw"]
+[ext_resource type="AudioStream" uid="uid://bucx1x3sxd1hs" path="res://Hallasan-Sunset/Audio/Songs/Slick tent.ogg" id="2_sd6xw"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_x7rmp"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_quds0"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_quds0"]
 [ext_resource type="PackedScene" uid="uid://bjdlcofd2dxsk" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem3.tscn" id="5_g2gps"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="6_htgvb"]
 

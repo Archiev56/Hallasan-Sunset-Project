@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsbsklcuokb72"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Weather/Day&Night System/dayand_night_cycle.gd" id="1_knuo8"]
+[ext_resource type="Script" uid="uid://ccl2a4kqteapi" path="res://Hallasan-Sunset/Environment/Weather/Day&Night System/dayand_night_cycle.gd" id="1_knuo8"]
 
 [sub_resource type="Animation" id="Animation_n7knm"]
 resource_name = "Day_night"
@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0sar7"]
 _data = {
-"Day_night": SubResource("Animation_n7knm"),
-"RESET": SubResource("Animation_4vjin")
+&"Day_night": SubResource("Animation_n7knm"),
+&"RESET": SubResource("Animation_4vjin")
 }
 
 [node name="DayandNightCycle" type="CanvasModulate" groups=["dayAndNightCycle"]]

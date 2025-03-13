@@ -6,7 +6,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_noodt"]
 shader = ExtResource("2_cevfw")
-shader_parameter/WindStrength = null
+shader_parameter/WindStrength = 0.0
 
 [node name="Area2D" type="Area2D"]
 z_index = 5

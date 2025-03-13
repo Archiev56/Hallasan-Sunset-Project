@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brwadfbnpe7jc"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Throwable/Throwable.gd" id="1_fxtyw"]
+[ext_resource type="Script" uid="uid://jvpvv58adty2" path="res://Hallasan-Sunset/Technical/Throwable/Throwable.gd" id="1_fxtyw"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="2_j3abk"]
 
 [node name="Throwable" type="Area2D"]

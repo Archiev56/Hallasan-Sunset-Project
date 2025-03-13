@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://muyixecsja26"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/energy_orb.gd" id="1_a3nl4"]
+[ext_resource type="Script" uid="uid://djnb47j786w0b" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/energy_orb.gd" id="1_a3nl4"]
 [ext_resource type="AudioStream" uid="uid://tl8w86gkpuc4" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Audio/boss_fireball.wav" id="2_n8pkn"]
 [ext_resource type="Material" uid="uid://8g8oxepcywc7" path="res://Hallasan-Sunset/Shaders/light_material.tres" id="2_sytbr"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="2_wwe35"]

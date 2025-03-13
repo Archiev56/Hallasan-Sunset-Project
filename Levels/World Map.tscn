@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=4 uid="uid://q422e3kdlyl2"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_qtuvp"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_qtuvp"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_ll8s7"]
 [ext_resource type="PackedScene" uid="uid://c712lfsg073ux" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_2.tscn" id="3_1vjxy"]
 [ext_resource type="PackedScene" uid="uid://c3xqxa36itxnl" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_3.tscn" id="4_nxup2"]
@@ -13,8 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://cekm3xgcqle1i" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_10.tscn" id="11_tpymx"]
 [ext_resource type="PackedScene" uid="uid://62thlhk68xup" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_11.tscn" id="12_lax54"]
 [ext_resource type="PackedScene" uid="uid://wurqaqupmrgy" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_12.tscn" id="13_0bixr"]
-[ext_resource type="PackedScene" path="res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_13.tscn" id="14_godyk"]
 [ext_resource type="PackedScene" uid="uid://d07g1iyxenhx8" path="res://Hallasan-Sunset/Levels/Act1/Skyhollow Town/Act_1_Town_1.tscn" id="15_n03mp"]
+
+[sub_resource type="Resource" id="Resource_cgw4k"]
+metadata/__load_path__ = "res://Hallasan-Sunset/Levels/Act1/Forest/Act_1_Scene_13.tscn"
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_qtuvp")
@@ -1697,7 +1699,7 @@ position = Vector2(-1748, 4138)
 [node name="ItemPickup" parent="Map10" index="7"]
 position = Vector2(1422.35, 137.658)
 
-[node name="Map11" parent="." instance=ExtResource("14_godyk")]
+[node name="Map11" parent="."]
 position = Vector2(-3308, 4472)
 
 [node name="StaticBody2D" parent="Map11/Environment/Objects" index="0"]

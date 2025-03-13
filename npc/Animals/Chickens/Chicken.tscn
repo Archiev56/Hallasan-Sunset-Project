@@ -1,6 +1,6 @@
 [gd_scene load_steps=79 format=3 uid="uid://dsegww1ov52t8"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_f5sxn"]
+[ext_resource type="Script" uid="uid://3eugq3lyyivt" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_f5sxn"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="2_6veku"]
 [ext_resource type="Texture2D" uid="uid://dj7s1a5n85ae3" path="res://Hallasan-Sunset/npc/Animals/Chickens/Chicken_Sprite_Sheet.png" id="3_nvm24"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="4_88csr"]
@@ -31,15 +31,15 @@
 [ext_resource type="AudioStream" uid="uid://c72fo331ibgld" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_kill.mp3" id="29_mu0m3"]
 [ext_resource type="Texture2D" uid="uid://cr2xglvr66xkw" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Animations/walk_side/Untitled_Artwork 55.png" id="30_dh5uc"]
 [ext_resource type="AudioStream" uid="uid://ur4xtvsfcry4" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_hit.mp3" id="31_nknq3"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="32_it4vh"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="33_d7wa7"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="34_6iqqs"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="35_eqs72"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="36_5nkhq"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="37_abcle"]
+[ext_resource type="Script" uid="uid://cw4vkck68lt22" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="32_it4vh"]
+[ext_resource type="Script" uid="uid://brlcx1u3weeem" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="33_d7wa7"]
+[ext_resource type="Script" uid="uid://dkqddec3hu23w" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="34_6iqqs"]
+[ext_resource type="Script" uid="uid://du2e0pgg12551" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="35_eqs72"]
+[ext_resource type="Script" uid="uid://nj1ai8bhfcju" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="36_5nkhq"]
+[ext_resource type="Script" uid="uid://ocaacixauwww" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="37_abcle"]
 [ext_resource type="Resource" uid="uid://c3cx0nodai8jq" path="res://Hallasan-Sunset/Items/Currency/Gem/Gem.tres" id="38_6wd0p"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="39_5pn85"]
-[ext_resource type="PackedScene" uid="uid://c1irimlt3ed4m" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/damage_numbers_origin.tscn" id="40_itfd1"]
+[ext_resource type="PackedScene" uid="uid://c1irimlt3ed4m" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/damage_numbers_origin copy.tscn" id="40_itfd1"]
 [ext_resource type="Texture2D" uid="uid://b0deec4ud0pn1" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Smash/Free Smoke Fx  Pixel 06.png" id="41_skxco"]
 [ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Technical/Vision Area/Vision_area.tscn" id="42_wb2sr"]
 [ext_resource type="Texture2D" uid="uid://dk75qs4d6k6p0" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/Star.png" id="43_5pxo7"]
@@ -763,22 +763,22 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {
-"RESET": SubResource("Animation_wnokj"),
-"chase_down": SubResource("Animation_jbt1i"),
-"chase_side": SubResource("Animation_qmolq"),
-"chase_up": SubResource("Animation_2icpl"),
-"destroy_down": SubResource("Animation_sakl5"),
-"destroy_side": SubResource("Animation_slqic"),
-"destroy_up": SubResource("Animation_mtgbe"),
-"hurt_down": SubResource("Animation_ij6g7"),
-"hurt_side": SubResource("Animation_idd40"),
-"hurt_up": SubResource("Animation_8ivg1"),
-"idle_down": SubResource("Animation_kxr6h"),
-"idle_side": SubResource("Animation_6tpqk"),
-"idle_up": SubResource("Animation_3xmtn"),
-"walk_down": SubResource("Animation_iq8d0"),
-"walk_side": SubResource("Animation_jb7fe"),
-"walk_up": SubResource("Animation_dvb3c")
+&"RESET": SubResource("Animation_wnokj"),
+&"chase_down": SubResource("Animation_jbt1i"),
+&"chase_side": SubResource("Animation_qmolq"),
+&"chase_up": SubResource("Animation_2icpl"),
+&"destroy_down": SubResource("Animation_sakl5"),
+&"destroy_side": SubResource("Animation_slqic"),
+&"destroy_up": SubResource("Animation_mtgbe"),
+&"hurt_down": SubResource("Animation_ij6g7"),
+&"hurt_side": SubResource("Animation_idd40"),
+&"hurt_up": SubResource("Animation_8ivg1"),
+&"idle_down": SubResource("Animation_kxr6h"),
+&"idle_side": SubResource("Animation_6tpqk"),
+&"idle_up": SubResource("Animation_3xmtn"),
+&"walk_down": SubResource("Animation_iq8d0"),
+&"walk_side": SubResource("Animation_jb7fe"),
+&"walk_up": SubResource("Animation_dvb3c")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ovf5"]
@@ -863,8 +863,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7gr4"]
 _data = {
-"RESET": SubResource("Animation_uni4i"),
-"destroy": SubResource("Animation_wnxxk")
+&"RESET": SubResource("Animation_uni4i"),
+&"destroy": SubResource("Animation_wnxxk")
 }
 
 [sub_resource type="Gradient" id="Gradient_l4vde"]
@@ -898,8 +898,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_q3vuw")
 
 [sub_resource type="Curve" id="Curve_xxidr"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -907,7 +906,7 @@ point_count = 2
 curve = SubResource("Curve_xxidr")
 
 [sub_resource type="Curve" id="Curve_cmc5w"]
-max_value = 3.0
+_limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0.0214876, 0.347087), 0.0, 0.0, 0, 0, Vector2(0.985124, 0.69501), 0.0, 0.0, 0, 0]
 point_count = 2
 

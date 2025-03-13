@@ -37,14 +37,14 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u0psf"]
 _data = {
-"RESET": SubResource("Animation_q85f6"),
-"hover": SubResource("Animation_qlttg")
+&"RESET": SubResource("Animation_q85f6"),
+&"hover": SubResource("Animation_qlttg")
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="Shadow" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.27)
+modulate = Color(0, 0, 0, 0.27)
 texture_filter = 1
 position = Vector2(0, 70)
 scale = Vector2(3, 3)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cr4mn2ndohjxo"]
 
 [ext_resource type="Texture2D" uid="uid://r1mnrbw2hf7" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/lamppost.png" id="1_tro8k"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_hcnu5"]
+[ext_resource type="Script" uid="uid://0mnmwsenhjp1" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_hcnu5"]
 [ext_resource type="Texture2D" uid="uid://cvn86kqmt24nn" path="res://Hallasan-Sunset/Environment/TX Props.png" id="3_su6xa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pw2in"]

@@ -1,16 +1,16 @@
-[gd_scene load_steps=31 format=3 uid="uid://dsdsymcscej23"]
+[gd_scene load_steps=34 format=3 uid="uid://dsdsymcscej23"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.gd" id="1_enff3"]
+[ext_resource type="Script" uid="uid://dbsys8xpe6boq" path="res://Hallasan-Sunset/Player/GUI/Player_hud/player_hud.gd" id="1_enff3"]
 [ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_oupnd"]
 [ext_resource type="PackedScene" uid="uid://3ou4mscqfens" path="res://Hallasan-Sunset/Player/GUI/Player_hud/heart_gui.tscn" id="2_xlvne"]
 [ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="4_suqvs"]
 [ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="5_srpej"]
 [ext_resource type="Texture2D" uid="uid://bpphdxqd10vsv" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/boss-hp.png" id="6_bavgn"]
 [ext_resource type="Texture2D" uid="uid://nn1omdjbl3r1" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/panel_notification.png" id="8_6ya57"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Notifications/notifications.gd" id="8_mchtw"]
-[ext_resource type="Texture2D" uid="uid://bc7cmbl8u1m6q" path="res://Hallasan-Sunset/UI/Inventory/Banner.png" id="10_17bch"]
+[ext_resource type="Script" uid="uid://cpaonric8ctgy" path="res://Hallasan-Sunset/UI/Notifications/notifications.gd" id="8_mchtw"]
+[ext_resource type="FontFile" uid="uid://bfu1go1hde7bc" path="res://Hallasan-Sunset/UI/Fonts/CursedScript.ttf" id="9_8tx6c"]
 [ext_resource type="AudioStream" uid="uid://b4p67spcqc2u8" path="res://Hallasan-Sunset/Audio/Sound effects/Menu_notification.mp3" id="10_l5yyi"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Energy Bar/energy_bar.gd" id="11_wyh6r"]
+[ext_resource type="Script" uid="uid://dtt47mhies2qm" path="res://Hallasan-Sunset/Technical/Energy Bar/energy_bar.gd" id="11_wyh6r"]
 [ext_resource type="PackedScene" uid="uid://dbs7ly28qwxoa" path="res://Hallasan-Sunset/Technical/Coin Counter/coin_counter.tscn" id="12_6k10q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqb76"]
@@ -267,9 +267,9 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yi2p7"]
 _data = {
-"RESET": SubResource("Animation_23vnf"),
-"fade_to_black": SubResource("Animation_31077"),
-"show_game_over": SubResource("Animation_j42si")
+&"RESET": SubResource("Animation_23vnf"),
+&"fade_to_black": SubResource("Animation_31077"),
+&"show_game_over": SubResource("Animation_j42si")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4aiw3"]
@@ -390,8 +390,8 @@ tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eodqd"]
 _data = {
-"RESET": SubResource("Animation_gmq34"),
-"show_notification": SubResource("Animation_yhi33")
+&"RESET": SubResource("Animation_gmq34"),
+&"show_notification": SubResource("Animation_yhi33")
 }
 
 [sub_resource type="Animation" id="Animation_x48i6"]
@@ -401,22 +401,10 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.8, 2.5, 3.2, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/Label:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.8, 2.5, 3.2, 5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
@@ -428,7 +416,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/path = NodePath("Label:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -437,23 +425,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/Label:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b0p7r"]
 _data = {
-"Fade_in": SubResource("Animation_x48i6"),
-"RESET": SubResource("Animation_d0wpj")
+&"Fade_in": SubResource("Animation_x48i6"),
+&"RESET": SubResource("Animation_d0wpj")
 }
 
 [sub_resource type="Animation" id="Animation_oqplt"]
@@ -514,8 +490,69 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5g833"]
 _data = {
-"Fade_in": SubResource("Animation_oqplt"),
-"RESET": SubResource("Animation_a11ic")
+&"Fade_in": SubResource("Animation_oqplt"),
+&"RESET": SubResource("Animation_a11ic")
+}
+
+[sub_resource type="Animation" id="Animation_ep8nv"]
+resource_name = "Cutscene"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Black Bars/TopBar:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(640, 0), Vector2(640, 60)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Black Bars/BottomBar:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector2(640, 60), Vector2(640, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j5ix6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Black Bars/TopBar:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 60)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/Black Bars/BottomBar:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 60)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hafm5"]
+_data = {
+&"Cutscene": SubResource("Animation_ep8nv"),
+&"RESET": SubResource("Animation_j5ix6")
 }
 
 [node name="PlayerHUD" type="CanvasLayer" groups=["player_hud"]]
@@ -534,7 +571,6 @@ mouse_filter = 2
 mouse_default_cursor_shape = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control"]
-modulate = Color(0.443137, 0.458824, 0.47451, 1)
 texture_filter = 1
 position = Vector2(58, 13)
 scale = Vector2(2, 2)
@@ -746,7 +782,7 @@ layout_mode = 0
 offset_left = 5.0
 offset_top = 5.0
 offset_right = 249.0
-offset_bottom = 47.0
+offset_bottom = 53.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_uap67")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Notification/PanelContainer"]
@@ -757,7 +793,7 @@ modulate = Color(1, 0.858824, 0.552941, 1)
 custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_suqvs")
+theme_override_fonts/font = ExtResource("9_8tx6c")
 text = "Notification Type"
 autowrap_mode = 2
 
@@ -765,7 +801,7 @@ autowrap_mode = 2
 custom_minimum_size = Vector2(220, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_suqvs")
+theme_override_fonts/font = ExtResource("9_8tx6c")
 text = "Notification Message
 "
 autowrap_mode = 2
@@ -789,26 +825,25 @@ offset_bottom = 169.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/Area Notification"]
-texture = ExtResource("10_17bch")
-
-[node name="Label" type="Label" parent="Control/Area Notification/Sprite2D"]
+[node name="Label" type="Label" parent="Control/Area Notification"]
 texture_filter = 1
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -238.0
-offset_top = -55.5
-offset_right = -178.0
-offset_bottom = -35.5
+offset_left = -84.0
+offset_top = -25.5
+offset_right = 84.0
+offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_font_sizes/font_size = 32
 text = "pohpoh"
+horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Area Notification"]
 libraries = {
@@ -878,8 +913,41 @@ show_percentage = false
 
 [node name="Coin Counter" parent="Control" groups=["coin_counter"] instance=ExtResource("12_6k10q")]
 
+[node name="PanelContainer" parent="Control/Coin Counter" index="1"]
+offset_bottom = 111.0
+
 [node name="Label" parent="Control/Coin Counter/PanelContainer" index="1"]
+theme_override_fonts/font = ExtResource("9_8tx6c")
 text = ""
+
+[node name="Black Bars" type="Control" parent="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Black Bars"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_hafm5")
+}
+
+[node name="TopBar" type="ColorRect" parent="Control/Black Bars"]
+visible = false
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 20.0
+color = Color(0, 0, 0, 1)
+
+[node name="BottomBar" type="ColorRect" parent="Control/Black Bars"]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 339.0
+offset_right = 639.0
+offset_bottom = 359.0
+color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

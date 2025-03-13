@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://cvoni5gbutug8"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Bomb/arc_projectile.gd" id="1_e0p8d"]
+[ext_resource type="Script" uid="uid://4rik6nrdeq5w" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Bomb/arc_projectile.gd" id="1_e0p8d"]
 [ext_resource type="Texture2D" uid="uid://ba0fv0orkokpx" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Bomb/Animations/projectile_shadow.png" id="2_yr1kk"]
 [ext_resource type="Texture2D" uid="uid://bsuuia3fqy6wg" path="res://Hallasan-Sunset/Player/Sprites/Hands.png" id="3_xrutk"]
 [ext_resource type="Texture2D" uid="uid://cq7jdy4ajln77" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Smash/Smoke Effect.png" id="7_wuhv3"]
@@ -102,8 +102,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q0xlk"]
 _data = {
-"BombLive": SubResource("Animation_btdsq"),
-"RESET": SubResource("Animation_8rhgq")
+&"BombLive": SubResource("Animation_btdsq"),
+&"RESET": SubResource("Animation_8rhgq")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vh6cn"]
@@ -165,8 +165,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_se3ph"]
 _data = {
-"Explode": SubResource("Animation_7h5ig"),
-"RESET": SubResource("Animation_cagxx")
+&"Explode": SubResource("Animation_7h5ig"),
+&"RESET": SubResource("Animation_cagxx")
 }
 
 [node name="arc_projectile" type="Node2D"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cr8c8wtlgk4rc"]
 
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="1_r57bv"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="11_2ksic"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="11_2ksic"]
 
-[node name="Tileset" type="TileMapLayer"]
+[node name="Tileset" type="TileMapLayer" groups=["tilemaps"]]
 z_index = -1
 y_sort_enabled = true
 texture_filter = 1

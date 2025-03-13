@@ -1,6 +1,6 @@
 [gd_scene load_steps=65 format=3 uid="uid://0uw5235d8xhl"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_44gfu"]
+[ext_resource type="Script" uid="uid://3eugq3lyyivt" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_44gfu"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="1_etj4l"]
 [ext_resource type="AudioStream" uid="uid://c72fo331ibgld" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_kill.mp3" id="4_o2dro"]
 [ext_resource type="AudioStream" uid="uid://dnatwpjkorctu" path="res://Hallasan-Sunset/Audio/Sound effects/Slime.mp3" id="5_denur"]
@@ -8,15 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://h8b84gyye5uo" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-1 19.png" id="6_v3phd"]
 [ext_resource type="Texture2D" uid="uid://cmljk7ttsnbw4" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-2 13.png" id="7_tpksn"]
 [ext_resource type="Texture2D" uid="uid://d1bbxb6aq0rpc" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-3 13.png" id="8_x386k"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_7uhoo"]
+[ext_resource type="Script" uid="uid://du2e0pgg12551" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_7uhoo"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="9_m6qf0"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="9_wc0n0"]
+[ext_resource type="Script" uid="uid://cw4vkck68lt22" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="9_wc0n0"]
 [ext_resource type="Texture2D" uid="uid://b3xyyko78s6iv" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-4 9.png" id="9_wv305"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_6rw3k"]
+[ext_resource type="Script" uid="uid://nj1ai8bhfcju" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_6rw3k"]
 [ext_resource type="Texture2D" uid="uid://b7sdvl0wwfsa" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_down/walk_down-5 5.png" id="10_h17cf"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="10_trauc"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="11_bamqg"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="11_s01br"]
+[ext_resource type="Script" uid="uid://brlcx1u3weeem" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="10_trauc"]
+[ext_resource type="Script" uid="uid://dkqddec3hu23w" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="11_bamqg"]
+[ext_resource type="Script" uid="uid://ocaacixauwww" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="11_s01br"]
 [ext_resource type="Texture2D" uid="uid://bao6u4j0tssr0" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-1 19.png" id="11_yt2gu"]
 [ext_resource type="Texture2D" uid="uid://b88cyaf6mb8bq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-2 13.png" id="12_7dy00"]
 [ext_resource type="Texture2D" uid="uid://b1g8vvkvadq5m" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/animations/walk_side/Untitled_Artwork-3 13.png" id="13_i3olk"]
@@ -691,19 +691,19 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {
-"RESET": SubResource("Animation_wnokj"),
-"destroy_down": SubResource("Animation_sakl5"),
-"destroy_side": SubResource("Animation_slqic"),
-"destroy_up": SubResource("Animation_mtgbe"),
-"hurt_down": SubResource("Animation_ij6g7"),
-"hurt_side": SubResource("Animation_idd40"),
-"hurt_up": SubResource("Animation_8ivg1"),
-"idle_down": SubResource("Animation_kxr6h"),
-"idle_side": SubResource("Animation_6tpqk"),
-"idle_up": SubResource("Animation_3xmtn"),
-"walk_down": SubResource("Animation_iq8d0"),
-"walk_side": SubResource("Animation_jb7fe"),
-"walk_up": SubResource("Animation_dvb3c")
+&"RESET": SubResource("Animation_wnokj"),
+&"destroy_down": SubResource("Animation_sakl5"),
+&"destroy_side": SubResource("Animation_slqic"),
+&"destroy_up": SubResource("Animation_mtgbe"),
+&"hurt_down": SubResource("Animation_ij6g7"),
+&"hurt_side": SubResource("Animation_idd40"),
+&"hurt_up": SubResource("Animation_8ivg1"),
+&"idle_down": SubResource("Animation_kxr6h"),
+&"idle_side": SubResource("Animation_6tpqk"),
+&"idle_up": SubResource("Animation_3xmtn"),
+&"walk_down": SubResource("Animation_iq8d0"),
+&"walk_side": SubResource("Animation_jb7fe"),
+&"walk_up": SubResource("Animation_dvb3c")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ovf5"]
@@ -790,8 +790,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7gr4"]
 _data = {
-"RESET": SubResource("Animation_uni4i"),
-"destroy": SubResource("Animation_wnxxk")
+&"RESET": SubResource("Animation_uni4i"),
+&"destroy": SubResource("Animation_wnxxk")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gjmbv"]
@@ -851,8 +851,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_r77ro")
 
 [sub_resource type="Curve" id="Curve_h3cic"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -860,7 +859,7 @@ point_count = 2
 curve = SubResource("Curve_h3cic")
 
 [sub_resource type="Curve" id="Curve_3nfhk"]
-max_value = 3.0
+_limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0.0214876, 0.347087), 0.0, 0.0, 0, 0, Vector2(0.985124, 0.69501), 0.0, 0.0, 0, 0]
 point_count = 2
 

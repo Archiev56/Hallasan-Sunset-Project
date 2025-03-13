@@ -1,7 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cghyxc7hn1cfd"]
 
-[ext_resource type="Texture2D" path="res://Player/Shadow.png" id="1_pvyd0"]
 [ext_resource type="Texture2D" uid="uid://dq0t5jaopmu3p" path="res://Hallasan-Sunset/Environment/Forest/Rock/rock.png" id="2_82a36"]
+
+[sub_resource type="Resource" id="Resource_myptp"]
+metadata/__load_path__ = "res://Player/Shadow.png"
 
 [node name="Rock" type="StaticBody2D"]
 collision_layer = 16
@@ -17,7 +19,7 @@ texture_filter = 1
 position = Vector2(0.999999, 19)
 rotation = -0.0907571
 scale = Vector2(2.15184, 1.52)
-texture = ExtResource("1_pvyd0")
+texture = SubResource("Resource_myptp")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false

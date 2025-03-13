@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://bc0ofrtosagbj"]
 
 [ext_resource type="Texture2D" uid="uid://clwueu10en1l4" path="res://Hallasan-Sunset/Environment/Forest/Campfire/campfire-sheet.png" id="1_7ev4g"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Campfire/campfire.gd" id="1_lg873"]
+[ext_resource type="Script" uid="uid://b6u6xq7r5ts6e" path="res://Hallasan-Sunset/Environment/Forest/Campfire/campfire.gd" id="1_lg873"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3jy2l"]
 atlas = ExtResource("1_7ev4g")

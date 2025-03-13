@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cr1vro2w6labf"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pushable Statue/pushable_statue.gd" id="1_1c35h"]
+[ext_resource type="Script" uid="uid://b18gd3nr51e0b" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pushable Statue/pushable_statue.gd" id="1_1c35h"]
 [ext_resource type="Texture2D" uid="uid://cvlwicitqr46e" path="res://Hallasan-Sunset/Environment/Forest/Statue/Untitled_Artwork 28.png" id="2_h5b2h"]
 [ext_resource type="AudioStream" uid="uid://cqvpyc2oo55fn" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Audio/push_stone.wav" id="3_a8wto"]
 

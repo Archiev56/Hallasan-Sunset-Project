@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://xwk3g6ka7muy"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash/dash.gd" id="1_v0ktd"]
+[ext_resource type="Script" uid="uid://pf5timcd5vy3" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash/dash.gd" id="1_v0ktd"]
 [ext_resource type="Texture2D" uid="uid://dnnst1vwolayn" path="res://Hallasan-Sunset/Player/Technical/Moves/Dash/dust.png" id="2_g85g4"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3fmsv"]

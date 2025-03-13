@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://bkgbqgy67q6fd"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_dnxpv"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_dnxpv"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_xxwbh"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="2_yav3h"]
 

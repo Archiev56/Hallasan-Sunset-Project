@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://dv1pf7ueffcyc"]
 
 [ext_resource type="Material" uid="uid://8g8oxepcywc7" path="res://Hallasan-Sunset/Shaders/light_material.tres" id="1_0v1pb"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/beam_attack.gd" id="1_b7qvt"]
+[ext_resource type="Script" uid="uid://ty44qnqfnpv4" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/beam_attack.gd" id="1_b7qvt"]
 [ext_resource type="Texture2D" uid="uid://coo8ikr7qo8wg" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/energy-beam.png" id="1_dnphu"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/energy_beam_sprite.gd" id="3_0v650"]
+[ext_resource type="Script" uid="uid://bc56vsqnd6tn3" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Scripts/energy_beam_sprite.gd" id="3_0v650"]
 [ext_resource type="Texture2D" uid="uid://c2w6458qbuqdr" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Sprites/energy-beam-large.png" id="4_18ha1"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="5_364j5"]
 [ext_resource type="AudioStream" uid="uid://cm8r1bq10h7wp" path="res://Hallasan-Sunset/Enemies/Bosses/wizard/Audio/beam.mp3" id="6_bfhcr"]
@@ -191,9 +191,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h4f7w"]
 _data = {
-"RESET": SubResource("Animation_bwluu"),
-"attack": SubResource("Animation_bjt4x"),
-"default": SubResource("Animation_ytdyt")
+&"RESET": SubResource("Animation_bwluu"),
+&"attack": SubResource("Animation_bjt4x"),
+&"default": SubResource("Animation_ytdyt")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5xcr"]

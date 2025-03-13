@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bc0bncjege2kf"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Intro Splash/intro_splash.gd" id="1_6yqvc"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_0ulna"]
 [ext_resource type="Texture2D" uid="uid://dcsx2177uo0w7" path="res://Hallasan-Sunset/UI/Intro Splash/Untitled design (3).png" id="2_j5rga"]
 
 [sub_resource type="Animation" id="Animation_wncj1"]
@@ -49,12 +49,12 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ulic1"]
 _data = {
-"RESET": SubResource("Animation_wncj1"),
-"intro": SubResource("Animation_aq2ng")
+&"RESET": SubResource("Animation_wncj1"),
+&"intro": SubResource("Animation_aq2ng")
 }
 
 [node name="Intro Splash" type="Node2D"]
-script = ExtResource("1_6yqvc")
+script = ExtResource("1_0ulna")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

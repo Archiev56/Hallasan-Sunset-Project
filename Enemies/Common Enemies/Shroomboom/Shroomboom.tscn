@@ -1,6 +1,6 @@
 [gd_scene load_steps=69 format=3 uid="uid://cp7e7rucofrk0"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_5tg0a"]
+[ext_resource type="Script" uid="uid://3eugq3lyyivt" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_5tg0a"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="2_8uoke"]
 [ext_resource type="Texture2D" uid="uid://dk75qs4d6k6p0" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/Star.png" id="3_7ep0d"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="5_83oyw"]
@@ -10,18 +10,18 @@
 [ext_resource type="Texture2D" uid="uid://dyc1neosryru" path="res://Hallasan-Sunset/Enemies/Common Enemies/Shroomboom/Sprites/Untitled_Artwork 103.png" id="8_qafuc"]
 [ext_resource type="AudioStream" uid="uid://ur4xtvsfcry4" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_hit.mp3" id="10_3da4u"]
 [ext_resource type="AudioStream" uid="uid://c72fo331ibgld" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_kill.mp3" id="11_jjowf"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="19_u31ug"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="20_pl4fw"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="21_rg15e"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_explode.gd" id="21_w4nsa"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="22_gk7nm"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="23_go7i1"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="24_um662"]
+[ext_resource type="Script" uid="uid://cw4vkck68lt22" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="19_u31ug"]
+[ext_resource type="Script" uid="uid://brlcx1u3weeem" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="20_pl4fw"]
+[ext_resource type="Script" uid="uid://dkqddec3hu23w" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="21_rg15e"]
+[ext_resource type="Script" uid="uid://dxoyog01dlbjt" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_explode.gd" id="21_w4nsa"]
+[ext_resource type="Script" uid="uid://du2e0pgg12551" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="22_gk7nm"]
+[ext_resource type="Script" uid="uid://nj1ai8bhfcju" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="23_go7i1"]
+[ext_resource type="Script" uid="uid://ocaacixauwww" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="24_um662"]
 [ext_resource type="Resource" uid="uid://kp6gn8ous75v" path="res://Hallasan-Sunset/Items/Currency/Coins/Silver Coin/Silver Coin.tres" id="25_ns52n"]
 [ext_resource type="Texture2D" uid="uid://bcq3uu6osnr2c" path="res://Hallasan-Sunset/Enemies/Common Enemies/Shroomboom/Effects/spritesheet.png" id="25_sgnds"]
 [ext_resource type="Resource" uid="uid://b7mhtict54464" path="res://Hallasan-Sunset/Items/Currency/Coins/Gold Coin/Gold Coin.tres" id="26_nbxld"]
 [ext_resource type="Resource" uid="uid://bpoatvtr71w35" path="res://Hallasan-Sunset/Items/Currency/Coins/Coin Stack/Coin Stack.tres" id="27_r5mcf"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="28_wgrxr"]
+[ext_resource type="Script" uid="uid://jwnndw8cqhed" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="28_wgrxr"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="29_3lkxb"]
 [ext_resource type="Texture2D" uid="uid://dbl07ag0yb620" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/DestroySmoke.png" id="30_ajww2"]
 [ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Technical/Vision Area/Vision_area.tscn" id="31_dijxo"]
@@ -481,6 +481,83 @@ tracks/6/keys = {
 }
 tracks/6/use_blend = true
 
+[sub_resource type="Animation" id="Animation_x2yp1"]
+resource_name = "explosion"
+length = 1.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.952, 0.8), Vector2(1.112, 0.8), Vector2(0.630504, 0.8), Vector2(0.630504, 0.760001), Vector2(0.630504, 1.04), Vector2(0.350505, 1.04), Vector2(1.07051, 1.04), Vector2(1.35051, 0.800002), Vector2(0.630511, 1.36), Vector2(1.71051, 0.56), Vector2(0.470508, 0.56), Vector2(0.470508, 1), Vector2(1.23051, 0.439999), Vector2(0.390507, 1.32), Vector2(1, 1)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Explosion Sprite/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("explosion"),
+"times": PackedFloat32Array(1)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.05),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HurtBox:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 1.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Explosion Sprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 1.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.65),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_ij6g7"]
 resource_name = "Hurt"
 length = 0.3
@@ -856,102 +933,25 @@ tracks/1/keys = {
 "values": [0.127409, 0.254818, 0.127409, 0.0, -0.127409, -0.424115, -0.127409]
 }
 
-[sub_resource type="Animation" id="Animation_x2yp1"]
-resource_name = "explosion"
-length = 1.7
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(0.952, 0.8), Vector2(1.112, 0.8), Vector2(0.630504, 0.8), Vector2(0.630504, 0.760001), Vector2(0.630504, 1.04), Vector2(0.350505, 1.04), Vector2(1.07051, 1.04), Vector2(1.35051, 0.800002), Vector2(0.630511, 1.36), Vector2(1.71051, 0.56), Vector2(0.470508, 0.56), Vector2(0.470508, 1), Vector2(1.23051, 0.439999), Vector2(0.390507, 1.32), Vector2(1, 1)]
-}
-tracks/1/type = "animation"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Explosion Sprite/AnimationPlayer")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": PackedStringArray("explosion"),
-"times": PackedFloat32Array(1)
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1, 1.05),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("HurtBox:monitoring")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1, 1.65),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Explosion Sprite:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(1, 1.65),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/5/type = "method"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(1.65),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"queue_free"
-}]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {
-"RESET": SubResource("Animation_wnokj"),
-"chase_down": SubResource("Animation_qp3lq"),
-"chase_side": SubResource("Animation_gsgsg"),
-"chase_up": SubResource("Animation_08tk6"),
-"destroy_down": SubResource("Animation_sakl5"),
-"destroy_side": SubResource("Animation_slqic"),
-"destroy_up": SubResource("Animation_mtgbe"),
-"explosion": SubResource("Animation_x2yp1"),
-"hurt_down": SubResource("Animation_ij6g7"),
-"hurt_side": SubResource("Animation_idd40"),
-"hurt_up": SubResource("Animation_8ivg1"),
-"idle_down": SubResource("Animation_kxr6h"),
-"idle_side": SubResource("Animation_6tpqk"),
-"idle_up": SubResource("Animation_3xmtn"),
-"walk_down": SubResource("Animation_iq8d0"),
-"walk_side": SubResource("Animation_jb7fe"),
-"walk_up": SubResource("Animation_dvb3c")
+&"RESET": SubResource("Animation_wnokj"),
+&"chase_down": SubResource("Animation_qp3lq"),
+&"chase_side": SubResource("Animation_gsgsg"),
+&"chase_up": SubResource("Animation_08tk6"),
+&"destroy_down": SubResource("Animation_sakl5"),
+&"destroy_side": SubResource("Animation_slqic"),
+&"destroy_up": SubResource("Animation_mtgbe"),
+&"explosion": SubResource("Animation_x2yp1"),
+&"hurt_down": SubResource("Animation_ij6g7"),
+&"hurt_side": SubResource("Animation_idd40"),
+&"hurt_up": SubResource("Animation_8ivg1"),
+&"idle_down": SubResource("Animation_kxr6h"),
+&"idle_side": SubResource("Animation_6tpqk"),
+&"idle_up": SubResource("Animation_3xmtn"),
+&"walk_down": SubResource("Animation_iq8d0"),
+&"walk_side": SubResource("Animation_jb7fe"),
+&"walk_up": SubResource("Animation_dvb3c")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ovf5"]
@@ -1039,8 +1039,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7gr4"]
 _data = {
-"RESET": SubResource("Animation_uni4i"),
-"destroy": SubResource("Animation_wnxxk")
+&"RESET": SubResource("Animation_uni4i"),
+&"destroy": SubResource("Animation_wnxxk")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gfs4t"]
@@ -1054,8 +1054,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_jkxkh")
 
 [sub_resource type="Curve" id="Curve_l5868"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -1063,7 +1062,7 @@ point_count = 2
 curve = SubResource("Curve_l5868")
 
 [sub_resource type="Curve" id="Curve_tsrgo"]
-max_value = 3.0
+_limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0.0214876, 0.347087), 0.0, 0.0, 0, 0, Vector2(0.985124, 0.69501), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -1082,6 +1081,21 @@ scale_max = 1.5
 scale_over_velocity_curve = SubResource("CurveTexture_hey8g")
 color_ramp = SubResource("GradientTexture1D_ph1l6")
 
+[sub_resource type="Animation" id="Animation_of7mq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
 [sub_resource type="Animation" id="Animation_r0avc"]
 resource_name = "explosion"
 length = 0.66
@@ -1099,32 +1113,17 @@ tracks/0/keys = {
 "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
 }
 
-[sub_resource type="Animation" id="Animation_of7mq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qsf3w"]
 _data = {
-"RESET": SubResource("Animation_of7mq"),
-"explosion": SubResource("Animation_r0avc")
+&"RESET": SubResource("Animation_of7mq"),
+&"explosion": SubResource("Animation_r0avc")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_55chj"]
 radius = 105.802
 
 [node name="Shroomboom" type="CharacterBody2D"]
-z_index = 1
+y_sort_enabled = true
 collision_layer = 260
 collision_mask = 21
 script = ExtResource("1_5tg0a")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://du4a4pwgq37s3"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Scarecrow/Scarecrow.gd" id="1_6nkcd"]
+[ext_resource type="Script" uid="uid://bk6mqnreyr55i" path="res://Hallasan-Sunset/Enemies/Common Enemies/Scarecrow/Scarecrow.gd" id="1_6nkcd"]
 [ext_resource type="Texture2D" uid="uid://b2hbvc4ik2bfo" path="res://Hallasan-Sunset/Enemies/Common Enemies/Scarecrow/18.png" id="2_nugy0"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="3_ih88j"]
 

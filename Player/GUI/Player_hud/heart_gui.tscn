@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3ou4mscqfens"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/GUI/Player_hud/heart_gui.gd" id="1_b3fqt"]
+[ext_resource type="Script" uid="uid://cnm5rfddnnkfd" path="res://Hallasan-Sunset/Player/GUI/Player_hud/heart_gui.gd" id="1_b3fqt"]
 [ext_resource type="Texture2D" uid="uid://dihi7uarrmto5" path="res://Hallasan-Sunset/Player/GUI/Player_hud/gui-health (1).png" id="1_fmdtk"]
 
 [node name="Heart" type="Control"]

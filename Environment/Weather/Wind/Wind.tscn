@@ -14,8 +14,7 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.486275, 0.868985, 0.868985, 0.8
 gradient = SubResource("Gradient_bk5hg")
 
 [sub_resource type="Curve" id="Curve_d52ty"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.118162, 52.6121), 0.0, 0.0, 0, 0, Vector2(0.245077, -14.8203), 0.0, 0.0, 0, 0, Vector2(0.376368, 59.3553), 0.0, 0.0, 0, 0, Vector2(0.525164, -15.7836), 0.0, 0.0, 0, 0, Vector2(0.625821, 57.4287), 0.0, 0.0, 0, 0, Vector2(0.757112, -14.8203), 0.0, 0.0, 0, 0, Vector2(0.877462, 56.4653), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 9
 

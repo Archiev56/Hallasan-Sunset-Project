@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://d01s4uc2xvw63"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Transition/scene_transition.gd" id="1_w5skp"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/iris.gdshader" id="2_shd2a"]
+[ext_resource type="Script" uid="uid://d1g8clutg2kmd" path="res://Hallasan-Sunset/Technical/Transition/scene_transition.gd" id="1_w5skp"]
+[ext_resource type="Shader" uid="uid://c24rx63x4h6jd" path="res://Hallasan-Sunset/Shaders/iris.gdshader" id="2_shd2a"]
 
 [sub_resource type="Animation" id="Animation_1l6ej"]
 length = 0.001
@@ -79,10 +79,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_le278"]
 _data = {
-"RESET": SubResource("Animation_1l6ej"),
-"default": SubResource("Animation_hpkkc"),
-"fading_in": SubResource("Animation_nkh6b"),
-"fading_out": SubResource("Animation_tutb7")
+&"RESET": SubResource("Animation_1l6ej"),
+&"default": SubResource("Animation_hpkkc"),
+&"fading_in": SubResource("Animation_nkh6b"),
+&"fading_out": SubResource("Animation_tutb7")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k6qmk"]

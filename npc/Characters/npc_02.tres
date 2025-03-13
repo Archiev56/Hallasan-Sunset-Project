@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="NPCResource" load_steps=4 format=3 uid="uid://dbxg2swo5t7w8"]
 
 [ext_resource type="Texture2D" uid="uid://dpi4wo5kd61q5" path="res://Hallasan-Sunset/npc/Portraits/npc_portrait_02.png" id="1_gbkrp"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="2_0idil"]
-[ext_resource type="Texture2D" uid="uid://ctcrfy803geml" path="res://Hallasan-Sunset/npc/Sprites/npc_sprite.png" id="3_vnds2"]
+[ext_resource type="Script" uid="uid://b36i5c8j16vj4" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="2_0idil"]
+[ext_resource type="Texture2D" uid="uid://dmgnyrt7lp1kd" path="res://Hallasan-Sunset/npc/Sprites/Untitled_Artwork 123.png" id="3_n7mtt"]
 
 [resource]
 script = ExtResource("2_0idil")
 npc_name = "Bolo"
-sprite = ExtResource("3_vnds2")
+sprite = ExtResource("3_n7mtt")
 portrait = ExtResource("1_gbkrp")
 dialog_audio_pitch = 0.7

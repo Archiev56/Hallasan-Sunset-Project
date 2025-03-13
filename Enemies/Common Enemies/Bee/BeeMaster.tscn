@@ -1,21 +1,21 @@
 [gd_scene load_steps=56 format=3 uid="uid://dps1ro1bnjtis"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_4nr01"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/Shadow.gdshader" id="1_tbsif"]
+[ext_resource type="Script" uid="uid://3eugq3lyyivt" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_4nr01"]
+[ext_resource type="Shader" uid="uid://revdxr7x06s5" path="res://Hallasan-Sunset/Shaders/Shadow.gdshader" id="1_tbsif"]
 [ext_resource type="Texture2D" uid="uid://cteqajjg7vj0h" path="res://Hallasan-Sunset/Tilemaps/Sprites/Dusk_Icons_x24.png" id="3_t4wu7"]
 [ext_resource type="Texture2D" uid="uid://c4tu82rh4pi5s" path="res://Hallasan-Sunset/Enemies/Common Enemies/Bee/Slime purple.png" id="4_a5mpe"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="5_6hewp"]
 [ext_resource type="AudioStream" uid="uid://bujw7xwffover" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Slime-[AudioTrimmer.com].wav" id="8_6hc5g"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="11_qwoe6"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="12_v2qay"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="13_wq4vb"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_shoot.gd" id="14_2oaea"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="14_w0n5u"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="15_qmc6x"]
+[ext_resource type="Script" uid="uid://cw4vkck68lt22" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="11_qwoe6"]
+[ext_resource type="Script" uid="uid://brlcx1u3weeem" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="12_v2qay"]
+[ext_resource type="Script" uid="uid://dkqddec3hu23w" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="13_wq4vb"]
+[ext_resource type="Script" uid="uid://dg4gnhra48r6m" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_shoot.gd" id="14_2oaea"]
+[ext_resource type="Script" uid="uid://du2e0pgg12551" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="14_w0n5u"]
+[ext_resource type="Script" uid="uid://nj1ai8bhfcju" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="15_qmc6x"]
 [ext_resource type="PackedScene" uid="uid://djihtmauie3ou" path="res://Hallasan-Sunset/Enemies/Common Enemies/energy_projectile.tscn" id="15_t2n4i"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="16_41w3b"]
+[ext_resource type="Script" uid="uid://ocaacixauwww" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="16_41w3b"]
 [ext_resource type="Resource" uid="uid://c3cx0nodai8jq" path="res://Hallasan-Sunset/Items/Currency/Gem/Gem.tres" id="17_u1vii"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="18_vm0ei"]
+[ext_resource type="Script" uid="uid://jwnndw8cqhed" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="18_vm0ei"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="19_ndrqb"]
 [ext_resource type="Texture2D" uid="uid://dbl07ag0yb620" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/DestroySmoke.png" id="20_ej3vj"]
 [ext_resource type="PackedScene" uid="uid://c55aho78pvpy8" path="res://Hallasan-Sunset/Enemies/Technical/Vision Area/Vision_area.tscn" id="21_67amd"]
@@ -27,9 +27,9 @@ shader_parameter/xframe = 0
 shader_parameter/yframe = 0
 shader_parameter/xframe_count = 6
 shader_parameter/yframe_count = 6
-shader_parameter/sunPos = null
-shader_parameter/glow_color = null
-shader_parameter/modulate_color = null
+shader_parameter/sunPos = Vector3(0, 0, 0)
+shader_parameter/glow_color = Color(0, 0, 0, 1)
+shader_parameter/modulate_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_tgach"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -504,20 +504,20 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_emwhk"]
 _data = {
-"RESET": SubResource("Animation_43nvg"),
-"destroy_down": SubResource("Animation_icuu7"),
-"destroy_side": SubResource("Animation_v8x5m"),
-"destroy_up": SubResource("Animation_5y0yj"),
-"hurt_down": SubResource("Animation_io8m7"),
-"hurt_side": SubResource("Animation_h5023"),
-"hurt_up": SubResource("Animation_nwft8"),
-"idle_down": SubResource("Animation_ehjij"),
-"idle_side": SubResource("Animation_j4167"),
-"idle_up": SubResource("Animation_aejnc"),
-"shoot_down": SubResource("Animation_up47f"),
-"walk_down": SubResource("Animation_5s5q0"),
-"walk_side": SubResource("Animation_gjbwl"),
-"walk_up": SubResource("Animation_uvbdk")
+&"RESET": SubResource("Animation_43nvg"),
+&"destroy_down": SubResource("Animation_icuu7"),
+&"destroy_side": SubResource("Animation_v8x5m"),
+&"destroy_up": SubResource("Animation_5y0yj"),
+&"hurt_down": SubResource("Animation_io8m7"),
+&"hurt_side": SubResource("Animation_h5023"),
+&"hurt_up": SubResource("Animation_nwft8"),
+&"idle_down": SubResource("Animation_ehjij"),
+&"idle_side": SubResource("Animation_j4167"),
+&"idle_up": SubResource("Animation_aejnc"),
+&"shoot_down": SubResource("Animation_up47f"),
+&"walk_down": SubResource("Animation_5s5q0"),
+&"walk_side": SubResource("Animation_gjbwl"),
+&"walk_up": SubResource("Animation_uvbdk")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ovf5"]
@@ -591,8 +591,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7gr4"]
 _data = {
-"RESET": SubResource("Animation_uni4i"),
-"destroy": SubResource("Animation_wnxxk")
+&"RESET": SubResource("Animation_uni4i"),
+&"destroy": SubResource("Animation_wnxxk")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gfs4t"]
@@ -606,8 +606,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_jkxkh")
 
 [sub_resource type="Curve" id="Curve_l5868"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -615,7 +614,7 @@ point_count = 2
 curve = SubResource("Curve_l5868")
 
 [sub_resource type="Curve" id="Curve_tsrgo"]
-max_value = 3.0
+_limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0.0214876, 0.347087), 0.0, 0.0, 0, 0, Vector2(0.985124, 0.69501), 0.0, 0.0, 0, 0]
 point_count = 2
 

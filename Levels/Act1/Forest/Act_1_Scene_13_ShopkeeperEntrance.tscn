@@ -1,17 +1,19 @@
-[gd_scene load_steps=9 format=4 uid="uid://bir3duftyohnp"]
+[gd_scene load_steps=10 format=4 uid="uid://bir3duftyohnp"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_ycy5u"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_ycy5u"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="2_7rd40"]
+[ext_resource type="AudioStream" uid="uid://ck5s35f0psf2s" path="res://Hallasan-Sunset/Audio/Songs/Act 1/Forest/Forest Song.mp3" id="2_kc332"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_gjk72"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="4_c0jrm"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_y0lyf"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="5_57w6x"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="5_57w6x"]
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="6_gokd3"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="8_4et7q"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_ycy5u")
+music = ExtResource("2_kc332")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("2_7rd40")]
 position = Vector2(331, 143)

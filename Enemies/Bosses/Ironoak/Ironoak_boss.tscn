@@ -1,14 +1,14 @@
 [gd_scene load_steps=31 format=3 uid="uid://ctbbh43inokqv"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/ironoak_boss.gd" id="1_kndsa"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="2_phsx3"]
+[ext_resource type="Script" uid="uid://bocyprekyk5mr" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/ironoak_boss.gd" id="1_kndsa"]
+[ext_resource type="Script" uid="uid://ocaacixauwww" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="2_phsx3"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="3_1khwm"]
 [ext_resource type="Texture2D" uid="uid://hhu88s7g8grp" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Animations/Death/Untitled_Artwork-4 20.png" id="3_8hjec"]
 [ext_resource type="Texture2D" uid="uid://csa2l7d5bn2ay" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Sprites/Untitled_Artwork-1 32.png" id="3_gft6y"]
 [ext_resource type="Resource" uid="uid://c3cx0nodai8jq" path="res://Hallasan-Sunset/Items/Currency/Gem/Gem.tres" id="3_jt58s"]
 [ext_resource type="Texture2D" uid="uid://da1ghtcpcoi8f" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Animations/Idle/Untitled_Artwork-4 19.png" id="3_mc14b"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_u5jal"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Branch/branch_spawner.gd" id="4_467m5"]
+[ext_resource type="Script" uid="uid://0tta4vx604h1" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Branch/branch_spawner.gd" id="4_467m5"]
 [ext_resource type="Texture2D" uid="uid://suwgtgmcrpkg" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Animations/Idle/Untitled_Artwork-3 23.png" id="4_gm2pq"]
 [ext_resource type="Texture2D" uid="uid://1qka6cgtuct0" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Animations/Idle/Untitled_Artwork-2 25.png" id="5_sgixm"]
 [ext_resource type="Texture2D" uid="uid://ci0dsq3r3hgc2" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Animations/Idle/Untitled_Artwork-1 36.png" id="6_nmu55"]
@@ -261,11 +261,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xxpn2"]
 _data = {
-"Death": SubResource("Animation_pt3nm"),
-"Hurt": SubResource("Animation_evqlq"),
-"RESET": SubResource("Animation_oegoh"),
-"attack": SubResource("Animation_4ymo2"),
-"idle": SubResource("Animation_vdv6e")
+&"Death": SubResource("Animation_pt3nm"),
+&"Hurt": SubResource("Animation_evqlq"),
+&"RESET": SubResource("Animation_oegoh"),
+&"attack": SubResource("Animation_4ymo2"),
+&"idle": SubResource("Animation_vdv6e")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s8cao"]

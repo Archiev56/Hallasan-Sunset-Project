@@ -1,10 +1,14 @@
 class_name Stats extends PanelContainer
 
 
-@onready var label_level = $VBoxContainer/HBoxContainer/Label2
-@onready var label_xp = $VBoxContainer/HBoxContainer2/Label2
-@onready var label_attack = $VBoxContainer/HBoxContainer3/Label2
-@onready var label_defense = $VBoxContainer/HBoxContainer4/Label2
+@onready var label_level = %Label_lvl
+@onready var label_xp = %Label_xp
+@onready var label_attack = %Label_attack
+@onready var label_defense = %Label_defense
+@onready var label_attack_change = %Label_attack_change
+@onready var label_defense_change = %Label_defense_change
+
+
 
 func _ready() -> void:
 	PauseMenu.shown.connect(update_stats)

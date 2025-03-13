@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=4 uid="uid://wurqaqupmrgy"]
+[gd_scene load_steps=26 format=4 uid="uid://wurqaqupmrgy"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_qxh1m"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_qxh1m"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_1yc6e"]
-[ext_resource type="AudioStream" uid="uid://c57s3sp41srat" path="res://Hallasan-Sunset/Audio/Song/Forest Theme.ogg" id="2_ybvwc"]
+[ext_resource type="AudioStream" uid="uid://ck5s35f0psf2s" path="res://Hallasan-Sunset/Audio/Songs/Act 1/Forest/Forest Song.mp3" id="2_37dan"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_ownhv"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_mo2xx"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_mo2xx"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="5_hw5g3"]
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="6_n7uab"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="6_row2c"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dk11vr1agmrsd" path="res://Hallasan-Sunset/Environment/Forest/Chest/chest.tscn" id="8_ef20y"]
 [ext_resource type="PackedScene" uid="uid://cou4euvvaw0ml" path="res://Hallasan-Sunset/UI/Dialogue_system/dialogue_interaction.tscn" id="8_vici0"]
 [ext_resource type="PackedScene" uid="uid://3c8o5hxduleo" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderBottom.tscn" id="9_bh2i1"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_text.gd" id="9_hs1em"]
+[ext_resource type="Script" uid="uid://cwdm0l0hkothu" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_text.gd" id="9_hs1em"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="10_8qgmy"]
 [ext_resource type="Resource" uid="uid://dxnb65gey8g0i" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tres" id="10_gi5qa"]
 [ext_resource type="PackedScene" uid="uid://chwksqbnu0jli" path="res://Hallasan-Sunset/npc/Characters/Slick/Slick.tscn" id="10_otmro"]
@@ -21,13 +21,15 @@
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Weather/Leaves/Magicleaves.tscn" id="11_f5n5s"]
 [ext_resource type="PackedScene" uid="uid://ddioxudb4roti" path="res://Hallasan-Sunset/Items/Technical/item_pickup/item_pickup.tscn" id="18_0p8wk"]
 [ext_resource type="PackedScene" uid="uid://dyufjm1518vwi" path="res://Hallasan-Sunset/Enemies/Common Enemies/Goblin/Goblin.tscn" id="19_yroyr"]
+[ext_resource type="Script" uid="uid://cmbmdbarq3bal" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_choice.gd" id="21_2iy5u"]
 [ext_resource type="PackedScene" uid="uid://s87tt1bkx3ku" path="res://Hallasan-Sunset/Environment/Weather/Floating Lights/Floating lights.tscn" id="21_u2yhk"]
+[ext_resource type="Script" uid="uid://dwvdc0d4nkxc1" path="res://Hallasan-Sunset/npc/Dialog/Scripts/dialog_branch.gd" id="22_nkfix"]
 [ext_resource type="PackedScene" uid="uid://cal6ga32aayko" path="res://Hallasan-Sunset/Technical/Save Bell/Save Bell.tscn" id="23_fy5uk"]
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_qxh1m")
-music = ExtResource("2_ybvwc")
+music = ExtResource("2_37dan")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("6_row2c")]
 position = Vector2(1512, 32)
@@ -276,11 +278,55 @@ position = Vector2(0, 24)
 
 [node name="DialogText" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
 script = ExtResource("9_hs1em")
+text = "Woioi big man! How is it going playboy? "
 npc_info = ExtResource("10_gi5qa")
 
 [node name="DialogText2" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
 script = ExtResource("9_hs1em")
+text = "Saw you checkin' out the lovely lady in my life,  Bertha my balloon. Gorgeous, ain't she? "
 npc_info = ExtResource("10_gi5qa")
+
+[node name="DialogText3" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("9_hs1em")
+text = "Wicker baskets and flames go together like a dream, who would'a thought?"
+npc_info = ExtResource("10_gi5qa")
+
+[node name="DialogText4" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("9_hs1em")
+text = "I know every Tom, Dick and Harry on this mountain Kid. "
+npc_info = ExtResource("10_gi5qa")
+
+[node name="DialogText5" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("9_hs1em")
+text = "And whispers around here say you're looking for some medicine ingredients? "
+npc_info = ExtResource("10_gi5qa")
+
+[node name="DialogText6" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("9_hs1em")
+text = "Remember, Champ—sometimes, the key to healing sometimes lies not beneath your feet, but high above!"
+npc_info = ExtResource("10_gi5qa")
+
+[node name="DialogText7" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("9_hs1em")
+text = "I'll do you a ride for 10 coins, keen?"
+npc_info = ExtResource("10_gi5qa")
+
+[node name="DialogChoice" type="Node" parent="NPC\'s/Slick/DialogueInteraction"]
+script = ExtResource("21_2iy5u")
+
+[node name="DialogBranch" type="Node" parent="NPC\'s/Slick/DialogueInteraction/DialogChoice"]
+script = ExtResource("22_nkfix")
+
+[node name="DialogText" type="Node" parent="NPC\'s/Slick/DialogueInteraction/DialogChoice/DialogBranch"]
+script = ExtResource("9_hs1em")
+
+[node name="DialogBranch2" type="Node" parent="NPC\'s/Slick/DialogueInteraction/DialogChoice"]
+script = ExtResource("22_nkfix")
+text = "That basket smells abit weird, i'll pass"
+
+[node name="DialogText" type="Node" parent="NPC\'s/Slick/DialogueInteraction/DialogChoice/DialogBranch2"]
+script = ExtResource("9_hs1em")
+text = "Was woven by the finest Wanchojang's on the mountain...but whatever..."
 
 [node name="Transitions" type="Node2D" parent="."]
 y_sort_enabled = true

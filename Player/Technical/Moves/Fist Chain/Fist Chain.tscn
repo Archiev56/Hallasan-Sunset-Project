@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://f7o83hmapxib"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Chain/fist_chain.gd" id="1_hmvnh"]
+[ext_resource type="Script" uid="uid://kwhc3hainvqx" path="res://Hallasan-Sunset/Player/Technical/Moves/Fist Chain/fist_chain.gd" id="1_hmvnh"]
 [ext_resource type="Texture2D" uid="uid://bsuuia3fqy6wg" path="res://Hallasan-Sunset/Player/Sprites/Hands.png" id="2_l75p4"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_0oksv"]
 

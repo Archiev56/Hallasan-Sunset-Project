@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://q4tcvwp83ov5" path="res://Hallasan-Sunset/Audio/Sound effects/UI_Select.wav" id="4_2ejl7"]
 [ext_resource type="PackedScene" uid="uid://s87tt1bkx3ku" path="res://Hallasan-Sunset/Environment/Weather/Floating Lights/Floating lights.tscn" id="5_3oyqx"]
 [ext_resource type="FontFile" uid="uid://bimnqo2lc0co0" path="res://Hallasan-Sunset/UI/Fonts/papercut.ttf" id="6_8hs4p"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/Scrolling.gdshader" id="7_fpg8d"]
+[ext_resource type="Shader" uid="uid://n35prymah3hw" path="res://Hallasan-Sunset/Shaders/Scrolling.gdshader" id="7_fpg8d"]
 [ext_resource type="Texture2D" uid="uid://bjhu2h1vr8mvh" path="res://Hallasan-Sunset/UI/Untitled_Artwork 115.png" id="8_fi43r"]
 [ext_resource type="Texture2D" uid="uid://c03n7i5l4o6gf" path="res://Hallasan-Sunset/UI/Logo/Untitled_Artwork 90.png" id="10_jnukg"]
 [ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="11_orcgf"]
@@ -16,16 +16,15 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ghkvn"]
 shader = ExtResource("7_fpg8d")
+shader_parameter/pattern_sampler = ExtResource("8_fi43r")
 shader_parameter/Top_Color = Color(0.0745098, 0.0509804, 0.0901961, 1)
 shader_parameter/Mid_Color = Color(0.247708, 0.1885, 0.29, 1)
 shader_parameter/Bot_Color = Color(0.0745098, 0.0509804, 0.0901961, 1)
 shader_parameter/pattern_color = Color(0.611765, 0.321569, 1, 1)
 shader_parameter/scale = 5.12
 shader_parameter/ratio = 0.65
-shader_parameter/pattern_sampler = ExtResource("8_fi43r")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c0gwj"]
-load_path = "res://.godot/imported/HALLASAN (1).png-5515af429c16a71a35339ff81da87230.ctex"
 
 [sub_resource type="Animation" id="Animation_n5mro"]
 length = 0.001
@@ -61,8 +60,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_njiow"]
 _data = {
-"RESET": SubResource("Animation_n5mro"),
-"Title": SubResource("Animation_n0lyp")
+&"RESET": SubResource("Animation_n5mro"),
+&"Title": SubResource("Animation_n0lyp")
 }
 
 [node name="Main Menu" type="Node2D"]

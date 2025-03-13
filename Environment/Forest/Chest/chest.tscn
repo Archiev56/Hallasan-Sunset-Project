@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dk11vr1agmrsd"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Chest/chest.gd" id="1_wcqph"]
+[ext_resource type="Script" uid="uid://2vicav2whuuo" path="res://Hallasan-Sunset/Environment/Forest/Chest/chest.gd" id="1_wcqph"]
 [ext_resource type="Texture2D" uid="uid://dh6awve7ygyfy" path="res://Hallasan-Sunset/Environment/Forest/Chest/Sprites/Tiger Chest/Untitled_Artwork-5.png" id="2_lir6l"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_vv3xs"]
 [ext_resource type="Texture2D" uid="uid://p8o8r5rp8giq" path="res://Hallasan-Sunset/Environment/Forest/Chest/Sprites/Fantasy RPG (Toony) 32x32.png" id="3_yymi6"]
@@ -162,10 +162,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cv34p"]
 _data = {
-"RESET": SubResource("Animation_j0ghv"),
-"closed": SubResource("Animation_ujsht"),
-"opened": SubResource("Animation_nrweh"),
-"opened_chest": SubResource("Animation_3c5j3")
+&"RESET": SubResource("Animation_j0ghv"),
+&"closed": SubResource("Animation_ujsht"),
+&"opened": SubResource("Animation_nrweh"),
+&"opened_chest": SubResource("Animation_3c5j3")
 }
 
 [node name="Chest" type="Node2D"]

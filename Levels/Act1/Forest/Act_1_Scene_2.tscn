@@ -1,12 +1,13 @@
-[gd_scene load_steps=27 format=4 uid="uid://c712lfsg073ux"]
+[gd_scene load_steps=28 format=4 uid="uid://c712lfsg073ux"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_phgp6"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_phgp6"]
+[ext_resource type="AudioStream" uid="uid://ck5s35f0psf2s" path="res://Hallasan-Sunset/Audio/Songs/Act 1/Forest/Forest Song.mp3" id="2_dusvs"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_t5med"]
 [ext_resource type="PackedScene" uid="uid://ba2vdtt3qp7p3" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorder.tscn" id="4_chl80"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="5_bxmgt"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="5_ehbxm"]
 [ext_resource type="PackedScene" uid="uid://3c8o5hxduleo" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderBottom.tscn" id="6_2etwl"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="6_34sd8"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="6_34sd8"]
 [ext_resource type="PackedScene" uid="uid://byh8a7p1yblry" path="res://Hallasan-Sunset/Environment/Weather/Leaves/Magicleaves.tscn" id="8_qqj6t"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="9_n5wkl"]
 [ext_resource type="PackedScene" uid="uid://dk2ene3poro4h" path="res://Hallasan-Sunset/Environment/Town/Outhouse/Outhouse.tscn" id="10_gm7vt"]
@@ -31,6 +32,7 @@
 [node name="Level2" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_phgp6")
+music = ExtResource("2_dusvs")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("20_pgqld")]
 z_index = 0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bdqsrs7ycwg0r"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Scripts/boomerang.gd" id="1_mesgm"]
+[ext_resource type="Script" uid="uid://bg2ft0btyypis" path="res://Hallasan-Sunset/Player/Scripts/boomerang.gd" id="1_mesgm"]
 [ext_resource type="Texture2D" uid="uid://bsuuia3fqy6wg" path="res://Hallasan-Sunset/Player/Sprites/Hands.png" id="2_6rfbq"]
 [ext_resource type="AudioStream" uid="uid://dpv0lmar317h0" path="res://Hallasan-Sunset/Player/Audio/ES_Punch, Block, Swoosh - Epidemic Sound - 1509-1983.wav" id="3_4fld0"]
 [ext_resource type="PackedScene" uid="uid://b4eaotgg15phx" path="res://Hallasan-Sunset/Items/Technical/Magnet/item_magnet.tscn" id="4_4iig7"]
@@ -77,10 +77,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r88w0"]
 _data = {
-"RESET": SubResource("Animation_6l3ty"),
-"fist_down": SubResource("Animation_qh5yh"),
-"fist_side": SubResource("Animation_k58od"),
-"fist_up": SubResource("Animation_pfa46")
+&"RESET": SubResource("Animation_6l3ty"),
+&"fist_down": SubResource("Animation_qh5yh"),
+&"fist_side": SubResource("Animation_k58od"),
+&"fist_up": SubResource("Animation_pfa46")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vtptd"]

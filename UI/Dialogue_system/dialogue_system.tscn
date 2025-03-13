@@ -1,13 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://dtr04wu7jvf8i"]
+[gd_scene load_steps=21 format=3 uid="uid://dtr04wu7jvf8i"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Dialogue_system/Scripts/dialogue_system.gd" id="1_khtq7"]
+[ext_resource type="Script" uid="uid://bwkqo3d5ns2t6" path="res://Hallasan-Sunset/UI/Dialogue_system/Scripts/dialogue_system.gd" id="1_khtq7"]
 [ext_resource type="Texture2D" uid="uid://nn1omdjbl3r1" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/panel_notification.png" id="2_16vj7"]
-[ext_resource type="FontFile" uid="uid://cfbroi8iib1y5" path="res://Hallasan-Sunset/UI/Fonts/KiwiSoda.ttf" id="3_uusnm"]
+[ext_resource type="FontFile" uid="uid://bfu1go1hde7bc" path="res://Hallasan-Sunset/UI/Fonts/CursedScript.ttf" id="3_g1fy4"]
 [ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="4_p60l6"]
+[ext_resource type="FontFile" uid="uid://dsp7y4sy3pvy0" path="res://Hallasan-Sunset/UI/Fonts/CursedScript-Bold.ttf" id="4_sclys"]
 [ext_resource type="Texture2D" uid="uid://bvatnfpnfknqv" path="res://Hallasan-Sunset/npc/Portraits/npc_portrait_01.png" id="5_q1yyc"]
 [ext_resource type="AudioStream" uid="uid://41d64nns2t8u" path="res://Hallasan-Sunset/npc/Dialog/Audio/voice_blip.wav" id="6_6vqfw"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Dialogue_system/Scripts/dialog_portrait.gd" id="6_nafna"]
+[ext_resource type="Script" uid="uid://cum8vbledkxv8" path="res://Hallasan-Sunset/UI/Dialogue_system/Scripts/dialog_portrait.gd" id="6_nafna"]
 [ext_resource type="Theme" uid="uid://ep8fk2oqixb5" path="res://Hallasan-Sunset/UI/Menu_Theme.tres" id="8_84y64"]
+[ext_resource type="Texture2D" uid="uid://bb2cj67ow4dyn" path="res://Hallasan-Sunset/UI/Dialogue_system/Sprites/ps4_ps5/btn_x_b.png" id="8_p0nri"]
 
 [sub_resource type="Gradient" id="Gradient_73ho2"]
 offsets = PackedFloat32Array(0.00706714, 1)
@@ -30,6 +32,9 @@ texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pkggu"]
+texture = ExtResource("8_p0nri")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqmip"]
 content_margin_left = 10.0
@@ -56,6 +61,30 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_p0nri")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxTexture_pkggu")]
+}
 
 [sub_resource type="Animation" id="Animation_pj0oh"]
 resource_name = "default"
@@ -72,11 +101,35 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1.2, 1.4, 1.5, 1), Color(1, 1, 1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:theme_override_styles/panel:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_p0nri"), ExtResource("8_p0nri")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:theme_override_styles/panel")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.681983),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("StyleBoxTexture_pkggu")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8hnyg"]
 _data = {
-"RESET": SubResource("Animation_ilas7"),
-"default": SubResource("Animation_pj0oh")
+&"RESET": SubResource("Animation_ilas7"),
+&"default": SubResource("Animation_pj0oh")
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_syagu"]
@@ -148,9 +201,9 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_wjo6s")
 [node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/PanelContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_fonts/normal_font = ExtResource("4_p60l6")
-theme_override_fonts/bold_font = ExtResource("4_p60l6")
-theme_override_font_sizes/normal_font_size = 32
+theme_override_fonts/normal_font = ExtResource("3_g1fy4")
+theme_override_fonts/bold_font = ExtResource("4_sclys")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[wave] hello [/wave]
 
@@ -160,13 +213,13 @@ scroll_active = false
 [node name="NameLabel" type="Label" parent="DialogUI"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 104.0
-offset_top = 226.0
-offset_right = 200.0
-offset_bottom = 266.0
+offset_left = 125.0
+offset_top = 219.0
+offset_right = 221.0
+offset_bottom = 259.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_outline_size = 6
-theme_override_fonts/font = ExtResource("4_p60l6")
+theme_override_fonts/font = ExtResource("4_sclys")
 theme_override_font_sizes/font_size = 32
 text = "NAME"
 
@@ -184,13 +237,14 @@ offset_left = 544.0
 offset_top = 323.0
 offset_right = 612.0
 offset_bottom = 349.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_pkggu")
 
 [node name="Label" type="Label" parent="DialogUI/DialogProgressIndicator"]
 self_modulate = Color(0.43824, 0.4224, 0.66, 1)
 texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_uusnm")
+theme_override_fonts/font = ExtResource("3_g1fy4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_dqmip")
 text = "NEXT"
@@ -242,3 +296,8 @@ theme_override_fonts/font = ExtResource("4_p60l6")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_bv8xe")
 text = "Choice 2..."
+
+[node name="Sprite2D" type="Sprite2D" parent="DialogUI"]
+position = Vector2(580, 335)
+scale = Vector2(2, 2)
+texture = ExtResource("8_p0nri")

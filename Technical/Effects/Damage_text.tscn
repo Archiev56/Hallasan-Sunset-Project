@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dqqkqub5gyw28"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Effects/damage_text.gd" id="1_kkyyy"]
+[ext_resource type="Script" uid="uid://bvn4w2k48fhia" path="res://Hallasan-Sunset/Technical/Effects/damage_text.gd" id="1_kkyyy"]
 
 [node name="DamageText" type="Node2D"]
 z_index = 100

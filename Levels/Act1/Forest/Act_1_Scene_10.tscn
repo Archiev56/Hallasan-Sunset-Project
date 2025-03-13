@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=4 uid="uid://cekm3xgcqle1i"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_mbfwj"]
-[ext_resource type="AudioStream" uid="uid://c57s3sp41srat" path="res://Hallasan-Sunset/Audio/Song/Forest Theme.ogg" id="2_3m3k2"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_mbfwj"]
+[ext_resource type="AudioStream" uid="uid://ck5s35f0psf2s" path="res://Hallasan-Sunset/Audio/Songs/Act 1/Forest/Forest Song.mp3" id="2_2pvxt"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_xe56l"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="3_gkf75"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="4_gp3f4"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bbejca547y4ce" path="res://Hallasan-Sunset/Environment/Forest/Trees/Magic Tree/MagicTree.tscn" id="4_pnrcx"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="5_1rg8d"]
 [ext_resource type="PackedScene" uid="uid://bjdlcofd2dxsk" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem3.tscn" id="5_67me2"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="5_672jq"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="5_672jq"]
 [ext_resource type="PackedScene" uid="uid://cb2ddj5khwruw" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.tscn" id="6_ieocw"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="8_42e5j"]
 [ext_resource type="PackedScene" uid="uid://s87tt1bkx3ku" path="res://Hallasan-Sunset/Environment/Weather/Floating Lights/Floating lights.tscn" id="9_jf7oy"]
@@ -20,7 +20,7 @@
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_mbfwj")
-music = ExtResource("2_3m3k2")
+music = ExtResource("2_2pvxt")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("5_1rg8d")]
 position = Vector2(1030, 584)

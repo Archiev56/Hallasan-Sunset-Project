@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://ck2dpa4dd808r"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Pot/Pot.gd" id="1_8h3y1"]
+[ext_resource type="Script" uid="uid://cr3h6mk3l78p1" path="res://Hallasan-Sunset/Environment/Forest/Pot/Pot.gd" id="1_8h3y1"]
 [ext_resource type="Texture2D" uid="uid://btw8r3qjabski" path="res://Hallasan-Sunset/Environment/Forest/Pot/Untitled_Artwork 46.png" id="2_lt34s"]
 [ext_resource type="AudioStream" uid="uid://s6udhgpapjck" path="res://Hallasan-Sunset/Environment/Forest/Pot/pot_destroy.wav" id="3_5e1xx"]
 [ext_resource type="PackedScene" uid="uid://brwadfbnpe7jc" path="res://Hallasan-Sunset/Technical/Throwable/Throwable.tscn" id="4_q4xnd"]
@@ -129,9 +129,9 @@ tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c78o5"]
 _data = {
-"RESET": SubResource("Animation_rhab0"),
-"default": SubResource("Animation_0xeqx"),
-"destroy": SubResource("Animation_jl28v")
+&"RESET": SubResource("Animation_rhab0"),
+&"default": SubResource("Animation_0xeqx"),
+&"destroy": SubResource("Animation_jl28v")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ovjx2"]

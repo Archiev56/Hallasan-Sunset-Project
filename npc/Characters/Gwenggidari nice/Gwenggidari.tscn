@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://biqm0bsvhjkqr"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc.gd" id="1_54psq"]
+[ext_resource type="Script" uid="uid://dss7csdyxpmtt" path="res://Hallasan-Sunset/npc/scripts/npc.gd" id="1_54psq"]
 [ext_resource type="Resource" uid="uid://cengu4o4xxb4h" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Gwenggidari.tres" id="2_3ov67"]
 [ext_resource type="Texture2D" uid="uid://ddr6e1tadtjmv" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-1 30.png" id="3_6gvun"]
 [ext_resource type="Texture2D" uid="uid://cuvgsyd825y83" path="res://Hallasan-Sunset/Player/Sprites/Shadow (1).png" id="4_xgvru"]
@@ -53,11 +53,11 @@ step = 0.2
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ivkd1"]
 _data = {
-"idle_down": SubResource("Animation_7du3u"),
-"idle_up": SubResource("Animation_8m2xn"),
-"walk_down": SubResource("Animation_62wq6"),
-"walk_side": SubResource("Animation_l0wml"),
-"walk_up": SubResource("Animation_5qrp0")
+&"idle_down": SubResource("Animation_7du3u"),
+&"idle_up": SubResource("Animation_8m2xn"),
+&"walk_down": SubResource("Animation_62wq6"),
+&"walk_side": SubResource("Animation_l0wml"),
+&"walk_up": SubResource("Animation_5qrp0")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkj7h"]

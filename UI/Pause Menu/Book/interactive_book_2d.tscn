@@ -1,7 +1,7 @@
 [gd_scene load_steps=107 format=3 uid="uid://kf64j7pluy7o"]
 
 [ext_resource type="Texture2D" uid="uid://5wh2s3ee617w" path="res://Hallasan-Sunset/UI/Pause Menu/Book/Book_Sheet_64x64.png" id="1_nusbk"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Book/interactive_book_2d.gd" id="2_j3gqr"]
+[ext_resource type="Script" uid="uid://cf8v06k8bq1hd" path="res://Hallasan-Sunset/UI/Pause Menu/Book/interactive_book_2d.gd" id="2_j3gqr"]
 [ext_resource type="Texture2D" uid="uid://bregtvpmrysvk" path="res://Hallasan-Sunset/UI/Pause Menu/Book/Back_Button.png" id="3_fg802"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ag3u"]

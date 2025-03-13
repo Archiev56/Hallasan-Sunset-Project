@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpfw0mspp00am"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Kimbap.gd" id="1_6okfv"]
+[ext_resource type="Script" uid="uid://cr38okajnl81k" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Kimbap.gd" id="1_6okfv"]
 [ext_resource type="Texture2D" uid="uid://dsilespmxkmts" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Untitled_Artwork-1 3.png" id="2_ubdur"]
 [ext_resource type="Resource" uid="uid://cw3bf5p68wy7b" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Kimbap.tres" id="2_vt87d"]
 [ext_resource type="AudioStream" uid="uid://dahijkeowm3re" path="res://Hallasan-Sunset/Items/Consumables/Corndog/item_pickup.wav" id="3_mp8a2"]

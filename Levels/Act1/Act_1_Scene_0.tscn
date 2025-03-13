@@ -1,28 +1,17 @@
-[gd_scene load_steps=15 format=4 uid="uid://dt3m3oafv62td"]
+[gd_scene load_steps=13 format=4 uid="uid://dt3m3oafv62td"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_higxg"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_higxg"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_v5y5q"]
 [ext_resource type="TileSet" uid="uid://ch55l646cr805" path="res://Hallasan-Sunset/Tilemaps/Tileset.tres" id="3_32471"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_3hcut"]
+[ext_resource type="PackedScene" uid="uid://bwa7pwfu4bu0q" path="res://Hallasan-Sunset/Environment/Weather/Clouds/Clowds.tscn" id="3_bjbgj"]
+[ext_resource type="Script" uid="uid://bkfrr01tlskb5" path="res://Hallasan-Sunset/Tilemaps/Scripts/LevelTileMapLayer.gd" id="4_3hcut"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="5_6hepf"]
 [ext_resource type="PackedScene" uid="uid://ulerv0qebh18" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem1.tscn" id="5_njull"]
 [ext_resource type="PackedScene" uid="uid://ds6bxm232amrv" path="res://Hallasan-Sunset/Environment/Weather/Fog/Fog.tscn" id="5_ruwnp"]
 [ext_resource type="PackedScene" uid="uid://cbc44elj4cips" path="res://Hallasan-Sunset/Environment/Weather/Wind/Wind.tscn" id="6_hje2f"]
 [ext_resource type="PackedScene" uid="uid://dnoohvgbs737l" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem2.tscn" id="6_lbb55"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/Scrolling.gdshader" id="6_o5rk6"]
-[ext_resource type="Texture2D" uid="uid://bjhu2h1vr8mvh" path="res://Hallasan-Sunset/UI/Untitled_Artwork 115.png" id="7_au4y6"]
 [ext_resource type="PackedScene" uid="uid://bjdlcofd2dxsk" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Totems/Totem3.tscn" id="8_jl041"]
 [ext_resource type="PackedScene" uid="uid://dhn7e36w2k7u6" path="res://Hallasan-Sunset/npc/Characters/Merged Mask/combined_masks.tscn" id="10_h2xgh"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1wmel"]
-shader = ExtResource("6_o5rk6")
-shader_parameter/Top_Color = Color(0, 0, 0, 0)
-shader_parameter/Mid_Color = Color(0, 0, 0, 0)
-shader_parameter/Bot_Color = Color(0, 0, 0, 0)
-shader_parameter/pattern_color = Color(1, 1, 1, 0.768627)
-shader_parameter/scale = 1.65
-shader_parameter/ratio = 1.67
-shader_parameter/pattern_sampler = ExtResource("7_au4y6")
 
 [node name="Map" type="Node2D"]
 y_sort_enabled = true
@@ -32,14 +21,7 @@ script = ExtResource("1_higxg")
 layer = 0
 scroll_ignore_camera_zoom = false
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = 2
-y_sort_enabled = true
-material = SubResource("ShaderMaterial_1wmel")
-offset_top = -553.0
-offset_right = 959.0
-offset_bottom = 729.0
-color = Color(1, 1, 1, 0.121569)
+[node name="ColorRect" parent="." instance=ExtResource("3_bjbgj")]
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("5_6hepf")]
 z_index = 0

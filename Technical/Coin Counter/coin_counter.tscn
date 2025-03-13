@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbs7ly28qwxoa"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Coin Counter/coin_counter.gd" id="1_0kskg"]
+[ext_resource type="Script" uid="uid://xucud0ibju8" path="res://Hallasan-Sunset/Technical/Coin Counter/coin_counter.gd" id="1_0kskg"]
 [ext_resource type="Texture2D" uid="uid://nn1omdjbl3r1" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/Sprites/panel_notification.png" id="2_11bhe"]
 [ext_resource type="Texture2D" uid="uid://cteqajjg7vj0h" path="res://Hallasan-Sunset/Tilemaps/Sprites/Dusk_Icons_x24.png" id="3_k1vnv"]
 
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ji8xj"]
 _data = {
-"RESET": SubResource("Animation_5y72d"),
-"show_coin": SubResource("Animation_ih4fs")
+&"RESET": SubResource("Animation_5y72d"),
+&"show_coin": SubResource("Animation_ih4fs")
 }
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cwdkk"]

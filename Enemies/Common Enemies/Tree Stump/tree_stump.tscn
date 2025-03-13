@@ -1,26 +1,26 @@
 [gd_scene load_steps=70 format=3 uid="uid://5ympmnaidvus"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_7vw80"]
+[ext_resource type="Script" uid="uid://3eugq3lyyivt" path="res://Hallasan-Sunset/Enemies/Scripts/States/Enemy.gd" id="1_7vw80"]
 [ext_resource type="Texture2D" uid="uid://bi47jj5telw2g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Shadow copy.png" id="2_q1u30"]
 [ext_resource type="Texture2D" uid="uid://dk75qs4d6k6p0" path="res://Hallasan-Sunset/Technical/Damage Indicators copy/Star.png" id="3_538g4"]
 [ext_resource type="Texture2D" uid="uid://7oovqxp45blq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_down/Untitled_Artwork-1 16.png" id="3_ida3r"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="6_8x1ad"]
+[ext_resource type="Script" uid="uid://cw4vkck68lt22" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_machine.gd" id="6_8x1ad"]
 [ext_resource type="Texture2D" uid="uid://clik15gmdq3pn" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_down/Untitled_Artwork-2 10.png" id="7_6a8c6"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="7_i2j2d"]
+[ext_resource type="Script" uid="uid://brlcx1u3weeem" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_idle.gd" id="7_i2j2d"]
 [ext_resource type="Texture2D" uid="uid://cjnfrfya5dr7r" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_side/Untitled_Artwork-1 18.png" id="7_ocssw"]
 [ext_resource type="Texture2D" uid="uid://ck1h7xm4ny3tl" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_down/Untitled_Artwork-3 10.png" id="8_bcph4"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="8_i7cum"]
+[ext_resource type="Script" uid="uid://dkqddec3hu23w" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_wander.gd" id="8_i7cum"]
 [ext_resource type="Texture2D" uid="uid://ctgvji3ki2imv" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_side/Untitled_Artwork-2 12.png" id="8_m8dq5"]
 [ext_resource type="Texture2D" uid="uid://dmsvhn4n2kaxy" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_side/Untitled_Artwork-3 12.png" id="9_ha4y2"]
 [ext_resource type="Texture2D" uid="uid://hnt61u4hlu6v" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-1 17.png" id="9_tb6gj"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_tfda5"]
+[ext_resource type="Script" uid="uid://du2e0pgg12551" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_stun.gd" id="9_tfda5"]
 [ext_resource type="Texture2D" uid="uid://bioe7krs3wk0e" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-2 11.png" id="10_k4s3j"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_vdwbv"]
+[ext_resource type="Script" uid="uid://nj1ai8bhfcju" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Destroy.gd" id="10_vdwbv"]
 [ext_resource type="Texture2D" uid="uid://du07fdisrwq21" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/walk_up/Untitled_Artwork-3 11.png" id="11_f3d7y"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="12_q6cmd"]
+[ext_resource type="Script" uid="uid://ocaacixauwww" path="res://Hallasan-Sunset/Enemies/Technical/Drop Data/drop_data.gd" id="12_q6cmd"]
 [ext_resource type="Texture2D" uid="uid://d4dhcek1d0hk2" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 56.png" id="12_yuel8"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="13_xjk0p"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="14_urhcl"]
+[ext_resource type="Script" uid="uid://jwnndw8cqhed" path="res://Hallasan-Sunset/Enemies/Scripts/States/enemy_state_chase.gd" id="14_urhcl"]
 [ext_resource type="AudioStream" uid="uid://c72fo331ibgld" path="res://Hallasan-Sunset/Audio/Sound effects/Enemy_kill.mp3" id="15_i5x76"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="15_x42rq"]
 [ext_resource type="Texture2D" uid="uid://di7k7tbp7g2vq" path="res://Hallasan-Sunset/Enemies/Common Enemies/Tree Stump/Animations/Untitled_Artwork 72.png" id="16_vh2s2"]
@@ -749,22 +749,22 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {
-"RESET": SubResource("Animation_wnokj"),
-"chase_down": SubResource("Animation_qp3lq"),
-"chase_side": SubResource("Animation_gsgsg"),
-"chase_up": SubResource("Animation_08tk6"),
-"destroy_down": SubResource("Animation_sakl5"),
-"destroy_side": SubResource("Animation_slqic"),
-"destroy_up": SubResource("Animation_mtgbe"),
-"hurt_down": SubResource("Animation_ij6g7"),
-"hurt_side": SubResource("Animation_idd40"),
-"hurt_up": SubResource("Animation_8ivg1"),
-"idle_down": SubResource("Animation_kxr6h"),
-"idle_side": SubResource("Animation_6tpqk"),
-"idle_up": SubResource("Animation_3xmtn"),
-"walk_down": SubResource("Animation_iq8d0"),
-"walk_side": SubResource("Animation_jb7fe"),
-"walk_up": SubResource("Animation_dvb3c")
+&"RESET": SubResource("Animation_wnokj"),
+&"chase_down": SubResource("Animation_qp3lq"),
+&"chase_side": SubResource("Animation_gsgsg"),
+&"chase_up": SubResource("Animation_08tk6"),
+&"destroy_down": SubResource("Animation_sakl5"),
+&"destroy_side": SubResource("Animation_slqic"),
+&"destroy_up": SubResource("Animation_mtgbe"),
+&"hurt_down": SubResource("Animation_ij6g7"),
+&"hurt_side": SubResource("Animation_idd40"),
+&"hurt_up": SubResource("Animation_8ivg1"),
+&"idle_down": SubResource("Animation_kxr6h"),
+&"idle_side": SubResource("Animation_6tpqk"),
+&"idle_up": SubResource("Animation_3xmtn"),
+&"walk_down": SubResource("Animation_iq8d0"),
+&"walk_side": SubResource("Animation_jb7fe"),
+&"walk_up": SubResource("Animation_dvb3c")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ovf5"]
@@ -807,8 +807,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 gradient = SubResource("Gradient_jkxkh")
 
 [sub_resource type="Curve" id="Curve_l5868"]
-min_value = -200.0
-max_value = 200.0
+_limits = [-200.0, 200.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -816,7 +815,7 @@ point_count = 2
 curve = SubResource("Curve_l5868")
 
 [sub_resource type="Curve" id="Curve_tsrgo"]
-max_value = 3.0
+_limits = [0.0, 3.0, 0.0, 1.0]
 _data = [Vector2(0.0214876, 0.347087), 0.0, 0.0, 0, 0, Vector2(0.985124, 0.69501), 0.0, 0.0, 0, 0]
 point_count = 2
 
@@ -903,8 +902,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s7gr4"]
 _data = {
-"RESET": SubResource("Animation_uni4i"),
-"destroy": SubResource("Animation_wnxxk")
+&"RESET": SubResource("Animation_uni4i"),
+&"destroy": SubResource("Animation_wnxxk")
 }
 
 [node name="TreeStump" type="CharacterBody2D"]

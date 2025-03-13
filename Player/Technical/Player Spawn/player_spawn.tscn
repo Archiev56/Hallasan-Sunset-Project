@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://udy8tcrufx43"]
 
 [ext_resource type="Texture2D" uid="uid://bnxtk8wdu5h6j" path="res://Hallasan-Sunset/Player/Animations/Idle/IdleDown/Untitled_Artwork-1.png" id="1_fsjjb"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.gd" id="1_gspw8"]
+[ext_resource type="Script" uid="uid://dksatk55lq014" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.gd" id="1_gspw8"]
 
 [node name="PlayerSpawn" type="Node2D"]
 z_index = 1

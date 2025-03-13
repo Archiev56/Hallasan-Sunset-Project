@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://8l5uc6or308u"]
 
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="1_prxrg"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Dancing.gdshader" id="2_0hpkg"]
+[ext_resource type="Shader" uid="uid://bogi68u12lem8" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Dancing.gdshader" id="2_0hpkg"]
 [ext_resource type="Texture2D" uid="uid://d0bsp3r4wshc0" path="res://Hallasan-Sunset/npc/Characters/Totem Poles/Sprites/5.png" id="3_3o43w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_noodt"]

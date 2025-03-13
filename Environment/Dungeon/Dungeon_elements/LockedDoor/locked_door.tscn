@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://iuhg4fkjm7w"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/LockedDoor/locked_door.gd" id="1_fwr1q"]
+[ext_resource type="Script" uid="uid://bheaxiakya0k" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/LockedDoor/locked_door.gd" id="1_fwr1q"]
 [ext_resource type="PackedScene" uid="uid://qeg0erpj3xkj" path="res://Hallasan-Sunset/Technical/PersistentDataHelper copy/persistent-data-handler.tscn" id="2_2j8fr"]
 [ext_resource type="Resource" uid="uid://b4b3fc4qc1cnh" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Dungeon Key/Key_dungeon.tres" id="2_rywnv"]
 [ext_resource type="AudioStream" uid="uid://cn3onwirruj32" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Audio/locked_door.wav" id="3_d0ds5"]
@@ -147,11 +147,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_adfnl"]
 _data = {
-"RESET": SubResource("Animation_7d6db"),
-"close_door": SubResource("Animation_yh5uu"),
-"closed": SubResource("Animation_d3a06"),
-"open_door": SubResource("Animation_y7evu"),
-"opened": SubResource("Animation_5pf8o")
+&"RESET": SubResource("Animation_7d6db"),
+&"close_door": SubResource("Animation_yh5uu"),
+&"closed": SubResource("Animation_d3a06"),
+&"open_door": SubResource("Animation_y7evu"),
+&"opened": SubResource("Animation_5pf8o")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xy10u"]

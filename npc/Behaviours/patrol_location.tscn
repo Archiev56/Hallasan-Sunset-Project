@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfj26i8q1kf67"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/PatrolLocation.gd" id="1_5wd6o"]
+[ext_resource type="Script" uid="uid://bb7777837ry12" path="res://Hallasan-Sunset/npc/scripts/PatrolLocation.gd" id="1_5wd6o"]
 [ext_resource type="FontFile" uid="uid://dqpmaxkisn3ln" path="res://Hallasan-Sunset/UI/Fonts/pjuksimple_pixel_font_by_pjuk_d48ilnb.ttf" id="2_65o11"]
 
 [sub_resource type="Gradient" id="Gradient_feh8b"]

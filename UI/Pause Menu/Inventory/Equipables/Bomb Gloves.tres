@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://cgmwv8prargbr"]
+
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/item_effect.gd" id="1_ow778"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/equipable_item_modifier.gd" id="2_ckkwg"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/equipable_items.gd" id="3_u48mm"]
+[ext_resource type="Texture2D" uid="uid://cteqajjg7vj0h" path="res://Hallasan-Sunset/Tilemaps/Sprites/Dusk_Icons_x24.png" id="4_ql3qn"]
+
+[sub_resource type="Resource" id="Resource_q4wgp"]
+script = ExtResource("2_ckkwg")
+type = 1
+value = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s11hd"]
+atlas = ExtResource("4_ql3qn")
+region = Rect2(48, 337, 24, 23)
+
+[resource]
+script = ExtResource("3_u48mm")
+type = 0
+modifiers = Array[ExtResource("2_ckkwg")]([SubResource("Resource_q4wgp")])
+name = "Bomb Gloves"
+description = "Big Bang gloves
+"
+texture = SubResource("AtlasTexture_s11hd")
+effects = Array[ExtResource("1_ow778")]([])

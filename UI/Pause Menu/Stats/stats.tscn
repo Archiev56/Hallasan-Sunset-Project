@@ -5,9 +5,9 @@
 
 [node name="Stats" type="PanelContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(225, 250)
-offset_right = 250.0
-offset_bottom = 250.0
+custom_minimum_size = Vector2(75, 75)
+offset_right = 137.0
+offset_bottom = 75.0
 theme_override_styles/panel = ExtResource("1_m4hdh")
 script = ExtResource("2_78sob")
 
@@ -15,39 +15,43 @@ script = ExtResource("2_78sob")
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0.71403, 0.192014, 0.988783, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "Level"
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
+[node name="Label_lvl" type="Label" parent="VBoxContainer/HBoxContainer5/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "1"
 horizontal_alignment = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(80, 0)
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer5/HBoxContainer2"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0.71403, 0.192014, 0.988783, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "XP"
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
-custom_minimum_size = Vector2(40, 0)
+[node name="Label_xp" type="Label" parent="VBoxContainer/HBoxContainer5/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "1"
 horizontal_alignment = 2
 
@@ -56,17 +60,25 @@ layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer3"]
-custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0.71403, 0.192014, 0.988783, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "Attack"
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer3"]
-custom_minimum_size = Vector2(40, 0)
+[node name="Label_attack" type="Label" parent="VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "1"
+horizontal_alignment = 2
+
+[node name="Label_attack_change" type="Label" parent="VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "+1"
 horizontal_alignment = 2
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
@@ -74,15 +86,23 @@ layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer4"]
-custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0.71403, 0.192014, 0.988783, 1)
-theme_override_font_sizes/font_size = 32
-text = "Defence"
+theme_override_font_sizes/font_size = 16
+text = "Defense"
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer4"]
-custom_minimum_size = Vector2(40, 0)
+[node name="Label_defense" type="Label" parent="VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 16
 text = "1"
+horizontal_alignment = 2
+
+[node name="Label_defense_change" type="Label" parent="VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "+1"
 horizontal_alignment = 2

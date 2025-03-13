@@ -94,12 +94,7 @@ func handle_walking(delta: float):
 		player.velocity += input * accel * delta
 		player.velocity = player.velocity.limit_length(max_speed)
 
-	# Play walking sound at intervals
-	sound_cooldown -= delta
-	if sound_cooldown <= 0.0 and input != Vector2.ZERO:
-		walk_left_audio.pitch_scale = randf_range(0.9, 1.1)
-		walk_left_audio.play()
-		sound_cooldown = 0.4
+	
 
 	# Update player animation
 	if player.set_direction():

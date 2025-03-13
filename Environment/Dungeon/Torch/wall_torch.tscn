@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b44kyfk0deywt"]
 
 [ext_resource type="Texture2D" uid="uid://583xn4h3c75" path="res://Hallasan-Sunset/Tilemaps/Sprites/Tree Village.png" id="1_5nksv"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_vd0on"]
+[ext_resource type="Script" uid="uid://0mnmwsenhjp1" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_vd0on"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e6tn1"]
 atlas = ExtResource("1_5nksv")

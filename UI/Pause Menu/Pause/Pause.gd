@@ -17,6 +17,7 @@ signal hidden
 @onready var button_settings : Button = $TabContainer/System/VBoxContainer/Button_settings
 @onready var button_menu : Button = $TabContainer/System/VBoxContainer/Button_menu
 @onready var button_quit : Button = $TabContainer/System/VBoxContainer/Button_quit
+@onready var animation_player4 = $BookSheet64x64/AnimationPlayer
 
 var is_paused : bool = false
 
@@ -47,12 +48,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_paused:
 		if event.is_action_pressed("right_bumper"):
 			change_tab( 1 )
+			
 		elif event.is_action_pressed("left_bumper"):
+			
 			
 			change_tab( -1 )
 
 
 func show_pause_menu() -> void:
+	animation_player4.play("page turn")
 	get_tree().paused = true
 	visible = true
 	is_paused = true
@@ -60,6 +64,8 @@ func show_pause_menu() -> void:
 	shown.emit()
 
 func hide_pause_menu() -> void:
+	animation_player4.play("close")
+	await animation_player4.animation_finished
 	get_tree().paused = false
 	visible = false
 	is_paused = false
@@ -98,6 +104,7 @@ func _on_main_menu_pressed():
 
 # Function to quit the game
 func _on_quit_pressed():
+	animation_player4.play("close")
 	get_tree().quit()
 	play_audio( button_press_audio )
 	
@@ -106,11 +113,12 @@ func play_audio( audio : AudioStream ) -> void:
 	audio_stream_player.play()
 	
 func change_tab( _i : int = 1 ) -> void:
-
+	animation_player4.play("turn")
 	tab_container.current_tab = wrapi(
 			tab_container.current_tab + _i,
 			0,
 			tab_container.get_tab_count()
+			
 			
 		)
 	tab_container.get_tab_bar().grab_focus()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cb2ddj5khwruw"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.gd" id="1_j3tkh"]
+[ext_resource type="Script" uid="uid://37dc5cve0v0b" path="res://Hallasan-Sunset/Technical/Transition/Level_transition.gd" id="1_j3tkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ictlj"]
 resource_local_to_scene = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://b5me57cghtrro"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Branch/tree_branch.gd" id="1_myb8u"]
+[ext_resource type="Script" uid="uid://c1a1hoa2p3amt" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Branch/tree_branch.gd" id="1_myb8u"]
 [ext_resource type="Texture2D" uid="uid://bl81qf7k2qimv" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Branch/small_worm.png" id="2_8806v"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_pmk8y"]
 [ext_resource type="Texture2D" uid="uid://clsjs6k8q3wsy" path="res://Hallasan-Sunset/Environment/Hazards/Wooden Spikes/Animation/Spike-1 20.png" id="3_wj8ad"]
@@ -137,8 +137,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igohu"]
 _data = {
-"RESET": SubResource("Animation_hm6rm"),
-"attack": SubResource("Animation_xgjs5")
+&"RESET": SubResource("Animation_hm6rm"),
+&"attack": SubResource("Animation_xgjs5")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6epx0"]

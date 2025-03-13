@@ -1,8 +1,30 @@
-[gd_resource type="Resource" script_class="InventoryData" load_steps=3 format=3 uid="uid://dcqu1flenu416"]
+[gd_resource type="Resource" script_class="InventoryData" load_steps=9 format=3 uid="uid://dcqu1flenu416"]
 
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/inventory_data.gd" id="1_vhxcb"]
 [ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/slot_data.gd" id="2_q2lis"]
+[ext_resource type="Resource" uid="uid://cgmwv8prargbr" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Equipables/Bomb Gloves.tres" id="3_k1e2l"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/item_effect.gd" id="3_pcyur"]
+[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Inventory/Scripts/item_data.gd" id="4_jjpay"]
+
+[sub_resource type="Resource" id="Resource_7vbng"]
+script = ExtResource("4_jjpay")
+name = ""
+description = ""
+effects = Array[ExtResource("3_pcyur")]([])
+metadata/_custom_type_script = "uid://by265x207jy1a"
+
+[sub_resource type="Resource" id="Resource_arinm"]
+script = ExtResource("2_q2lis")
+item_data = SubResource("Resource_7vbng")
+quantity = 1
+metadata/_custom_type_script = "uid://dffme6j33gsj2"
+
+[sub_resource type="Resource" id="Resource_4dhhj"]
+script = ExtResource("2_q2lis")
+item_data = ExtResource("3_k1e2l")
+quantity = 0
+metadata/_custom_type_script = "uid://dffme6j33gsj2"
 
 [resource]
 script = ExtResource("1_vhxcb")
-slots = Array[ExtResource("2_q2lis")]([null, null, null, null, null, null, null, null, null, null, null, null])
+slots = Array[ExtResource("2_q2lis")]([null, null, null, SubResource("Resource_arinm"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_4dhhj"), null, null, null])

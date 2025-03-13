@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dc6lo3whucr6e"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc.gd" id="1_jmq23"]
+[ext_resource type="Script" uid="uid://dss7csdyxpmtt" path="res://Hallasan-Sunset/npc/scripts/npc.gd" id="1_jmq23"]
 [ext_resource type="Texture2D" uid="uid://ctcrfy803geml" path="res://Hallasan-Sunset/npc/Sprites/npc_sprite.png" id="2_5x0gd"]
 [ext_resource type="Texture2D" uid="uid://cuvgsyd825y83" path="res://Hallasan-Sunset/Player/Sprites/Shadow (1).png" id="3_n7vwa"]
 
@@ -108,13 +108,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ivkd1"]
 _data = {
-"RESET": SubResource("Animation_d2wm5"),
-"idle_down": SubResource("Animation_7du3u"),
-"idle_side": SubResource("Animation_7wkjd"),
-"idle_up": SubResource("Animation_8m2xn"),
-"walk_down": SubResource("Animation_62wq6"),
-"walk_side": SubResource("Animation_l0wml"),
-"walk_up": SubResource("Animation_5qrp0")
+&"RESET": SubResource("Animation_d2wm5"),
+&"idle_down": SubResource("Animation_7du3u"),
+&"idle_side": SubResource("Animation_7wkjd"),
+&"idle_up": SubResource("Animation_8m2xn"),
+&"walk_down": SubResource("Animation_62wq6"),
+&"walk_side": SubResource("Animation_l0wml"),
+&"walk_up": SubResource("Animation_5qrp0")
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6cfnt"]

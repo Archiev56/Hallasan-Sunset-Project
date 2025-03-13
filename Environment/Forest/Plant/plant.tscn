@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://d3yqw06xn5rae"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Plant/plant.gd" id="1_ijbhi"]
+[ext_resource type="Script" uid="uid://dkub05ifxhjpa" path="res://Hallasan-Sunset/Environment/Forest/Plant/plant.gd" id="1_ijbhi"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_0fwjp"]
 [ext_resource type="Texture2D" uid="uid://ckuy60kqljivj" path="res://Hallasan-Sunset/Environment/Forest/Plant/Sprites/bush 1.png" id="3_7ka5c"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="3_7x2if"]
@@ -46,8 +46,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p3l4h"]
 _data = {
-"Destroyed": SubResource("Animation_yllw8"),
-"Rustle": SubResource("Animation_ja51m")
+&"Destroyed": SubResource("Animation_yllw8"),
+&"Rustle": SubResource("Animation_ja51m")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qamg5"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=61 format=3 uid="uid://byg8cnxq228vx"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Minotaur/minotaur.gd" id="1_f0pen"]
+[ext_resource type="Script" uid="uid://btf5qqhpiwden" path="res://Hallasan-Sunset/Enemies/Bosses/Minotaur/minotaur.gd" id="1_f0pen"]
 [ext_resource type="Texture2D" uid="uid://bj7m2iue47et8" path="res://Hallasan-Sunset/Enemies/Bosses/Minotaur/Minotaur - Sprite Sheet.png" id="1_yjl0f"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="2_qlr51"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="3_w6fd2"]
@@ -412,7 +412,7 @@ resource_name = "Idle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eklst"]
 _data = {
-"Idle": SubResource("Animation_8ooar")
+&"Idle": SubResource("Animation_8ooar")
 }
 
 [node name="Minotaur" type="CharacterBody2D"]

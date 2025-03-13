@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bvatnfpnfknqv" path="res://Hallasan-Sunset/npc/Portraits/npc_portrait_01.png" id="1_p7ev3"]
 [ext_resource type="Texture2D" uid="uid://c76tna6xedfie" path="res://Hallasan-Sunset/npc/Characters/Slick/Untitled_Artwork 88.png" id="2_3cn5o"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="2_ugwk8"]
+[ext_resource type="Script" uid="uid://b36i5c8j16vj4" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="2_ugwk8"]
 
 [resource]
 script = ExtResource("2_ugwk8")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dla2m7ra56uvu"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pressure Plate/PressurePlate.gd" id="1_hc1fk"]
+[ext_resource type="Script" uid="uid://lr5ofmy2m4wr" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pressure Plate/PressurePlate.gd" id="1_hc1fk"]
 [ext_resource type="Texture2D" uid="uid://hv02yidexlkv" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Sprites/dungeon_props (1).png" id="2_ox8aq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hm7r5"]

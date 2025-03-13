@@ -1,19 +1,21 @@
 [gd_scene load_steps=2 format=3 uid="uid://v0k1yqv8sn7u"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_item.gd" id="1_y202x"]
+[ext_resource type="Script" uid="uid://cgd0e2xfvh7ec" path="res://Hallasan-Sunset/UI/Pause Menu/Quests/quest_item.gd" id="1_y202x"]
 
 [node name="QuestItem" type="Button"]
 texture_filter = 1
-custom_minimum_size = Vector2(200, 50)
+custom_minimum_size = Vector2(150, 50)
+offset_right = 195.0
+offset_bottom = 50.0
 script = ExtResource("1_y202x")
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 203.0
-offset_bottom = 25.0
-theme_override_font_sizes/font_size = 32
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 143.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 16
 text = "Quest Title"
 clip_text = true
 text_overrun_behavior = 3

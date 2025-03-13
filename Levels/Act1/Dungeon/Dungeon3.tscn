@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://ykanljwojokv"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_kuyxt"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_kuyxt"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="2_qnlo6"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="3_gkydn"]
 [ext_resource type="PackedScene" uid="uid://bqhetgyfhjtdv" path="res://Hallasan-Sunset/Environment/Dungeon/Torch/torch.tscn" id="3_yl82t"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cqv8ikbi4p00s" path="res://Hallasan-Sunset/Technical/Item Dropper/item_dropper.tscn" id="8_4ea3q"]
 [ext_resource type="PackedScene" uid="uid://dla2m7ra56uvu" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Pressure Plate/pressure_plate.tscn" id="9_1t031"]
 [ext_resource type="Resource" uid="uid://b4b3fc4qc1cnh" path="res://Hallasan-Sunset/Environment/Dungeon/Dungeon_elements/Dungeon Key/Key_dungeon.tres" id="9_quis7"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Quests/Utility_nodes/quest_advance_trigger.gd" id="10_e0a6a"]
+[ext_resource type="Script" uid="uid://s4h8y8m8b0ft" path="res://Hallasan-Sunset/Quests/Utility_nodes/quest_advance_trigger.gd" id="10_e0a6a"]
 [ext_resource type="Resource" uid="uid://b3er7dgk0xnm6" path="res://Hallasan-Sunset/Quests/Quests/short_quest.tres" id="11_w3etk"]
 
 [node name="Node2D" type="Node2D"]

@@ -1,13 +1,13 @@
 [gd_scene load_steps=24 format=3 uid="uid://bob2mestb7isk"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Common Enemies/Skeleton/Skeleton.gd" id="1_1ajxs"]
-[ext_resource type="Texture2D" path="res://Player/Shadow.png" id="2_8oxbh"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Blink.gdshader" id="3_6yycg"]
+[ext_resource type="Script" uid="uid://biy81mobmjsl2" path="res://Hallasan-Sunset/Enemies/Common Enemies/Skeleton/Skeleton.gd" id="1_1ajxs"]
+[ext_resource type="Shader" uid="uid://w08kxgply0g" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Blink.gdshader" id="3_6yycg"]
 [ext_resource type="Texture2D" uid="uid://clqfwdjbwlcpb" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Slime.png" id="4_84i3i"]
 [ext_resource type="AudioStream" uid="uid://bujw7xwffover" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Slime-[AudioTrimmer.com].wav" id="6_pb8wm"]
 [ext_resource type="Material" uid="uid://xi2k6m0b3vyg" path="res://Hallasan-Sunset/Enemies/Common Enemies/Slime/Blood/slime.tres" id="7_eahop"]
-[ext_resource type="Script" path="res://Technical/GeneralNodes/Hurtbox/hurt_box.gd" id="8_3xb8r"]
-[ext_resource type="Script" path="res://Technical/GeneralNodes/Hitbox/hit_box.gd" id="9_j131k"]
+
+[sub_resource type="Resource" id="Resource_hh6bo"]
+metadata/__load_path__ = "res://Player/Shadow.png"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j43ph"]
 resource_local_to_scene = true
@@ -282,20 +282,26 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n6mj4"]
 _data = {
-"RESET": SubResource("Animation_uhmpt"),
-"hurt_down": SubResource("Animation_ij6g7"),
-"hurt_side": SubResource("Animation_idd40"),
-"hurt_up": SubResource("Animation_8ivg1"),
-"idle_down": SubResource("Animation_kxr6h"),
-"idle_side": SubResource("Animation_6tpqk"),
-"idle_up": SubResource("Animation_3xmtn"),
-"walk_down": SubResource("Animation_iq8d0"),
-"walk_side": SubResource("Animation_jb7fe"),
-"walk_up": SubResource("Animation_dvb3c")
+&"RESET": SubResource("Animation_uhmpt"),
+&"hurt_down": SubResource("Animation_ij6g7"),
+&"hurt_side": SubResource("Animation_idd40"),
+&"hurt_up": SubResource("Animation_8ivg1"),
+&"idle_down": SubResource("Animation_kxr6h"),
+&"idle_side": SubResource("Animation_6tpqk"),
+&"idle_up": SubResource("Animation_3xmtn"),
+&"walk_down": SubResource("Animation_iq8d0"),
+&"walk_side": SubResource("Animation_jb7fe"),
+&"walk_up": SubResource("Animation_dvb3c")
 }
+
+[sub_resource type="Resource" id="Resource_5mv1t"]
+metadata/__load_path__ = "res://Technical/GeneralNodes/Hitbox/hit_box.gd"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_53syc"]
 radius = 20.0
+
+[sub_resource type="Resource" id="Resource_jjr4g"]
+metadata/__load_path__ = "res://Technical/GeneralNodes/Hurtbox/hurt_box.gd"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ipekq"]
 radius = 20.0
@@ -309,7 +315,7 @@ script = ExtResource("1_1ajxs")
 modulate = Color(0, 0, 0, 0.282353)
 texture_filter = 1
 position = Vector2(0, -2)
-texture = ExtResource("2_8oxbh")
+texture = SubResource("Resource_hh6bo")
 
 [node name="Slime" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -333,7 +339,7 @@ autoplay = "idle_down"
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 256
 collision_mask = 0
-script = ExtResource("9_j131k")
+script = SubResource("Resource_5mv1t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(0, -11)
@@ -364,7 +370,7 @@ one_shot = true
 explosiveness = 1.0
 
 [node name="HurtBox" type="Area2D" parent="."]
-script = ExtResource("8_3xb8r")
+script = SubResource("Resource_jjr4g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -11)

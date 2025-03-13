@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4eaotgg15phx"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Items/Technical/Magnet/item_magnet.gd" id="1_2ghcm"]
+[ext_resource type="Script" uid="uid://8rcjcdo5r276" path="res://Hallasan-Sunset/Items/Technical/Magnet/item_magnet.gd" id="1_2ghcm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qt6e6"]
 radius = 44.0114

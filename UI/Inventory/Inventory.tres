@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Inv" load_steps=15 format=3 uid="uid://ccbtyau6rcrdp"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Inventory/Inv_slot.gd" id="2_85yne"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/UI/Inventory/inventory.gd" id="2_m5ysj"]
+[ext_resource type="Script" uid="uid://cb8qnn5dlrb3p" path="res://Hallasan-Sunset/UI/Inventory/Inv_slot.gd" id="2_85yne"]
+[ext_resource type="Script" uid="uid://f3t1ae3etlkd" path="res://Hallasan-Sunset/UI/Inventory/inventory.gd" id="2_m5ysj"]
 
 [sub_resource type="Resource" id="Resource_ow878"]
 script = ExtResource("2_85yne")

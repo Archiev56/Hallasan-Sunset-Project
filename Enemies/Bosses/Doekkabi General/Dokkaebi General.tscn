@@ -1,7 +1,7 @@
 [gd_scene load_steps=91 format=3 uid="uid://16xbcxav5kb5"]
 
 [ext_resource type="Texture2D" uid="uid://b3o6dle05t0c0" path="res://Hallasan-Sunset/Enemies/Bosses/Doekkabi General/Goblin King Sprite Sheet.png" id="1_fkq2k"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Enemies/Bosses/Doekkabi General/dokkaebi_general.gd" id="1_s4prm"]
+[ext_resource type="Script" uid="uid://badgr6eildtsh" path="res://Hallasan-Sunset/Enemies/Bosses/Doekkabi General/dokkaebi_general.gd" id="1_s4prm"]
 [ext_resource type="PackedScene" uid="uid://b5rmod0fwgoy" path="res://Hallasan-Sunset/Player/Boxes/HurtBox/hurt_box.tscn" id="3_t6xuo"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="4_3pc8u"]
 
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_be63e"]
 _data = {
-"Idle": SubResource("Animation_48kjk"),
-"RESET": SubResource("Animation_1scwd")
+&"Idle": SubResource("Animation_48kjk"),
+&"RESET": SubResource("Animation_1scwd")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6tiw"]

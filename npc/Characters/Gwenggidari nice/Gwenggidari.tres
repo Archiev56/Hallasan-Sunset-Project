@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://cengu4o4xxb4h"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="1_dql16"]
+[ext_resource type="Script" uid="uid://b36i5c8j16vj4" path="res://Hallasan-Sunset/npc/scripts/npc_resource.gd" id="1_dql16"]
 [ext_resource type="Texture2D" uid="uid://ddr6e1tadtjmv" path="res://Hallasan-Sunset/npc/Characters/Gwenggidari nice/Idle_down/Untitled_Artwork-1 30.png" id="2_xtdnt"]
 
 [resource]

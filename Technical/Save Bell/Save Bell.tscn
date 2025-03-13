@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://cal6ga32aayko"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Technical/Save Bell/Save_Bell.gd" id="1_xtbfx"]
+[ext_resource type="Script" uid="uid://jpxg2e4y0j7h" path="res://Hallasan-Sunset/Technical/Save Bell/Save_Bell.gd" id="1_xtbfx"]
 [ext_resource type="Texture2D" uid="uid://67reuta3hfbo" path="res://Hallasan-Sunset/Shadow.png" id="2_mo4fa"]
 [ext_resource type="Texture2D" uid="uid://duvfhjstvlvba" path="res://Hallasan-Sunset/Technical/Save Bell/Sprites/Save Bell.png" id="3_tsd72"]
 [ext_resource type="PackedScene" uid="uid://bu0yfb7p2b8pi" path="res://Hallasan-Sunset/Player/Boxes/HitBox/hit_box.tscn" id="4_ry46a"]
 [ext_resource type="AudioStream" uid="uid://cku1jg2g72pqm" path="res://Hallasan-Sunset/Technical/Save Bell/Bell Hit.wav" id="5_xdor4"]
 [ext_resource type="Texture2D" uid="uid://swxs3cikpsuj" path="res://Hallasan-Sunset/Technical/Save Bell/Sprites/Untitled_Artwork 113.png" id="6_866ki"]
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Shaders/Shockwave.gdshader" id="7_q3waw"]
+[ext_resource type="Shader" uid="uid://b7qetbgr1j5hv" path="res://Hallasan-Sunset/Shaders/Shockwave.gdshader" id="7_q3waw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uoy11"]
 
@@ -72,8 +72,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vrbw4"]
 _data = {
-"Pulse": SubResource("Animation_yb2u6"),
-"RESET": SubResource("Animation_jehkj")
+&"Pulse": SubResource("Animation_yb2u6"),
+&"RESET": SubResource("Animation_jehkj")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dvav6"]
@@ -185,8 +185,8 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m1x4i"]
 _data = {
-"Game saved": SubResource("Animation_8tt6f"),
-"RESET": SubResource("Animation_e3afu")
+&"Game saved": SubResource("Animation_8tt6f"),
+&"RESET": SubResource("Animation_e3afu")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_54oqi"]

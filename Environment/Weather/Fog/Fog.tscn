@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ds6bxm232amrv"]
 
-[ext_resource type="Shader" path="res://Hallasan-Sunset/Environment/Weather/Fog/MystyFog.gdshader" id="1_vqwea"]
+[ext_resource type="Shader" uid="uid://5p4p83grokhs" path="res://Hallasan-Sunset/Environment/Weather/Fog/MystyFog.gdshader" id="1_vqwea"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_u7h8m"]
 frequency = 0.005
@@ -14,9 +14,9 @@ noise = SubResource("FastNoiseLite_u7h8m")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ne2pu"]
 shader = ExtResource("1_vqwea")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_2wdew")
 shader_parameter/density = 0.3
 shader_parameter/speed = Vector2(0.02, 0.01)
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_2wdew")
 
 [node name="Fog" type="ParallaxBackground"]
 rotation = 1.5708

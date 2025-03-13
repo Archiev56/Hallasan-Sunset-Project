@@ -26,7 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n160t"]
 _data = {
-"Idle": SubResource("Animation_rigee")
+&"Idle": SubResource("Animation_rigee")
 }
 
 [node name="Ungyeo Bear" type="CharacterBody2D"]

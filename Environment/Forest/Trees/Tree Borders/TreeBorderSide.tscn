@@ -64,7 +64,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vcpwn"]
 _data = {
-"restore": SubResource("Animation_bhkv1")
+&"restore": SubResource("Animation_bhkv1")
 }
 
 [node name="SideBorder" type="StaticBody2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://7rut64xaeyi0"]
 
-[ext_resource type="Script" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_14gk0"]
+[ext_resource type="Script" uid="uid://7d2vundqlf1" path="res://Hallasan-Sunset/Levels/Scripts/Level.gd" id="1_14gk0"]
 [ext_resource type="PackedScene" uid="uid://cr8c8wtlgk4rc" path="res://Hallasan-Sunset/Tilemaps/Tileset.tscn" id="2_752fl"]
 [ext_resource type="PackedScene" uid="uid://udy8tcrufx43" path="res://Hallasan-Sunset/Player/Technical/Player Spawn/player_spawn.tscn" id="3_2r4kj"]
 [ext_resource type="PackedScene" uid="uid://mquiukhsvnvp" path="res://Hallasan-Sunset/Environment/Forest/Trees/Tree Borders/TreeBorderSide.tscn" id="5_cjalj"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqv8ikbi4p00s" path="res://Hallasan-Sunset/Technical/Item Dropper/item_dropper.tscn" id="5_p8ne5"]
 [ext_resource type="PackedScene" uid="uid://bbulqo1o3cehl" path="res://Hallasan-Sunset/Technical/Enemy Counter/enemy_counter.tscn" id="5_ug6cb"]
 [ext_resource type="PackedScene" uid="uid://4cp3bb2wjdid" path="res://Hallasan-Sunset/Environment/Forest/Interactive_grass/Interactive_grass.tscn" id="6_we3e0"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Quests/Utility_nodes/quest_advance_trigger.gd" id="7_tdxe1"]
+[ext_resource type="Script" uid="uid://s4h8y8m8b0ft" path="res://Hallasan-Sunset/Quests/Utility_nodes/quest_advance_trigger.gd" id="7_tdxe1"]
 [ext_resource type="Resource" uid="uid://dvw6oeqr106yd" path="res://Hallasan-Sunset/Quests/Quests/Purge the poison forest.tres" id="8_he1x7"]
 [ext_resource type="Resource" uid="uid://cw3bf5p68wy7b" path="res://Hallasan-Sunset/Items/Consumables/Kimbap/Kimbap.tres" id="8_s44ie"]
 [ext_resource type="PackedScene" uid="uid://ctbbh43inokqv" path="res://Hallasan-Sunset/Enemies/Bosses/Ironoak/Ironoak_boss.tscn" id="9_nbicu"]

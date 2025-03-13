@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqhetgyfhjtdv"]
 
 [ext_resource type="Texture2D" uid="uid://dxen2237r80j" path="res://Hallasan-Sunset/Tilemaps/Sprites/Cave/Cave Interior.png" id="1_ha08e"]
-[ext_resource type="Script" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_t2scp"]
+[ext_resource type="Script" uid="uid://0mnmwsenhjp1" path="res://Hallasan-Sunset/Environment/Forest/Lamppost/TorchFlicker.gd" id="2_t2scp"]
 
 [sub_resource type="Animation" id="Animation_pj201"]
 resource_name = "Flicker"
@@ -38,8 +38,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yfksk"]
 _data = {
-"Flicker": SubResource("Animation_pj201"),
-"RESET": SubResource("Animation_lnkrl")
+&"Flicker": SubResource("Animation_pj201"),
+&"RESET": SubResource("Animation_lnkrl")
 }
 
 [sub_resource type="Gradient" id="Gradient_6iqfe"]
